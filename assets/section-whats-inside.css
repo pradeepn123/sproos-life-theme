@@ -1,0 +1,42 @@
+@media only screen and (min-width: 750px) {
+  .whats-inside {
+    display: flex;
+    justify-content: space-between;
+  }
+  .whats-inside .whats-inside-right {
+    flex-basis: 60%;
+    max-width: 60%;
+    padding: 1rem;
+  }
+  .whats-inside .whats-inside-left {
+    flex-grow: 1;
+  }
+}
+
+.whats-inside .whats-inside-left ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.whats-inside .whats-inside-left li {
+  flex-basis: 33%;
+  margin: 1em 0;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.whats-inside .whats-inside-left li img {
+  border: 4.5px dotted #ffffff;
+  max-width: 10rem;
+}
+.whats-inside .whats-inside-left li.active img, .whats-inside .whats-inside-left li:hover img {
+  border: 4.5px dotted #FF8189;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.whats-inside .whats-inside-right div {
+  display: none;
+}
+.whats-inside .whats-inside-right div.active {
+  display: block;
+}

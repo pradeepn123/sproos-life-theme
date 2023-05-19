@@ -1,0 +1,343 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "title_style": "default"
+      }
+    },
+    "16493109744b3d2be3": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16493109740cc7394d-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your values?",
+            "icon": "none",
+            "row_content": "<p>We're about keeping health simple in a complex world. All of our products are purposeful, clean, sustainable and simple. Learn more about our values <a href=\"\/pages\/about\/#sproos-values\" title=\"\/pages\/about\/#sproos-values\">here<\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "16493109740cc7394d-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is Sproos based?",
+            "icon": "none",
+            "row_content": "<p>We’re fortunate to be based in beautiful British Columbia, Canada. Our environment and surroundings provide us with inspiration for developing products that positively impact people’s health.<\/p>",
+            "page": ""
+          }
+        },
+        "16493109740cc7394d-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who is behind Sproos?",
+            "icon": "none",
+            "row_content": "<p><\/p><p>Sproos was founded by Leah & John Garrad-Cole, previously the founders of Love Child Organics, Canada’s leading organic and baby and children’s food brand. Learn more about what drove them to start Sproos <a href=\"\/pages\/about\/#sproos-values\" title=\"\/pages\/about\/#sproos-values\">here<\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "16493109740cc7394d-0",
+        "16493109740cc7394d-1",
+        "16493109740cc7394d-2"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Company",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "164931222148618fdf": {
+      "type": "collapsible-content",
+      "blocks": {
+        "1649312221aba0e54e-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where do you ship?",
+            "icon": "none",
+            "row_content": "<p>We ship to both Canada and the US!<\/p>",
+            "page": ""
+          }
+        },
+        "1649312221aba0e54e-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What shipping options are available?",
+            "icon": "none",
+            "row_content": "<p>All Canadian and US orders over $50 CAD pre-tax are eligible for free shipping. <\/p>",
+            "page": ""
+          }
+        },
+        "1649312221aba0e54e-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the typical order processing time?",
+            "icon": "none",
+            "row_content": "<p>We try to ensure that all orders are processed within a 24-hour window (orders received over the weekend or on public holidays will be processed on the next available business day). Once the order has been placed, you will receive a confirmation number.<\/p>",
+            "page": ""
+          }
+        },
+        "1649312221aba0e54e-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Sproos accept customer returns?",
+            "icon": "none",
+            "row_content": "<p>In some circumstances. Please contact <a href=\"https:\/\/sprooslife.com\/pages\/contact\" title=\"Contact Us | Sproos\">customer service<\/a> for more information.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "1649312221aba0e54e-1",
+        "1649312221aba0e54e-2",
+        "1649312221aba0e54e-3",
+        "1649312221aba0e54e-0"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Shipping & Returns",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "164931159358128483": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16493115938e57232a-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What do I do if my tub is missing its scoop?",
+            "icon": "none",
+            "row_content": "<p>The scoop may be buried in the powder during transit. Simply use a fork to sift through the powder. If you still cannot find it, please reach out to us and we'll provide you with an equivalent for the scoop size.<\/p>",
+            "page": ""
+          }
+        },
+        "16493115938e57232a-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you provide coupons?",
+            "icon": "none",
+            "row_content": "<p>Sign up for our newsletter <a href=\"https:\/\/sprooslife.com\/pages\/newsletter\" title=\"Newsletter Sign-Up | Sproos\">here<\/a> and you'll get a 20% off discount code for your first purchase!<\/p>",
+            "page": ""
+          }
+        },
+        "16493115938e57232a-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use more than one discount code or offer?",
+            "icon": "none",
+            "row_content": "<p>Our system only allows for one discount per order. If you have more than one discount code, please apply whichever one saves you the most.<\/p>",
+            "page": ""
+          }
+        },
+        "f2e6fa54-9009-4141-8244-d3d1f4a0587e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I buy Sproos on Amazon?",
+            "icon": "none",
+            "row_content": "<p>Yes! If you prefer to shop on Amazon, you can find us both on <a href=\"https:\/\/www.amazon.ca\/s?k=sproos&ref=nb_sb_noss\">Amazon.ca<\/a> and <a href=\"https:\/\/www.amazon.com\/s?k=sproos&ref=nb_sb_noss_2\">Amazon.com<\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "4c2c1c39-569e-4d40-b0b4-c356340f89c3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I buy Sproos?",
+            "icon": "none",
+            "row_content": "<p>Please use the store finder function on our website, available <a href=\"\/pages\/where-to-buy\" title=\"Where to Buy\">here<\/a>. We are widely distributed throughout retailers and online in Canada, and online in the US. You can also purchase our products directly through our website <a href=\"\/collections\" title=\"All collections\">here<\/a>. We ship to both Canada and the US.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "16493115938e57232a-0",
+        "16493115938e57232a-2",
+        "16493115938e57232a-3",
+        "f2e6fa54-9009-4141-8244-d3d1f4a0587e",
+        "4c2c1c39-569e-4d40-b0b4-c356340f89c3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "General",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1649311877be3d9cd5": {
+      "type": "collapsible-content",
+      "blocks": {
+        "1649311877e2e8bcd9-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What types of fish are in your marine collagen?",
+            "icon": "none",
+            "row_content": "<p>The fish that we source are predominantly pollock, haddock and cod. All from regulated North Atlantic fisheries off of the coast of Eastern Canada.<\/p>",
+            "page": ""
+          }
+        },
+        "0ff023b6-d2d7-4d2c-a661-2fdb6f1d503d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does your marine collagen contain heavy metals?",
+            "icon": "none",
+            "row_content": "<p>All of our products undergo rigorous testing for heavy metals and contaminants. We’re pleased to say our marine collagen meets the most stringent worldwide standards for heavy metals and is well below the Canadian permitted level.<\/p>",
+            "page": ""
+          }
+        },
+        "45584837-2887-4767-bf91-a66593bf0942": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does your marine collagen taste fishy?",
+            "icon": "none",
+            "row_content": "<p>No, it really is almost flavourless, and we are told often that our collagen is the most tasteless marine collagen our customers have tried. We recommend taking your pure collagen in coffee, tea or a smoothie which will mask any perceptible taste.<\/p>",
+            "page": ""
+          }
+        },
+        "1649311877e2e8bcd9-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the grass-fed collagen also grass-finished?",
+            "icon": "none",
+            "row_content": "<p>Yes! Our North American pasture-raised, grass-fed collagen is also grass-finished. There are no added hormones, antibiotics or pesticides either.<\/p>",
+            "page": ""
+          }
+        },
+        "1649311877e2e8bcd9-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the difference between the types of collagen?",
+            "icon": "none",
+            "row_content": "<p>There are numerous types of collagen in the body, but over 90% of it consists of types I III. Type I is by far the most dominant. You will also hear mention of type II collagen. Type II collagen is found in cartilage, so is a valuable contributor to joint health. Learn more about the types of collagen <a href=\"\/pages\/science\" title=\"Science\">here<\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "1649311877e2e8bcd9-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there any side effects of collagen?",
+            "icon": "none",
+            "row_content": "<p>‘Mild gastrointestinal disturbance’ can be a possible side effect with collagen consumption as per <a href=\"http:\/\/webprod.hc-sc.gc.ca\/nhpid-bdipsn\/atReq.do?atid=hydrolized.collagen\" target=\"_blank\">Health Canada<\/a>. Although we rarely hear this as feedback, sensitivity varies from person to person.<\/p>",
+            "page": ""
+          }
+        },
+        "578c6395-c1a5-4141-98da-962ceac434c9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s the difference between your single collagen products and your collagen blends?",
+            "icon": "none",
+            "row_content": "<p>Sproos Grass-Fed Collagen, Marine Collagen and Performance Multi-Collagen are pure sources of collagen. They are a great way to receive the all-round benefits of collagen. They are flavourless, dissolve easily and can be added to your favourite hot or cold beverage, or even to certain foods (e.g. soups, oatmeal or baking).<\/p><p>Our collagen blends build on our core collagen ingredient and enhance it with other active ingredients, all of which are focused on benefitting the target area (skin and hair, gut or joints) of that product. <\/p>",
+            "page": ""
+          }
+        },
+        "d65ce15d-1fb7-4128-81d4-1b413df629da": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where are Sproos products manufactured?",
+            "icon": "none",
+            "row_content": "<p>All of our products are manufactured in Canada at highly respected and Health Canada approved facilities. Our manufacturers hold numerous Natural Health Product industry certifications, including certification as a Good Manufacturing Practice (GMP) manufacturer and\/or SQF certifications.<\/p>",
+            "page": ""
+          }
+        },
+        "131bcd41-e645-4b2a-b2ad-220ec1506f1f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much collagen should I take per day?",
+            "icon": "none",
+            "row_content": "<p>Health Canada advises taking 5-10g of collagen per day to receive the benefits.<\/p>",
+            "page": ""
+          }
+        },
+        "8ad70f5a-1605-483f-a026-b7d1e01b2ce1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Sproos’ products safe for women who are pregnant or breastfeeding?",
+            "icon": "none",
+            "row_content": "<p>Please see the caution wording on each individual Sproos product which reflects Health Canada recommendations. In addition, we always recommend talking with your doctor first before taking any supplement as nutritional needs can vary during pregnancy and when breastfeeding.<br\/><br\/>We also have a blog post <a href=\"https:\/\/sprooslife.com\/blogs\/blog\/is-collagen-safe-during-pregnancy-and-breastfeeding?_pos=1&_sid=3d8349d99&_ss=r\" title=\"IS COLLAGEN SAFE DURING PREGNANCY AND BREASTFEEDING?\">here<\/a> that has some great information.<\/p>",
+            "page": ""
+          }
+        },
+        "96d738be-064c-48b3-b936-df45d01bc97e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Sproos packaging recyclable?",
+            "icon": "none",
+            "row_content": "<p>Yes, our BPA-free HDPE tubs can be put into your blue recycling box.<\/p>",
+            "page": ""
+          }
+        },
+        "8565629e-b0d1-4a2a-9964-a384fc480a56": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I take collagen?",
+            "icon": "none",
+            "row_content": "<p>Our pure collagen powders are unflavoured and easily dissolve into anything. A scoop can simply be mixed into any hot or cold beverage (think: smoothies, coffee, lattes). But collagen can also be used in baking, oatmeal, energy bites and more!<br\/><br\/>Check out our <a href=\"\/blogs\/blog\" title=\"THE SCOOP\">blog<\/a> for more recipes and ideas.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "1649311877e2e8bcd9-0",
+        "0ff023b6-d2d7-4d2c-a661-2fdb6f1d503d",
+        "45584837-2887-4767-bf91-a66593bf0942",
+        "1649311877e2e8bcd9-1",
+        "1649311877e2e8bcd9-2",
+        "1649311877e2e8bcd9-3",
+        "578c6395-c1a5-4141-98da-962ceac434c9",
+        "d65ce15d-1fb7-4128-81d4-1b413df629da",
+        "131bcd41-e645-4b2a-b2ad-220ec1506f1f",
+        "8ad70f5a-1605-483f-a026-b7d1e01b2ce1",
+        "96d738be-064c-48b3-b936-df45d01bc97e",
+        "8565629e-b0d1-4a2a-9964-a384fc480a56"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Products",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16493109744b3d2be3",
+    "164931222148618fdf",
+    "164931159358128483",
+    "1649311877be3d9cd5"
+  ]
+}

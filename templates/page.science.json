@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "165135703397e62fdc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"jump-menu\"><div class=\"page-width\">\n<ul class=\"jump-menu list-unstyled\">\n<li><a href=\"#what\">WHAT IS COLLAGEN<\/a><\/li>\n<li><a href=\"#types\">TYPES OF COLLAGEN<\/a><\/li>\n<li><a href=\"#choose\">HOW TO CHOOSE<\/a><\/li>\n<li><a href=\"#multicolumn\">HEALTH BENEFITS<\/a><\/li>\n<\/ul>\n<\/div><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "16500017645b2481da": {
+      "type": "rich-text",
+      "blocks": {
+        "165000176438da492f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "IT’S LIKE MAGIC, BUT ACTUALLY SCIENCE.",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "165000176438da492f-0"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1650002900f7b2c682": {
+      "type": "image-with-text",
+      "blocks": {
+        "165000290049c3dd54-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE START WITH COLLAGEN...",
+            "heading_size": "h2"
+          }
+        },
+        "165000290049c3dd54-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The science is clear: collagen is a key component for the maintenance of healthy skin, hair, joints and gut. Sproos sources the highest quality collagen from sustainable and non-GMO sources. Our marine collagen is sourced from North Atlantic, wild-caught fish and processed in Canada. Our bovine collagen comes from North American grass-fed and finished cattle. We didn’t like the idea of any contaminants in our products and we knew you wouldn’t either.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "165000290049c3dd54-0",
+        "165000290049c3dd54-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/science_2x_64423d4f-8287-42c2-86b7-9b3addc82cea.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "165000172997aaeae7": {
+      "type": "image-with-text",
+      "blocks": {
+        "16500017297062d306-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "...AND THEN WE GO FURTHER",
+            "heading_size": "h2"
+          }
+        },
+        "16500017297062d306-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We didn’t stop there. We consulted with experts, like naturopathic doctors, to develop our unique line of collagen products. Our wide array of products make it easy to incorporate collagen into your daily routine. However you prefer to take your collagen – with your morning coffee or smoothie, added to water, or in a delicious real food nutrition bar – we’ve got you covered.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16500017297062d306-0",
+        "16500017297062d306-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sproos-science-girl_2x_b25607f0-e8d6-4457-b077-053b6cc423be.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "title_style": "default"
+      }
+    },
+    "1650005359b23d8c9e": {
+      "type": "multicolumn",
+      "blocks": {
+        "1650005359c279bb10-0": {
+          "type": "column",
+          "settings": {
+            "title": "JOINT, BONE & RECOVERY BENEFITS",
+            "text": "<p>- Maintains joint health and flexibility<\/p><p>- Reduces risk of joint deterioration<\/p><p>- Strengthens ligaments and cartilage<\/p><p>- Improves pain associated with joint degeneration<\/p><p>- Injury and recovery support<\/p><p>- Bone health support<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1650005359c279bb10-1": {
+          "type": "column",
+          "settings": {
+            "title": "SKIN & HAIR BENEFITS",
+            "text": "<p>- Improves skin elasticity and hydration<br\/>- Visibly improves overall skin tone and appearance – get that glow!<br\/>- Reduces and prevents fine lines<br\/>- Hydrates and smoothes dry, brittle hair<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1650005359c279bb10-2": {
+          "type": "column",
+          "settings": {
+            "title": "GUT BENEFITS",
+            "text": "<p>- Optimizes immune function of the intestines<br\/>- Helps maintain integrity, growth, and function of intestines<br\/>- Helps repair digestive tract and prevent ‘leaky gut’<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1650005359c279bb10-0",
+        "1650005359c279bb10-1",
+        "1650005359c279bb10-2"
+      ],
+      "settings": {
+        "flipping": true,
+        "title": "COLLAGEN BENEFITS",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "165135703397e62fdc",
+    "16500017645b2481da",
+    "1650002900f7b2c682",
+    "165000172997aaeae7",
+    "main",
+    "1650005359b23d8c9e"
+  ]
+}

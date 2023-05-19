@@ -1,0 +1,201 @@
+{
+  "sections": {
+    "1649986649ca7d8f33": {
+      "type": "image-banner",
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/Sproos_ads_oct21-088-2_2f064506-7a89-4b0e-aa1b-ef0a6ed8fc0d.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 76,
+        "padding_bottom": 0,
+        "title_style": "default"
+      }
+    },
+    "165162574208d39796": {
+      "type": "rich-text",
+      "blocks": {
+        "165162574207baf2da-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "sproos is about keeping health simple in a complex world.",
+            "heading_size": "h2"
+          }
+        },
+        "165162574207baf2da-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Information overload - we've been there. Between competing health claims, confusing labels and a sea of products, simple health choices can feel overwhelming. Enter Sproos. We did the research, sourced the highest quality ingredients and created functional products that provide purposeful, clean and sustainable nutrition.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165162574207baf2da-0",
+        "165162574207baf2da-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1649987276636cae45": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "164998727655b61d4a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "sproos is about keeping health simple in a complex world.",
+            "heading_size": "h2"
+          }
+        },
+        "164998727655b61d4a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Information overload - we've been there. Between competing health claims, confusing labels and a sea of products, simple health choices can feel overwhelming. Enter Sproos. We did the research, sourced the highest quality ingredients and created functional products that provide purposeful, clean and sustainable nutrition.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "164998727655b61d4a-0",
+        "164998727655b61d4a-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sproos-biker-guy_2x_52e3b86b-caad-411b-bda3-0a3b9f4fc7f9.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "16499876516fb31e3e": {
+      "type": "multicolumn",
+      "blocks": {
+        "164998765152bcdfab-0": {
+          "type": "column",
+          "settings": {
+            "title": "PURPOSEFUL",
+            "text": "<p>Every ingredient is chosen with intention and included in meaningful quantities. We ensure that our ingredients are effective, high quality and work synergistically for optimal results.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "164998765152bcdfab-1": {
+          "type": "column",
+          "settings": {
+            "title": "CLEAN",
+            "text": "<p>We keep our ingredient lists short and sweet. No fillers, artificial colours or flavours. We also have high standards when it comes to our manufacturing and only work with Health Canada approved SQF or GMP facilities.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "164998765152bcdfab-2": {
+          "type": "column",
+          "settings": {
+            "title": "SUSTAINABLE",
+            "text": "<p>Our health is deeply connected to the planet. That’s why we’ve searched for the most sustainable collagen options available. Our tubs are also recyclable and BPA-free.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "37b2917d-a49c-48e1-a222-b5c00b680f9b": {
+          "type": "column",
+          "settings": {
+            "title": "SIMPLE",
+            "text": "<p>Life is busy, so making healthy choices should be simple. We've created products that are easy to use and incorporate into your daily life.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164998765152bcdfab-0",
+        "164998765152bcdfab-1",
+        "164998765152bcdfab-2",
+        "37b2917d-a49c-48e1-a222-b5c00b680f9b"
+      ],
+      "settings": {
+        "flipping": true,
+        "title": "OUR VALUES",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1649988012aa3f4b00": {
+      "type": "image-with-text",
+      "blocks": {
+        "1649988011687690cb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "MEET THE FOUNDERS",
+            "heading_size": "h1"
+          }
+        },
+        "1649988011687690cb-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sproos was founded by Leah & John Garrad-Cole, the husband and wife team behind Love Child Organics, Canada’s leading organic baby and children’s food brand. Sproos was born from a personal health journey. When Leah began experiencing gut-related health issues, collagen became an essential part of her self-care routine that helped her get back on her feet.<br\/><br\/>During Leah’s battle to recover her health, John watched as she became frustrated with the natural health supplement options available. Confusing labels and big price tags with little return. Combining their insight with their previous business experience and passionate belief in the health benefits of collagen, they developed their own brand — Sproos – to provide a simple, natural and functional way to get proactive about personal health.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1649988011687690cb-0",
+        "1649988011687690cb-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/20220427_190104.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1649986649ca7d8f33",
+    "main",
+    "165162574208d39796",
+    "1649987276636cae45",
+    "16499876516fb31e3e",
+    "1649988012aa3f4b00"
+  ]
+}

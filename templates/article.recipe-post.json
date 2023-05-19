@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "medium"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ],
+      "settings": {
+      }
+    },
+    "1649736494e888139a": {
+      "type": "multicolumn",
+      "blocks": {
+        "16497364948d40a7a2-0": {
+          "type": "column",
+          "settings": {
+            "title": "Ingredients",
+            "text": "<p>1 scoop Sproos Super Hot Chocolate<br\/>1\/2 cup all natural almond butter<br\/>2 tablespoons maple syrup<br\/>2 teaspoons cinnamon<br\/>1\/2 cup coconut oil<br\/>1\/4 cup chocolate chips<br\/>1 tablespoon maca powder<br\/>a pinch of flakey salt<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16497364948d40a7a2-2": {
+          "type": "column",
+          "settings": {
+            "title": "Method",
+            "text": "<p>1) Add all ingredients (except the salt) to a small saucepan.<br\/>2) Over low heat, stir all ingredients together until coconut oil, almond butter and chocolate chips have all melted.<\/p><p>3) Pour melted mixture into an ice cube tray or small container and place in freezer for 1 hour or until hardened. We recommend using silicon ice cube trays as it makes it easier to remove the fudge squares once formed!<br\/>4) After 1 hour remove fudge squares from the ice cube tray or container, top with flakey salt and enjoy! Recipe makes about 6 squares. Store in the fridge.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16497364948d40a7a2-0",
+        "16497364948d40a7a2-2"
+      ],
+      "settings": {
+        "title": "Recipe",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1649736494e888139a"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1652300162fac320a5": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "165230016202fca5bf-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "COMING SOON",
+            "heading_size": "h1"
+          }
+        },
+        "165230016202fca5bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thanks so much for your interest in Sproos!  We’re currently in the process of launching our new website so please  visit back soon.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165230016202fca5bf-0",
+        "165230016202fca5bf-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1652300162fac320a5"
+  ]
+}

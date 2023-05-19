@@ -1,0 +1,54 @@
+{%- assign icon_content = "" -%}
+{%- assign description_content = "" -%}
+{%- assign class = "active" -%}
+{% for tag in product.tags %}
+  {% if tag contains 'inside_' %}
+    {%- assign slug = 'products.product.sproos_whats_inside.' | append: tag | replace: "inside_", "" -%}
+    {%- capture icon_content -%}
+      {{  icon_content }}
+      {%- assign img_url = tag | append: ".svg" -%}
+      <li data-id="{{tag}}" class="{{ class }}">
+        <img src="{{ img_url | asset_url }}" loading="lazy" alt="{{ slug | append: ".title" | t }}" title="{{ slug | append: ".title" | t }}" /></li>
+    {%- endcapture -%}
+
+    {%- capture description_content -%}
+      {{  description_content }}
+      <div id="{{tag}}" class="{{ class }}">
+        <h2>{{ slug | append: ".title" | t }}</h2>
+        <p>{{ slug | append: ".text" | t }}</p>
+      </div>
+    {%- endcapture -%}
+
+    {%- assign class = "" -%}
+  {% endif %}
+{% endfor %}
+
+{%- if icon_content != "" -%}
+  <link rel="stylesheet" href="{{ 'section-whats-inside.css' | asset_url }}" media="print" onload="this.media='all'">
+  <div class="page-width">
+    <h1 class="whats-inside-title">{{ 'products.product.sproos_whats_inside.title' | t }}</h1>
+    <div class="whats-inside">
+      <div class="whats-inside-left">
+        <ul class="whats-inside-icons list-unstyled">
+          {{ icon_content }}
+        </ul>
+      </div>
+      <div class="whats-inside-right">
+        {{ description_content }}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+
+
+
+{% schema %}
+{
+  "name": "What's Inside",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ]
+}
+{% endschema %}

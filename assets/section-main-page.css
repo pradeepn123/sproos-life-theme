@@ -1,0 +1,64 @@
+.page-title {
+  margin-top: 0;
+}
+
+.main-page-title {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .main-page-title {
+    margin-bottom: 4rem;
+  }
+}
+
+.page-placeholder-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.page-placeholder {
+  width: 52.5rem;
+  height: 52.5rem;
+}
+
+/*custom*/
+.template-page--about .main-page-title,
+.template-page--science .main-page-title {
+  text-align: center;
+}
+#hellobar-bar, .HB-Bar {
+  display: none !important;
+}
+#jump-menu {
+  background: var(--sproos-blue);
+  padding: 1.1rem 0 1rem;
+}
+#jump-menu a {
+  color: var(--sproos-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+  display: inline-block;
+}
+@media screen and (min-width: 990px) {
+  #jump-menu a {
+    font-size: 1.35rem;
+  }
+}
+.jump-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.jump-menu li {
+  padding: 0 1rem;
+  text-align: center;
+}
+.jump-menu-fixed #jump-menu {
+  position: fixed;
+  top: 0;
+  width:  100%;
+  z-index: 2;
+}
