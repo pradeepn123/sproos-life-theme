@@ -113,11 +113,10 @@
           },
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Shop our NEW bundles and save 25%",
+              "text": "20% off our NEW Keto Creamer",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/collections\/bundles"
+              "link": "shopify:\/\/products\/sproos-keto-creamer"
             }
           }
         },
@@ -437,7 +436,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".sezzle-checkout-button {width: 100%;}"
+
     ]
   }
 }

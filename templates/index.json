@@ -2,19 +2,18 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Something sweet for you",
+            "heading": "NEW! Keto Creamer",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Save on Super Hot Chocolate this Valentine's Day",
+            "text": "20% off limited time only",
             "text_style": "subtitle"
           }
         },
@@ -22,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/products\/sproos-super-hot-chocolate",
+            "button_link_1": "shopify:\/\/products\/sproos-keto-creamer",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -36,12 +35,12 @@
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled_design_12.png",
-        "image_overlay_opacity": 0,
+        "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
@@ -51,6 +50,7 @@
     },
     "16584952237a3d1d62": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "16584952239e37253b-0": {
           "type": "heading",
