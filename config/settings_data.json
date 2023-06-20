@@ -113,6 +113,7 @@
           },
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "20% off our NEW Keto Creamer",
               "color_scheme": "accent-1",

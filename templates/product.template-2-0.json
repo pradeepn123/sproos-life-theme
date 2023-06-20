@@ -285,6 +285,20 @@
         "padding_bottom": 36
       }
     },
+    "7a4be800-7acb-4768-8372-8602294744c3": {
+      "type": "section--how-to-use",
+      "settings": {
+        "heading": "How to Use",
+        "heading_size": "h2",
+        "cover_image": "{{ product.metafields.sproos.how_to_use_detail.value.video_image.value }}",
+        "video_url": "",
+        "description": "{{ product.metafields.sproos.how_to_use_detail.value.description | metafield_tag }}",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 68,
+        "padding_bottom": 68
+      }
+    },
     "b188e874-3f40-4320-a7ff-0f841eb9a7e9": {
       "type": "product-video",
       "disabled": true,
@@ -408,6 +422,7 @@
     "8061c67e-8de0-4b96-8ab5-83a95c50999d",
     "870b683a-cba4-4813-8e33-1c4d538f1cde",
     "4a6432eb-ca68-40e6-b914-25855145912d",
+    "7a4be800-7acb-4768-8372-8602294744c3",
     "b188e874-3f40-4320-a7ff-0f841eb9a7e9",
     "054fc94b-73b6-47de-bc2c-0e06906ae2ff",
     "7436a445-3b6b-4777-afb0-c8a2728e9d61",
