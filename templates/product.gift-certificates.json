@@ -76,7 +76,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "plant",
-            "content": "<p>{{ product.metafields.sproos.ingredients | metafield_tag }}<\/p>",
+            "content": "",
             "page": ""
           }
         },
