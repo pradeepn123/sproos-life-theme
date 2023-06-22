@@ -1,0 +1,93 @@
+.footer-pluss_wrapper .footer_plus__content-top{
+    display: flex;
+}  
+
+.footer_plus__content-block{
+    width: 60%;
+}
+
+.footer_plus__content-top .footer_plus__logo{
+    margin-bottom: 35px;
+}
+
+.footer_plus__copyright{
+    margin: 20px 0;
+    text-align: left;
+}
+
+.footer_plus__copyright small{
+    font-size: 12px
+}
+.footer_plus__copyright .break-para__mobile{
+    display: none;
+}
+.footer_plus__content-top .footer_plus__menu-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12rem;
+}
+.footer_plus__content-top .footer_plus__menu-wrapper .footer_plus-menu__items a{
+    text-decoration: none;
+    color: #2E292F;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.footer_plus__content-bottom .footer__column--info {
+    align-items: start;
+}
+.footer_plus__content-bottom .footer__localization {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 520px) {
+    .footer-pluss_wrapper .footer_plus__content-top{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer_plus__content-top .footer_plus__logo{
+        margin-bottom: 15px;
+    }
+    .footer_plus__content-block .list-social__item a svg{
+       color: #2A7DE1
+    }
+    .footer_plus__content-top .footer_plus__menu-wrapper{
+        justify-content: flex-start;
+    }
+    .footer_plus__copyright{
+        margin: 40px 0;
+        text-align: center;
+    }
+    .footer_plus__copyright small{
+       font-size: 14px;
+    }
+    .footer_plus__copyright .break-para__mobile{
+        display: block;
+    }
+    .footer_plus__content-bottom .footer__column--info {
+        align-items: center;
+    }
+    .footer_plus__content-bottom .list-payment .list-payment__item{
+        width: 45px;
+        height: 30px;
+    }
+    .footer_plus__content-top .footer_plus__menu-wrapper .footer_plus-menu__items a {
+        font-size: 18px;
+        line-height: 2;
+    }
+    .footer_plus__content-bottom .footer__localization {
+        justify-content: center;
+    }    
+}
+
+@media screen and (max-width: 410px){
+    .footer_plus__content-top .footer_plus__menu-wrapper{
+        gap: 8rem;
+    }
+}
+
+
+
+
+  

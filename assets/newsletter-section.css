@@ -24,13 +24,13 @@
 }
 
 .newsletter__subheading {
-  max-width: 70rem;
+  max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .newsletter__wrapper .newsletter-form__field-wrapper {
-  max-width: 36rem;
+  max-width: 48rem;
 }
 
 .newsletter-form__field-wrapper .newsletter-form__message {
@@ -42,9 +42,48 @@
   width: fit-content;
 }
 
+.newsletter-form__field-wrapper input{
+  background-color: #ffffff;
+}
+
+.newsletter-form__field-wrapper label{
+  color: #aaaaaa;
+}
+
+.newsletter__wrapper{
+  z-index: 1;
+}
+.newsletter .top__wave{
+  position: relative;
+  left: 0;
+  top: 12px;
+}
+.newsletter .bottom__wave{
+  position: relative;
+  left: 0;
+  bottom: 12px;
+  width: 100%
+}
+
 @media screen and (min-width: 750px) {
   .newsletter__button {
     flex-shrink: 0;
     margin: 0 0 0 1rem;
+  }
+  .newsletter .top__wave{
+    top: 40px;
+  }
+  .newsletter .bottom__wave{
+    bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1150px){
+  .newsletter .top__wave{
+    top: 75px;
+  }
+
+  .newsletter .bottom__wave{
+    bottom: 75px;
   }
 }
