@@ -74,5 +74,29 @@
 
 .newsletter__wrapper h2{
   text-transform: initial;
-  font-size: 30px
+}
+
+.newsletter{
+  position: relative;
+}
+.newsletter__wrapper{
+  z-index: 1;
+}
+.top__wave{
+  position: absolute;
+  left: 0;
+  top: -80px;  
+}
+.bottom__wave{
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+}
+
+@media screen and (max-width: 749px) {
+  .bottom__wave{
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+  } 
 }

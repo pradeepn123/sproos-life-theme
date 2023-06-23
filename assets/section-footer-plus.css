@@ -40,6 +40,9 @@
 .footer_plus__content-bottom .footer__localization {
     justify-content: flex-end;
 }
+.footer_plus__content-bottom .footer__content-bottom-wrapper{
+    border-bottom: 1px solid #dddddd;
+}
 
 @media screen and (max-width: 520px) {
     .footer-pluss_wrapper .footer_plus__content-top{
@@ -79,6 +82,9 @@
     .footer_plus__content-bottom .footer__localization {
         justify-content: center;
     }    
+    .footer_plus__content-bottom .footer__content-bottom-wrapper{
+        border-bottom: unset;
+    }
 }
 
 @media screen and (max-width: 410px){
