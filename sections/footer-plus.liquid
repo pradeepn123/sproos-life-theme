@@ -29,9 +29,9 @@
    
       <div class="footer_plus__content-block">
         <div class="footer_plus__logo">
-          {%- if section.settings.footer-plus_logo != blank -%}
-            <div>{{ section.settings.footer-plus_logo }}</div>
-          {%- endif -%} 
+          {%- if section.settings.footer_logo != blank -%}
+            <img src="{{ section.settings.footer_logo | img_url: '200x200' }}"/>
+          {%- endif -%}
         </div>
   
         <div class="sproos-footer">
@@ -311,8 +311,8 @@
       "label": "t:sections.footer.settings.color_scheme.label"
     },
     {
-      "type": "html",
-      "id": "footer-plus_logo",
+      "type": "image_picker",
+      "id": "footer_logo",
       "label": "Logo Svg"
     },
     {
