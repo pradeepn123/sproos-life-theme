@@ -3,18 +3,18 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "NEW! Keto Creamer",
-            "heading_size": "h1"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
             "text": "Your coffee just got butter.",
             "text_style": "subtitle"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEW! Keto Creamer",
+            "heading_size": "h1"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
@@ -30,14 +30,14 @@
         }
       },
       "block_order": [
-        "heading",
         "text",
+        "heading",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
-        "image_overlay_opacity": 10,
-        "image_height": "medium",
+        "image": "shopify:\/\/shop_images\/banner_2_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -97,8 +97,103 @@
         "show_text_below": true
       }
     },
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
+      "type": "shop-by-category",
+      "blocks": {
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bundles.png",
+            "title": "Bundles",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pure-collagen.png",
+            "title": "Pure Collagen",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a7c63b7b-23df-4332-88fc-fa24462ddda7": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/creamers.png",
+            "title": "Creamers",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f149d48a-dd6c-4675-b3c5-02325035c13f": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bundles.png",
+            "title": "Lattes",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e6642fe7-b998-4da4-a830-56678ae1432a": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pure-collagen.png",
+            "title": "Collagen Blends",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9ad36d64-a134-4032-9131-126748c2871c": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/creamers.png",
+            "title": "All",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25",
+        "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b",
+        "a7c63b7b-23df-4332-88fc-fa24462ddda7",
+        "f149d48a-dd6c-4675-b3c5-02325035c13f",
+        "e6642fe7-b998-4da4-a830-56678ae1432a",
+        "9ad36d64-a134-4032-9131-126748c2871c"
+      ],
+      "settings": {
+        "title": "Shop by category",
+        "heading_size": "h2",
+        "background_color": "#2a7de1",
+        "margin_top": 0,
+        "margin_bottom": 100,
+        "choose_layout": "carousel",
+        "collection": "all",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "color_scheme": "accent-2",
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Our Bestsellers",
         "heading_size": "h2",
@@ -308,6 +403,7 @@
   "order": [
     "image_banner",
     "16584952237a3d1d62",
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
     "featured_collection",
     "1649910994d4f0cc54",
     "multicolumn",
