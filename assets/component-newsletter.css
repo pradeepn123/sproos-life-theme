@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 750px) {
   .newsletter-form {
-    align-items: flex-start;
+    align-items: center;
     margin: 0 auto;
     margin-top: 2rem !important;
   }
@@ -68,5 +68,35 @@
 }
 
 .newsletter-form__button .icon {
-  width: 1.5rem;
+  width: 2rem;
+  color: #aaaaaa;
+}
+
+.newsletter__wrapper h2{
+  text-transform: initial;
+}
+
+.newsletter{
+  position: relative;
+}
+.newsletter__wrapper{
+  z-index: 1;
+}
+.top__wave{
+  position: absolute;
+  left: 0;
+  top: -80px;  
+}
+.bottom__wave{
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+}
+
+@media screen and (max-width: 749px) {
+  .bottom__wave{
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+  } 
 }
