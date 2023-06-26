@@ -59,7 +59,6 @@
         justify-content: flex-start;
     }
     .footer_plus__copyright{
-        margin: 40px 0;
         text-align: center;
     }
     .footer_plus__copyright small{
@@ -85,11 +84,23 @@
     .footer_plus__content-bottom .footer__content-bottom-wrapper{
         border-bottom: unset;
     }
+    .copyright__content--horizontal__line{
+        border-bottom: 1px solid #dddddd;
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 410px){
     .footer_plus__content-top .footer_plus__menu-wrapper{
         gap: 8rem;
+    }
+}
+
+@media screen and (min-width: 520px){
+    .footer_plus__content-bottom .list-payment {
+        justify-content: flex-start;
+        margin: -0.5rem;
+        padding-top: 0;
     }
 }
 
