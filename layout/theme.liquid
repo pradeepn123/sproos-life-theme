@@ -222,7 +222,11 @@
   
       {{ 'base.css' | asset_url | stylesheet_tag }}
       {{ 'sproos.css' | asset_url | stylesheet_tag }}
-  
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
       {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
       {%- endunless -%}
@@ -397,7 +401,7 @@
           </a>
         </div>
       </div>
-    </modal-dialog>
+    </modal-dialog>   
 
     </body>
   </html>

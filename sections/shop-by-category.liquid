@@ -142,10 +142,10 @@
                 {%- endif -%}
             </slider-component>
         {% else %}
-            <section class="carousel-wrap">
-                <ul class="carousel">
-                    {%- for product in section.settings.collection.products limit: 5 -%}                    
-                        <div class="items main-pos" id="{{ forloop.index }}">
+            <div class="swiper-container two">
+		        <div class="swiper-wrapper">					
+                    {%- for product in section.settings.collection.products  -%}                    
+                        <div class="swiper-slide">
                             {% render 'card-product',
                                 card_product: product,
                                 media_aspect_ratio: section.settings.image_ratio,
@@ -155,162 +155,8 @@
                             %}
                         </div>
                     {%- endfor -%}
-                </ul>
-            </section>
-            <section class="carousel-wrap">
-                <ul class="carousel">
-                    <li class="items main-pos" id="1">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Oscar Owens</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="items right-pos" id="2">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Helena Baker</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="items back-pos" id="3">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Mark Holden</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                        
-                    </li>
-                    <li class="items back-pos" id="4">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Frederick Greer</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                        
-                    </li>
-                    <li class="items back-pos" id="5">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Jonathan Richards</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                        
-                    </li>
-                    <li class="items back-pos" id="6">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Emma Frazier</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                        
-                    </li>
-                    <li class="items left-pos" id="7">
-                        <div class="review-card review-card--option-4 text-center">
-                            <div class="review-card-img">&nbsp;</div>
-                            <div class="review-author">
-                                <span class="ra-author">Oscar Owens</span>
-                                <ul class="ra-rating-star">
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE838;</i></li>
-                                    <li><i class="material-icons">&#xE839;</i></li>
-                                </ul>
-                            </div>
-                            <div class="review-content">
-                                <p>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut
-                                    lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                                    Lorem ipsum dolor sit amet, cssonsectetur adipiscing elit. </p>
-                            </div>
-                        </div>
-                        
-                    </li>
-                </ul>
-                <span class="slider">
-                    <a href="javascript:void(0);" value="Prev" id="prev"><i class="material-icons">&#xE314;</i></a>
-                    <a href="javascript:void(0);" value="Next" id="next"><i class="material-icons">&#xE315;</i></a>
-                    
-                </span>
-            </section>
+                </div>
+            </div>
             
         {% endif %}
   
@@ -328,116 +174,23 @@
     {% render 'wave-bottom', color: bg_color, class: "wave-bottom" %}
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 
 <script>
-   //slideshow style interval
-var autoSwap = setInterval( swap,7000);
-
-//pause slideshow and reinstantiate on mouseout
-$('.carousel, .slider').hover(
-  function () {
-    clearInterval(autoSwap);
-}, 
-  function () {
-   autoSwap = setInterval( swap,7000);
-});
-
-//global variables
-var items = [];
-var startItem = 1;
-var position = 0;
-var itemCount = $('.carousel>li').length;
-var leftpos = itemCount;
-var resetCount = itemCount;
-
-//unused: gather text inside items class
-$('.carousel>li').each(function(index) {
-    items[index] = $(this).text();
-});
-
-//swap images function
-function swap(action) {
-  var direction = action;
-  
-  //moving carousel backwards
-  if(direction == 'counter-clockwise') {
-    var leftitem = $('.left-pos').attr('id') - 1;
-    if(leftitem == 0) {
-      leftitem = itemCount;
-    }
-    
-    $('.right-pos').removeClass('right-pos').addClass('back-pos');
-    $('.main-pos').removeClass('main-pos').addClass('right-pos');
-    $('.left-pos').removeClass('left-pos').addClass('main-pos');
-    $('#'+leftitem+'').removeClass('back-pos').addClass('left-pos');
-    
-    startItem--;
-    if(startItem < 1) {
-      startItem = itemCount;
-    }
-  }
-  
-  //moving carousel forward
-  if(direction == 'clockwise' || direction == '' || direction == null ) {
-    function pos(positionvalue) {
-      if(positionvalue != 'leftposition') {
-        //increment image list id
-        position++;
-        
-        //if final result is greater than image count, reset position.
-        if((startItem+position) > resetCount) {
-          position = 1-startItem;
-        }
+    var swiper = new Swiper( '.swiper-container.two', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      effect: 'coverflow',		
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: false,
+      initialSlide: 3,
+      coverflow: {
+        rotate: 0,
+        stretch: 100,
+        depth: 150,
+        modifier: 1.5,
+        slideShadows : false,
       }
-    
-      //setting the left positioned item
-      if(positionvalue == 'leftposition') {
-        //left positioned image should always be one left than main positioned image.
-        position = startItem - 1;
-      
-        //reset last image in list to left position if first image is in main position
-        if(position < 1) {
-          position = itemCount;
-        }
-      }
-   
-      return position;
-    }  
-  
-    $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
-    $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
-    $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
-    $('#'+ pos('leftposition') +'').removeClass('left-pos').addClass('back-pos');
-
-        startItem++;
-        position=0;
-        if(startItem > itemCount) {
-        startItem = 1;
-        }
-    }
-    }
-
-    //next button click function
-    $('#next').click(function() {
-    swap('clockwise');
-    });
-
-    //prev button click function
-    $('#prev').click(function() {
-    swap('counter-clockwise');
-    });
-
-    //if any visible items are clicked
-    $('.items').click(function() {
-    if($(this).attr('class') == 'items left-pos') {
-        swap('counter-clockwise'); 
-    }
-    else {
-        swap('clockwise'); 
-    }
     });
 </script>
 
