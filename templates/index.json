@@ -104,6 +104,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/bundles.png",
+            "collection": "bundles",
             "title": "Bundles",
             "text": "",
             "link_label": "",
@@ -114,6 +115,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/pure-collagen.png",
+            "collection": "pure-collagen",
             "title": "Pure Collagen",
             "text": "",
             "link_label": "",
@@ -124,6 +126,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/creamers.png",
+            "collection": "creamers",
             "title": "Creamers",
             "text": "",
             "link_label": "",
@@ -134,6 +137,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/bundles.png",
+            "collection": "lattes",
             "title": "Lattes",
             "text": "",
             "link_label": "",
@@ -144,6 +148,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/pure-collagen.png",
+            "collection": "collagen-blends",
             "title": "Collagen Blends",
             "text": "",
             "link_label": "",
@@ -154,6 +159,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/creamers.png",
+            "collection": "all",
             "title": "All",
             "text": "",
             "link_label": "",
@@ -172,15 +178,15 @@
       "settings": {
         "title": "Shop by category",
         "heading_size": "h2",
+        "heading_alignment": "center",
         "background_color": "#2a7de1",
         "margin_top": 0,
         "margin_bottom": 100,
-        "choose_layout": "carousel",
         "collection": "all",
         "products_to_show": 6,
         "columns_desktop": 4,
         "color_scheme": "accent-2",
-        "show_view_all": true,
+        "show_view_all": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -215,11 +221,23 @@
     "1649910994d4f0cc54": {
       "type": "image-with-text",
       "blocks": {
+        "3d27d214-74e6-4652-bdf6-817bb07f5ef7": {
+          "type": "caption",
+          "settings": {
+            "caption": "it’s what’s inside that counts",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
         "164991099453dbbec2-0": {
           "type": "heading",
           "settings": {
             "heading": "Why Collagen?",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "padding_top": 28,
+            "padding_bottom": 0
           }
         },
         "164991099453dbbec2-1": {
@@ -238,19 +256,22 @@
         }
       },
       "block_order": [
+        "3d27d214-74e6-4652-bdf6-817bb07f5ef7",
         "164991099453dbbec2-0",
         "164991099453dbbec2-1",
         "164991099453dbbec2-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_Mar21-149.jpg",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/why_collagen.jpg",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
+        "text_color": "#2a7de1",
+        "description_color": "#121212",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 72
