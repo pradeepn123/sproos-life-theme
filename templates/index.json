@@ -3,18 +3,18 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Your coffee just got butter.",
-            "text_style": "subtitle"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
             "heading": "NEW! Keto Creamer",
             "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Your coffee just got butter.",
+            "text_style": "subtitle"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
@@ -30,14 +30,14 @@
         }
       },
       "block_order": [
-        "text",
         "heading",
+        "text",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_2_1.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -405,59 +405,79 @@
         "html_area": ""
       }
     },
-    "46ecf684-34c4-4720-99e7-7925b42df09b": {
-      "type": "newsletter",
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4": {
+      "type": "instagram-feed",
       "blocks": {
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-0": {
-          "type": "heading",
+        "c2a1ddb6-fbc2-496e-9f7f-74fff8ea1699": {
+          "type": "select",
           "settings": {
-            "heading": "Discover a better way to live!",
-            "heading_size": "h2"
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
           }
         },
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-2": {
-          "type": "email_form",
+        "b1896a26-df57-4fcd-a521-9d40f0ddc929": {
+          "type": "select",
           "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
           }
         },
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-1": {
-          "type": "paragraph",
+        "a9125596-22a6-46e9-a8aa-bb9011527f29": {
+          "type": "select",
           "settings": {
-            "text": "<p>Sign up to get 20% OFF early access to new products, recipes and exclusive discounts.<\/p>"
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_216.png"
+          }
+        },
+        "3e51eacb-2301-4bbe-b2d9-6fd007acbc62": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
+          }
+        },
+        "d940a922-c813-45c1-aa25-4ce63e9e1460": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
+          }
+        },
+        "fb23bff7-86fb-4009-bcec-28dd18105adb": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
+          }
+        },
+        "e1b87dd8-48e0-4a82-9665-ca5525319bb9": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
           }
         }
       },
       "block_order": [
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-0",
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-2",
-        "template--19523083534655__46ecf684-34c4-4720-99e7-7925b42df09b-168750073458b91a9b-1"
+        "c2a1ddb6-fbc2-496e-9f7f-74fff8ea1699",
+        "b1896a26-df57-4fcd-a521-9d40f0ddc929",
+        "a9125596-22a6-46e9-a8aa-bb9011527f29",
+        "3e51eacb-2301-4bbe-b2d9-6fd007acbc62",
+        "d940a922-c813-45c1-aa25-4ce63e9e1460",
+        "fb23bff7-86fb-4009-bcec-28dd18105adb",
+        "e1b87dd8-48e0-4a82-9665-ca5525319bb9"
       ],
       "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 16,
-        "margin_top": 100,
-        "margin_bottom": 60,
-        "top_wave": true,
-        "bottom_wave": true
-    "5449d5f4-c776-4ae2-8feb-25299f23ddc4": {
-      "type": "instagram-feed",
-      "settings": {
+        "section_title": "<p>Follow us <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">@sprooslife<\/a><\/p>",
+        "title_font-size": 40,
+        "title_font-size_mobile": 32,
+        "title_position": "center",
+        "title_position_mobile": "left"
       }
     }
   },
   "order": [
     "image_banner",
     "16584952237a3d1d62",
-    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
     "featured_collection",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "1649910994d4f0cc54",
     "multicolumn",
     "164991100118f2233a",
     "16499520255e00269a",
-    "46ecf684-34c4-4720-99e7-7925b42df09b",
     "5449d5f4-c776-4ae2-8feb-25299f23ddc4"
   ]
 }

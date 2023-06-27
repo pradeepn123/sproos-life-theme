@@ -201,40 +201,6 @@
           "product-page-alignment": "auto",
           "cart-page-alignment": "auto"
         }
-      },
-      "footer-plus": {
-        "type": "footer-plus",
-        "blocks": {
-          "footer-plus-0": {
-            "type": "link_list",
-            "settings": {
-              "heading": "",
-              "menu": "footer"
-            }
-          },
-          "b9ca75e8-d060-4e31-bd53-a089095730e5": {
-            "type": "link_list",
-            "settings": {
-              "heading": "",
-              "menu": "homepage-menu"
-            }
-          }
-        },
-        "block_order": [
-          "footer-plus-0",
-          "b9ca75e8-d060-4e31-bd53-a089095730e5"
-        ],
-        "settings": {
-          "color_scheme": "background-1",
-          "footer_logo": "shopify:\/\/shop_images\/sproos_logo.png",
-          "show_social": true,
-          "enable_country_selector": true,
-          "enable_language_selector": false,
-          "payment_enable": true,
-          "margin_top": 64,
-          "padding_top": 36,
-          "padding_bottom": 36
-        }
       }
     },
     "content_for_index": [
