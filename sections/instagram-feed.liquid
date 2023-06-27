@@ -1,0 +1,117 @@
+{{ 'section-instagram-feed.css' | asset_url | stylesheet_tag }}
+{% style %}
+    .section_title{
+        font-size: {{ section.settings.title_font-size }}px;
+        text-align: {{ section.settings.title_position }};
+    }
+    @media (max-width: 768px){
+        .section_title{
+            font-size: {{ section.settings.title_font-size_mobile }}px;
+            text-align: {{ section.settings.title_position_mobile }};
+        }
+    }
+{% endstyle %}
+<div class="instagram_feed_wrapper page-width-desktop">
+    <span class="section_title">{{ section.settings.section_title }}</span>
+    <a href="{{ section.settings.instagram_redirection_link }}">
+        <div class="instagram_image_section">
+            {% for block in section.blocks %}
+                <div class="image_block">
+                    <img src="{{ block.settings.instagram_image_block | img_url: 'master' }}" alt="instagram image">
+                </div>
+            {% endfor %}
+        </div>
+    </a>
+</div>
+
+{% schema %}
+{
+    "name": "Instagram Feed",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "section_title",
+            "label": "Section Title"
+        },
+        {
+            "type": "url",
+            "id": "instagram_redirection_link",
+            "label": "Instagram redirection link"
+        },
+        {
+            "type": "range",
+            "id": "title_font-size",
+            "label": "Title: font-size",
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "title_font-size_mobile",
+            "label": "Title: font-size for mobile",
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 32
+        },
+        {
+            "type": "select",
+            "id": "title_position",
+            "label": "Title: Position",
+            "options":[
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "title_position_mobile",
+            "label": "Title: Position on mobile screen",
+            "options":[
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "Image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "instagram_image_block",
+                    "label": "Instagram image block"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Instagram Feed"
+        }
+    ]
+}
+{% endschema %}
