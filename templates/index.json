@@ -444,18 +444,21 @@
         },
         "d940a922-c813-45c1-aa25-4ce63e9e1460": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
           }
         },
         "fb23bff7-86fb-4009-bcec-28dd18105adb": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
           }
         },
         "e1b87dd8-48e0-4a82-9665-ca5525319bb9": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
           }
