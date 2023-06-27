@@ -22,7 +22,7 @@
     background-image: url('{{ section.settings.collection_banner_title_background | img_url: 'master' }}');
     background-repeat: no-repeat;
   }
-  .grid__item{
+  .section-{{ section.id }}-padding .grid__item{
     width: calc(100% / {{ section.settings.products_to_show }} - 30px) !important;
     max-width: calc(100% /{{ section.settings.products_to_show }}) !important;
   }

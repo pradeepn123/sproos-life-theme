@@ -1,0 +1,95 @@
+{% style %}
+    .section-curved-marquee{
+        margin-top: -60px;
+    }
+    .section-curved-marquee svg path{
+        fill:transparent;
+        stroke: transparent;
+    }
+    .section-curved-marquee svg .text_size{
+        font-size: 20px;
+        fill: #C3E76B;
+        margin-right: 38px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }    
+{% endstyle %}
+<svg id="svg" viewBox="0 0 1440 111" xmlns="http://www.w3.org/2000/svg">
+    <path id="curve" d="M1 53.6648C60 68.6663 247.8 108.165 429 106.165C655.5 103.665 730.5 85.1643 1005 51.1643C1263.83 19.1053 1628.5 145.666 1703.5 173.666" stroke="black"/>
+    <text x="-1000">
+        <textPath xlink:href="#curve">
+        {%- for i in (1..50) -%}
+            <a class='text_size'>{{ section.settings.title }}</a>
+        {%- endfor -%}
+        </textPath>
+        <animate attributeName="x" dur="50s" values="-2000;0" repeatCount="indefinite"></animate>
+    </text>
+</svg>
+
+{% schema %}
+{
+  "name": "Curved Marquee",
+  "tag": "section",
+  "class": "section-curved-marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Making life simple",
+      "label": "Marquee title"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },    
+    {
+        "type": "color",
+        "id": "background_color",
+        "default": "#FFFFFF",
+        "label": "Section background color" 
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],  
+  "presets": [
+    {
+      "name": "Curved Marquee"
+    }
+  ]
+}
+{% endschema %}

@@ -35,7 +35,7 @@
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
+        "image": "shopify:\/\/shop_images\/banner_2_1.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -197,6 +197,16 @@
         "padding_bottom": 36
       }
     },
+    "ca98da10-075c-4ac2-bf5d-7aec7bedbe18": {
+      "type": "curved-marquee",
+      "settings": {
+        "title": "Making life simple . Sproos life .",
+        "heading_size": "h1",
+        "background_color": "#ffffff",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -215,28 +225,6 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 76,
-        "padding_bottom": 36
-      }
-    },
-    "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
-      "type": "featured-collection-with-banner",
-      "settings": {
-        "title": "Save with Bundles",
-        "heading_size": "h2",
-        "collection": "frontpage",
-        "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
-        "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_view_all": true,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -297,6 +285,28 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 72
+      }
+    },
+    "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
+      "type": "featured-collection-with-banner",
+      "settings": {
+        "title": "Save with Bundles",
+        "heading_size": "h2",
+        "collection": "frontpage",
+        "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
+        "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -462,22 +472,64 @@
       ],
       "settings": {
         "section_title": "<p>Follow us <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">@sprooslife<\/a><\/p>",
+        "instagram_redirection_link": "",
         "title_font-size": 40,
         "title_font-size_mobile": 32,
         "title_position": "center",
         "title_position_mobile": "left"
+      }
+    },
+    "0259c5ae-e4c5-4da0-b94f-123231c3b32c": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover a better way to live!",
+            "heading_size": "h2"
+          }
+        },
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up to get 20% OFF early access to new products, recipes and exclusive discounts.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-0",
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-2",
+        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "margin_top": 100,
+        "margin_bottom": 60,
+        "top_wave": true,
+        "bottom_wave": true
       }
     }
   },
   "order": [
     "image_banner",
     "16584952237a3d1d62",
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
+    "ca98da10-075c-4ac2-bf5d-7aec7bedbe18",
     "featured_collection",
-    "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "1649910994d4f0cc54",
+    "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "multicolumn",
     "164991100118f2233a",
     "16499520255e00269a",
-    "5449d5f4-c776-4ae2-8feb-25299f23ddc4"
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
+    "0259c5ae-e4c5-4da0-b94f-123231c3b32c"
   ]
 }
