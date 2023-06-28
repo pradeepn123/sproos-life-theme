@@ -292,7 +292,7 @@
       "settings": {
         "title": "Save with Bundles",
         "heading_size": "h2",
-        "collection": "frontpage",
+        "collection": "bundles",
         "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
         "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
         "products_to_show": 3,
