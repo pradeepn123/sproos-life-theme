@@ -11,12 +11,38 @@
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }  
+  
+  .color-design{
+    color: {{ section.settings.section_text_color }};
+    background: {{ section.settings.section_background_color }};
+  }
+  
+  .color-design h1,.color-design h2, .color-design h3 {
+    color: {{ section.settings.section_text_color }};
+  }
 
 {%- endstyle -%}
 
+{% assign color_variable = section.settings.section_background_color %}
+
+{% case section.settings.color_scheme %}
+  {% when 'accent-1' %}
+      {% assign color_variable = 'var(--gradient-base-accent-1)' %}
+  {% when 'accent-2' %}
+      {% assign color_variable = 'var(--gradient-base-accent-2)' %}
+  {% when 'background-1' %}
+      {% assign color_variable = 'var(--gradient-base-background-1)' %}
+  {% when 'background-2' %}
+      {% assign color_variable = 'var(--gradient-base-background-2)' %}
+  {% when 'inverse' %}
+      {% assign color_variable = 'rgb(var(--color-base-text))' %}
+  {% when 'design' %}
+    {% assign color_variable = section.settings.section_background_color %}
+{% endcase %}
+
 
 <div class="color-{{ section.settings.color_scheme }} images-with-tabs__section images-with-tabs__wave">
-  {% render 'wave-top' class: 'wave--top', color: '#ff8189' %}
+  {% render 'wave-top' class: 'wave--top', color: color_variable %}
   <div class="images-with-tabs__wrapper section-{{ section.id }}-padding">
  
     <div class="images-with-tabs__wrapper-content page-width mobile__tabs">
@@ -38,7 +64,7 @@
 
       <div class="images-with-tabs__image-block">
         {% for block in section.blocks %}
-          <img class="image-panel {% if forloop.index == 1 %}is-show-image{% endif %}" src="{{ block.settings.image | img_url: '250x350' }}" />
+            <img class="image-panel {% if forloop.index == 1 %}is-show-image{% endif %} " src="{{ block.settings.image | img_url: 'master' }}">
         {% endfor %}
       </div>
 
@@ -56,12 +82,17 @@
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               <div class="swiper-slide">
-                <img src="{{ block.settings.image | img_url: '250x350' }}"/>
+                <img src="{{ block.settings.image | img_url: '250x250' }}"/>
                 <h2 class="swiper-slide__title">   {{ block.settings.heading | split: ' ' | join: '<br>' }} </h2>
                 <div class="swiper-slide__description">
                   {{ block.settings.description }}
                 </div> 
-                <button class="image_with_tabs--button">Shop Now</button>
+                {% comment %} <button class="image_with_tabs--button">Shop Now</button> {% endcomment %}
+                {%- if section.settings.button_label != blank -%}
+                  <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button button--secondary image_with_tabs--button">
+                    {{ section.settings.button_label | escape }}
+                  </a>
+                {% endif %}
              </div>
             {% endfor %}            
           </div>
@@ -70,7 +101,7 @@
     </div>
     
   </div>
-  {% render 'wave-bottom', class: 'wave--bottom', color: '#ff8189' %}
+  {% render 'wave-bottom', class: 'wave--bottom', color: color_variable %}
 </div>
 
 <script>
@@ -104,12 +135,7 @@
     slidesPerView: 1.5,
     spaceBetween: 20,
     centeredSlides: true,
-    breakpoints: {
-      450: {
-          slidesPerView: 2,
-          spaceBetween: 20
-      },     
-  }
+
   });
 
 </script>
@@ -145,10 +171,26 @@
         {
           "value": "inverse",
           "label": "t:sections.newsletter.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "design",
+          "label": "Custom Color"
         }
       ],
       "default": "background-1",
       "label": "t:sections.newsletter.settings.color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Section text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section background color",
+      "default": "#fff"
     },
     {
       "type": "header",
