@@ -17,9 +17,40 @@
     box-shadow: 0px 15px 21px 0px #32324714;
     box-shadow: 0px 12px 12px 0px #32324714;
 }
+.featured-collection-banner .collection-banner-mobile{
+    display: none;
+}
+.featured-collection-banner .banner_title_top_mobile, .featured-collection-banner .banner_title_bottom_mobile{
+    display: none;
+}
 @media (max-width: 767px){
     .featured-collection-banner .collection-banner{
         display: none;
+    }
+    .featured-collection-banner .banner_title_top_mobile, .featured-collection-banner .banner_title_bottom_mobile{
+        display: block;
+    }
+    .featured-collection-banner .collection-banner-mobile{
+        display: block !important;
+        background: #2A7DE1;
+        /* background-size: 100% !important; */
+        /* height: 235px; */
+        /* position: relative; */
+    }
+    .featured-collection-banner .collection-banner-mobile .banner_title_mobile{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #fff;
+    }
+    .featured-collection-banner .collection-banner-mobile .banner_title_mobile a{
+        font-size: 17px;
+        color: #fff !important;
     }
 }
 .cover::before {

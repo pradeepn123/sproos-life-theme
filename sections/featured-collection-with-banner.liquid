@@ -66,13 +66,19 @@
               {%- endif -%}
           </div>
       </div>
-      <div class="collection-banner-mobile" style="display: none;">
-        <div>
-          {% render 'wave-top' %}
-          {% render 'wave-bottom' %}
-        </div>
-        {{ section.settings.title | escape }}
+      {% render 'wave-top', class: 'banner_title_top_mobile' %}
+      <div class="collection-banner-mobile">
+          <div class="banner_title_mobile">
+            {{ section.settings.title | escape }}
+            <a href="{{ section.settings.collection.url }}"
+              class="shop_all_button"
+              aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+            >
+              {{ 'Shop all' }}
+          </a>
+          </div>
       </div>
+      {% render 'wave-bottom', color: '#2A7DE1', class: 'banner_title_bottom_mobile' %}
     {% endunless %}
 
     {% comment %} Swiper container {% endcomment %}
@@ -239,6 +245,11 @@
         "type": "image_picker",
         "id": "collection_banner_title_background",
         "label": "Collection banner - title background"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_banner_title_background_mobile",
+      "label": "Collection banner - title background (Mobile)"
     },
     {
       "type": "range",

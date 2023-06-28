@@ -35,9 +35,9 @@
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_2_1.jpg",
+        "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
         "image_overlay_opacity": 10,
-        "image_height": "large",
+        "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -95,6 +95,27 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Our Bestsellers",
+        "heading_size": "h2",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36
       }
     },
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
@@ -197,8 +218,8 @@
         "padding_bottom": 36
       }
     },
-    "ca98da10-075c-4ac2-bf5d-7aec7bedbe18": {
-      "type": "curved-marquee",
+    "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
+      "type": "featured-collection-with-banner",
       "settings": {
         "title": "Making life simple . Sproos life .",
         "heading_size": "h1",
@@ -260,17 +281,20 @@
         "title": "Our Bestsellers",
         "heading_size": "h2",
         "collection": "frontpage",
-        "products_to_show": 4,
-        "columns_desktop": 4,
+        "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
+        "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
+        "collection_banner_title_background_mobile": "shopify:\/\/shop_images\/WAVE_BANNER.png",
+        "products_to_show": 3,
+        "columns_desktop": 3,
         "color_scheme": "background-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 76,
+        "swipe_on_mobile": true,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -331,28 +355,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 72
-      }
-    },
-    "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
-      "type": "featured-collection-with-banner",
-      "settings": {
-        "title": "Save with Bundles",
-        "heading_size": "h2",
-        "collection": "bundles",
-        "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
-        "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_view_all": true,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -436,6 +438,7 @@
     },
     "164991100118f2233a": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "On the blog",
         "heading_size": "h1",
@@ -449,6 +452,76 @@
         "show_view_all": true,
         "padding_top": 72,
         "padding_bottom": 36
+      }
+    },
+    "f7d427db-8788-4b81-b9a2-53aa95eda803": {
+      "type": "blogs-section",
+      "blocks": {
+        "ec224298-3e3e-41d6-a7c3-bbcaa0d74c80": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/how-to-choose-a-collagen-powder",
+            "row_span_start": 1,
+            "row_span_end": 3,
+            "col_span_start": 1,
+            "col_span_end": 2,
+            "article_title_font_size": 32,
+            "article_title_color": "#ffffff"
+          }
+        },
+        "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/gingerbread-collagen-latte",
+            "row_span_start": 1,
+            "row_span_end": 2,
+            "col_span_start": 2,
+            "col_span_end": 3,
+            "article_title_font_size": 32,
+            "article_title_color": "#ffffff"
+          }
+        },
+        "7554fefd-ebce-4ae2-b173-ad42d3021d62": {
+          "type": "select",
+          "disabled": true,
+          "settings": {
+            "blog_article": "blog\/apple-pie-smoothie",
+            "row_span_start": 2,
+            "row_span_end": 3,
+            "col_span_start": 2,
+            "col_span_end": 3,
+            "article_title_font_size": 24,
+            "article_title_color": "#ffffff"
+          }
+        },
+        "3f75139b-99ad-461b-b6ef-7e7eb7f53767": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/cranberry-ginger-mocktail",
+            "row_span_start": 2,
+            "row_span_end": 3,
+            "col_span_start": 2,
+            "col_span_end": 3,
+            "article_title_font_size": 32,
+            "article_title_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "ec224298-3e3e-41d6-a7c3-bbcaa0d74c80",
+        "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e",
+        "7554fefd-ebce-4ae2-b173-ad42d3021d62",
+        "3f75139b-99ad-461b-b6ef-7e7eb7f53767"
+      ],
+      "settings": {
+        "section_background_color": "#fda3a2",
+        "section_text_color": "#ffffff",
+        "heading_text_align": "center",
+        "section_heading": "Most Popular Blogs",
+        "learn_more_link": "shopify:\/\/blogs\/blog",
+        "learn_more_button_text": "Learn More",
+        "article_limit": 3,
+        "row_height": 300
       }
     },
     "16499520255e00269a": {
@@ -490,21 +563,18 @@
         },
         "d940a922-c813-45c1-aa25-4ce63e9e1460": {
           "type": "select",
-          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
           }
         },
         "fb23bff7-86fb-4009-bcec-28dd18105adb": {
           "type": "select",
-          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
           }
         },
         "e1b87dd8-48e0-4a82-9665-ca5525319bb9": {
           "type": "select",
-          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
           }
@@ -527,44 +597,6 @@
         "title_position": "center",
         "title_position_mobile": "left"
       }
-    },
-    "0259c5ae-e4c5-4da0-b94f-123231c3b32c": {
-      "type": "newsletter",
-      "blocks": {
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Discover a better way to live!",
-            "heading_size": "h2"
-          }
-        },
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-2": {
-          "type": "email_form",
-          "settings": {
-          }
-        },
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Sign up to get 20% OFF early access to new products, recipes and exclusive discounts.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-0",
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-2",
-        "template--19608014946623__0259c5ae-e4c5-4da0-b94f-123231c3b32c-16878744419bcce39d-1"
-      ],
-      "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 16,
-        "margin_top": 100,
-        "margin_bottom": 60,
-        "top_wave": true,
-        "bottom_wave": true
-      }
     }
   },
   "order": [
@@ -574,12 +606,13 @@
     "ca98da10-075c-4ac2-bf5d-7aec7bedbe18",
     "253097bf-1e47-4ad8-9abb-313f30c4d579",
     "featured_collection",
-    "1649910994d4f0cc54",
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
+    "1649910994d4f0cc54",
     "multicolumn",
     "164991100118f2233a",
+    "f7d427db-8788-4b81-b9a2-53aa95eda803",
     "16499520255e00269a",
-    "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
-    "0259c5ae-e4c5-4da0-b94f-123231c3b32c"
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4"
   ]
 }
