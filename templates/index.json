@@ -202,7 +202,7 @@
       "settings": {
         "title": "Making life simple",
         "heading_size": "h1",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "margin_top": 36,
         "margin_bottom": 36
       }
@@ -601,6 +601,44 @@
         "title_position": "center",
         "title_position_mobile": "left"
       }
+    },
+    "77649fe1-487b-4b6f-8d29-b2e335e52a1b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover a better way to live!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up to get 20% OFF early access to new products, recipes and exclusive discounts.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0",
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2",
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 40,
+        "margin_bottom": 52,
+        "top_wave": true,
+        "bottom_wave": true
+      }
     }
   },
   "order": [
@@ -616,6 +654,7 @@
     "164991100118f2233a",
     "f7d427db-8788-4b81-b9a2-53aa95eda803",
     "16499520255e00269a",
-    "5449d5f4-c776-4ae2-8feb-25299f23ddc4"
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
+    "77649fe1-487b-4b6f-8d29-b2e335e52a1b"
   ]
 }
