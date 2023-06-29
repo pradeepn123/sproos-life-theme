@@ -483,20 +483,6 @@
             "article_title_color": "#ffffff"
           }
         },
-        "7554fefd-ebce-4ae2-b173-ad42d3021d62": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "blog_article": "blog\/apple-pie-smoothie",
-            "row_span_start": 2,
-            "row_span_end": 3,
-            "col_span_start": 2,
-            "col_span_end": 3,
-            "article_title_font_size": 24,
-            "article_title_font_size_mobile": 18,
-            "article_title_color": "#ffffff"
-          }
-        },
         "3f75139b-99ad-461b-b6ef-7e7eb7f53767": {
           "type": "select",
           "settings": {
@@ -514,7 +500,6 @@
       "block_order": [
         "ec224298-3e3e-41d6-a7c3-bbcaa0d74c80",
         "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e",
-        "7554fefd-ebce-4ae2-b173-ad42d3021d62",
         "3f75139b-99ad-461b-b6ef-7e7eb7f53767"
       ],
       "settings": {
