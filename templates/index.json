@@ -207,6 +207,52 @@
         "margin_bottom": 36
       }
     },
+    "253097bf-1e47-4ad8-9abb-313f30c4d579": {
+      "type": "images-with-tabs",
+      "blocks": {
+        "8c9eadd4-a9e5-4068-b05d-073df5009a7a": {
+          "type": "differences",
+          "settings": {
+            "heading": "SUSTAINABLY SOURCED",
+            "image": "shopify:\/\/shop_images\/Rectangle_41.png",
+            "description": "By choosing our sustainably sourced offerings, you can feel confident that you are making a positive impact on the planet while enjoying high-quality and ethically produced goods."
+          }
+        },
+        "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4": {
+          "type": "differences",
+          "settings": {
+            "heading": "SUSTAINABLY SOURCED",
+            "image": "shopify:\/\/shop_images\/Rectangle_41.png",
+            "description": "You can feel confident that you are making a positive impact on the planet while enjoying high-quality and ethically produced goods."
+          }
+        },
+        "2e69cba0-2c4a-468e-a3fd-cb42e783c23c": {
+          "type": "differences",
+          "settings": {
+            "heading": "SUSTAINABLY SOURCED",
+            "image": "shopify:\/\/shop_images\/Rectangle_41.png",
+            "description": "By choosing our sustainably sourced offerings, you can feel confident that you are making a positive impact on the planet while enjoying high-quality and ethically produced goods."
+          }
+        }
+      },
+      "block_order": [
+        "8c9eadd4-a9e5-4068-b05d-073df5009a7a",
+        "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4",
+        "2e69cba0-2c4a-468e-a3fd-cb42e783c23c"
+      ],
+      "settings": {
+        "color_scheme": "design",
+        "section_text_color": "#ffffff",
+        "section_background_color": "#fca4a2",
+        "main_heading": "Our Differences",
+        "button_label": "Shop now",
+        "button_link": "#",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "margin_top": 76,
+        "margin_bottom": 152
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -526,6 +572,7 @@
     "16584952237a3d1d62",
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
     "ca98da10-075c-4ac2-bf5d-7aec7bedbe18",
+    "253097bf-1e47-4ad8-9abb-313f30c4d579",
     "featured_collection",
     "1649910994d4f0cc54",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
