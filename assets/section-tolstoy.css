@@ -1,0 +1,11 @@
+.qMWqRG_arrowButtonContainer{
+    display: none !important;
+}
+.qMWqRG_dotsContainer{
+    display: none !important;
+}
+@media (max-width: 925px){
+    .tolstoy_carousel_container{
+        padding: 0 0 0 16px !important;
+    }
+}
