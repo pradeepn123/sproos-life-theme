@@ -1,1 +1,101 @@
-<tolstoy-carousel data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}" class="tolstoy-carousel" id="{{ section.settings.publishId }}"  data-publish-id="{{ section.settings.publishId }}"  data-product-id="{{ product.id }}"></tolstoy-carousel>{% schema %}  {    "name": "Tolstoy carousel",    "settings": [      {        "type": "text",        "id": "publishId",        "label": "Publish id",        "default": "publishId"      }    ],    "presets": [{"name": "Tolstoy carousel","category": "Tolstoy Sections"}]  }{% endschema %}
+{{ 'section-tolstoy.css' | asset_url | stylesheet_tag }}
+{% style %}
+    #tolstoy-carousel-container-{{ section.settings.publishId }}{
+        margin: 0 auto;
+    }
+    #tolstoy-carousel-videos-container-{{ section.settings.publishId }}{
+        gap: 21px;
+    }
+    #tolstoy-carousel-video-container-{{ section.settings.publishId }}{
+        border-radius: 0 !important;
+    }
+    #tolstoy-carousel-video-container-{{ section.settings.publishId }} video{
+        border-radius: 0 !important;
+    }
+    #tolstoy-play-button-container-{{ section.settings.publishId }}{
+        background: #2A7DE1;
+        opacity: 1 !important;
+    }
+    @media (max-width: 767px){
+        #tolstoy-carousel-videos-container-{{ section.settings.publishId }}{
+            grid-template-columns: repeat(4, 240px) !important;
+        }
+        #tolstoy-carousel-container-{{ section.settings.publishId }}{
+            margin: 0 !important;
+            width: 100%;
+        }
+    }
+    
+    .tolstoy_carousel_wrapper .section_heading{
+        color: #000;
+    }
+{% endstyle %}
+<div class="tolstoy_carousel_wrapper" style="background: linear-gradient(0deg, {{ section.settings.section_background }} 0%, rgba(195, 231, 107, 0.00) 100%);">
+    <div class="tolstoy_carousel_container page-width">
+        <p class="section_heading" style="font-size: {{ section.settings.heading_font_size }}px;text-align:{{ section.settings.text_align }};">{{ section.settings.heading }}</p>
+        <tolstoy-carousel
+            data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+            class="tolstoy-carousel"
+            id="{{ section.settings.publishId }}"
+            data-publish-id="{{ section.settings.publishId }}"
+            data-product-id="{{ product.id }}"
+        ></tolstoy-carousel>
+    </div>
+    
+</div>
+{% render 'wave-bottom', color: section.settings.section_background %}
+
+{% schema %} 
+{ 
+    "name": "Tolstoy carousel", 
+    "settings": [ 
+        { "type": "text", 
+            "id": "publishId", 
+            "label": "Publish id", 
+            "default": "publishId" 
+        },
+        {
+            "type": "color",
+            "id": "section_background",
+            "label": "Section background",
+            "default": "#C3E76B"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+        },
+        {
+            "type": "range",
+            "id": "heading_font_size",
+            "label": "Heading font size",
+            "min": 10,
+            "max": 100,
+            "step": 1,
+            "default": 40
+        },
+        {
+            "type": "select",
+            "id": "text_align",
+            "label": "Text align",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                }
+            ]
+        }
+    ], 
+    "presets": [
+        {
+            "name": "Tolstoy carousel",
+            "category": "Tolstoy Sections"
+        }
+    ] 
+}
+{% endschema %}
