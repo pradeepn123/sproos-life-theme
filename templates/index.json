@@ -278,8 +278,66 @@
         "padding_bottom": 36
       }
     },
+    "182e606a-3868-4b09-81df-f6f7e0d9ebb0": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "04ff1d22-5a6c-4660-b51b-f63450244847": {
+          "type": "caption",
+          "settings": {
+            "caption": "it’s what’s inside that counts",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": 18,
+            "padding_top": 30,
+            "padding_bottom": 30
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Collagen?",
+            "heading_size": "h1",
+            "padding_top": 18,
+            "padding_bottom": 18
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify:\/\/pages\/science"
+          }
+        }
+      },
+      "block_order": [
+        "04ff1d22-5a6c-4660-b51b-f63450244847",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-0",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-1",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/why_collagen.jpg",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "text_color": "#2a7de1",
+        "description_color": "#121212",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1649910994d4f0cc54": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "3d27d214-74e6-4652-bdf6-817bb07f5ef7": {
           "type": "caption",
@@ -637,6 +695,7 @@
     "56644474-3c52-4e0e-9a66-9ec85b0d6849",
     "253097bf-1e47-4ad8-9abb-313f30c4d579",
     "featured_collection",
+    "182e606a-3868-4b09-81df-f6f7e0d9ebb0",
     "1649910994d4f0cc54",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "multicolumn",
