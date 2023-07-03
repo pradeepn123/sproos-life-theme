@@ -143,7 +143,21 @@
     <div class="footer_plus__copyright caption">
       <div class="page-width">
         <div class="copyright__content--horizontal__line">
-          <small class="copyright__content"> Copyright &copy; {{ 'now' | date: "%Y" }}, SPOOSLIFE <br class="break-para__mobile"> Terms of use Privacy Policy Refund Policy</small>
+          <small class="copyright__content"> Copyright &copy; {{ 'now' | date: "%Y" }}, SPOOSLIFE <br class="break-para__mobile"></small>
+          {%- for block in section.blocks -%}
+            {%- case block.type -%} 
+              {%- when 'fotter_bottom_link_list' -%}
+              <ul class="list-unstyled footer_bottom">
+                {%- for link in block.settings.bottom_menu.links -%}
+                  <li class="footer_plus-menu__items">
+                    <a href="{{ link.url }}" class="">
+                      {{ link.title }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endcase -%}
+          {%- endfor -%}          
         </div>
       </div>
     </div>
@@ -278,6 +292,25 @@
         {
           "type": "link_list",
           "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    { 
+      "limit": 1,  
+      "type": "fotter_bottom_link_list",
+      "name": "Footer bottom Menu Links",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "link_list",
+          "id": "bottom_menu",
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"

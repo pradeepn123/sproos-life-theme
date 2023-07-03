@@ -23,6 +23,9 @@
 .featured-collection-banner .banner_title_top_mobile, .featured-collection-banner .banner_title_bottom_mobile{
     display: none;
 }
+.featured-collection-banner .slider-mobile-gutter variant-selects{
+    display: none;
+}
 @media (max-width: 767px){
     .featured-collection-banner .collection-banner{
         display: none;
