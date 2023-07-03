@@ -405,6 +405,7 @@
           "type": "header",
           "settings": {
             "color_scheme": "background-1",
+            "header_background_mobile": "#FDA3A2",
             "logo_width": 90,
             "logo_position": "middle-left",
             "menu": "main-menu",
