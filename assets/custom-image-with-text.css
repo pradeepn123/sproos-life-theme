@@ -18,7 +18,7 @@
         width: 100%
     }
     .custom-image-with-text .image-with-text__content {
-        padding: 4rem 0 5rem;
+        padding: 4rem 0 0;
     }
 }
 
