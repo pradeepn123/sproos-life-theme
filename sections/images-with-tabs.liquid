@@ -83,16 +83,17 @@
             {% for block in section.blocks %}
               <div class="swiper-slide">
                 <img src="{{ block.settings.image | img_url: '250x250' }}"/>
-                <h2 class="swiper-slide__title">   {{ block.settings.heading | split: ' ' | join: '<br>' }} </h2>
-                <div class="swiper-slide__description">
-                  {{ block.settings.description }}
-                </div> 
-                {% comment %} <button class="image_with_tabs--button">Shop Now</button> {% endcomment %}
-                {%- if section.settings.button_label != blank -%}
-                  <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button button--secondary image_with_tabs--button">
-                    {{ section.settings.button_label | escape }}
-                  </a>
-                {% endif %}
+                <div class="swiper-slide__content">
+                  <h2 class="swiper-slide__title">   {{ block.settings.heading | split: ' ' | join: '<br>' }} </h2>
+                  <div class="swiper-slide__description">
+                    {{ block.settings.description }}
+                  </div> 
+                  {%- if section.settings.button_label != blank -%}
+                    <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button button--secondary image_with_tabs--button">
+                      {{ section.settings.button_label | escape }}
+                    </a>
+                  {% endif %}
+                </div>
              </div>
             {% endfor %}            
           </div>
