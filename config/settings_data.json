@@ -105,6 +105,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Free shipping on all orders $50+",
               "color_scheme": "inverse",
@@ -220,11 +221,19 @@
               "heading": "",
               "menu": "footer-2"
             }
+          },
+          "bb1046ac-6e79-4e9a-bb59-49f0870e4032": {
+            "type": "fotter_bottom_link_list",
+            "settings": {
+              "heading": "",
+              "bottom_menu": "footer-bottom"
+            }
           }
         },
         "block_order": [
           "footer-plus-0",
-          "4d2fade6-7cc0-4850-80f1-9a0ae2227ede"
+          "4d2fade6-7cc0-4850-80f1-9a0ae2227ede",
+          "bb1046ac-6e79-4e9a-bb59-49f0870e4032"
         ],
         "settings": {
           "color_scheme": "background-1",
@@ -233,8 +242,8 @@
           "enable_country_selector": true,
           "enable_language_selector": false,
           "payment_enable": true,
-          "margin_top": 40,
-          "padding_top": 36,
+          "margin_top": 68,
+          "padding_top": 48,
           "padding_bottom": 36
         }
       }

@@ -15,8 +15,21 @@
     text-align: left;
 }
 
+.footer_plus__copyright .copyright__content--horizontal__line{
+    display: flex;
+    column-gap: 16px;
+}
+.footer_plus__copyright .footer_bottom a{
+    color: rgba(var(--color-foreground),.75);
+    text-decoration: none;
+    font-size: 13px;
+}
+.footer_plus__copyright .footer_bottom{
+    display: flex;
+    column-gap: 16px;
+}
 .footer_plus__copyright small{
-    font-size: 12px
+    font-size: 13px;
 }
 .footer_plus__copyright .break-para__mobile{
     display: none;

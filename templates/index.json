@@ -225,7 +225,7 @@
         "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4": {
           "type": "differences",
           "settings": {
-            "heading": "SUSTAINABLY SOURCED",
+            "heading": "QUALITY FIRST",
             "image": "shopify:\/\/shop_images\/Rectangle_41.png",
             "description": "You can feel confident that you are making a positive impact on the planet while enjoying high-quality and ethically produced goods."
           }
@@ -233,7 +233,7 @@
         "2e69cba0-2c4a-468e-a3fd-cb42e783c23c": {
           "type": "differences",
           "settings": {
-            "heading": "SUSTAINABLY SOURCED",
+            "heading": "PURPOSEFUL INGREDIENTS",
             "image": "shopify:\/\/shop_images\/Rectangle_41.png",
             "description": "By choosing our sustainably sourced offerings, you can feel confident that you are making a positive impact on the planet while enjoying high-quality and ethically produced goods."
           }
@@ -624,18 +624,21 @@
         },
         "d940a922-c813-45c1-aa25-4ce63e9e1460": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
           }
         },
         "fb23bff7-86fb-4009-bcec-28dd18105adb": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
           }
         },
         "e1b87dd8-48e0-4a82-9665-ca5525319bb9": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
           }
@@ -666,7 +669,7 @@
           "type": "heading",
           "settings": {
             "heading": "Discover a better way to live!",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2": {

@@ -4,7 +4,7 @@
 
 .images-with-tabs__wave .wave--top{
   position: absolute;
-  top: -90px;
+  top: -100px;
   z-index: -1;
 }
 
