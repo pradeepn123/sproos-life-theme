@@ -395,6 +395,16 @@
         "padding_bottom": 72
       }
     },
+    "3cb6d275-3ac2-451f-be4e-cebafa5ef54d": {
+      "type": "tolstoy-carousel",
+      "settings": {
+        "publishId": "twlm7c9nmp92h",
+        "section_background": "#c3e76b",
+        "heading": "Get Curious",
+        "heading_font_size": 40,
+        "text_align": "center"
+      }
+    },
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
       "type": "featured-collection-with-banner",
       "settings": {
@@ -697,6 +707,7 @@
     "featured_collection",
     "182e606a-3868-4b09-81df-f6f7e0d9ebb0",
     "1649910994d4f0cc54",
+    "3cb6d275-3ac2-451f-be4e-cebafa5ef54d",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "multicolumn",
     "164991100118f2233a",
