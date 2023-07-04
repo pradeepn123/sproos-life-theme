@@ -11,8 +11,8 @@
  
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile | times: 0.75 | round: 0 }}px;
   }
   .collection-banner{
     background-image: url('{{ section.settings.collection_banner_image | img_url: 'master' }}');
@@ -26,10 +26,10 @@
     width: calc(100% / {{ section.settings.products_to_show }} - 30px) !important;
     max-width: calc(100% /{{ section.settings.products_to_show }}) !important;
   }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
   }
 {%- endstyle -%}
@@ -66,7 +66,7 @@
               {%- endif -%}
           </div>
       </div>
-      {% render 'wave-top', class: 'banner_title_top_mobile' %}
+      {% render 'wave-top', class: 'banner_title_top_mobile', color: '#2A7DE1' %}
       <div class="collection-banner-mobile">
           <div class="banner_title_mobile">
             {{ section.settings.title | escape }}
@@ -109,8 +109,16 @@
     spaceBetween: 15,
     noSwiping: false,
     breakpoints: {
-      768: {
+      1280: {
         slidesPerView: '3',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        spaceBetween: 30
+      },
+      768: {
+        slidesPerView: '2.2',
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -311,6 +319,30 @@
     {
       "type": "range",
       "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Section heading - mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
       "min": 0,
       "max": 100,
       "step": 4,
