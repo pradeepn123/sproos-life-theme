@@ -296,7 +296,7 @@
           "settings": {
             "heading": "Why Collagen?",
             "heading_size": "h1",
-            "padding_top": 18,
+            "padding_top": 0,
             "padding_bottom": 18
           }
         },
@@ -658,6 +658,8 @@
       "settings": {
         "section_title": "<p>Follow us <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">@sprooslife<\/a><\/p>",
         "instagram_redirection_link": "",
+        "margin_top": 48,
+        "margin_bottom": 124,
         "title_font-size": 40,
         "title_font-size_mobile": 32,
         "title_position": "center",

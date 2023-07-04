@@ -6,11 +6,16 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
-  .images-with-tabs__section {        
-    margin-top: {{ section.settings.margin_top }}px;
-    margin-bottom: {{ section.settings.margin_bottom }}px;
-  }  
+  .images-with-tabs__section {
+    margin-top: calc({{ section.settings.margin_top }}px / 2);
+    margin-bottom: calc({{ section.settings.margin_bottom }}px / 2);
+  }
+  @media (min-width: 1200px){
+    .images-with-tabs__section {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
   
   .color-design{
     color: {{ section.settings.section_text_color }};
