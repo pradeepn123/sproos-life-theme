@@ -18,7 +18,14 @@
         width: 100%
     }
     .custom-image-with-text .image-with-text__content {
-        padding: 4rem 0 0;
+        padding: unset;
+    }
+    .custom-image-with-text .image-with-text__text.image-with-text__text--caption{
+        padding-top: 40px;  
+        padding-bottom: 24px; 
+    }
+    .custom-image-with-text .image-with-text__heading{
+        padding: unset;
     }
 }
 
