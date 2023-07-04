@@ -18,6 +18,9 @@
 .blogs_heading{
     padding: 60px 50px;
 }
+.blogs_heading h1{
+    text-transform: capitalize;
+}
 .blogs_heading .learn_more_button{
     background: #2A7DE1;
     padding: 14px 30px;
@@ -39,8 +42,38 @@
     font-weight: 700;
     line-height: normal;
 }
+.blogs_section_wave_bottom{
+    position: relative;
+    bottom: 12px;
+}
+
 @media (max-width: 989px){
     .article_title{
         padding: 16px 10px;
     }
 }
+
+@media (max-width: 767px){
+    .blogs_heading{
+        padding: 40px;
+    }
+}
+
+/* .blogs_section .blogs_content .article_wrapper{
+    transition: all 1s cubic-bezier(.104,.204,.492,1);
+    border-radius: 5px;
+}
+.blogs_section .blogs_content .article_wrapper:hover{
+    transform: scale(1.05);
+} */
+
+.blogs_section .blogs_content .article_wrapper{
+    position: relative;
+}
+
+
+
+
+
+
+
