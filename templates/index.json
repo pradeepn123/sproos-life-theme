@@ -3,18 +3,18 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "NEW! Keto Creamer",
-            "heading_size": "h1"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
             "text": "Your coffee just got butter.",
             "text_style": "subtitle"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEW! Keto Creamer",
+            "heading_size": "h1"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
@@ -32,8 +32,8 @@
         }
       },
       "block_order": [
-        "heading",
         "text",
+        "heading",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
