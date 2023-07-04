@@ -100,6 +100,10 @@
     .copyright__content--horizontal__line{
         border-bottom: 1px solid #dddddd;
         padding: 12px;
+        flex-direction: column;
+    }
+    .footer_plus__copyright .footer_bottom{
+        justify-content: center;
     }
 }
 
