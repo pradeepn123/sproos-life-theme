@@ -2,7 +2,7 @@
     display: flex;
     column-gap: 30px;
 }
-@media (max-width: 767px){
+@media (max-width: 989px){
     .featured-collection-banner{
         flex-direction: column;
     }
@@ -12,8 +12,8 @@
     position: relative;
     background-position: center;
     background-size: cover;
-    margin: 1em 0 1.2em 0;
-    border: 5px;
+    margin: 1em auto 1.2em;
+    border-radius: 5px;
     box-shadow: 0px 15px 21px 0px #32324714;
     box-shadow: 0px 12px 12px 0px #32324714;
 }
@@ -26,7 +26,7 @@
 .featured-collection-banner .slider-mobile-gutter variant-selects{
     display: none;
 }
-@media (max-width: 767px){
+@media (max-width: 989px){
     .featured-collection-banner .collection-banner{
         display: none;
     }
@@ -89,9 +89,13 @@
 }
 .featured-collection-banner .collection-banner .collection-banner-title .title{
     margin: 0;
-    max-width: 55%;
     letter-spacing: 0.6px;
     text-transform: capitalize;
+}
+@media (min-width: 1261px){
+    .featured-collection-banner .collection-banner .collection-banner-title .title{
+        max-width: 55%;
+    }
 }
 .featured-collection-banner .collection__view-all a{
     color: #fff;
@@ -136,10 +140,14 @@
     font-size: 18px;
     font-weight: 700;
 }
+.featured-collection-banner .card__content .card__information .card__heading.featured-collection-with-banner_heading a{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .featured-collection-banner .card__content .card__information .price{
     margin: 20px 0;
 }
-@media (max-width: 767px){
+@media (max-width: 989px){
     .featured-collection-banner .card__content .card__information .card__heading.featured-collection-with-banner_heading{
         font-size: 14px;
     }
@@ -211,7 +219,7 @@
     font-size: 11px;
     color: #A8A4A4;
 }
-@media (min-width: 768px){
+@media (min-width: 990px){
     .swiper-button-prev, .swiper-button-next {
         /* background: #fff;
         border-radius: 50%;
