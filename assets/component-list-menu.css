@@ -29,3 +29,10 @@
   width: 10rem;
   padding: 0.5rem;
 }
+
+#cart-icon-bubble svg path {
+  stroke: #000;
+}
+#cart-icon-bubble .cart-count-bubble span{
+  color: #ffffff;
+}

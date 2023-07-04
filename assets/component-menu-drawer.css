@@ -262,14 +262,3 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__utility-links .sproos-currency-img {
     justify-content: flex-end;
 }
-@media (max-width: 1023px){
-  .header-wrapper.header-wrap__transparent .header__icon svg path{
-    stroke: #000;
-  }
-  .header-wrapper.header-wrap__transparent .header{
-    background: transparent !important;
-  }
-  .header-wrapper.header-wrap__transparent .header .menu-drawer-container.menu-opening .icon_menu{
-    opacity: 0;
-  }
-}
