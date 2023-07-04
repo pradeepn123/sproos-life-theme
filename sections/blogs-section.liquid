@@ -16,9 +16,41 @@
             font-size: {{ block.settings.article_title_font_size }}px;
             color: {{ block.settings.article_title_color }};
         } 
+
+        @media (min-width: 989px){
+            .blogs_section .article_wrapper {
+                position: relative;
+                overflow: hidden;
+            }
+            .blogs_section .article_wrapper.block-id-{{ forloop.index }}:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('{{ block.settings.blog_article.image | img_url: 'master' }}');
+                transition: all 1s cubic-bezier(.104,.204,.492,1);
+                repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+       
+            }
+            .blogs_section .article_wrapper:hover:before {
+                transform: scale(1.05);
+            }
+
+        }
+
         @media (max-width: 989px){
             .article_wrapper.block-id-{{ forloop.index }} .article_title{
                 font-size: {{ block.settings.article_title_font_size_mobile }}px !important;
+            }
+            .blogs_section .article_wrapper.block-id-{{ forloop.index }}{
+                background: url('{{ block.settings.blog_article.image | img_url: 'master' }}');
+                repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
             }
         }
     {% endfor %}
@@ -35,7 +67,7 @@
         <div class="blogs_content_mobile swiper-container">
             <div class="swiper-wrapper blogs_content">
                 {% for block in section.blocks %}
-                    <a href="{{ block.settings.blog_article.url }}" class="swiper-slide article_wrapper block-id-{{ forloop.index }}" style="background: url('{{ block.settings.blog_article.image | img_url: 'master' }}') no-repeat; background-size: cover; background-position: center center;">
+                    <a href="{{ block.settings.blog_article.url }}" class="swiper-slide article_wrapper block-id-{{ forloop.index }}">
                         <div class="article_content">
                             <span class="article_title">{{ block.settings.blog_article.title }}</span>
                         </div>
