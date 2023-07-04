@@ -135,6 +135,9 @@
     .shopify-section-header-sticky .header-wrapper.header-wrap__transparent svg path{
       stroke: rgba(var(--color-foreground),.75) !important;
     }
+    #shopify-section-header .header-wrapper.header-wrap__transparent svg path{
+      stroke: #fff;
+    }
     .header__menu-item.link{
       font-size: 16px !important;
     }
@@ -153,7 +156,21 @@
     .header-wrapper.header-wrap__transparent .header__inline-menu .list-menu .header__submenu li a{
       color: rgba(var(--color-foreground),.75);
     }
-  }  
+  } 
+  @media (max-width: 1023px){
+    .header-wrapper.header-wrap__transparent .header__icon svg path,
+    .header-wrapper .header--middle-center .header__icon svg path{
+      stroke: #000;
+    }
+    .header-wrapper.header-wrap__transparent .header,
+    .header-wrapper .header.header--middle-center{
+      background: transparent !important;
+    }
+    .header-wrapper.header-wrap__transparent .header .menu-drawer-container.menu-opening .icon_menu,
+    .header-wrapper .header.header--middle-center .menu-drawer-container.menu-opening .icon_menu{
+      opacity: 0;
+    }
+  }
 </style>
 
 {%- style -%}
@@ -548,7 +565,7 @@
               <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-close">
               </svg> {% endcomment %}
-              {% render 'icon-search', color: '#fff' %}
+              {% render 'icon-search', color: '#000' %}
             </span>
           </summary>
           <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
@@ -617,9 +634,9 @@
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
-            render 'icon-cart-basket', color: "#fff"
+            render 'icon-cart-basket', color: "#000"
           else
-            render 'icon-cart', color: "#fff"'
+            render 'icon-cart', color: "#000"
           endif
         -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
@@ -634,7 +651,7 @@
       </a>
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          {% render 'icon-account-new', color: '#fff' %}
+          {% render 'icon-account-new', color: '#000' %}
           <span class="visually-hidden">
             {%- liquid
               if customer

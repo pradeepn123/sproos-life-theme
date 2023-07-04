@@ -295,3 +295,10 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+variant-selects .product-form__input{
+  display: none;
+}
+.shop-by-category variant-selects .product-form__input{
+  display: block;
+}

@@ -20,7 +20,7 @@
     column-gap: 16px;
 }
 .footer_plus__copyright .footer_bottom a{
-    color: rgba(var(--color-foreground),.75);
+    color: #2E292F;
     text-decoration: none;
     font-size: 13px;
 }
@@ -30,6 +30,7 @@
 }
 .footer_plus__copyright small{
     font-size: 13px;
+    color: #2E292F;
 }
 .footer_plus__copyright .break-para__mobile{
     display: none;
