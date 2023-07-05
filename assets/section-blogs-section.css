@@ -61,12 +61,14 @@
     .blogs_heading{
         padding: 40px;
     }
+    .blogs_heading h1{
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 375px){
     .blogs_heading h1{
        font-size: 24px;
-       margin-bottom: 20px;
     }
 }
 
