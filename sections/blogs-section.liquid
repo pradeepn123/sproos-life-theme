@@ -82,8 +82,9 @@
 <script>
     if(window.screen.width < 990){
         var swiper = new Swiper('.blogs_content_mobile', {
-            slidesPerView: 1.2,
-            spaceBetween: 15,
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 20,
             noSwiping: false,
             breakpoints: {
                 768:{

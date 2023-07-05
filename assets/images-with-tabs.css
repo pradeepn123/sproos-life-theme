@@ -204,4 +204,10 @@
   .images-with-tabs__wave .wave--bottom {
     bottom: -18px;  
   }
+  .images-with-tabs__section .swiper-slide__description{
+    margin-right: 1.5rem;
+  }
+  .images-with-tabs__section .swiper-slide__title {
+    font-size: 21px;
+  }
 }
