@@ -104,11 +104,9 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          {% unless request.page_type != index %}
+          {% unless request.page_type != "index" %}
             <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
-              <a href="{{ card_product.url }}" class="full-unstyled-link">
-                {{ card_product.title | escape }}
-              </a>
+              {{ card_product.title | escape }}
             </h3>
           {% endunless %}
           <div class="card-information">
@@ -152,43 +150,44 @@
                 </span>
                 <!-- Stamped - End Star Rating Badge -->
             {%- endif -%}
-            {% if request.page_type != index %}
-              <h3 class="card__heading featured-collection-with-banner_heading {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
+            {% if request.page_type != "index" %}
+              <h3 class="card__heading {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
                 <a href="{{ card_product.url }}" class="full-unstyled-link">
-                  {{ card_product.title | escape }}
+                  {{ card_product.title }}
                 </a>
               </h3>
             {% endif %}
 
             {% comment %} variant loop render all variants {% endcomment %}        
-            {% if card_product.variants.size > 1 %}
-            <variant-custom-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ card_product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-form-id="{{ product_form_id }}" >
-              {%- for option in card_product.options_with_values -%}
-                <div class="product-form__input product-form__input--dropdown">
-                  <label class="form__label hidden" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-                    {{ option.name }}
-                  </label>
-                  <div class="select">
-                    <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
-                      class="select__select"
-                      name="{{ option.name | escape }}"
-                      form="{{ product_form_id }}"
-                    >
-                      {%- for value in option.values -%}
-                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                          {{ value }}
-                        </option>
-                      {%- endfor -%}
-                    </select>
-                    {% render 'icon-caret' %}
+            {% if card_product.variants.size > 0 %}
+              <variant-custom-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ card_product.url }}" data-update-url="false" {{ block.shopify_attributes }} data-form-id="{{ product_form_id }}" >
+                {%- for option in card_product.options_with_values -%}
+                  <div class="product-form__input product-form__input--dropdown" style="min-height: 3.5rem;">
+                    {% unless option.name contains "Title" %}
+                      <label class="form__label hidden" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                        {{ option.name }}
+                      </label>
+                      <div class="select">
+                        <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="select__select"
+                          name="{{ option.name | escape }}"
+                          form="{{ product_form_id }}"
+                        >
+                          {%- for value in option.values -%}
+                            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                              {{ value }}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                        {% render 'icon-caret' %}
+                      </div>
+                    {% endunless %}
                   </div>
-                </div>
-              {%- endfor -%}
-
-              <script type="application/json">
-                {{ card_product.variants | json }}
-              </script>
-            </variant-custom-selects>
+                {%- endfor -%}
+                <script type="application/json">
+                  {{ card_product.variants | json }}
+                </script>
+              </variant-custom-selects>
             {% endif %}
             
             {% render 'price', product: card_product, price_class: '' %}

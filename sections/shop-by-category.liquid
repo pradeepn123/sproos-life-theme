@@ -108,8 +108,8 @@
             </ul>
             <div class='tab-content'>
                 {%- for block in section.blocks -%}
-                <div class="content{{forloop.index}} tab-inner-content">
-                    <div class="swiper swiper--global">
+                  <div class="content{{forloop.index}} tab-inner-content">
+                    <div class="swiper swiper--global" data-block-id="{{ block.id }}">
                         <div class="swiper-wrapper">
                             {%- for product in block.settings.collection.products  -%}
                                 <div class="swiper-slide">
@@ -128,9 +128,9 @@
                         <div class="swiper-pagination"></div>
                     </div>
                     <!-- Add Arrows -->
-                    <div class="swiper-button-next swiper-button-black"></div>
-                    <div class="swiper-button-prev swiper-button-black"></div>
-                </div>
+                    <div class="swiper-button-next swiper-button-next-{{ block.id }} swiper-button-black"></div>
+                    <div class="swiper-button-prev swiper-button-prev-{{ block.id }} swiper-button-black"></div>
+                  </div>
                 {%- endfor -%}
             </div>
         </div>
@@ -164,7 +164,6 @@
           if($(this).hasClass(thisclass)){
             const forms = this.querySelectorAll("form")
             forms.forEach((form, index) => {
-              console.log(this, form)
               const form_id = form.getAttribute("id")
               const selectElement = this.querySelector('[form="' + form_id + '"]')
               if (!form_id.includes("---swiper-")) {
@@ -174,53 +173,62 @@
                 }
               }
             })
-            $(this).fadeIn(600);
-          } else{
+
+            $(this).fadeIn(500);
+            let swiperEl = this.querySelector('.swiper--global');
+            if (typeof (swiperEl) != 'undefined' && swiperEl != null) {
+              let swiperInstance = this.querySelector('.swiper--global').swiper;
+              setTimeout(() => {
+                swiperInstance.update()
+                swiperInstance.slideNext();
+              }, 250);
+            }
+          } else {
             $(this).hide();
           }
       });
   });
 
+  let swiperCards = document.querySelectorAll(".swiper--global");
+  swiperCards.forEach((swiperCard) => {
   //3d swiper slider in shop by category
-  var swiper = new Swiper(".swiper--global", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    coverflowEffect: {
+    var swiper = new Swiper(swiperCard, {
+      effect: "coverflow",
+      grabCursor: !0,
+      centeredSlides: !0,
+      coverflowEffect: {
         rotate: 0,
         stretch: 0,
         depth: 100,
         modifier: 4.12,
         slideShadows: true
-    },
-    loop: true,
-    loopedSlides: 5,
-    observer: true, 
-    slidesPerView: 2,        
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    on: {
-      afterInit: function () {
-        const swiper = this;
-        console.log(swiper.slides)
-        swiper.slides.forEach((slide, index) => {
-          if (slide) {
-            const form = slide.querySelector("form")
-            const form_id = form.getAttribute("id")
-            const selectElement = slide.querySelector('[form="' + form_id + '"]')
-            if (!form_id.includes("---swiper-")) {
-              form.setAttribute("id", form_id + "---swiper-" + index)
-              if (selectElement) {
-                selectElement.setAttribute("form", form.getAttribute("id"))
+      },
+      loop: true,
+      loopedSlides: 5,
+      slidesPerView: 2,
+      navigation: {
+        nextEl: '.swiper-button-next-' + swiperCard.getAttribute("data-block-id"),
+        prevEl: '.swiper-button-prev-' + swiperCard.getAttribute("data-block-id"),
+      },
+      on: {
+        afterInit: function () {
+          const swiper = this;
+          swiper.slides.forEach((slide, index) => {
+            if (slide) {
+              const form = slide.querySelector("form")
+              const form_id = form.getAttribute("id")
+              const selectElement = slide.querySelector('[form="' + form_id + '"]')
+              if (!form_id.includes("---swiper-")) {
+                form.setAttribute("id", form_id + "---swiper-" + index)
+                if (selectElement) {
+                  selectElement.setAttribute("form", form.getAttribute("id"))
+                }
               }
             }
-          }
-        })
-      }
-    },
-    breakpoints: {
+          })
+        }
+      },
+      breakpoints: {
         640: {
             slidesPerView: 2
         },
@@ -233,8 +241,9 @@
         1560: {
             slidesPerView: 3
         }
-    }
-  });
+      }
+    });
+  })
 </script>
 
 {% schema %}
