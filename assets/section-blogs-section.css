@@ -55,10 +55,6 @@
     .blogs_section .blogs_content{
         column-gap: unset;
     }
-    
-    .blogs_content_mobile .swiper-slide{
-        width: 75%
-    }
 }
 
 @media (max-width: 767px){
