@@ -296,9 +296,9 @@
   margin-top: 1rem;
 }
 
-variant-selects .product-form__input{
+variant-custom-selects .product-form__input{
   display: none;
 }
-.shop-by-category variant-selects .product-form__input{
+.shop-by-category variant-custom-selects .product-form__input{
   display: block;
 }
