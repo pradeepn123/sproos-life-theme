@@ -52,7 +52,11 @@
   font-size: 28px;
 }
 
-.image_with_tabs--button{
+.images-with-tabs__wrapper .button{
+  min-width: unset;
+}
+
+.images-with-tabs__wrapper .image_with_tabs--button{
   color: #ffffff;
   background: #407AD9;
 } 
