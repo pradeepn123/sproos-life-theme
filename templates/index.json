@@ -399,6 +399,7 @@
       "type": "tolstoy-carousel",
       "settings": {
         "publishId": "twlm7c9nmp92h",
+        "videos_count": "7",
         "section_background": "#c3e76b",
         "heading": "Get Curious",
         "heading_font_size": 40,
