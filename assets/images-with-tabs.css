@@ -184,14 +184,11 @@
   }  
 
   .images-with-tabs__wave .wave--top {
-    top: -25px;  
+    top: -30px;  
   }
   .images-with-tabs__wave .wave--bottom {
-    bottom: -25px;  
+    bottom: -30px;  
   }
-  .image_with_tabs--button{
-    padding: unset;
-  } 
   .images-with-tabs__section .mobile__swiper--title{
     font-size: 18px;
   }

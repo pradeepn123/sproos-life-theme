@@ -1,4 +1,4 @@
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1150px) {
     .custom-image-with-text .image-with-text__media{
       width: 520px;
       height: 520px !important;
@@ -21,8 +21,8 @@
         padding: unset;
     }
     .custom-image-with-text .image-with-text__text.image-with-text__text--caption{
-        padding-top: 40px;  
-        padding-bottom: 24px; 
+        padding-top: 45px;  
+        padding-bottom: 28px; 
     }
     .custom-image-with-text .image-with-text__heading{
         padding: unset;

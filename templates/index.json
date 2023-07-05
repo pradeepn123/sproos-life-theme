@@ -254,7 +254,7 @@
         "padding_top": 100,
         "padding_bottom": 100,
         "margin_top": 76,
-        "margin_bottom": 152
+        "margin_bottom": 120
       }
     },
     "featured_collection": {
@@ -400,6 +400,7 @@
       "settings": {
         "publishId": "twlm7c9nmp92h",
         "videos_count": "7",
+        "videos_width": 240,
         "section_background": "#c3e76b",
         "heading": "Get Curious",
         "heading_font_size": 40,
