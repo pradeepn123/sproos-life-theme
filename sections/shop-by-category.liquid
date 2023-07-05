@@ -113,12 +113,14 @@
                         <div class="swiper-wrapper">
                             {%- for product in block.settings.collection.products  -%}
                                 <div class="swiper-slide">
+                                    {%- assign product_form_id = 'card-product-form-{{forloop.index}}-' | append: section.id | append: product.id | append: block.settings.title | handle -%}
                                     {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: section.settings.image_ratio,
                                         show_secondary_image: section.settings.show_secondary_image,
                                         show_vendor: section.settings.show_vendor,
-                                        show_rating: section.settings.show_rating
+                                        show_rating: section.settings.show_rating,
+                                        product_form_id: product_form_id
                                     %}
                                 </div>
                             {%- endfor -%}
@@ -155,14 +157,26 @@
   $('.tab-content>div').first().slideDown();
   $('.tab-buttons li').click(function(){
       $('.tab-buttons li').removeClass('active');
-      var thisclass=$(this).attr('class');
+      var thisclass = $(this).attr('class');
       $(this).addClass('active');
-      $('.tab-content>div').each(function(){
+
+      $('.tab-content>div').each(function( ){
           if($(this).hasClass(thisclass)){
-              $(this).fadeIn(600);
-          }
-          else{
-              $(this).hide();
+            const forms = this.querySelectorAll("form")
+            forms.forEach((form, index) => {
+              console.log(this, form)
+              const form_id = form.getAttribute("id")
+              const selectElement = this.querySelector('[form="' + form_id + '"]')
+              if (!form_id.includes("---swiper-")) {
+                form.setAttribute("id", form_id + "---swiper-" + index)
+                if (selectElement) {
+                  selectElement.setAttribute("form", form.getAttribute("id"))
+                }
+              }
+            })
+            $(this).fadeIn(600);
+          } else{
+            $(this).hide();
           }
       });
   });
@@ -186,6 +200,25 @@
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    on: {
+      afterInit: function () {
+        const swiper = this;
+        console.log(swiper.slides)
+        swiper.slides.forEach((slide, index) => {
+          if (slide) {
+            const form = slide.querySelector("form")
+            const form_id = form.getAttribute("id")
+            const selectElement = slide.querySelector('[form="' + form_id + '"]')
+            if (!form_id.includes("---swiper-")) {
+              form.setAttribute("id", form_id + "---swiper-" + index)
+              if (selectElement) {
+                selectElement.setAttribute("form", form.getAttribute("id"))
+              }
+            }
+          }
+        })
+      }
     },
     breakpoints: {
         640: {
