@@ -149,65 +149,59 @@
 </div>
 
 <script>
+  //tabs in shop by category
+  $('.tab-buttons li').first().addClass('active');
+  $('.tab-content>div').hide();
+  $('.tab-content>div').first().slideDown();
+  $('.tab-buttons li').click(function(){
+      $('.tab-buttons li').removeClass('active');
+      var thisclass=$(this).attr('class');
+      $(this).addClass('active');
+      $('.tab-content>div').each(function(){
+          if($(this).hasClass(thisclass)){
+              $(this).fadeIn(600);
+          }
+          else{
+              $(this).hide();
+          }
+      });
+  });
 
-    //tabs in shop by category
-    $('.tab-buttons li').first().addClass('active');
-    $('.tab-content>div').hide();
-    $('.tab-content>div').first().slideDown();
-    $('.tab-buttons li').click(function(){
-        $('.tab-buttons li').removeClass('active');
-        var thisclass=$(this).attr('class');
-        $(this).addClass('active');
-        $('.tab-content>div').each(function(){
-            if($(this).hasClass(thisclass)){
-                $(this).fadeIn(600);
-            }
-            else{
-                $(this).hide();
-            }
-        });
-    });
-
-    //3d swiper slider in shop by category
-    var swiper = new Swiper(".swiper--global", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 4.12,
-            slideShadows: true
+  //3d swiper slider in shop by category
+  var swiper = new Swiper(".swiper--global", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 4.12,
+        slideShadows: true
+    },
+    loop: true,
+    loopedSlides: 5,
+    observer: true, 
+    slidesPerView: 2,        
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2
         },
-        loop: true,
-        loopedSlides: 5,
-        observer: true, 
-        slidesPerView: 2,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
+        768: {
+            slidesPerView: 2
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        1024: {
+            slidesPerView: 3
         },
-        breakpoints: {
-            640: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2
-            },
-            1024: {
-                slidesPerView: 3
-            },
-            1560: {
-                slidesPerView: 3
-            }
+        1560: {
+            slidesPerView: 3
         }
-    });
-    
+    }
+  });
 </script>
 
 {% schema %}

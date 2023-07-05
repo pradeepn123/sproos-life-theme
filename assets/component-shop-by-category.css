@@ -48,14 +48,14 @@
 .shop-by-category-main-sec .tabs .tab-content .card-wrapper .card__content .card-information .product-form__input{
     width: fit-content;
     margin-top: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 .shop-by-category-main-sec .tabs .tab-content .card-wrapper .card__content .card-information .product-form__input .select__select{
     background: transparent;
     color: #000;
     border: 1px solid #2A7DE1;
     border-radius: 4rem;
-    font-size: 16px;
+    font-size: 16px;    
 }
 .shop-by-category-main-sec .tabs .tab-content .card__heading a:after{
     display: none;
@@ -95,12 +95,13 @@
     background: #FFFFFF;
     box-shadow: 0px 10.8px 10.8px rgba(50, 50, 71, 0.08), 0px 14.4px 21.6px rgba(50, 50, 71, 0.08);    
     padding: 16px;
+    margin: 0;
     border-radius: 10px;
 }
 
 .swiper.swiper--global .card__content .card__heading{
-    color: #000;
-    font-size: 16px;
+    color: #121212;
+    font-size: 14px;
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -176,8 +177,15 @@
     margin: 0 auto;
     transition: all .2s ease-in-out;
 }
+.swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper{
+    perspective: 730px;
+}
 
-@media(min-width:1200px){
+.stamped-badge-caption[data-reviews][data-label][data-version="2"]>span{
+    display: none !important;
+}
+
+@media(min-width:1200px){    
     .shop-by-category-main-sec .title-wrapper-with-link{
         margin-bottom: 60px;
     }
@@ -228,9 +236,37 @@
 @media(min-width:768px) and (max-width:1024px){
     .shop-by-category-main-sec .wave-bottom{
         bottom: -56px;
+    }    
+}
+@media(min-width:768px){
+    .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper{
+        perspective: 768px;
+    }
+}
+@media(min-width:1024px){
+    .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper{
+        perspective: 1186px;
     }
 }
 @media(max-width:767px){
+    .shop-by-category-main-sec .collection .product-form .product-form__buttons button{
+        min-height: calc(4rem + var(--buttons-border-width) * 2);
+    }
+    .shop-by-category-main-sec .tabs .tab-buttons{
+        padding-bottom: 25px;
+    }
+    .shop-by-category-main-sec .tabs .tab-buttons .icontext-card__info h3{
+        font-size: 14px;
+        margin: 0;
+    }
+    .shop-by-category-main-sec .tabs .tab-content .card-wrapper .card__content .card-information .product-form__input .select__select{
+        height: 3.5rem;
+        font-size: 12px;
+        padding-left: 1rem;
+    }
+    .shop-by-category-main-sec .tabs .tab-content .card__information{
+        padding-bottom: 0;
+    }
     .shop-by-category-main-sec .wave-bottom{
         bottom: -24px;
     }
