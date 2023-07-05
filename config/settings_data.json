@@ -246,6 +246,44 @@
           "padding_top": 48,
           "padding_bottom": 36
         }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "blocks": {
+          "6b15e259-dd6b-43cf-b1f0-d2ef6cc1fbd9": {
+            "type": "heading",
+            "settings": {
+              "heading": "Discover a better way to live!",
+              "heading_size": 28
+            }
+          },
+          "207fa504-4755-442b-b836-7df566c883a2": {
+            "type": "email_form",
+            "settings": {
+            }
+          },
+          "c3060ce9-4c3d-42fc-9113-5315d65b3cce": {
+            "type": "paragraph",
+            "settings": {
+              "text": "<p>Sign up to get <strong>20% OFF<\/strong> early access to new products, recipes and exclusive discounts.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "6b15e259-dd6b-43cf-b1f0-d2ef6cc1fbd9",
+          "207fa504-4755-442b-b836-7df566c883a2",
+          "c3060ce9-4c3d-42fc-9113-5315d65b3cce"
+        ],
+        "settings": {
+          "color_scheme": "accent-2",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52,
+          "margin_top": 92,
+          "margin_bottom": 52,
+          "top_wave": true,
+          "bottom_wave": true
+        }
       }
     },
     "content_for_index": [

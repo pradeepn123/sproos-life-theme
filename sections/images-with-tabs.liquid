@@ -16,6 +16,12 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
+  @media (max-width: 767px){
+    .section-{{ section.id }}-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }   
+  }
   
   .color-design{
     color: {{ section.settings.section_text_color }};

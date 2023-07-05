@@ -256,11 +256,8 @@
         {{ content_for_layout }}
       </main>
       
-      {% if template.name == "index" %}
-        {% section 'footer-plus' %}
-      {% else %}
-        {% section 'footer' %}
-      {% endif %}
+      {% section 'newsletter' %}
+      {% section 'footer-plus' %}
   
       <ul hidden>
         <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
