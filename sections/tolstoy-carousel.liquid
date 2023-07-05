@@ -1,9 +1,9 @@
-{{ 'section-tolstoy.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'section-tolstoy.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {% style %}
     #tolstoy-carousel-container-{{ section.settings.publishId }}{
         margin: 0 auto;
     }
-    #tolstoy-carousel-videos-container-{{ section.settings.publishId }}{
+    /* #tolstoy-carousel-videos-container-{{ section.settings.publishId }}{
         gap: 21px;
     }
     #tolstoy-carousel-video-container-{{ section.settings.publishId }}{
@@ -15,21 +15,13 @@
     #tolstoy-play-button-container-{{ section.settings.publishId }}{
         background: #2A7DE1;
         opacity: 1 !important;
-    }
-    {% if section.settings.videos_count != blank %}
-        #tolstoy-carousel-videos-container-twlm7c9nmp92h{
-            grid-template-columns: repeat({{ section.settings.videos_count }}, {{ section.settings.videos_width }}px) !important;
-        }
-    {% endif %}
-    @media (max-width: 767px){
-        #tolstoy-videos-carousel-container-{{ section.settings.publishId }}{
-            /* grid-template-columns: repeat(4, 240px) !important; */
-        }
+    } */
+    /* @media (max-width: 767px){
         #tolstoy-carousel-container-{{ section.settings.publishId }}{
             margin: 0 !important;
             width: 100%;
         }
-    }
+    } */
     
     .tolstoy_carousel_wrapper .section_heading{
         color: #000;
