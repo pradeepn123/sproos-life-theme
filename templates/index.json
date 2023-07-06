@@ -103,7 +103,6 @@
     },
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
       "type": "shop-by-category",
-      "disabled": true,
       "blocks": {
         "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
           "type": "icontext",
