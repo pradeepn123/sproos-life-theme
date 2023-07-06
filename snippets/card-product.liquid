@@ -181,7 +181,9 @@
                             </option>
                           {%- endfor -%}
                         </select>
-                        {% render 'icon-caret' %}
+                        {% if card_product.variants.size > 1 %}
+                          {% render 'icon-caret' %}
+                        {% endif %}
                       </div>
                     {% endunless %}
                   </div>
