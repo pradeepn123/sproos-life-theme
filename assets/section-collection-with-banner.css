@@ -90,11 +90,6 @@
     letter-spacing: 0.6px;
     text-transform: capitalize;
 }
-@media (min-width: 1261px){
-    .featured-collection-banner .collection-banner .collection-banner-title .title{
-        max-width: 55%;
-    }
-}
 .featured-collection-banner .collection__view-all a{
     color: #fff;
     font-size: 16px;

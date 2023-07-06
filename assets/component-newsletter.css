@@ -23,12 +23,16 @@
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
   color: #858585;
+  height: 100%;
 }
 
 .newsletter-form__field-wrapper .field {
   z-index: 0;
+  height: 63px;
 }
-
+.newsletter-form__field-wrapper .field label{
+  top: calc(2rem + var(--inputs-border-width)) !important;
+}
 .newsletter-form__message {
   justify-content: center;
   margin-bottom: 0;
