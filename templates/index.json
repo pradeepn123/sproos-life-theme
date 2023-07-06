@@ -659,7 +659,7 @@
       ],
       "settings": {
         "section_title": "<p>Follow us <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">@sprooslife<\/a><\/p>",
-        "instagram_redirection_link": "",
+        "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
         "margin_top": 48,
         "margin_bottom": 28,
         "title_font-size": 40,
