@@ -111,6 +111,7 @@
 }
 .featured-collection-banner .slider-mobile-gutter{
     flex-basis: 75%;
+    padding: 0 10px;
 }
 .featured-collection-banner .slider-mobile-gutter .swiper-wrapper{
     position: relative;
@@ -134,11 +135,11 @@
 .featured-collection-banner .slider-mobile-gutter .card__information{
     padding: 0 !important;
 }
-.featured-collection-banner .card__content .card__information .card__heading.featured-collection-with-banner_heading{
+.featured-collection-banner .card__content .card__information .card__heading{
     font-size: 18px;
     font-weight: 700;
 }
-.featured-collection-banner .card__content .card__information .card__heading.featured-collection-with-banner_heading a{
+.featured-collection-banner .card__content .card__information .card__heading{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -146,7 +147,7 @@
     margin: 20px 0;
 }
 @media (max-width: 989px){
-    .featured-collection-banner .card__content .card__information .card__heading.featured-collection-with-banner_heading{
+    .featured-collection-banner .card__content .card__information .card__heading{
         font-size: 14px;
     }
     .featured-collection-banner .card__content .card__information .price{
