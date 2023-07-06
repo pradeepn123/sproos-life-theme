@@ -658,8 +658,8 @@
         "e1b87dd8-48e0-4a82-9665-ca5525319bb9"
       ],
       "settings": {
-        "section_title": "<p>Follow us <a href=\"https:\/\/google.com\" target=\"_blank\" title=\"https:\/\/google.com\">@sprooslife<\/a><\/p>",
-        "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
+        "section_title": "<p>Follow us <a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
+        "instagram_redirection_link": "",
         "margin_top": 48,
         "margin_bottom": 28,
         "title_font-size": 40,
