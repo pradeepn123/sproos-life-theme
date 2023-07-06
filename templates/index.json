@@ -250,7 +250,7 @@
         "section_background_color": "#fca4a2",
         "main_heading": "Our Differences",
         "button_label": "Shop now",
-        "button_link": "shopify:\/\/collections",
+        "button_link": "shopify:\/\/collections\/all",
         "padding_top": 100,
         "padding_bottom": 100,
         "margin_top": 76,
