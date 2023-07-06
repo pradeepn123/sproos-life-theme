@@ -28,10 +28,10 @@
 
 .newsletter-form__field-wrapper .field {
   z-index: 0;
-  height: 63px;
+  height: 50px;
 }
 .newsletter-form__field-wrapper .field label{
-  top: calc(2rem + var(--inputs-border-width)) !important;
+  top: calc(1.2rem + var(--inputs-border-width)) !important;
 }
 .newsletter-form__message {
   justify-content: center;
