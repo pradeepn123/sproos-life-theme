@@ -104,9 +104,15 @@
           {% unless request.page_type != "index" %}
               {% assign current_variant = card_product.selected_or_first_available_variant %}
               <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
+                {% unless avoind_redire == blank %}
                 <a href="#" class="full-unstyled-link" data-link-to="{{ current_variant.url }}">
                   {{ card_product.title | escape }}
                 </a>
+                {% else %}
+                <a href="{{ card_product.url }}" class="full-unstyled-link">
+                  {{ card_product.title | escape }}
+                </a>
+              {% endunless %}
               </h3>
           {% endunless %}
           <div class="card-information">
