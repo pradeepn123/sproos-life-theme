@@ -86,7 +86,7 @@
         <div class="card__content">
           <div class="card__information">
             <h3 class="card__heading">
-                {{ card_product.title | escape }}
+              {{ card_product.title | escape }}
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
@@ -102,14 +102,11 @@
       <div class="card__content">
         <div class="card__information">
           {% unless request.page_type != "index" %}
+              {% assign current_variant = card_product.selected_or_first_available_variant %}
               <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
-                {% unless avoid_redirect != blank %}
-                  <a href="{{ card_product.url }}" class="full-unstyled-link">  
-                {% endunless %}
+                <a href="#" class="full-unstyled-link" data-link-to="{{ current_variant.url }}">
                   {{ card_product.title | escape }}
-                {% unless avoid_redirect != blank %}
-                  </a>
-                {% endunless %}
+                </a>
               </h3>
           {% endunless %}
           <div class="card-information">
@@ -155,7 +152,9 @@
             {%- endif -%}
             {% if request.page_type != "index" %}
               <h3 class="card__heading {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
+                <a href="{{ card_product.url }}" class="full-unstyled-link">  
                   {{ card_product.title }}
+                </a>
               </h3>
             {% endif %}
 

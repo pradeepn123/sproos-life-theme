@@ -245,6 +245,12 @@
       }
     });
   })
+  document.querySelectorAll("[data-link-to]").forEach((ele) => {
+    ele.addEventListener("click", function (e) {
+      e.preventDefault()
+      window.location.href = this.getAttribute("data-link-to")
+    })
+  })
 </script>
 
 {% schema %}
