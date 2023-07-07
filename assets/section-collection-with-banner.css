@@ -53,6 +53,13 @@
         font-size: 17px;
         color: #fff !important;
     }
+    .featured-collection-banner:has(.collection-banner-mobile){
+        padding-top: 0 !important;
+    }
+    .banner_title_top_mobile{
+        background: rgb(195, 231, 107);
+        margin: -1px 0 !important;
+    }
 }
 .cover::before {
     content: '';
