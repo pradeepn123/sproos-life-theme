@@ -412,7 +412,7 @@
       "settings": {
         "title": "Save with Bundles",
         "heading_size": 30,
-        "collection": "frontpage",
+        "collection": "bundles",
         "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
         "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
         "collection_banner_title_background_mobile": "shopify:\/\/shop_images\/WAVE_BANNER.png",
@@ -421,7 +421,7 @@
         "color_scheme": "background-1",
         "show_view_all": true,
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
@@ -658,7 +658,7 @@
         "e1b87dd8-48e0-4a82-9665-ca5525319bb9"
       ],
       "settings": {
-        "section_title": "<p>Follow us <a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
+        "section_title": "<p><a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
         "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
         "margin_top": 48,
         "margin_bottom": 28,
