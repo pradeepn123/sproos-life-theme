@@ -111,8 +111,7 @@
                   <div class="content{{forloop.index}} tab-inner-content">
                     <div class="swiper swiper--global" data-block-id="{{ block.id }}">
                         <div class="swiper-wrapper">
-                          {%- assign sorted_products = block.settings.collection.products | sort: 'tags' -%}
-                            {%- for product in sorted_products -%}
+                              {%- for product in block.settings.collection.products  -%}
                               {%- unless product.tags contains 'exclude' -%}
                                 <div class="swiper-slide">
                                     {%- assign product_form_id = 'card-product-form-{{forloop.index}}-' | append: section.id | append: product.id | append: block.settings.title | handle -%}
