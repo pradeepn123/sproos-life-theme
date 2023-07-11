@@ -582,9 +582,9 @@
         "section_background_color": "#fda3a2",
         "section_text_color": "#ffffff",
         "heading_text_align": "center",
-        "section_heading": "Most Popular Blogs",
+        "section_heading": "On the blog",
         "learn_more_link": "shopify:\/\/blogs\/blog",
-        "learn_more_button_text": "Learn More",
+        "learn_more_button_text": "Explore More",
         "article_limit": 3,
         "row_height": 300
       }
