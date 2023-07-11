@@ -662,8 +662,8 @@
         "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
         "margin_top": 48,
         "margin_bottom": 28,
-        "title_font-size": 40,
-        "title_font-size_mobile": 32,
+        "title_font-size": 30,
+        "title_font-size_mobile": 30,
         "title_position": "center",
         "title_position_mobile": "left"
       }
