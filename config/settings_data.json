@@ -105,10 +105,9 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "Free shipping on all orders $50+",
-              "color_scheme": "inverse",
+              "color_scheme": "accent-1",
               "link": "shopify:\/\/collections\/all"
             }
           },
