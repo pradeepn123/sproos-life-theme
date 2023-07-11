@@ -549,7 +549,7 @@
         "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e": {
           "type": "select",
           "settings": {
-            "blog_article": "blog\/gingerbread-collagen-latte",
+            "blog_article": "blog\/iced-strawberry-matcha-latte",
             "row_span_start": 1,
             "row_span_end": 2,
             "col_span_start": 2,
@@ -562,7 +562,7 @@
         "3f75139b-99ad-461b-b6ef-7e7eb7f53767": {
           "type": "select",
           "settings": {
-            "blog_article": "blog\/cranberry-ginger-mocktail",
+            "blog_article": "blog\/do-i-need-to-take-vitamin-c-with-collagen",
             "row_span_start": 2,
             "row_span_end": 3,
             "col_span_start": 2,
