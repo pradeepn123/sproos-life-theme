@@ -224,6 +224,7 @@
           },
           "bb1046ac-6e79-4e9a-bb59-49f0870e4032": {
             "type": "fotter_bottom_link_list",
+            "disabled": true,
             "settings": {
               "heading": "",
               "bottom_menu": "footer-bottom"

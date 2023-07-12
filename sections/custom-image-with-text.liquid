@@ -22,6 +22,8 @@
   }
   .image-with-text__text.rte.body{
     color:{{ section.settings.description_color}};
+    opacity: 0.75;
+    line-height: 28px;
   }
   {%- for block in section.blocks -%}
     {% case block.type %}
@@ -37,6 +39,11 @@
         font-size: {{ block.settings.text_size }}px;
         padding-top: {{block.settings.padding_top}}px;
         padding-bottom: {{block.settings.padding_bottom}}px;
+      }
+      @media (max-width: 989px){
+        .image-with-text__text.image-with-text__text--caption{
+          font-size: 18px;
+        }
       }
     {% endcase %}  
   {%-endfor-%}
@@ -68,13 +75,13 @@
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
-              <h2 class="image-with-text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+              <h2 class="image-with-text__heading" {{ block.shopify_attributes }} style="font-size:{{ block.settings.heading_size }}px;">
                 {{ block.settings.heading | escape }}
               </h2>
             {%- when 'caption' -%}
-              <p class="image-with-text__text  image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
+              <p class="image-with-text__text  image-with-text__text--caption {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="font-size: {{ block.settings.text_font_size }}px;">{{ block.settings.text }}</div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
@@ -275,23 +282,12 @@
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
         },
         {
-          "type": "select",
+          "type": "range",
           "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 30, 
           "label": "t:sections.all.heading_size.label"
         },
         {
@@ -385,6 +381,15 @@
           "id": "text",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 20,
+          "label": "Text font size"
         },
         {
           "type": "select",

@@ -107,7 +107,7 @@
         "edde711b-3c06-4cbf-a0d7-3bfe7392e569": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7763.svg",
+            "image": "shopify:\/\/shop_images\/Group_7768.svg",
             "collection": "best-sellers",
             "title": "Best Sellers",
             "text": "",
@@ -118,7 +118,7 @@
         "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7764.svg",
+            "image": "shopify:\/\/shop_images\/Group_7767.svg",
             "collection": "pure-collagen",
             "title": "Pure Collagen",
             "text": "",
@@ -129,7 +129,7 @@
         "a7c63b7b-23df-4332-88fc-fa24462ddda7": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7766.svg",
+            "image": "shopify:\/\/shop_images\/Group_7764.svg",
             "collection": "creamers",
             "title": "Creamers",
             "text": "",
@@ -140,7 +140,7 @@
         "f149d48a-dd6c-4675-b3c5-02325035c13f": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7767.svg",
+            "image": "shopify:\/\/shop_images\/Group_7766.svg",
             "collection": "lattes",
             "title": "Lattes",
             "text": "",
@@ -159,24 +159,23 @@
             "link": ""
           }
         },
-        "9ad36d64-a134-4032-9131-126748c2871c": {
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
           "type": "icontext",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/creamers.png",
-            "collection": "all",
-            "title": "All",
+            "image": "shopify:\/\/shop_images\/Group_7763.svg",
+            "collection": "creamers",
+            "title": "Bundles",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
+        "9ad36d64-a134-4032-9131-126748c2871c": {
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_7768.svg",
-            "collection": "creamers",
-            "title": "Bundles",
+            "collection": "all",
+            "title": "Shop all",
             "text": "",
             "link_label": "",
             "link": ""
@@ -189,12 +188,12 @@
         "a7c63b7b-23df-4332-88fc-fa24462ddda7",
         "f149d48a-dd6c-4675-b3c5-02325035c13f",
         "e6642fe7-b998-4da4-a830-56678ae1432a",
-        "9ad36d64-a134-4032-9131-126748c2871c",
-        "51eb703e-2973-4c34-9a2c-3a7aee830e25"
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25",
+        "9ad36d64-a134-4032-9131-126748c2871c"
       ],
       "settings": {
         "title": "Shop by category",
-        "heading_size": "h2",
+        "heading_size": 30,
         "heading_alignment": "center",
         "background_color": "#2a7de1",
         "margin_top": 0,
@@ -217,8 +216,8 @@
     "56644474-3c52-4e0e-9a66-9ec85b0d6849": {
       "type": "curved-marquee",
       "settings": {
-        "title": "Free shipping on orders over $50 -",
-        "heading_size": "h1",
+        "title": "Free shipping on orders over $50",
+        "heading_size": 28,
         "background_color": "#ffffff",
         "margin_top": 36,
         "margin_bottom": 36
@@ -232,7 +231,9 @@
           "settings": {
             "heading": "Sustainable Sourcing",
             "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
-            "description": "Our health is deeply connected to our planet. That's why we've sourced the most sustainable collagen available. From wild-caught fish off of the coast of Nova Scotia to grass-fed and finished US cattle."
+            "description": "Our health is deeply connected to our planet. That's why we've sourced the most sustainable collagen available. From wild-caught fish off of the coast of Nova Scotia to grass-fed and finished US cattle.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
           }
         },
         "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4": {
@@ -240,7 +241,9 @@
           "settings": {
             "heading": "QUALITY FIRST",
             "image": "shopify:\/\/shop_images\/2_b56fc4a8-5ab5-4347-aaa9-fc2fa668c0f2.png",
-            "description": "Our products are produced in Canada at a Health Canada approved GMP facility. Our products are also third-party tested for heavy metals and contaminants."
+            "description": "Our products are produced in Canada at a Health Canada approved GMP facility. Our products are also third-party tested for heavy metals and contaminants.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
           }
         },
         "2e69cba0-2c4a-468e-a3fd-cb42e783c23c": {
@@ -248,7 +251,9 @@
           "settings": {
             "heading": "flavour + function",
             "image": "shopify:\/\/shop_images\/3_dce7c9da-f9b6-4c12-b316-0f15f926287b.png",
-            "description": "We're always looking for ways to make taking your daily collagen easy. We're constantly creating new products, flavours and recipes."
+            "description": "We're always looking for ways to make taking your daily collagen easy. We're constantly creating new products, flavours and recipes.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
           }
         }
       },
@@ -262,6 +267,7 @@
         "section_text_color": "#ffffff",
         "section_background_color": "#fca4a2",
         "main_heading": "Our Difference",
+        "heading_size": 22,
         "button_label": "Shop now",
         "button_link": "shopify:\/\/collections\/all",
         "padding_top": 100,
@@ -299,7 +305,7 @@
           "settings": {
             "caption": "It's like magic, but actually science.",
             "text_style": "caption-with-letter-spacing",
-            "text_size": 18,
+            "text_size": 22,
             "padding_top": 30,
             "padding_bottom": 30
           }
@@ -308,7 +314,7 @@
           "type": "heading",
           "settings": {
             "heading": "Why Collagen?",
-            "heading_size": "h1",
+            "heading_size": 30,
             "padding_top": 18,
             "padding_bottom": 18
           }
@@ -317,6 +323,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Collagen is the body’s most abundant protein and provides the foundation for our connective tissues. Collagen can help maintain glowing skin, strong joints and a healthy gut.<\/p>",
+            "text_font_size": 20,
             "text_style": "body"
           }
         },
@@ -554,7 +561,7 @@
             "row_span_end": 3,
             "col_span_start": 1,
             "col_span_end": 2,
-            "article_title_font_size": 32,
+            "article_title_font_size": 28,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
@@ -567,7 +574,7 @@
             "row_span_end": 2,
             "col_span_start": 2,
             "col_span_end": 3,
-            "article_title_font_size": 32,
+            "article_title_font_size": 28,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
@@ -580,7 +587,7 @@
             "row_span_end": 3,
             "col_span_start": 2,
             "col_span_end": 3,
-            "article_title_font_size": 32,
+            "article_title_font_size": 28,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
@@ -596,10 +603,11 @@
         "section_text_color": "#ffffff",
         "heading_text_align": "center",
         "section_heading": "On the blog",
+        "heading_size": 30,
         "learn_more_link": "shopify:\/\/blogs\/blog",
         "learn_more_button_text": "Explore More",
         "article_limit": 3,
-        "row_height": 300
+        "row_height": 240
       }
     },
     "16499520255e00269a": {
@@ -689,7 +697,7 @@
           "type": "heading",
           "settings": {
             "heading": "Discover a better way to live!",
-            "heading_size": 28
+            "heading_size": 30
           }
         },
         "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2": {

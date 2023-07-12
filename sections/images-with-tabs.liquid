@@ -10,6 +10,16 @@
     margin-top: calc({{ section.settings.margin_top }}px / 2);
     margin-bottom: calc({{ section.settings.margin_bottom }}px / 2);
   }
+  {% for block in section.blocks %}
+    .images-with-tabs__section .panel{
+      font-size: {{ block.settings.description_font_size }}px;
+    }
+    @media (max-width: 1275px){
+      .images-with-tabs__section .panel{
+        font-size: {{ block.settings.description_font_size_mobile }}px;
+      }
+    }
+  {% endfor %}
   @media (min-width: 1200px){
     .images-with-tabs__section {
       margin-top: {{ section.settings.margin_top }}px;
@@ -58,7 +68,7 @@
  
     <div class="images-with-tabs__wrapper-content page-width mobile__tabs">
       <div class="images-with-tabs__wrapper-title">
-        <h3>{{ section.settings.main_heading }}</h3>
+        <h3 style="font-size: {{ section.settings.heading_size }}px;">{{ section.settings.main_heading }}</h3>
         {% for block in section.blocks %}
           <h2 class="tab {% if forloop.index == 1 %}is-active{% endif %}">
             {{ block.settings.heading }}
@@ -215,6 +225,15 @@
       "label": "Heading"
     },
     {
+      "type": "range",
+      "id": "heading_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 22,
+      "label": "Heading size"
+    },
+    {
       "type": "text",
       "id": "button_label",
       "default": "Button label",
@@ -293,6 +312,24 @@
           "id": "description",
           "default": "Add some description",
           "label": "Key Difference Description"
+        },
+        {
+          "type": "range",
+          "id": "description_font_size",
+          "label": "Description font size",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "description_font_size_mobile",
+          "label": "Description font size for mobile",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 18
         }
       ]
     }

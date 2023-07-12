@@ -7,7 +7,7 @@
         stroke: transparent;
     }
     .section-curved-marquee svg .text_size{
-        font-size: 30px;
+        font-size: {{ section.settings.heading_size }}px;
         fill: #C3E76B;
         margin-right: 38px;
         display: block;
@@ -16,7 +16,7 @@
     }
     @media(max-width: 749px){
       .section-curved-marquee svg .text_size{
-        font-size: 60px;
+        font-size: {{ section.settings.heading_size_size }}px;
       }
     }    
 {% endstyle %}
@@ -25,7 +25,7 @@
     <text x="-1000">
         <textPath xlink:href="#curve">
         {%- for i in (1..50) -%}
-            <a class='text_size'>{{ section.settings.title }}</a>
+            <a class='text_size'>{{ section.settings.title }}  </a>
         {%- endfor -%}
         </textPath>
         <animate attributeName="x" dur="50s" values="-2000;0" repeatCount="indefinite"></animate>
@@ -45,25 +45,23 @@
       "label": "Marquee title"
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
+      "min": 10,
+      "max": 100, 
+      "step": 1,
+      "default": 28,
       "label": "t:sections.all.heading_size.label"
-    },    
+    }, 
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 10,
+      "max": 100, 
+      "step": 1,
+      "default": 28,
+      "label": "Heading size for mobile"
+    },   
     {
         "type": "color",
         "id": "background_color",

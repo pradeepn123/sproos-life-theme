@@ -55,11 +55,11 @@
         }
     {% endfor %}
 {% endstyle %}
-
+{% render 'wave-top', color: section.settings.section_background_color, class: 'blogs_section_wave_top' %}
 <div class="blogs_section full-width-desktop" id="section-{{ section.id }}" style="background: {{ section.settings.section_background_color }};">
     <div class="blogs_wrapper page-width-desktop">
         <div class="blogs_heading" style="text-align: {{ section.settings.heading_text_align }};">
-            <h1 style="color: {{ section.settings.section_text_color }};">{{ section.settings.section_heading }}</h1>
+            <h1 style="color: {{ section.settings.section_text_color }}; font-size: {{ section.settings.heading_size }}px;">{{ section.settings.section_heading }}</h1>
             {% if section.settings.learn_more_link != blank %}
                 <a class="learn_more_button" href="{{ section.settings.learn_more_link }}" style="color: {{ section.settings.section_text_color }};">{{ section.settings.learn_more_button_text }}</a>
             {% endif %}
@@ -133,6 +133,15 @@
                 "type": "text",
                 "id": "section_heading",
                 "label": "Heading"
+            },
+            {
+                "type": "range",
+                "id": "heading_size",
+                "min": 10,
+                "max": 100,
+                "step": 1,
+                "default": 30,
+                "label": "Heading Size"
             },
             {
                 "type": "url",
