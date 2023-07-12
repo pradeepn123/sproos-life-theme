@@ -104,12 +104,12 @@
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
       "type": "shop-by-category",
       "blocks": {
-        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
+        "edde711b-3c06-4cbf-a0d7-3bfe7392e569": {
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/bundles.png",
-            "collection": "creamers",
-            "title": "Bundles",
+            "collection": "best-sellers",
+            "title": "Best Sellers",
             "text": "",
             "link_label": "",
             "link": ""
@@ -161,6 +161,7 @@
         },
         "9ad36d64-a134-4032-9131-126748c2871c": {
           "type": "icontext",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/creamers.png",
             "collection": "all",
@@ -169,15 +170,27 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bundles.png",
+            "collection": "creamers",
+            "title": "Bundles",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "51eb703e-2973-4c34-9a2c-3a7aee830e25",
+        "edde711b-3c06-4cbf-a0d7-3bfe7392e569",
         "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b",
         "a7c63b7b-23df-4332-88fc-fa24462ddda7",
         "f149d48a-dd6c-4675-b3c5-02325035c13f",
         "e6642fe7-b998-4da4-a830-56678ae1432a",
-        "9ad36d64-a134-4032-9131-126748c2871c"
+        "9ad36d64-a134-4032-9131-126748c2871c",
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25"
       ],
       "settings": {
         "title": "Shop by category",
@@ -191,7 +204,7 @@
         "columns_desktop": 4,
         "color_scheme": "accent-2",
         "show_view_all": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
