@@ -26,14 +26,15 @@
     text-transform: inherit;
 }
 .shop-by-category-main-sec .title-wrapper-with-link{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 .shop-by-category-main-sec .tabs .tab-buttons{
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     column-gap: 20px;
 }
 .shop-by-category-main-sec .tabs .tab-buttons .icontext-card__info h3{
     text-transform: inherit;
+    margin-top: 0px !important;
 }
 .shop-by-category-main-sec .tabs .tab-content{
     padding-top: 25px;
@@ -47,15 +48,16 @@
 }
 .shop-by-category-main-sec .tabs .tab-content .card-wrapper .card__content .card-information .product-form__input{
     width: fit-content;
-    margin-top: 12px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .shop-by-category-main-sec .tabs .tab-content .card-wrapper .card__content .card-information .product-form__input .select__select{
     background: transparent;
     color: #000;
     border: 1px solid #2A7DE1;
     border-radius: 4rem;
-    font-size: 16px;    
+    font-size: 16px;   
+    height: 3rem !important; 
 }
 .shop-by-category-main-sec .tabs .tab-content .card__heading a:after{
     display: none;
@@ -97,6 +99,9 @@
     padding: 16px;
     margin: 0;
     border-radius: 10px;
+}
+.swiper.swiper--global .card-wrapper .card__inner{
+    width: 100% !important;
 }
 
 .swiper.swiper--global .card__content .card__heading{
@@ -158,6 +163,7 @@
     position: relative;
     z-index: 1;
     transition: all .2s ease-in-out;
+    width: 90px;
 }
 .tab-buttons li.active .icon-card__wrapper:after {
     opacity: 1;
@@ -168,9 +174,9 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    width: 149px;
-    height: 149px;
-    background: url(https://cdn.shopify.com/s/files/1/0556/8508/7313/files/sproos_hover_effect.svg?v=1687850685);
+    width: 100px;
+    height: 100px;
+    background: url(https://cdn.shopify.com/s/files/1/0556/8508/7313/files/Vector.png?v=1689145385);
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 0;
@@ -187,13 +193,13 @@
 
 @media(min-width:1200px){    
     .shop-by-category-main-sec .title-wrapper-with-link{
-        margin-bottom: 60px;
+        margin-bottom: 25px !important;
     }
     .shop-by-category-main-sec .title-wrapper-with-link h2{
-        font-size: 40px;        
+        font-size: 30px;        
     }
     .swiper.swiper--global{
-        width: 80%;
+        width: 65%;
     }
     .swiper-pagination{
         display: none;
@@ -202,13 +208,13 @@
         font-size: 18px;        
     }
     .shop-by-category-main-sec .tabs .tab-buttons{
-        padding-bottom: 25px;
+        padding-bottom: 0px;
     }
 }
 
 @media(max-width:1024px){
     .shop-by-category-main-sec ul{
-        justify-content: flex-start;
+        justify-content: space-between;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -272,7 +278,7 @@
     }
     .tab-buttons li .icon-card__wrapper .icontext-card__image{
         width: 90px;
-        height: 90px;
+        height: 85px;
         margin: 0 auto;
     }
     .tab-buttons li .icon-card__wrapper:after{

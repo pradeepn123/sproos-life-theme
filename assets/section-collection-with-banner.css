@@ -115,6 +115,11 @@
     flex-basis: 75%;
     padding: 0 10px;
 }
+@media (max-width: 989px){
+    .featured-collection-banner .slider-mobile-gutter{
+        padding: 50px 10px;
+    }
+}
 .featured-collection-banner .slider-mobile-gutter .swiper-wrapper{
     position: relative;
     /* column-gap: 30px; */
@@ -154,9 +159,6 @@
     }
     .featured-collection-banner .card__content .card__information .price{
         font-size: 12px;
-    }
-    .featured-collection-banner .swiper-container .swiper-slide:first-child{
-        margin-left: 15px;
     }
 }
 .featured-collection-banner .slider-buttons{

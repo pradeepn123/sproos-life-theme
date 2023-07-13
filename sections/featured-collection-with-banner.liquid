@@ -29,12 +29,31 @@
     width: calc(100% / {{ section.settings.products_to_show }} - 30px) !important;
     max-width: calc(100% /{{ section.settings.products_to_show }}) !important;
   }
+  @media (max-width: 989px){
+    .featured-collection-banner.page-width{
+      padding: 0 !important
+    }
+    {% if section.settings.collection.all_products_count > 1%}
+    .featured-collection-banner .swiper-container .swiper-slide:first-child{
+        margin-left: 15px;
+    }
+    {% endif %}
+  }
   @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
   }
+  {% if section.settings.collection.all_products_count > 3 %}
+  .swiper-button-next, .swiper-button-prev{
+    display: block !important;
+  }
+  {% else %}
+  .swiper-button-next, .swiper-button-prev{
+    display: none !important;
+  }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -51,6 +70,7 @@
     assign show_mobile_slider = true
   endif
 -%}
+
  <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection featured-collection-banner page-width{% if show_mobile_slider %} page-width-desktop{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
@@ -73,12 +93,14 @@
       <div class="collection-banner-mobile">
           <div class="banner_title_mobile">
             {{ section.settings.title | escape }}
-            <a href="{{ section.settings.collection.url }}"
-              class="shop_all_button"
-              aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
-            >
-              {{ 'Shop all' }}
-          </a>
+            {%- if section.settings.show_view_all and more_in_collection -%}
+                <a href="{{ section.settings.collection.url }}"
+                  class="shop_all_button"
+                  aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+                >
+                  {{ 'Shop all' }}
+              </a>
+            {%- endif -%}
           </div>
       </div>
       {% render 'wave-bottom', color: '#2A7DE1', class: 'banner_title_bottom_mobile' %}
@@ -105,11 +127,19 @@
     </div>
   </div>
 </div> 
-
+{% liquid
+    if section.settings.collection.all_products_count == 1
+      assign slidesPerView = 1
+    else
+      assign slidesPerView = 1.7
+    endif 
+%}
 <script>
+  var slidesPerView = {{ slidesPerView }};
+  console.log('slidesPerView...', slidesPerView)
   var Swipes = new Swiper('.slider-mobile-gutter', {
     loop: false,
-    slidesPerView: '1.7',
+    slidesPerView: slidesPerView,
     spaceBetween: 15,
     noSwiping: false,
     breakpoints: {
@@ -122,7 +152,7 @@
         spaceBetween: 20
       },
       768: {
-        slidesPerView: '2.2',
+        slidesPerView: 2.2,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

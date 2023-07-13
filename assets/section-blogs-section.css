@@ -1,6 +1,9 @@
 .blogs_section{
     padding-bottom: 95px;
 }
+.blogs_section_wave_top{
+    margin-bottom: -9px !important;
+}
 @media (max-width: 989px){
     .blogs_section .blogs_content{
         display: flex !important;
@@ -16,7 +19,7 @@
     column-gap: 27px;
 }
 .blogs_heading{
-    padding: 60px 50px;
+    padding: 0 60px 50px;
 }
 .blogs_heading h1{
     text-transform: capitalize;
@@ -46,6 +49,7 @@
 .blogs_section_wave_bottom{
     position: relative;
     bottom: 12px;
+    margin-top: 0px !important;
 }
 
 @media (max-width: 989px){

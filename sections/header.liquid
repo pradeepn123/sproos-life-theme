@@ -48,10 +48,26 @@
     justify-self: start;
     margin-left: -1.2rem;
   }
-
+  .header-wrapper.header-wrap__transparent .header__heading-link .home-logo{
+    width: 142px;
+    height: 32px;
+  }
+  @media (max-width: 989px){
+    .header-wrapper.header-wrap__transparent .header__heading-link .home-logo path{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important; 
+    }
+    .header-wrapper.header-wrap__transparent .header__heading-link .home-logo{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important;
+    }
+  }
   @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
+    }
+    .list-menu li:first-child{
+      margin-right: 10px;
     }
   }
 
@@ -112,7 +128,7 @@
       padding-right: 0;
     }
     .header--middle-center .header__inline-menu .list-menu{
-      column-gap: 40px;
+      column-gap: 30px;
     }
     .header--middle-center .header__inline-menu .list-menu.list-menu--inline .header__menu-item{
       padding: 0;
@@ -131,6 +147,15 @@
     .shopify-section-header-sticky .header-wrapper.header-wrap__transparent {
       background: rgb(var(--color-background)) !important;
       background: var(--gradient-background) !important;      
+    }
+    
+    .shopify-section-header-sticky .header-wrapper.header-wrap__transparent .header__heading-link .home-logo path{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important;
+    }
+    .shopify-section-header-sticky .header-wrapper.header-wrap__transparent .header__heading-link .home-logo{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important;
     }
     .shopify-section-header-sticky .header-wrapper.header-wrap__transparent svg path{
       stroke: rgba(var(--color-foreground),.75) !important;
@@ -476,14 +501,15 @@
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if request.page_type == 'index' and section.settings.transparent_logo != blank and section.settings.header_transparent -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.transparent_logo | img_url: image_size }} 1x, {{ section.settings.transparent_logo | img_url: image_size, scale: 2 }} 2x"
+            {% comment %} <img srcset="{{ section.settings.transparent_logo | img_url: image_size }} 1x, {{ section.settings.transparent_logo | img_url: image_size, scale: 2 }} 2x"
               src="{{ section.settings.transparent_logo | img_url: image_size }}"
               loading="lazy"
               class="header__heading-logo transparent_logo"
               width="{{ section.settings.transparent_logo.width }}"
               height="{{ section.settings.transparent_logo.height }}"
               alt="{{ section.settings.transparent_logo.alt | default: shop.name | escape }}"
-            >          
+            >           {% endcomment %}
+            {% render 'logo', class: 'home-logo' %}
           {%- elsif section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"

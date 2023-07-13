@@ -144,7 +144,7 @@
     <div class="footer_plus__copyright caption">
       <div class="page-width">
         <div class="copyright__content--horizontal__line">
-          <small class="copyright__content"> Copyright &copy; {{ 'now' | date: "%Y" }}, SPOOSLIFE <br class="break-para__mobile"></small>
+          <small class="copyright__content"> Copyright &copy; {{ 'now' | date: "%Y" }}, SPROOS <br class="break-para__mobile"></small>
           {%- for block in section.blocks -%}
             {%- case block.type -%} 
               {%- when 'fotter_bottom_link_list' -%}
@@ -170,13 +170,13 @@
             {%- if section.settings.payment_enable -%}
               <div>
                 <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-                <ul class="list list-payment" role="list">
+                {% comment %} <ul class="list list-payment" role="list">
                   {%- for type in shop.enabled_payment_types -%}
                     <li class="list-payment__item">
                       {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
                     </li>
                   {%- endfor -%}
-                </ul>
+                </ul> {% endcomment %}
               </div>
             {%- endif -%}
           </div>
