@@ -160,9 +160,6 @@
     .featured-collection-banner .card__content .card__information .price{
         font-size: 12px;
     }
-    .featured-collection-banner .swiper-container .swiper-slide:first-child{
-        margin-left: 15px;
-    }
 }
 .featured-collection-banner .slider-buttons{
     display: flex !important;

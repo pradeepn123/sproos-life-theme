@@ -48,13 +48,26 @@
     justify-self: start;
     margin-left: -1.2rem;
   }
-
+  .header-wrapper.header-wrap__transparent .header__heading-link .home-logo{
+    width: 142px;
+    height: 32px;
+  }
+  @media (max-width: 989px){
+    .header-wrapper.header-wrap__transparent .header__heading-link .home-logo path{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important; 
+    }
+    .header-wrapper.header-wrap__transparent .header__heading-link .home-logo{
+      fill: #407AD9 !important;
+      stroke: #407AD9 !important;
+    }
+  }
   @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
     }
     .list-menu li:first-child{
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 
@@ -115,7 +128,7 @@
       padding-right: 0;
     }
     .header--middle-center .header__inline-menu .list-menu{
-      column-gap: 40px;
+      column-gap: 30px;
     }
     .header--middle-center .header__inline-menu .list-menu.list-menu--inline .header__menu-item{
       padding: 0;
@@ -135,6 +148,7 @@
       background: rgb(var(--color-background)) !important;
       background: var(--gradient-background) !important;      
     }
+    
     .shopify-section-header-sticky .header-wrapper.header-wrap__transparent .header__heading-link .home-logo path{
       fill: #407AD9 !important;
       stroke: #407AD9 !important;

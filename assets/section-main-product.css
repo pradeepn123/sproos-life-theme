@@ -442,6 +442,7 @@ a.product__text {
 
 .product-form__buttons {
   max-width: 44rem;
+  width: 100% !important;
 }
 
 .product--no-media .product__info-container > modal-opener {

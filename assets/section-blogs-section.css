@@ -49,6 +49,7 @@
 .blogs_section_wave_bottom{
     position: relative;
     bottom: 12px;
+    margin-top: 0px !important;
 }
 
 @media (max-width: 989px){

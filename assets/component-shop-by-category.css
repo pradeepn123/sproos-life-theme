@@ -26,7 +26,7 @@
     text-transform: inherit;
 }
 .shop-by-category-main-sec .title-wrapper-with-link{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 .shop-by-category-main-sec .tabs .tab-buttons{
     padding-bottom: 0px;
@@ -34,6 +34,7 @@
 }
 .shop-by-category-main-sec .tabs .tab-buttons .icontext-card__info h3{
     text-transform: inherit;
+    margin-top: 0px !important;
 }
 .shop-by-category-main-sec .tabs .tab-content{
     padding-top: 25px;
@@ -55,7 +56,8 @@
     color: #000;
     border: 1px solid #2A7DE1;
     border-radius: 4rem;
-    font-size: 16px;    
+    font-size: 16px;   
+    height: 3rem !important; 
 }
 .shop-by-category-main-sec .tabs .tab-content .card__heading a:after{
     display: none;
@@ -97,6 +99,9 @@
     padding: 16px;
     margin: 0;
     border-radius: 10px;
+}
+.swiper.swiper--global .card-wrapper .card__inner{
+    width: 100% !important;
 }
 
 .swiper.swiper--global .card__content .card__heading{
@@ -158,6 +163,7 @@
     position: relative;
     z-index: 1;
     transition: all .2s ease-in-out;
+    width: 90px;
 }
 .tab-buttons li.active .icon-card__wrapper:after {
     opacity: 1;
@@ -168,8 +174,8 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     background: url(https://cdn.shopify.com/s/files/1/0556/8508/7313/files/Vector.png?v=1689145385);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -187,13 +193,13 @@
 
 @media(min-width:1200px){    
     .shop-by-category-main-sec .title-wrapper-with-link{
-        margin-bottom: 30px;
+        margin-bottom: 25px !important;
     }
     .shop-by-category-main-sec .title-wrapper-with-link h2{
         font-size: 30px;        
     }
     .swiper.swiper--global{
-        width: 80%;
+        width: 65%;
     }
     .swiper-pagination{
         display: none;
@@ -271,7 +277,7 @@
         bottom: -24px;
     }
     .tab-buttons li .icon-card__wrapper .icontext-card__image{
-        width: 95px;
+        width: 90px;
         height: 85px;
         margin: 0 auto;
     }
