@@ -37,7 +37,7 @@
     margin-top: 0px !important;
 }
 .shop-by-category-main-sec .tabs .tab-content{
-    padding-top: 25px;
+    padding-top: 15px;
 }
 .shop-by-category-main-sec .tabs .tab-content .tab-inner-content{
     position: relative;
@@ -56,7 +56,7 @@
     color: #000;
     border: 1px solid #2A7DE1;
     border-radius: 4rem;
-    font-size: 16px;   
+    font-size: 12px;   
     height: 3rem !important; 
 }
 .shop-by-category-main-sec .tabs .tab-content .card__heading a:after{

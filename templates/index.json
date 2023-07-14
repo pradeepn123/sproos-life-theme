@@ -39,7 +39,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
         "image_overlay_opacity": 10,
-        "image_height": "medium",
+        "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -118,7 +118,7 @@
         "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7767.svg",
+            "image": "shopify:\/\/shop_images\/Group_7764.svg",
             "collection": "pure-collagen",
             "title": "Pure Collagen",
             "text": "",
@@ -129,7 +129,7 @@
         "a7c63b7b-23df-4332-88fc-fa24462ddda7": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7764.svg",
+            "image": "shopify:\/\/shop_images\/Group_7766.svg",
             "collection": "creamers",
             "title": "Creamers",
             "text": "",
@@ -140,7 +140,7 @@
         "f149d48a-dd6c-4675-b3c5-02325035c13f": {
           "type": "icontext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_7766.svg",
+            "image": "shopify:\/\/shop_images\/Group_7767.svg",
             "collection": "lattes",
             "title": "Lattes",
             "text": "",
@@ -562,7 +562,7 @@
             "row_span_end": 3,
             "col_span_start": 1,
             "col_span_end": 2,
-            "article_title_font_size": 28,
+            "article_title_font_size": 22,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
@@ -575,7 +575,7 @@
             "row_span_end": 2,
             "col_span_start": 2,
             "col_span_end": 3,
-            "article_title_font_size": 28,
+            "article_title_font_size": 22,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
@@ -588,7 +588,7 @@
             "row_span_end": 3,
             "col_span_start": 2,
             "col_span_end": 3,
-            "article_title_font_size": 28,
+            "article_title_font_size": 22,
             "article_title_font_size_mobile": 18,
             "article_title_color": "#ffffff"
           }
