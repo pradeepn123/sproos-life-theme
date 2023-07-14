@@ -60,9 +60,6 @@
     <div class="blogs_wrapper page-width-desktop">
         <div class="blogs_heading" style="text-align: {{ section.settings.heading_text_align }};">
             <h1 style="color: {{ section.settings.section_text_color }}; font-size: {{ section.settings.heading_size }}px;">{{ section.settings.section_heading }}</h1>
-            {% if section.settings.learn_more_link != blank %}
-                <a class="learn_more_button" href="{{ section.settings.learn_more_link }}" style="color: {{ section.settings.section_text_color }};">{{ section.settings.learn_more_button_text }}</a>
-            {% endif %}
         </div>
         <div class="blogs_content_mobile swiper-container">
             <div class="swiper-wrapper blogs_content">
@@ -74,6 +71,12 @@
                     </a>
                 {% endfor %}
             </div>
+        </div>
+        <div class="blogs_heading explore_button" style="text-align: {{ section.settings.heading_text_align }};">
+            {% comment %} <h1 style="color: {{ section.settings.section_text_color }}; font-size: {{ section.settings.heading_size }}px;">{{ section.settings.section_heading }}</h1> {% endcomment %}
+            {% if section.settings.learn_more_link != blank %}
+                <a class="learn_more_button" href="{{ section.settings.learn_more_link }}" style="color: {{ section.settings.section_text_color }};">{{ section.settings.learn_more_button_text }}</a>
+            {% endif %}
         </div>
     </div>  
 </div>
@@ -251,4 +254,4 @@
             }
         ]
     }
-{% endschema %}
+{% endschema %} 

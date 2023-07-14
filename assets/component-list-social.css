@@ -1,7 +1,8 @@
 .list-social {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .footer__blocks-wrapper .list-social {
