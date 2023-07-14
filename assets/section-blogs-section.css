@@ -19,7 +19,7 @@
     column-gap: 27px;
 }
 .blogs_heading{
-    padding: 0 60px 50px;
+    padding: 0 60px 30px;
 }
 .blogs_heading.explore_button{
     padding: 0;
@@ -28,6 +28,7 @@
 .blogs_heading h1{
     text-transform: capitalize;
     margin-top: 0;
+    margin-bottom: 0;
 }
 .blogs_heading .learn_more_button{
     background: #2A7DE1;
@@ -67,10 +68,10 @@
 
 @media (max-width: 767px){
     .blogs_heading{
-        padding: 40px;
+        padding: 30px;
     }
     .blogs_heading h1{
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
 }
 
