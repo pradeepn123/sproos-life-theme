@@ -1,0 +1,344 @@
+{{ 'images-with-tabs.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .images-with-tabs__section {
+    margin-top: calc({{ section.settings.margin_top }}px / 2);
+    margin-bottom: calc({{ section.settings.margin_bottom }}px / 2);
+  }
+  {% for block in section.blocks %}
+    .images-with-tabs__section .panel{
+      font-size: {{ block.settings.description_font_size }}px;
+    }
+    @media (max-width: 1275px){
+      .images-with-tabs__section .panel{
+        font-size: {{ block.settings.description_font_size_mobile }}px;
+      }
+    }
+  {% endfor %}
+  @media (min-width: 1200px){
+    .images-with-tabs__section {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+  @media (max-width: 767px){
+    .section-{{ section.id }}-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }   
+  }
+  
+  .color-design{
+    color: {{ section.settings.section_text_color }};
+    background: {{ section.settings.section_background_color }};
+  }
+  
+  .color-design h1,.color-design h2, .color-design h3 {
+    color: {{ section.settings.section_text_color }};
+  }
+
+{%- endstyle -%}
+
+{% assign color_variable = section.settings.section_background_color %}
+
+{% case section.settings.color_scheme %}
+  {% when 'accent-1' %}
+      {% assign color_variable = 'var(--gradient-base-accent-1)' %}
+  {% when 'accent-2' %}
+      {% assign color_variable = 'var(--gradient-base-accent-2)' %}
+  {% when 'background-1' %}
+      {% assign color_variable = 'var(--gradient-base-background-1)' %}
+  {% when 'background-2' %}
+      {% assign color_variable = 'var(--gradient-base-background-2)' %}
+  {% when 'inverse' %}
+      {% assign color_variable = 'rgb(var(--color-base-text))' %}
+  {% when 'design' %}
+    {% assign color_variable = section.settings.section_background_color %}
+{% endcase %}
+
+
+<div class="color-{{ section.settings.color_scheme }} images-with-tabs__section images-with-tabs__wave">
+  {% render 'wave-top-diff' class: 'wave--top', color: color_variable %}
+  <div class="images-with-tabs__wrapper section-{{ section.id }}-padding">
+ 
+    <div class="images-with-tabs__wrapper-content page-width mobile__tabs">
+      <div class="images-with-tabs__wrapper-title">
+        <h3 style="font-size: {{ section.settings.heading_size }}px;">{{ section.settings.main_heading }}</h3>
+        {% for block in section.blocks %}
+          <h2 class="tab {% if forloop.index == 1 %}is-active{% endif %}">
+            {{ block.settings.heading }}
+            <span class="right-arrow">{% render 'right-arrow' %}</span>
+          </h2>
+        {% endfor %}   
+
+        {%- if section.settings.button_label != blank -%}
+          <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button button--secondary image_with_tabs--button">
+            {{ section.settings.button_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="images-with-tabs__image-block">
+        {% for block in section.blocks %}
+            <img class="image-panel {% if forloop.index == 1 %}is-show-image{% endif %} " src="{{ block.settings.image | img_url: 'master' }}">
+        {% endfor %}
+      </div>
+
+      <div class="images-with-tabs__content-block">
+        {% for block in section.blocks %}
+          <div class="panel {% if forloop.index == 1 %}is-show{% endif %}">{{ block.settings.description }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="mobile__swiper">
+      <h2 class="mobile__swiper--title" style="text-align: center">{{ section.settings.main_heading }}</h2>
+      <div class="container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.image | img_url: '250x250' }}"/>
+                <div class="swiper-slide__content">
+                  <h2 class="swiper-slide__title">   {{ block.settings.heading | split: ' ' | join: '<br>' }} </h2>
+                  <div class="swiper-slide__description">
+                    {{ block.settings.description }}
+                  </div> 
+                  {%- if section.settings.button_label != blank -%}
+                    <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button button--secondary image_with_tabs--button">
+                      {{ section.settings.button_label | escape }}
+                    </a>
+                  {% endif %}
+                </div>
+             </div>
+            {% endfor %}            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  {% render 'wave-bottom', class: 'wave--bottom', color: color_variable %}
+</div>
+
+<script>
+
+  // Tabs: Desktop
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab'); // selecting tabs
+    const images = document.querySelectorAll('.image-panel'); // selecting middle images
+
+    tabs.forEach(function(tab, index) {
+      tab.addEventListener('click', function() {
+        document.querySelector('.tab.is-active').classList.remove('is-active'); // first remove the is-active
+        this.classList.add('is-active'); // add is-active
+
+        document.querySelector('.panel.is-show').classList.remove('is-show'); // remove is-show from content
+        document.querySelectorAll('.panel')[index].classList.add('is-show'); // add is-show
+
+        document.querySelector('.image-panel.is-show-image').classList.remove('is-show-image'); // remove is-show-image
+        images[index].classList.add('is-show-image'); // add is-show-image
+
+      });
+    });
+  });
+
+ 
+  // Swiper: Slider
+
+  let images_with_tabs_swiper =  new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    centeredSlides: true,
+
+  });
+
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Images with tabs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.newsletter.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.newsletter.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.newsletter.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.newsletter.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.newsletter.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "design",
+          "label": "Custom Color"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.newsletter.settings.color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Section text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "default": "Our Differences",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 22,
+      "label": "Heading size"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+      "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "header",
+      "content": "Section Margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "differences",
+      "name": "Key Difference",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "SUSTAINABLY SOURCED",
+          "label": "Key Difference Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "default": "Add some description",
+          "label": "Key Difference Description"
+        },
+        {
+          "type": "range",
+          "id": "description_font_size",
+          "label": "Description font size",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "description_font_size_mobile",
+          "label": "Description font size for mobile",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 18
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images with tabs"
+    }
+  ]
+}
+{% endschema %}
+

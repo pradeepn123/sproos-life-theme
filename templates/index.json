@@ -3,13 +3,6 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "NEW! Keto Creamer",
-            "heading_size": "h1"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
@@ -17,33 +10,42 @@
             "text_style": "subtitle"
           }
         },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEW! Keto Creamer",
+            "heading_size": "h1"
+          }
+        },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/products\/sproos-keto-creamer",
+            "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_text_color_2": "#000000",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading",
         "text",
+        "heading",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Untitled_design_2.gif",
         "image_overlay_opacity": 10,
-        "image_height": "medium",
+        "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
@@ -71,9 +73,11 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
+            "button_text_color_1": "#000000",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_text_color_2": "#000000",
             "button_style_secondary_2": false
           }
         }
@@ -97,34 +101,282 @@
         "show_text_below": true
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
+      "type": "shop-by-category",
+      "blocks": {
+        "edde711b-3c06-4cbf-a0d7-3bfe7392e569": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7773.svg",
+            "collection": "best-sellers",
+            "title": "Best Sellers",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7764.svg",
+            "collection": "pure-collagen",
+            "title": "Pure Collagen",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a7c63b7b-23df-4332-88fc-fa24462ddda7": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7765.svg",
+            "collection": "creamers",
+            "title": "Creamers",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f149d48a-dd6c-4675-b3c5-02325035c13f": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7766.svg",
+            "collection": "lattes",
+            "title": "Lattes",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e6642fe7-b998-4da4-a830-56678ae1432a": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7767.svg",
+            "collection": "collagen-blends",
+            "title": "Collagen Blends",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7763.svg",
+            "collection": "creamers",
+            "title": "Bundles",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9ad36d64-a134-4032-9131-126748c2871c": {
+          "type": "icontext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7768.svg",
+            "collection": "all",
+            "title": "Shop all",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "edde711b-3c06-4cbf-a0d7-3bfe7392e569",
+        "f1cf51de-a3ef-4b02-8fcc-3ebb4b4cba6b",
+        "a7c63b7b-23df-4332-88fc-fa24462ddda7",
+        "f149d48a-dd6c-4675-b3c5-02325035c13f",
+        "e6642fe7-b998-4da4-a830-56678ae1432a",
+        "51eb703e-2973-4c34-9a2c-3a7aee830e25",
+        "9ad36d64-a134-4032-9131-126748c2871c"
+      ],
       "settings": {
-        "title": "Our Bestsellers",
-        "heading_size": "h2",
-        "collection": "frontpage",
-        "products_to_show": 4,
+        "title": "Shop by category",
+        "heading_size": 30,
+        "heading_alignment": "center",
+        "background_color": "#2a7de1",
+        "margin_top": 0,
+        "margin_bottom": 100,
+        "collection": "all",
+        "products_to_show": 6,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "show_view_all": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 76,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "56644474-3c52-4e0e-9a66-9ec85b0d6849": {
+      "type": "curved-marquee",
+      "settings": {
+        "title": "Free shipping on orders over $50",
+        "heading_size": 28,
+        "heading_size_mobile": 60,
+        "background_color": "#ffffff",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "253097bf-1e47-4ad8-9abb-313f30c4d579": {
+      "type": "images-with-tabs",
+      "blocks": {
+        "8c9eadd4-a9e5-4068-b05d-073df5009a7a": {
+          "type": "differences",
+          "settings": {
+            "heading": "Sustainable Sourcing",
+            "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
+            "description": "Our health is deeply connected to our planet. That's why we've sourced the most sustainable collagen available. From wild-caught fish off of the coast of Nova Scotia to grass-fed and finished US cattle.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
+          }
+        },
+        "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4": {
+          "type": "differences",
+          "settings": {
+            "heading": "QUALITY FIRST",
+            "image": "shopify:\/\/shop_images\/2_b56fc4a8-5ab5-4347-aaa9-fc2fa668c0f2.png",
+            "description": "Our products are produced in Canada at a Health Canada approved GMP facility. Our products are also third-party tested for heavy metals and contaminants.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
+          }
+        },
+        "2e69cba0-2c4a-468e-a3fd-cb42e783c23c": {
+          "type": "differences",
+          "settings": {
+            "heading": "flavour + function",
+            "image": "shopify:\/\/shop_images\/3_dce7c9da-f9b6-4c12-b316-0f15f926287b.png",
+            "description": "We're always looking for ways to make taking your daily collagen easy. We're constantly creating new products, flavours and recipes.",
+            "description_font_size": 20,
+            "description_font_size_mobile": 18
+          }
+        }
+      },
+      "block_order": [
+        "8c9eadd4-a9e5-4068-b05d-073df5009a7a",
+        "bae2741d-a5a9-42a7-91f5-0d7707b0fcd4",
+        "2e69cba0-2c4a-468e-a3fd-cb42e783c23c"
+      ],
+      "settings": {
+        "color_scheme": "design",
+        "section_text_color": "#ffffff",
+        "section_background_color": "#fca4a2",
+        "main_heading": "Our Difference",
+        "heading_size": 22,
+        "button_label": "Shop now",
+        "button_link": "shopify:\/\/collections\/all",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "margin_top": 76,
+        "margin_bottom": 120
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Our Bestsellers",
+        "heading_size": "h2",
+        "collection": "frontpage",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "182e606a-3868-4b09-81df-f6f7e0d9ebb0": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "04ff1d22-5a6c-4660-b51b-f63450244847": {
+          "type": "caption",
+          "settings": {
+            "caption": "It's like magic, but actually science.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": 22,
+            "padding_top": 30,
+            "padding_bottom": 30
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Collagen?",
+            "heading_size": 30,
+            "padding_top": 18,
+            "padding_bottom": 18
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Collagen is the body’s most abundant protein and provides the foundation for our connective tissues. Collagen can help maintain glowing skin, strong joints and a healthy gut.<\/p>",
+            "text_font_size": 20,
+            "text_style": "body"
+          }
+        },
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify:\/\/pages\/science"
+          }
+        }
+      },
+      "block_order": [
+        "04ff1d22-5a6c-4660-b51b-f63450244847",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-0",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-1",
+        "template--19523083534655__182e606a-3868-4b09-81df-f6f7e0d9ebb0-1688368850f1f1c0bf-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_500_x_500_px_1.jpg",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "text_color": "#2a7de1",
+        "description_color": "#121212",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "1649910994d4f0cc54": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
+        "3d27d214-74e6-4652-bdf6-817bb07f5ef7": {
+          "type": "caption",
+          "settings": {
+            "caption": "it’s what’s inside that counts",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
         "164991099453dbbec2-0": {
           "type": "heading",
           "settings": {
             "heading": "Why Collagen?",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "padding_top": 28,
+            "padding_bottom": 0
           }
         },
         "164991099453dbbec2-1": {
@@ -143,26 +395,67 @@
         }
       },
       "block_order": [
+        "3d27d214-74e6-4652-bdf6-817bb07f5ef7",
         "164991099453dbbec2-0",
         "164991099453dbbec2-1",
         "164991099453dbbec2-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_Mar21-149.jpg",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/why_collagen.jpg",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
+        "text_color": "#2a7de1",
+        "description_color": "#121212",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 72
       }
     },
+    "3cb6d275-3ac2-451f-be4e-cebafa5ef54d": {
+      "type": "tolstoy-carousel",
+      "settings": {
+        "publishId": "twlm7c9nmp92h",
+        "videos_count": "5",
+        "videos_width": 240,
+        "section_background": "#c3e76b",
+        "heading": "Get Curious",
+        "heading_font_size": 30,
+        "text_align": "center"
+      }
+    },
+    "8f1d868b-cac1-400e-8606-4dff2bb0cb07": {
+      "type": "featured-collection-with-banner",
+      "settings": {
+        "title": "Save with Bundles",
+        "heading_size": 30,
+        "collection": "bundles",
+        "collection_banner_image": "shopify:\/\/shop_images\/4b07a079-8dbd-4c14-82ac-e0775bb5dc82_2.png",
+        "collection_banner_title_background": "shopify:\/\/shop_images\/Vector_50.png",
+        "collection_banner_title_background_mobile": "shopify:\/\/shop_images\/WAVE_BANNER.png",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -242,6 +535,7 @@
     },
     "164991100118f2233a": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "On the blog",
         "heading_size": "h1",
@@ -257,23 +551,201 @@
         "padding_bottom": 36
       }
     },
+    "f7d427db-8788-4b81-b9a2-53aa95eda803": {
+      "type": "blogs-section",
+      "blocks": {
+        "ec224298-3e3e-41d6-a7c3-bbcaa0d74c80": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/how-to-choose-a-collagen-powder",
+            "row_span_start": 1,
+            "row_span_end": 3,
+            "col_span_start": 1,
+            "col_span_end": 2,
+            "article_title_font_size": 22,
+            "article_title_font_size_mobile": 18,
+            "article_title_color": "#ffffff"
+          }
+        },
+        "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/iced-strawberry-matcha-latte",
+            "row_span_start": 1,
+            "row_span_end": 2,
+            "col_span_start": 2,
+            "col_span_end": 3,
+            "article_title_font_size": 22,
+            "article_title_font_size_mobile": 18,
+            "article_title_color": "#ffffff"
+          }
+        },
+        "3f75139b-99ad-461b-b6ef-7e7eb7f53767": {
+          "type": "select",
+          "settings": {
+            "blog_article": "blog\/do-i-need-to-take-vitamin-c-with-collagen",
+            "row_span_start": 2,
+            "row_span_end": 3,
+            "col_span_start": 2,
+            "col_span_end": 3,
+            "article_title_font_size": 22,
+            "article_title_font_size_mobile": 18,
+            "article_title_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "ec224298-3e3e-41d6-a7c3-bbcaa0d74c80",
+        "181f2e96-f6b1-4f5d-885b-80a8f7d1c36e",
+        "3f75139b-99ad-461b-b6ef-7e7eb7f53767"
+      ],
+      "settings": {
+        "section_background_color": "#fda3a2",
+        "section_text_color": "#ffffff",
+        "heading_text_align": "center",
+        "section_heading": "On the blog",
+        "heading_size": 30,
+        "learn_more_link": "shopify:\/\/blogs\/blog",
+        "learn_more_button_text": "Explore More",
+        "article_limit": 3,
+        "row_height": 240
+      }
+    },
     "16499520255e00269a": {
       "type": "instafeed",
+      "disabled": true,
       "settings": {
         "heading_font": "helvetica_n4",
         "heading_size": 20,
         "feed_width": 100,
         "html_area": ""
       }
+    },
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4": {
+      "type": "instagram-feed",
+      "blocks": {
+        "c2a1ddb6-fbc2-496e-9f7f-74fff8ea1699": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/8.jpg"
+          }
+        },
+        "b1896a26-df57-4fcd-a521-9d40f0ddc929": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/3.jpg"
+          }
+        },
+        "a9125596-22a6-46e9-a8aa-bb9011527f29": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/6.jpg"
+          }
+        },
+        "3e51eacb-2301-4bbe-b2d9-6fd007acbc62": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/4.jpg"
+          }
+        },
+        "d940a922-c813-45c1-aa25-4ce63e9e1460": {
+          "type": "select",
+          "disabled": true,
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_214.png"
+          }
+        },
+        "fb23bff7-86fb-4009-bcec-28dd18105adb": {
+          "type": "select",
+          "disabled": true,
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_217.png"
+          }
+        },
+        "e1b87dd8-48e0-4a82-9665-ca5525319bb9": {
+          "type": "select",
+          "disabled": true,
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/Rectangle_215.png"
+          }
+        }
+      },
+      "block_order": [
+        "c2a1ddb6-fbc2-496e-9f7f-74fff8ea1699",
+        "b1896a26-df57-4fcd-a521-9d40f0ddc929",
+        "a9125596-22a6-46e9-a8aa-bb9011527f29",
+        "3e51eacb-2301-4bbe-b2d9-6fd007acbc62",
+        "d940a922-c813-45c1-aa25-4ce63e9e1460",
+        "fb23bff7-86fb-4009-bcec-28dd18105adb",
+        "e1b87dd8-48e0-4a82-9665-ca5525319bb9"
+      ],
+      "settings": {
+        "section_title": "<p><a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
+        "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
+        "margin_top": 48,
+        "margin_bottom": 28,
+        "title_font-size": 30,
+        "title_font-size_mobile": 30,
+        "title_position": "center",
+        "title_position_mobile": "center"
+      }
+    },
+    "77649fe1-487b-4b6f-8d29-b2e335e52a1b": {
+      "type": "newsletter",
+      "disabled": true,
+      "blocks": {
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover a better way to live!",
+            "heading_size": 30
+          }
+        },
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up to get <strong>20% OFF<\/strong> early access to new products, recipes and exclusive discounts.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0",
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2",
+        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 40,
+        "margin_bottom": 52,
+        "top_wave": true,
+        "bottom_wave": true
+      }
     }
   },
   "order": [
     "image_banner",
     "16584952237a3d1d62",
+    "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
+    "56644474-3c52-4e0e-9a66-9ec85b0d6849",
+    "253097bf-1e47-4ad8-9abb-313f30c4d579",
     "featured_collection",
+    "182e606a-3868-4b09-81df-f6f7e0d9ebb0",
     "1649910994d4f0cc54",
+    "3cb6d275-3ac2-451f-be4e-cebafa5ef54d",
+    "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
     "multicolumn",
     "164991100118f2233a",
-    "16499520255e00269a"
+    "f7d427db-8788-4b81-b9a2-53aa95eda803",
+    "16499520255e00269a",
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
+    "77649fe1-487b-4b6f-8d29-b2e335e52a1b"
   ]
 }

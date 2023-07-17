@@ -1,0 +1,257 @@
+{{ 'section-blogs-section.css' | asset_url | stylesheet_tag }}
+{% style %}
+    .blogs_section{
+        color: {{ section.settings.section_text_color }};
+    }
+    .blogs_content{
+        grid-template-columns: auto auto;
+        grid-template-rows: {{ section.settings.row_height }}px {{ section.settings.row_height }}px;
+    }
+    
+    {% for block in section.blocks %}
+        .article_wrapper.block-id-{{ forloop.index }}{
+            grid-area: {{ block.settings.row_span_start }}/ {{ block.settings.col_span_start }} /{{ block.settings.row_span_end }} /{{ block.settings.col_span_end }};
+        }    
+        .article_wrapper.block-id-{{ forloop.index }} .article_title{
+            font-size: {{ block.settings.article_title_font_size }}px;
+            color: {{ block.settings.article_title_color }};
+        } 
+
+        @media (min-width: 989px){
+            .blogs_section .article_wrapper {
+                position: relative;
+                overflow: hidden;
+            }
+            .blogs_section .article_wrapper.block-id-{{ forloop.index }}:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('{{ block.settings.blog_article.image | img_url: 'master' }}');
+                transition: all 1s cubic-bezier(.104,.204,.492,1);
+                repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+       
+            }
+            .blogs_section .article_wrapper:hover:before {
+                transform: scale(1.05);
+            }
+
+        }
+
+        @media (max-width: 989px){
+            .article_wrapper.block-id-{{ forloop.index }} .article_title{
+                font-size: {{ block.settings.article_title_font_size_mobile }}px !important;
+            }
+            .blogs_section .article_wrapper.block-id-{{ forloop.index }}{
+                background: url('{{ block.settings.blog_article.image | img_url: 'master' }}');
+                repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    {% endfor %}
+{% endstyle %}
+{% render 'wave-top', color: section.settings.section_background_color, class: 'blogs_section_wave_top' %}
+<div class="blogs_section full-width-desktop" id="section-{{ section.id }}" style="background: {{ section.settings.section_background_color }};">
+    <div class="blogs_wrapper page-width-desktop">
+        <div class="blogs_heading" style="text-align: {{ section.settings.heading_text_align }};">
+            <h1 style="color: {{ section.settings.section_text_color }}; font-size: {{ section.settings.heading_size }}px;">{{ section.settings.section_heading }}</h1>
+        </div>
+        <div class="blogs_content_mobile swiper-container">
+            <div class="swiper-wrapper blogs_content">
+                {% for block in section.blocks %}
+                    <a href="{{ block.settings.blog_article.url }}" class="swiper-slide article_wrapper block-id-{{ forloop.index }}">
+                        <div class="article_content">
+                            <span class="article_title">{{ block.settings.blog_article.title }}</span>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="blogs_heading explore_button" style="text-align: {{ section.settings.heading_text_align }};">
+            {% comment %} <h1 style="color: {{ section.settings.section_text_color }}; font-size: {{ section.settings.heading_size }}px;">{{ section.settings.section_heading }}</h1> {% endcomment %}
+            {% if section.settings.learn_more_link != blank %}
+                <a class="learn_more_button" href="{{ section.settings.learn_more_link }}" style="color: {{ section.settings.section_text_color }};">{{ section.settings.learn_more_button_text }}</a>
+            {% endif %}
+        </div>
+    </div>  
+</div>
+{% render 'wave-bottom', color: section.settings.section_background_color, class: 'blogs_section_wave_bottom' %}
+
+<script>
+    if(window.screen.width < 990){
+        var swiper = new Swiper('.blogs_content_mobile', {
+            loop: true,
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            noSwiping: false,
+        });
+    }
+        
+</script>
+{% schema %}
+    {
+        "name": "Blogs section",
+        "settings": [
+            {
+                "type": "color",
+                "id": "section_background_color",
+                "label": "Section background color",
+                "default": "#fff"
+            },
+            {
+                "type": "color",
+                "id": "section_text_color",
+                "label": "Section text color",
+                "default": "#000"
+            },
+            {
+                "type": "select",
+                "id": "heading_text_align",
+                "label": "Heading alignment",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ]
+            },
+            {
+                "type": "header",
+                "content": "Article settings"
+            },
+            {
+                "type": "text",
+                "id": "section_heading",
+                "label": "Heading"
+            },
+            {
+                "type": "range",
+                "id": "heading_size",
+                "min": 10,
+                "max": 100,
+                "step": 1,
+                "default": 30,
+                "label": "Heading Size"
+            },
+            {
+                "type": "url",
+                "id": "learn_more_link",
+                "label": "Learn-more link"
+            },
+            {
+                "type": "text",
+                "id": "learn_more_button_text",
+                "label": "Learn-more button text"
+            },
+            {
+                "type": "range",
+                "id": "article_limit",
+                "label": "No. of articles",
+                "default": 3,
+                "min": 1,
+                "max": 4,
+                "step": 1
+            },
+            {
+                "type": "range",
+                "id": "row_height",
+                "label": "Row height",
+                "default": 300,
+                "min": 100,
+                "max": 1000,
+                "step": 20
+            }
+        ],
+        "blocks": [
+            {
+                "type": "select",
+                "name": "Article",
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "blog_article",
+                        "label": "Article"
+                    },
+                    {
+                        "type": "range",
+                        "id": "row_span_start",
+                        "label": "No. of rows - start",
+                        "min": 1,
+                        "max": 3,
+                        "step": 1,
+                        "default": 2
+                    },
+                    {
+                        "type": "range",
+                        "id": "row_span_end",
+                        "label": "No. of rows - end",
+                        "min": 1,
+                        "max": 3,
+                        "step": 1,
+                        "default": 2
+                    },
+                    {
+                        "type": "range",
+                        "id": "col_span_start",
+                        "label": "No. of columns - start",
+                        "min": 1,
+                        "max": 3,
+                        "step": 1,
+                        "default": 3
+                    },
+                    {
+                        "type": "range",
+                        "id": "col_span_end",
+                        "label": "No. of columns - end",
+                        "min": 1,
+                        "max": 3,
+                        "step": 1,
+                        "default": 3
+                    },
+                    {
+                        "type": "range",
+                        "id": "article_title_font_size",
+                        "label": "Article title font size",
+                        "default": 32,
+                        "min": 10,
+                        "max": 50,
+                        "step": 1
+                    },
+                    {
+                        "type": "range",
+                        "id": "article_title_font_size_mobile",
+                        "label": "Article title font size - mobile",
+                        "default": 18,
+                        "min": 10,
+                        "max": 50,
+                        "step": 1
+                    },
+                    {
+                        "type": "color",
+                        "id": "article_title_color",
+                        "label": "Article title color",
+                        "default": "#fff" 
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Blogs section"
+            }
+        ]
+    }
+{% endschema %} 

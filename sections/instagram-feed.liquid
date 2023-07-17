@@ -1,0 +1,157 @@
+{{ 'section-instagram-feed.css' | asset_url | stylesheet_tag }}
+{% style %}
+    .section_title{
+        font-size: {{ section.settings.title_font-size }}px;
+        text-align: {{ section.settings.title_position }};
+    }
+    @media (max-width: 768px){
+        .section_title{
+            font-size: {{ section.settings.title_font-size_mobile }}px;
+            text-align: {{ section.settings.title_position_mobile }};
+        }
+    }
+    .instagram_feed_wrapper{
+        margin-top: calc({{ section.settings.margin_top }}px / 2);
+        margin-bottom: calc({{ section.settings.margin_bottom }}px / 2);
+    }
+    @media(min-width:768px){
+        .instagram_feed_wrapper{
+            margin-top: calc({{ section.settings.margin_top }}px / 1.2);
+            margin-bottom: calc({{ section.settings.margin_bottom }}px / 1.2);
+        }
+    }
+    @media (min-width: 1200px){
+        .instagram_feed_wrapper{
+            margin-top: {{ section.settings.margin_top }}px;
+            margin-bottom: {{ section.settings.margin_bottom }}px;
+        }
+    }
+{% endstyle %}
+<div class="instagram_feed_wrapper page-width">
+    <span class="section_title">{{ section.settings.section_title }}</span>
+    <a href="{{ section.settings.instagram_redirection_link }}">
+        <div class="instagram_image_section">
+            {% for block in section.blocks %}
+                <div class="image_block">
+                    <img src="{{ block.settings.instagram_image_block | img_url: 'master' }}" alt="instagram image">
+                </div>
+            {% endfor %}
+        </div>
+    </a>
+</div>
+
+{% schema %}
+{
+    "name": "Instagram Feed",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "section_title",
+            "label": "Section Title"
+        },
+        {
+            "type": "url",
+            "id": "instagram_redirection_link",
+            "label": "Instagram redirection link"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.spacing"
+        },
+        {
+            "type": "range",
+            "id": "margin_top",
+            "min": 0,
+            "max": 180,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.footer.settings.margin_top.label",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "min": 0,
+            "max": 180,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.footer.settings.margin_top.label",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "title_font-size",
+            "label": "Title: font-size",
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "title_font-size_mobile",
+            "label": "Title: font-size for mobile",
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 32
+        },
+        {
+            "type": "select",
+            "id": "title_position",
+            "label": "Title: Position",
+            "options":[
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "title_position_mobile",
+            "label": "Title: Position on mobile screen",
+            "options":[
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "Image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "instagram_image_block",
+                    "label": "Instagram image block"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Instagram Feed"
+        }
+    ]
+}
+{% endschema %}
