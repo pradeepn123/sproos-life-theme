@@ -50,57 +50,6 @@
         "show_text_below": true
       }
     },
-    "16584952237a3d1d62": {
-      "type": "image-banner",
-      "disabled": true,
-      "blocks": {
-        "16584952239e37253b-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "feel good about feeling good",
-            "heading_size": "h1"
-          }
-        },
-        "16584952239e37253b-1": {
-          "type": "text",
-          "settings": {
-            "text": "Pure Collagen. Sustainably Sourced.",
-            "text_style": "body"
-          }
-        },
-        "480b4906-c92d-4f31-b79e-daf8a34df2dd": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_text_color_1": "#000000",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_text_color_2": "#000000",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "16584952239e37253b-0",
-        "16584952239e37253b-1",
-        "480b4906-c92d-4f31-b79e-daf8a34df2dd"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
-      }
-    },
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9": {
       "type": "shop-by-category",
       "blocks": {
@@ -356,66 +305,6 @@
         "padding_bottom": 36
       }
     },
-    "1649910994d4f0cc54": {
-      "type": "image-with-text",
-      "disabled": true,
-      "blocks": {
-        "3d27d214-74e6-4652-bdf6-817bb07f5ef7": {
-          "type": "caption",
-          "settings": {
-            "caption": "it’s what’s inside that counts",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
-        "164991099453dbbec2-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why Collagen?",
-            "heading_size": "h1",
-            "padding_top": 28,
-            "padding_bottom": 0
-          }
-        },
-        "164991099453dbbec2-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Collagen is the body’s most abundant protein and provides the foundation for our connective tissues. Collagen can help maintain glowing skin, strong joints and a healthy gut.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "164991099453dbbec2-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn More",
-            "button_link": "shopify:\/\/pages\/science"
-          }
-        }
-      },
-      "block_order": [
-        "3d27d214-74e6-4652-bdf6-817bb07f5ef7",
-        "164991099453dbbec2-0",
-        "164991099453dbbec2-1",
-        "164991099453dbbec2-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/why_collagen.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "text_color": "#2a7de1",
-        "description_color": "#121212",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 72
-      }
-    },
     "3cb6d275-3ac2-451f-be4e-cebafa5ef54d": {
       "type": "tolstoy-carousel",
       "settings": {
@@ -451,104 +340,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/product-info-circular-master-135.png",
-            "title": "Made in Canada",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/product-info-circular-master-137.png",
-            "title": "Family Founded",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/product-info-circular-master-138.png",
-            "title": "Sustainable Sourcing",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "50eac316-6d16-451d-bbc6-887d82a49bac": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/product-info-circular-master-139.png",
-            "title": "Recyclable Packaging",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "d2648331-8919-49d2-83e1-293550bbc554": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons_third-party-tested2.png",
-            "title": "Third-party Tested",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3",
-        "50eac316-6d16-451d-bbc6-887d82a49bac",
-        "d2648331-8919-49d2-83e1-293550bbc554"
-      ],
-      "settings": {
-        "flipping": false,
-        "title": "the sproos difference",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "square",
-        "columns_desktop": 5,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "inverse",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "164991100118f2233a": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "On the blog",
-        "heading_size": "h1",
-        "blog": "blog",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 72,
-        "padding_bottom": 36
       }
     },
     "f7d427db-8788-4b81-b9a2-53aa95eda803": {
@@ -689,63 +480,19 @@
         "title_position": "center",
         "title_position_mobile": "center"
       }
-    },
-    "77649fe1-487b-4b6f-8d29-b2e335e52a1b": {
-      "type": "newsletter",
-      "disabled": true,
-      "blocks": {
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Discover a better way to live!",
-            "heading_size": 30
-          }
-        },
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2": {
-          "type": "email_form",
-          "settings": {
-          }
-        },
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Sign up to get <strong>20% OFF<\/strong> early access to new products, recipes and exclusive discounts.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-0",
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-2",
-        "template--19609665339711__77649fe1-487b-4b6f-8d29-b2e335e52a1b-16880432591cbeb8c3-1"
-      ],
-      "settings": {
-        "color_scheme": "accent-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "margin_top": 40,
-        "margin_bottom": 52,
-        "top_wave": true,
-        "bottom_wave": true
-      }
     }
   },
   "order": [
     "image_banner",
-    "16584952237a3d1d62",
     "fb0cf837-05ec-4fc8-a21b-d0e128c591f9",
     "56644474-3c52-4e0e-9a66-9ec85b0d6849",
     "253097bf-1e47-4ad8-9abb-313f30c4d579",
     "featured_collection",
     "182e606a-3868-4b09-81df-f6f7e0d9ebb0",
-    "1649910994d4f0cc54",
     "3cb6d275-3ac2-451f-be4e-cebafa5ef54d",
     "8f1d868b-cac1-400e-8606-4dff2bb0cb07",
-    "multicolumn",
-    "164991100118f2233a",
     "f7d427db-8788-4b81-b9a2-53aa95eda803",
     "16499520255e00269a",
-    "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
-    "77649fe1-487b-4b6f-8d29-b2e335e52a1b"
+    "5449d5f4-c776-4ae2-8feb-25299f23ddc4"
   ]
 }
