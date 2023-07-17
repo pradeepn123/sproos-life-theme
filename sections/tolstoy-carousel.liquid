@@ -63,6 +63,7 @@
 </div>
 {% render 'wave-bottom', color: section.settings.section_background, class: "tolstoy_section_wave" %}
 
+{% comment %}
 <script>
     document.querySelector('.tolstoy_carousel_wrapper').style.display = 'none';
     document.querySelector('.tolstoy_section_wave').style.display = 'none';
@@ -73,6 +74,7 @@
         }
     })  
 </script>
+{% endcomment %}
 {% schema %} 
 { 
     "name": "Tolstoy carousel", 
