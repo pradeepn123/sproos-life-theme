@@ -138,7 +138,7 @@
           "logo_width": 130,
           "logo_position": "middle-center",
           "menu": "homepage-menu",
-          "show_offer": false,
+          "show_offer": true,
           "show_line_separator": false,
           "enable_sticky_header": true,
           "header_transparent": true,
