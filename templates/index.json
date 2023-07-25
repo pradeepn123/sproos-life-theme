@@ -498,6 +498,23 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "16903082000f78f44c": {
+      "type": "apps",
+      "blocks": {
+        "c6622afe-f01a-432c-bfbb-83dd66b7746a": {
+          "type": "shopify:\/\/apps\/qr-code-hub\/blocks\/home_landing\/4500f4b8-8cd3-4443-9a62-c1d1d9888ad7",
+          "settings": {
+            "has_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "c6622afe-f01a-432c-bfbb-83dd66b7746a"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -512,6 +529,7 @@
     "f7d427db-8788-4b81-b9a2-53aa95eda803",
     "16499520255e00269a",
     "5449d5f4-c776-4ae2-8feb-25299f23ddc4",
-    "168958274311551370"
+    "168958274311551370",
+    "16903082000f78f44c"
   ]
 }
