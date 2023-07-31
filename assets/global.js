@@ -1096,23 +1096,27 @@ function detectUserLocation() {
           if(Shopify.currency.active == 'CAD') {
             //user is in Canada and view the CAD site
             window.localStorage.setItem(lsStorageKey+"-cur", 'CAD');
+            modal.hide();
           }
-          else {
-            //send the user to the CAD site
-            //window.location = cleanPath + "?redirect=true";
-            modal.show(null);
-          }
+          // else {
+          //   //send the user to the CAD site
+          //   //window.location = cleanPath + "?redirect=true";
+          //   modal.show(null);
+          // }
         }
         if(ipCode == 'us') {
           if(Shopify.currency.active == 'USD') {
             //user is in US and view the USD site
             window.localStorage.setItem(lsStorageKey+"-cur", 'USD');
+            modal.hide();
           }
-          else {
-            //send the user to the USD site
-            //window.location = "/en-us" + cleanPath + "?redirect=true";
-            modal.show(null);
-          }
+          // else {
+          //   //send the user to the USD site
+          //   //window.location = "/en-us" + cleanPath + "?redirect=true";
+          //   modal.show(null);
+          // }
+        } else {
+          modal.hide();
         }
         return true;
       });
@@ -1124,7 +1128,6 @@ function detectUserLocation() {
   return true;
   
 }
-
 //decide if the modal should be shown on page load
 detectUserLocation();
 
@@ -1198,5 +1201,5 @@ document.querySelectorAll('.noFollow').forEach((link) => {
       $('body').removeClass('jump-menu-fixed');
     }
   }
-  */  
-    
+  */
+ 
