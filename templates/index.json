@@ -112,7 +112,7 @@
           "type": "icontext",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_7763.svg",
-            "collection": "creamers",
+            "collection": "bundles",
             "title": "Bundles",
             "text": "",
             "link_label": "",
@@ -483,7 +483,6 @@
     },
     "168958274311551370": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "44b60048-5a5e-414c-bfd4-c4f729f0ffc1": {
           "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
@@ -495,6 +494,7 @@
       "block_order": [
         "44b60048-5a5e-414c-bfd4-c4f729f0ffc1"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
