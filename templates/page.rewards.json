@@ -1,14 +1,74 @@
 {
   "sections": {
+    "4f835111-3926-4219-aa71-20bb022cf07e": {
+      "type": "image-banner",
+      "blocks": {
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Sproos Squad",
+            "heading_size": "h1"
+          }
+        },
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "With more ways to unlock exciting perks, this is your all access pass to exclusive rewards.",
+            "text_style": "body"
+          }
+        },
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join Now",
+            "button_link_1": "\/account\/register",
+            "button_text_color_1": "#2a7de1",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_text_color_2": "#000",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-heading-1",
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-text-1",
+        "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rewards_desktop_img_banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "title_style": "default"
+      }
+    },
+    "86684ace-bd7e-4c2c-9b3b-0e457e187b26": {
+      "type": "scoops-for-cash",
+      "settings": {
+        "scoops_for_cash_section_bg": "",
+        "scoops_for_cash_heading": ""
       }
     }
   },
   "order": [
-    "main"
+    "4f835111-3926-4219-aa71-20bb022cf07e",
+    "main",
+    "86684ace-bd7e-4c2c-9b3b-0e457e187b26"
   ]
 }

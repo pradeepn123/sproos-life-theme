@@ -1,0 +1,31 @@
+{% if page.handle == 'rewards' %}
+  {{ 'rewards.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+
+<div class="scoops_for_cash_section_container" style="background:{{section.settings.scoops_for_cash_section_bg}}">
+  <h1>Scoops For Cash Section</h1>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Scoops for cash section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "scoops_for_cash_section_bg",
+        "label": "Background Color"
+      }, {
+        "type": "text",
+        "id": "scoops_for_cash_heading",
+        "label": "Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Scoops for cash section"
+      }
+    ]
+  }
+{% endschema %}

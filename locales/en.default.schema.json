@@ -953,6 +953,9 @@
         "image": {
           "label": "First image"
         },
+        "mobile_image": {
+          "label": "Mobile image"
+        },
         "image_2": {
           "label": "Second image"
         },
