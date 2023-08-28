@@ -2,11 +2,7 @@
 
 {%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
   {%- style -%}
-    @media screen and (max-width: 749px) {
-    .content-container--full-width-mobile .banner__buttons .button {
-      color: #fff !important;
-      -webkit-text-fill-color: #fff !important;
-    }
+  @media screen and (max-width: 749px) {
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before,
     #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
@@ -15,6 +11,7 @@
       display: block;
     }
   }
+
   @media screen and (min-width: 750px) {
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before {
@@ -29,6 +26,11 @@
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+  @media (max-width: 749px){
+    .content-container--full-width-mobile .banner__buttons .button{
+      color: #fff !important;
+    }
   }
 {%- endstyle -%}
 
