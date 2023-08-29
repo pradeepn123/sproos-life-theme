@@ -27,7 +27,6 @@
     },
     "1652300162fac320a5": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "165230016202fca5bf-0": {
           "type": "heading",
@@ -47,6 +46,7 @@
         "165230016202fca5bf-0",
         "165230016202fca5bf-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "full_width": true,

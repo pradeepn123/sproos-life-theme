@@ -54,7 +54,6 @@
     },
     "1649987276636cae45": {
       "type": "image-with-text",
-      "disabled": true,
       "blocks": {
         "164998727655b61d4a-0": {
           "type": "heading",
@@ -75,6 +74,7 @@
         "164998727655b61d4a-0",
         "164998727655b61d4a-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/sproos-biker-guy_2x_52e3b86b-caad-411b-bda3-0a3b9f4fc7f9.png",
         "height": "adapt",

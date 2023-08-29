@@ -1,0 +1,85 @@
+
+.redeem-product-points-sec .heading-sec h4{
+    margin: 0;
+}
+.redeem-product-points-sec{
+    position: relative;
+}
+.section-curved-marquee{
+    margin-top: 20px !important;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper product-form.product-form{
+    display: none;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information{
+    padding: 0 1rem;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .price,
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .price--on-sale .price-item--regular {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information variant-custom-selects{
+    color: #000;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+    color: #121212;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__inner{
+    border-radius: 9px;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card{    
+    box-shadow: 0px 14.399999618530273px 21.599998474121094px 0px rgba(50, 50, 71, 0.08), 0px 10.799999237060547px 10.799999237060547px 0px rgba(50, 50, 71, 0.08);
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information{
+    background-color: #fff;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}    
+.redeem-product-points-sec .slider-mobile-points .card-wrapper{    
+    pointer-events: none;
+}
+.slider-mobile-points{
+    overflow: hidden;
+}
+.redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: calc(0px - (44px / 2));
+    z-index: 2;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 4px 4px rgba(11, 56, 109, 0.2);
+}
+.redeem-product-points-sec .swiper-button-next:after, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 16px;
+}
+.redeem-product-points-sec .swiper-button-prev:after, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 16px;
+}
+.redeem-product-points-sec .swiper-button-next, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-prev {
+    right: 10px !important;
+    left: auto;
+}
+.redeem-product-points-sec .swiper-button-prev, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-next {
+    left: 10px !important;
+    right: auto;
+}
