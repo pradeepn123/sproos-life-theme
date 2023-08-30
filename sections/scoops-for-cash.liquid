@@ -4,8 +4,8 @@
 
 
 <div class="scoops_for_cash_section_container" style="background:{{section.settings.scoops_for_cash_section_bg}}">
-  <h1>Scoops For Cash Section</h1>
-
+  <h2>{% if section.settings.scoops_for_cash_heading != blank %} {{section.settings.scoops_for_cash_heading }} {% else %} {{ "Scoops For Cash Section" }} {% endif %}</h2>
+  <p></p>
 </div>
 
 {% schema %}
