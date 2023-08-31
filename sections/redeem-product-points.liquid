@@ -19,6 +19,7 @@
         }
     }
 {%- endstyle -%}
+
 {% assign color_variable = '' %}
 
 {% case section.settings.color_scheme %}
@@ -40,10 +41,9 @@
             <div class="heading-sec" style="text-align: {{ section.settings.heading_alignment }}">
                 <h4 class="{{ section.settings.heading_size }}">{{section.settings.heading}}</h4>
                 <span>{{ section.settings.subheading }}</span>
-            </div>
-            
+            </div>            
             {% comment %} Swiper container {% endcomment %}
-            <div class="swiper-container slider-mobile-points">
+            <div class="swiper-container slider-mobile-points {% if request.path == '/pages/rewards' %}line_through{% endif %}">
                 <div class="swiper-wrapper">
                     {% for product in section.settings.collection.products %}
                         <div class="swiper-slide">
@@ -60,6 +60,8 @@
                     <div class="swiper-button-prev"></div>
                 {% endif %}
             </div>
+            {%- assign collection_handle = collections[section.settings.collection] -%}
+            <a href="{{collection_handle.url}}" class="collection_handle">Shop Now</a> 
         </div>
     </div>
     {% if section.settings.bottom_wave %}

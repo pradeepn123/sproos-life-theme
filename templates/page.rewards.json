@@ -139,8 +139,31 @@
         "heading_size": 30,
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
+        "svg_fill_color": "#407ad9",
         "margin_top": 80,
         "margin_bottom": 76
+      }
+    },
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c": {
+      "type": "refer-a-friend",
+      "settings": {
+        "top_wave": true,
+        "bottom_wave": true,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "color_scheme": "background-2",
+        "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
+        "text": "Refer a Friend",
+        "description": "<p>Give your friends a reward and claim your own when they make a purchase.They get $5 off coupon ,you get $5 off coupon on all successful referral. <\/p>",
+        "sign_up_text": "Sign Up",
+        "sign_up_url": "",
+        "log_in_text": "Log In",
+        "log_in_url": "",
+        "background_color": "#c3e76b",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -150,6 +173,7 @@
     "86684ace-bd7e-4c2c-9b3b-0e457e187b26",
     "80cbc417-e211-46e3-88f1-c2225e47c966",
     "021ac03c-84be-4eba-ab40-f5957d717eac",
-    "39b84a07-b9dc-4620-a315-adca8c5f6558"
+    "39b84a07-b9dc-4620-a315-adca8c5f6558",
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c"
   ]
 }
