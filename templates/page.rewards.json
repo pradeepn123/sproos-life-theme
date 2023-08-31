@@ -63,8 +63,18 @@
       "type": "scoops-for-cash",
       "disabled": true,
       "settings": {
-        "scoops_for_cash_section_bg": "",
-        "scoops_for_cash_heading": ""
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "background_color": "rgba(0,0,0,0)",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": false,
+        "bottom_wave": false
       }
     },
     "80cbc417-e211-46e3-88f1-c2225e47c966": {
@@ -125,7 +135,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "color_scheme": "accent-1",
-        "top_wave": false,
+        "top_wave": true,
         "bottom_wave": true,
         "background_color": "#2a7de1",
         "padding_top": 36,
@@ -165,6 +175,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0": {
+      "type": "scoops-for-cash",
+      "blocks": {
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "100 Scoops",
+            "content": "<p>$1<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "500 Scoops",
+            "content": "<p>$5<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "1000 Scoops",
+            "content": "<p>$10<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "2000 Scoops",
+            "content": "<p>$20<\/p>",
+            "heading_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1",
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf",
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef",
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7"
+      ],
+      "settings": {
+        "heading": "Scoops for cash",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "<p>Apply your Scoop points at checkout for a discount on your purchase.<\/p>",
+        "layout": "none",
+        "color_scheme": "accent-1",
+        "background_color": "#2880db",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": true,
+        "bottom_wave": true
+      }
+    },
+    "a95cdb0b-4ab5-4570-8856-da191dfae687": {
+      "type": "curved-marquee",
+      "settings": {
+        "title": "JOIN NOW FOR FREE TO START EARNING .",
+        "heading_size": 30,
+        "heading_size_mobile": 60,
+        "background_color": "#FFFFFF",
+        "margin_top": 80,
+        "margin_bottom": 76
+      }
     }
   },
   "order": [
@@ -174,6 +256,8 @@
     "80cbc417-e211-46e3-88f1-c2225e47c966",
     "021ac03c-84be-4eba-ab40-f5957d717eac",
     "39b84a07-b9dc-4620-a315-adca8c5f6558",
-    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c"
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c",
+    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0",
+    "a95cdb0b-4ab5-4570-8856-da191dfae687"
   ]
 }
