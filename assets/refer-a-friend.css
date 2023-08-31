@@ -1,0 +1,112 @@
+.refer-friend-section{
+    position: relative;
+    margin-top: 70px;
+}
+.refer-friend-section .wave--top{
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+}
+.refer-friend-section .wave--bottom{
+    position: absolute;
+    bottom: -90px;
+    z-index: -1;
+}
+.refer-friend-section .refer-friend-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.refer-friend-wrapper-image {
+    flex: 1 0 50%;
+    text-align: center;
+}
+.refer-friend-wrapper-info {
+    flex: 1 0 50%;
+}
+.refer-friend-wrapper-info .refer-friend-wrapper-info-wrap{
+    width: 75%;
+}
+.refer-friend-wrapper-info .refer_heading{
+    color: #541686;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;    
+}
+.refer-friend-wrapper-info .refer_description{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: #541686;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 40px;
+}
+.refer-friend-wrapper-info .sign_up{
+    background: #FFF;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    color: #541686;
+    font-size: 15px;
+    font-weight: 700;
+}
+.refer-friend-wrapper-info .log_in{
+    background: #FFF;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    color: #541686;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.copy-text-container.referral{
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #541686;
+    align-items: center;
+    padding: 4px 6px;
+}
+input.text-input.with-system-btn.referral-url {
+    min-height: 42px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+}
+.copy-text-container.referral svg {
+    cursor: pointer;
+}
+
+@media(min-width: 1200px){
+    .refer-friend-wrapper-info .refer_heading{
+        font-size: 44px;
+    }
+    .refer-friend-section{
+        margin-top: 70px;
+    }
+    .refer-friend-section .refer-friend-wrapper{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1275px){   
+    .refer-friend-section .wave--top {
+      top: -56px;
+    }    
+    .refer-friend-section .wave--bottom {
+        bottom: -56px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .refer-friend-section .wave--top {
+      top: -30px;  
+    }
+    .refer-friend-section .wave--bottom {
+      bottom: -30px;  
+    }   
+}
+  

@@ -8,7 +8,7 @@
     }
     .section-curved-marquee svg .text_size{
         font-size: {{ section.settings.heading_size }}px;
-        fill: #C3E76B;
+        fill: {{ section.settings.svg_fill_color }};
         margin-right: 38px;
         display: block;
         text-transform: uppercase;
@@ -41,7 +41,7 @@
     {
       "type": "text",
       "id": "title",
-      "default": "Making life simple",
+      "default": "Making life simple", 
       "label": "Marquee title"
     },
     {
@@ -67,6 +67,11 @@
         "id": "background_color",
         "default": "#FFFFFF",
         "label": "Section background color" 
+    },
+    {
+        "type": "color",
+        "id": "svg_fill_color",        
+        "label": "Text color" 
     },
     {
       "type": "range",
