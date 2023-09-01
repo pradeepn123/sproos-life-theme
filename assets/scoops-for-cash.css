@@ -23,9 +23,11 @@
     row-gap: 30px;
 
 }
+
 .scoops-for-cash-items {
     flex: 1 0 50%;
 }
+
 .scoops-for-cash-items h4, .scoops-for-cash-items p{
     margin: 0;
 }
@@ -37,7 +39,6 @@
 .scoops-for-cash-items .icon_svg{
     padding-bottom: 18px;    
 }
-
 
 .scoops-for-cash-items span.scoop-amount {
     padding-bottom: 18px;

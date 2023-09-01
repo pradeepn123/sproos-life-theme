@@ -1,0 +1,89 @@
+.ways-to-earn-section {
+    position: relative;
+}
+
+.ways-to-earn-section h4{
+    margin: 0;
+    text-transform: inherit;
+}
+
+.ways-to-earn-section h4 {
+    color: #FFF;
+}
+
+.ways-to-earn-section .sub-heading {
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.ways-to-earn-list {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.ways-to-earn-items {
+    flex: 1 0 25%;
+    background: #fff;
+    padding: 36px;
+    border-radius: 1.25em;
+    max-width: 420px;
+    margin: auto;
+}
+
+.ways-to-earn-items h4, .ways-to-earn-items p{
+    margin: 0;
+}
+
+.ways-to-earn-items p.scoop-heading{
+    color: #2A7DE1;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.4px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.ways-to-earn-items span.scoop-amount {
+    color: #2A7DE1;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.banner__buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 45rem;
+    word-break: break-word;
+    margin-top: 1.5em;
+}
+
+.button--secondary {
+    --color-button: 255, 255, 255;
+    --color-button-text: 255, 255, 255;
+    --alpha-button-background: 0;
+}
+
+.loggedin-btn {
+    margin-top: 1.5em;
+}
+
+.earn-icon {
+    margin-right: 10px;
+}
+
+.earned-btn {
+    border: 1px solid #2A7DE1;
+}
