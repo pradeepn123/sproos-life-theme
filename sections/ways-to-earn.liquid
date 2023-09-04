@@ -8,6 +8,14 @@
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
+    
+    a.edit-btn :not([href]) {
+      cursor: pointer !important;
+    }
+
+    .edit-content-wrapper {
+      display: none;
+    }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
@@ -17,8 +25,17 @@
     }
 {%- endstyle -%}
 
+{%- liquid 
+  if customer
+      assign SHOPIFY_CUSTOMER_EMAIL = customer.email
+  else 
+      assign SHOPIFY_CUSTOMER_EMAIL = ''
+  endif
+-%}
+
 {% assign top_wave_color = section.settings.top_wave_color %}
 {% assign bottom_wave_color = section.settings.bottom_wave_color %}
+{% assign editDate = false %}
 
 <div class="ways-to-earn-section color-{{ section.settings.color_scheme }} gradient">
   {% if section.settings.top_wave %}
@@ -32,9 +49,10 @@
             </div>
             <div class="ways-to-earn-list">
                 {%- for block in section.blocks -%}
-                    <div class="ways-to-earn-items" style="text-align: {{ block.settings.heading_alignment }}">
+                    <div class="ways-to-earn-items" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
                         {%- case block.type -%}
                             {%- when 'text_steps' -%}
+                              <div class="content-wrapper">
                                 <div class="icon_svg">
                                     {{block.settings.svg_icon}}
                                 </div>
@@ -52,7 +70,18 @@
                                       Earned
                                     </a>
                                   {% elsif block.settings.heading == 'Celebrate a birthday' %}
-                                    <a href="/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</a>
+                                      <div class="bday-btns">
+                                        <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
+                                        <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                          <span class="earn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                              <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                              <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                            </svg>
+                                          </span>
+                                          Earned
+                                        </button>
+                                      </div>
                                   {% elsif block.settings.heading == 'Follow on instagram' %}
                                     <a href="https://www.instagram.com/sprooslife/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</a>
                                   {% elsif block.settings.heading == 'Like on Facebook' %}
@@ -70,6 +99,45 @@
                                     {%- endif -%}
                                   </div>
                                 {% endif %}
+                              </div>
+                              {% if block.settings.heading == 'Celebrate a birthday' %}
+                                <div class="edit-content-wrapper">
+                                  <p>
+                                    We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
+                                  </p>
+                                  <div class="birth_date">
+                                      <span class="birth_year">
+                                          <span class="input_label_text">Year</span>
+                                          <span class="input_text">
+                                            <input type="number" class="y_date" id="y_datepicker" min="1" max="2" pattern="[1-2]">
+                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                          </span>
+                                      </span>
+                                      
+                                      <span class="birth_month">
+                                        <span class="input_label_text">Month</span>
+                                          <span class="input_text">
+                                            <input type="number" class="m_date" id="y_datepicker" min="0" max="1">
+                                            <input type="number" class="m_date" id="y_datepicker" min="0" max="9">
+                                          </span>
+                                      </span>
+                                    
+                                      <span class="birth_day">
+                                        <span class="input_label_text">Day</span>
+                                          <span class="input_text">
+                                            <input type="number" class="d_date" id="y_datepicker" min="0" max="3">
+                                            <input type="number" class="d_date" id="y_datepicker" min="0" max="9">
+                                          </span>
+                                      </span>
+                                    </div>
+
+                                    <button class="button button--primary" onclick="dateSubmit()">
+                                      Save Date
+                                    </button>
+                                </div>
+                              {% endif %}
                         {%- endcase -%}
                     </div>
                 {%- endfor -%}
@@ -81,6 +149,89 @@
     {% endif %}
 </div>
 
+<script>
+  let TOKEN = sessionStorage.getItem("SMILE_TOKEN");
+  // Get customer data
+  let CUSTOMER;
+  let edit_btn = document.querySelector('.edit-btn');
+
+  if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
+      getCustomerDetails();
+  }
+  
+  function getCustomerDetails() {
+    fetch(`https://platform.smile.io/v1/customers?email={{SHOPIFY_CUSTOMER_EMAIL}}`, {method:'GET', 
+      headers: {'Authorization': 'Bearer ' + TOKEN}})
+      .then(response => response.json())
+      .then(response => {
+          CUSTOMER = response.customers;
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+  }
+
+  edit_btn.addEventListener('click', updateBirthday)
+  
+  function updateBirthday() {
+    getCustomerDetails();
+    let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+    editDateContent.style.display = 'none';
+
+    document.querySelector('.edit-content-wrapper').style.display='block';
+    let current_dob = CUSTOMER[0].date_of_birth;
+
+    let date = current_dob.split("-");
+    document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
+      if(ind == index) {
+        val.value = i;
+      }
+    }
+    ));
+
+    document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
+      if(ind == index) {
+        val.value = i;
+      }
+    }
+    ));
+
+    document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
+      if(ind == index) {
+        val.value = i;
+      }
+    }
+    ));
+
+  }
+
+
+  function dateSubmit() {
+    let year = '', month = '', day = '';
+    document.querySelectorAll('.y_date').forEach((y) => year = year + (y.value).toString());
+    document.querySelectorAll('.m_date').forEach((m) => month = month + (m.value).toString());
+    document.querySelectorAll('.d_date').forEach((d) => day = day + (d.value).toString());
+    
+    let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
+    let reqBody = JSON.stringify({
+      "customer": {
+        "date_of_birth": dob_iso_format
+      }
+    })
+    fetch(`https://platform.smile.io/v1/customers/${CUSTOMER[0].id}`, {method:'PUT',
+      headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+          updateBirthday();
+          let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+          editDateContent.style.display = 'block';
+          document.querySelector('.edit-content-wrapper').style.display='none';
+          document.querySelector('.birthday-btn').style.display = 'block';
+      })
+      .catch(error => console.log('error', error));
+  }
+</script>
 
 {% schema %}
 {
