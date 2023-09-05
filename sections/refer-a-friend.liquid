@@ -72,6 +72,25 @@
                                             <path d="M4 4.5V30.5H24" stroke="#541686" stroke-width="2" stroke-linecap="round"/>
                                         </svg>                                    
                                     </div>
+                                    <div class="social-media-links-section">
+                                        {%- for block in section.blocks -%}
+                                            <div class="social-media-list">
+                                                {%- case block.type -%}
+                                                    {%- when 'social_icons' -%}
+                                                        <div class="social-media-content-wrapper">
+                                                            <a href="{{block.settings.social_icon_link}}">
+                                                                <div class="social-icon_svg">
+                                                                    {{block.settings.social_svg_icon}}
+                                                                </div>
+                                                                <p class="social-media-icon-text">
+                                                                    {{ block.settings.social_icon_text}}
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                {%- endcase -%}
+                                            </div>
+                                        {%- endfor -%}
+                                    </div>
                                 {% else %}
                                     <a href="{{ section.settings.sign_up_url }}" class="sign_up">{{ section.settings.sign_up_text }}</a>
                                     <a href="{{ section.settings.log_in_url }}" class="log_in">{{ section.settings.log_in_text }}</a>
@@ -305,11 +324,44 @@
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
             "default": 36
-        }  
-    ],  
+        }
+    ],
+    "blocks": [
+        {
+          "type": "social_icons",
+          "name": "Social Media Links",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "social_image_icon",
+              "label": "Choose social media icon"
+            },
+            {
+              "type": "html",
+              "id": "social_svg_icon",
+              "label": "Choose svg code"
+            },
+            {
+              "type": "text",
+              "id": "social_icon_text",          
+              "label": "Social Media Icon Text"
+            },
+            {
+                "type": "url",
+                "id": "social_icon_link",          
+                "label": "Social Media Link"
+            }
+          ]
+        }
+    ],
     "presets": [
         {
-            "name": "Refer a Friend"
+            "name": "Refer a Friend",
+            "blocks": [
+                {
+                  "type": "social_icons"
+                }
+            ]
         }
     ]
 }

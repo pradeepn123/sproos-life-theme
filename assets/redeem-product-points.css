@@ -106,11 +106,31 @@
     right: auto;
 }
 
+.redeem-product-points-sec .heading-sec .subheading {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.redeem-product-points-sec .heading-sec .subheading p {
+    margin-bottom: 45px;
+}
+
 @media(min-width:1200px){
+    .redeem-product-points-sec {
+        padding-top: 26px;
+    }
     .redeem-product-points-sec .redeem_point_text{
         font-size: 18px;
     }
     .collection_handle{
         width: 149px;
+    }
+}
+
+@media(max-width: 767px) {
+    .collection_handle {
+        max-width: 149px;
+        max-height: 49px;
     }
 }

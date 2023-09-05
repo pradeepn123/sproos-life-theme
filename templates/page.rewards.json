@@ -38,6 +38,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rewards_desktop_img_banner.png",
+        "mobile_image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED_png.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -150,101 +151,6 @@
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
         "svg_fill_color": "#407ad9",
-        "margin_top": 80,
-        "margin_bottom": 76
-      }
-    },
-    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c": {
-      "type": "refer-a-friend",
-      "settings": {
-        "top_wave": true,
-        "bottom_wave": true,
-        "heading": "",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "title_size": "h4",
-        "color_scheme": "background-2",
-        "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
-        "text": "Refer a Friend",
-        "description": "<p>Give your friends a reward and claim your own when they make a purchase.They get $5 off coupon ,you get $5 off coupon on all successful referral. <\/p>",
-        "sign_up_text": "Sign Up",
-        "sign_up_url": "",
-        "log_in_text": "Log In",
-        "log_in_url": "",
-        "background_color": "#c3e76b",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0": {
-      "type": "scoops-for-cash",
-      "blocks": {
-        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1": {
-          "type": "text_steps",
-          "settings": {
-            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
-            "heading": "100 Scoops",
-            "content": "<p>$1<\/p>",
-            "heading_alignment": "center"
-          }
-        },
-        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf": {
-          "type": "text_steps",
-          "settings": {
-            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
-            "heading": "500 Scoops",
-            "content": "<p>$5<\/p>",
-            "heading_alignment": "center"
-          }
-        },
-        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef": {
-          "type": "text_steps",
-          "settings": {
-            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
-            "heading": "1000 Scoops",
-            "content": "<p>$10<\/p>",
-            "heading_alignment": "center"
-          }
-        },
-        "48dca1e1-efa0-4009-aeee-4201b63b1fc7": {
-          "type": "text_steps",
-          "settings": {
-            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
-            "heading": "2000 Scoops",
-            "content": "<p>$20<\/p>",
-            "heading_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1",
-        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf",
-        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef",
-        "48dca1e1-efa0-4009-aeee-4201b63b1fc7"
-      ],
-      "settings": {
-        "heading": "Scoops for cash",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "title_size": "h4",
-        "subheading": "<p>Apply your Scoop points at checkout for a discount on your purchase.<\/p>",
-        "layout": "none",
-        "color_scheme": "accent-1",
-        "background_color": "#2880db",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "top_wave": true,
-        "bottom_wave": true
-      }
-    },
-    "a95cdb0b-4ab5-4570-8856-da191dfae687": {
-      "type": "curved-marquee",
-      "settings": {
-        "title": "JOIN NOW FOR FREE TO START EARNING .",
-        "heading_size": 30,
-        "heading_size_mobile": 60,
-        "background_color": "#ffffff",
-        "svg_fill_color": "#2a7de1",
         "margin_top": 80,
         "margin_bottom": 76
       }
@@ -362,6 +268,177 @@
         "top_wave": true,
         "bottom_wave": true
       }
+    },
+    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0": {
+      "type": "scoops-for-cash",
+      "blocks": {
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "100 Scoops",
+            "content": "<p>$1<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "500 Scoops",
+            "content": "<p>$5<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "1000 Scoops",
+            "content": "<p>$10<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "2000 Scoops",
+            "content": "<p>$20<\/p>",
+            "heading_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1",
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf",
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef",
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7"
+      ],
+      "settings": {
+        "heading": "Scoops for cash",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "<p>Apply your Scoop points at checkout for a discount on your purchase.<\/p>",
+        "layout": "none",
+        "color_scheme": "accent-1",
+        "background_color": "#2880db",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": true,
+        "bottom_wave": true
+      }
+    },
+    "a95cdb0b-4ab5-4570-8856-da191dfae687": {
+      "type": "curved-marquee",
+      "settings": {
+        "title": "JOIN NOW FOR FREE TO START EARNING .",
+        "heading_size": 30,
+        "heading_size_mobile": 60,
+        "background_color": "#ffffff",
+        "svg_fill_color": "#2a7de1",
+        "margin_top": 80,
+        "margin_bottom": 76
+      }
+    },
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c": {
+      "type": "refer-a-friend",
+      "blocks": {
+        "c1685f7c-09ab-4004-849c-228d13b12283": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\">\n  <g clip-path=\"url(#clip0_1918_1865)\">\n    <path d=\"M13.7783 6.01443e-06C10.304 -0.00160074 6.95749 1.3102 4.40975 3.67241C1.862 6.03461 0.301376 9.27258 0.0407695 12.7371C-0.219837 16.2017 0.838841 19.6367 3.00454 22.3534C5.17024 25.0702 8.28287 26.8678 11.7183 27.386V17.429H8.30935V13.808H11.7183V11.4C11.7183 7.41001 13.6623 5.65901 16.9783 5.65901C17.9233 5.64689 18.8678 5.70404 19.8043 5.83001V8.99101H17.5413C16.1333 8.99101 15.6413 10.326 15.6413 11.83V13.809H19.7663L19.2073 17.43H15.6423V27.415C19.1032 26.9455 22.2563 25.1784 24.4634 22.4716C26.6704 19.7648 27.7664 16.3204 27.5295 12.8359C27.2926 9.3514 25.7404 6.0871 23.1873 3.70392C20.6342 1.32073 17.2709 -0.0032563 13.7783 6.01443e-06Z\" fill=\"#541686\"><\/path>\n  <\/g>\n  <defs>\n    <clippath id=\"clip0_1918_1865\">\n      <rect width=\"27.556\" height=\"27.414\" fill=\"white\"><\/rect>\n    <\/clippath>\n  <\/defs>\n<\/svg>",
+            "social_icon_text": "Facebook",
+            "social_icon_link": "https:\/\/www.facebook.com\/sprooslife\/"
+          }
+        },
+        "d8ee1b8c-5e0d-48cc-ac36-b1874ec91982": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29\" height=\"28\" viewbox=\"0 0 29 28\" fill=\"none\">\n  <g clip-path=\"url(#clip0_1918_1869)\">\n    <path d=\"M14.3327 0C11.6077 0 8.94383 0.808065 6.67805 2.32201C4.41227 3.83596 2.64631 5.98779 1.60348 8.50539C0.560657 11.023 0.287807 13.7933 0.819434 16.466C1.35106 19.1386 2.66329 21.5936 4.59018 23.5205C6.51706 25.4474 8.97207 26.7596 11.6447 27.2913C14.3174 27.8229 17.0877 27.55 19.6053 26.5072C22.1229 25.4644 24.2747 23.6984 25.7887 21.4326C27.3026 19.1669 28.1107 16.503 28.1107 13.778C28.1067 10.1251 26.6538 6.62288 24.0708 4.03987C21.4878 1.45685 17.9856 0.00397044 14.3327 0ZM21.0637 11.1C21.0697 11.241 21.0737 11.385 21.0737 11.53C21.0736 13.2236 20.6178 14.886 19.754 16.3427C18.8903 17.7995 17.6504 18.997 16.1644 19.8095C14.6785 20.6221 13.0013 21.0198 11.3087 20.961C9.61614 20.9021 7.97059 20.3888 6.54469 19.475C8.29854 19.6808 10.0628 19.1867 11.4547 18.1C10.7629 18.0868 10.0924 17.8582 9.53677 17.4459C8.98109 17.0336 8.56787 16.4583 8.35469 15.8C8.85246 15.8961 9.36565 15.8766 9.85469 15.743C9.10408 15.5905 8.42923 15.1833 7.94447 14.5903C7.4597 13.9973 7.19482 13.2549 7.19469 12.489V12.447C7.65437 12.7033 8.16867 12.8459 8.69469 12.863C7.99244 12.3933 7.49542 11.6737 7.30465 10.8507C7.11389 10.0276 7.2437 9.16278 7.66769 8.432C8.5012 9.45695 9.54084 10.2952 10.7192 10.8925C11.8975 11.4898 13.1883 11.8327 14.5077 11.899C14.3422 11.1878 14.4158 10.4418 14.7171 9.77659C15.0184 9.11141 15.5307 8.56412 16.1745 8.21949C16.8183 7.87487 17.5578 7.75212 18.2784 7.87026C18.999 7.9884 19.6606 8.34084 20.1607 8.873C20.9034 8.72812 21.616 8.45757 22.2677 8.073C22.0198 8.84154 21.5009 9.49373 20.8077 9.908C21.4658 9.82934 22.1085 9.65307 22.7147 9.385C22.2704 10.05 21.7113 10.6307 21.0637 11.1Z\" fill=\"#541686\"><\/path>\n  <\/g>\n  <defs>\n    <clippath id=\"clip0_1918_1869\">\n      <rect width=\"27.556\" height=\"27.556\" fill=\"white\" transform=\"translate(0.554688)\"><\/rect>\n    <\/clippath>\n  <\/defs>\n<\/svg>",
+            "social_icon_text": "Twitter",
+            "social_icon_link": "https:\/\/www.twitter.com"
+          }
+        },
+        "fd5ad899-ac11-498f-a2f6-d5ff66bfb327": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"38\" height=\"27\" viewbox=\"0 0 38 27\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0.433594 0.97293V27H37.0765V0.957866L20.3278 13.8114L19.7513 14.2539L19.1525 13.8422L0.433594 0.97293ZM35.0395 0H2.54869L19.6867 11.7824L35.0395 0Z\" fill=\"#541686\"><\/path>\n<\/svg>",
+            "social_icon_text": "Mail",
+            "social_icon_link": "mailto:hello@sprooslife.com"
+          }
+        }
+      },
+      "block_order": [
+        "c1685f7c-09ab-4004-849c-228d13b12283",
+        "d8ee1b8c-5e0d-48cc-ac36-b1874ec91982",
+        "fd5ad899-ac11-498f-a2f6-d5ff66bfb327"
+      ],
+      "settings": {
+        "top_wave": true,
+        "bottom_wave": true,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "color_scheme": "background-2",
+        "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
+        "text": "Refer a Friend",
+        "description": "<p>Give your friends a reward and claim your own when they make a purchase.They get $5 off coupon ,you get $5 off coupon on all successful referral. <\/p>",
+        "sign_up_text": "Sign Up",
+        "sign_up_url": "",
+        "log_in_text": "Log In",
+        "log_in_url": "",
+        "background_color": "#c3e76b",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f5008bfa-3958-4972-b91c-d42372544ead": {
+      "type": "instagram-feed",
+      "blocks": {
+        "266abd62-ce2a-4df4-a4ff-13ee2adb7f8d": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/8.jpg"
+          }
+        },
+        "ccdeb948-fe13-43a8-bdc0-b742da94a460": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/3.jpg"
+          }
+        },
+        "dc72dece-26bb-44e3-b9ae-c5a618fcfb0f": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/6.jpg"
+          }
+        },
+        "81f5c272-4186-443a-b189-7537618c4b76": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "266abd62-ce2a-4df4-a4ff-13ee2adb7f8d",
+        "ccdeb948-fe13-43a8-bdc0-b742da94a460",
+        "dc72dece-26bb-44e3-b9ae-c5a618fcfb0f",
+        "81f5c272-4186-443a-b189-7537618c4b76"
+      ],
+      "settings": {
+        "section_title": "<p>Follow us <a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
+        "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
+        "margin_top": 48,
+        "margin_bottom": 28,
+        "title_font-size": 30,
+        "title_font-size_mobile": 30,
+        "title_position": "center",
+        "title_position_mobile": "center"
+      }
     }
   },
   "order": [
@@ -371,9 +448,10 @@
     "80cbc417-e211-46e3-88f1-c2225e47c966",
     "021ac03c-84be-4eba-ab40-f5957d717eac",
     "39b84a07-b9dc-4620-a315-adca8c5f6558",
-    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c",
+    "77ec366e-5169-473a-88fc-fad67da6300a",
     "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0",
     "a95cdb0b-4ab5-4570-8856-da191dfae687",
-    "77ec366e-5169-473a-88fc-fad67da6300a"
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c",
+    "f5008bfa-3958-4972-b91c-d42372544ead"
   ]
 }

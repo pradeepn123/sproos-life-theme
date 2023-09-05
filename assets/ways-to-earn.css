@@ -158,3 +158,51 @@
 .btn-border {
     border: 1px solid #2A7DE1;
 }
+
+/* Begin: Media Query */
+@media screen and (max-width: 767px) {
+    .page-width {
+        padding: 0 0 0 1.5rem;
+    }
+
+    .ways-to-earn-section h4 {
+        font-size: 32px;
+    }
+
+    .ways-to-earn-list {
+        padding-top: 24px;
+        display: flex;
+        flex-wrap: nowrap;
+        row-gap: 30px;
+        column-gap: 20px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #ways-to-earn-items-edit-birthday {
+        padding: 36px 16px;
+    }
+
+    .ways-to-earn-items {
+        min-width: 327px;
+    }
+
+    .ways-to-earn-items:last-child {
+        margin-right: 1.5rem;
+    }
+    
+    .ways-to-earn-items-edit-birthday {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .ways-to-earn-section .sub-heading {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ways-to-earn-section .sub-heading p {
+        margin-top: 10px;
+    }
+}
+/* End: Media Query */

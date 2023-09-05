@@ -21,7 +21,6 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 30px;
-
 }
 
 .scoops-for-cash-items {
@@ -112,8 +111,17 @@
     .scoops-for-cash-list {
         row-gap: 40px;
     }
-    .page-width {
-        margin-top: 20px;
+}
+
+@media(max-width: 767px) {
+    .scoops-for-cash-list {
+        padding-top: 24px;
+    }
+    .scoops-for-cash-section h4 {
+        font-size: 32px;
+    }
+    .scoops-for-cash-section .sub-heading p {
+        margin-top: 10px;
     }
 }
 
