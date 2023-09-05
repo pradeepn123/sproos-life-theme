@@ -2,11 +2,15 @@
 
 {%- style -%}
     .ways-to-earn-section{
-        background-image: linear-gradient(to bottom, {{section.settings.background_color1}}, {{section.settings.background_color2}});
+      margin-top: {{ section.settings.margin_top}}px;
+      margin-bottom: {{section.settings.margin_bottom}}px;
+    }
+    .ways-to-earn-section-wrap{
+      background-image: {{section.settings.background_color}};
     }
     .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
     
     a.edit-btn :not([href]) {
@@ -39,132 +43,134 @@
 
 <div class="ways-to-earn-section color-{{ section.settings.color_scheme }} gradient">
   {% if section.settings.top_wave %}
-    {% render 'wave-top', color: top_wave_color, class: 'top__wave' %}
+    {% render 'wave-top-diff', color: top_wave_color, class: 'wave--top' %}
   {% endif %}
-  <div class="page-width">
-        <div class="section-{{ section.id }}-padding">
-            <div class="heading-sec" style="text-align: {{ section.settings.heading_alignment }}">
-                <h4 class="{{ section.settings.heading_size }}">{{section.settings.heading}}</h4>
-                <span class="sub-heading">{{ section.settings.subheading }}</span>
-            </div>
-            <div class="ways-to-earn-list">
-                {%- for block in section.blocks -%}
-                    <div class="ways-to-earn-items" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
-                        {%- case block.type -%}
-                            {%- when 'text_steps' -%}
-                              <div class="content-wrapper">
-                                <div class="icon_svg">
-                                    {{block.settings.svg_icon}}
-                                </div>
-                                <p class="scoop-heading">{{ block.settings.heading}}</p>
-                                <span class="scoop-amount">{{ block.settings.content}}</span>
-                                {% if customer %}
-                                  {% if block.settings.heading == 'Sign Up' %}
-                                    <a class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
-                                      <span class="earn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
-                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
-                                        </svg>
-                                      </span>
-                                      Earned
-                                    </a>
-                                  {% elsif block.settings.heading == 'Celebrate a birthday' %}
-                                      <div class="bday-btns">
-                                        <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
-                                        <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
-                                          <span class="earn-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                              <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
-                                              <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
-                                            </svg>
-                                          </span>
-                                          Earned
-                                        </button>
-                                      </div>
-                                  {% elsif block.settings.heading == 'Follow on instagram' %}
-                                    <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
-                                    <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
-                                      <span class="earn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
-                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
-                                        </svg>
-                                      </span>
-                                      Earned
-                                    </button>
-                                  {% elsif block.settings.heading == 'Like on Facebook' %}
-                                    <button class="button button--primary loggedin-btn fb-like-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
-                                    <button class="button button--secondary earned-btn" id="fb-btn" style="color: {{ block.settings.button_text_color_2 }};">
-                                      <span class="earn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
-                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
-                                        </svg>
-                                      </span>
-                                      Earned
-                                    </button>
-                                  {% elsif block.settings.heading == 'Place an order' %}
-                                    <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
-                                  {% endif %}
-                                {% else %}
-                                  <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
-                                    {%- if block.settings.button_label_1 != blank -%}
-                                        <a {% if block.settings.button_link_1 != blank %}  href="{{ block.settings.button_link_1 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_1 }};">{{ block.settings.button_label_1 | escape }}</a>
-                                    {%- endif -%}
-                                    {%- if block.settings.button_label_2 != blank -%}
-                                        <a {% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_2 }};">{{ block.settings.button_label_2 | escape }}</a>
-                                    {%- endif -%}
-                                  </div>
-                                {% endif %}
-                              </div>
-                              {% if block.settings.heading == 'Celebrate a birthday' %}
-                                <div class="edit-content-wrapper">
-                                  <p>
-                                    We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
-                                  </p>
-                                  <div class="birth_date">
-                                      <span class="birth_year">
-                                          <span class="input_label_text">Year</span>
-                                          <span class="input_text">
-                                            <input type="number" class="y_date" id="y_datepicker" min="1" max="2" pattern="[1-2]">
-                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
-                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
-                                            <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
-                                          </span>
-                                      </span>
-                                      
-                                      <span class="birth_month">
-                                        <span class="input_label_text">Month</span>
-                                          <span class="input_text">
-                                            <input type="number" class="m_date" id="y_datepicker" min="0" max="1">
-                                            <input type="number" class="m_date" id="y_datepicker" min="0" max="9">
-                                          </span>
-                                      </span>
-                                    
-                                      <span class="birth_day">
-                                        <span class="input_label_text">Day</span>
-                                          <span class="input_text">
-                                            <input type="number" class="d_date" id="y_datepicker" min="0" max="3">
-                                            <input type="number" class="d_date" id="y_datepicker" min="0" max="9">
-                                          </span>
-                                      </span>
-                                    </div>
-                                    <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
-                                    <button class="button button--primary" onclick="dateSubmit()">
-                                      Save Date
-                                    </button>
-                                </div>
-                              {% endif %}
-                        {%- endcase -%}
-                    </div>
-                {%- endfor -%}
-            </div>
+  <div class="ways-to-earn-section-wrap">
+    <div class="page-width">
+      <div class="section-{{ section.id }}-padding">
+        <div class="heading-sec" style="text-align: {{ section.settings.heading_alignment }}">
+            <h4 class="{{ section.settings.heading_size }}">{{section.settings.heading}}</h4>
+            <span class="sub-heading">{{ section.settings.subheading }}</span>
         </div>
+        <div class="ways-to-earn-list">
+            {%- for block in section.blocks -%}
+                <div class="ways-to-earn-items" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
+                    {%- case block.type -%}
+                        {%- when 'text_steps' -%}
+                          <div class="content-wrapper">
+                            <div class="icon_svg">
+                                {{block.settings.svg_icon}}
+                            </div>
+                            <p class="scoop-heading">{{ block.settings.heading}}</p>
+                            <span class="scoop-amount">{{ block.settings.content}}</span>
+                            {% if customer %}
+                              {% if block.settings.heading == 'Sign Up' %}
+                                <a class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </a>
+                              {% elsif block.settings.heading == 'Celebrate a birthday' %}
+                                  <div class="bday-btns">
+                                    <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
+                                    <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                      <span class="earn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                        </svg>
+                                      </span>
+                                      Earned
+                                    </button>
+                                  </div>
+                              {% elsif block.settings.heading == 'Follow on instagram' %}
+                                <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
+                                <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </button>
+                              {% elsif block.settings.heading == 'Like on Facebook' %}
+                                <button class="button button--primary loggedin-btn fb-like-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
+                                <button class="button button--secondary earned-btn" id="fb-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </button>
+                              {% elsif block.settings.heading == 'Place an order' %}
+                                <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
+                              {% endif %}
+                            {% else %}
+                              <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+                                {%- if block.settings.button_label_1 != blank -%}
+                                    <a {% if block.settings.button_link_1 != blank %}  href="{{ block.settings.button_link_1 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_1 }};">{{ block.settings.button_label_1 | escape }}</a>
+                                {%- endif -%}
+                                {%- if block.settings.button_label_2 != blank -%}
+                                    <a {% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_2 }};">{{ block.settings.button_label_2 | escape }}</a>
+                                {%- endif -%}
+                              </div>
+                            {% endif %}
+                          </div>
+                          {% if block.settings.heading == 'Celebrate a birthday' %}
+                            <div class="edit-content-wrapper">
+                              <p>
+                                We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
+                              </p>
+                              <div class="birth_date">
+                                  <span class="birth_year">
+                                      <span class="input_label_text">Year</span>
+                                      <span class="input_text">
+                                        <input type="number" class="y_date" id="y_datepicker" min="1" max="2" pattern="[1-2]">
+                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                      </span>
+                                  </span>
+                                  
+                                  <span class="birth_month">
+                                    <span class="input_label_text">Month</span>
+                                      <span class="input_text">
+                                        <input type="number" class="m_date" id="y_datepicker" min="0" max="1">
+                                        <input type="number" class="m_date" id="y_datepicker" min="0" max="9">
+                                      </span>
+                                  </span>
+                                
+                                  <span class="birth_day">
+                                    <span class="input_label_text">Day</span>
+                                      <span class="input_text">
+                                        <input type="number" class="d_date" id="y_datepicker" min="0" max="3">
+                                        <input type="number" class="d_date" id="y_datepicker" min="0" max="9">
+                                      </span>
+                                  </span>
+                                </div>
+                                <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
+                                <button class="button button--primary" onclick="dateSubmit()">
+                                  Save Date
+                                </button>
+                            </div>
+                          {% endif %}
+                    {%- endcase -%}
+                </div>
+            {%- endfor -%}
+        </div>
+      </div>
     </div>
     {% if section.settings.bottom_wave %}
-        {% render 'wave-bottom' color: bottom_wave_color, class: 'bottom__wave' %}
+      {% render 'wave-bottom' color: bottom_wave_color, class: 'wave--bottom' %}
     {% endif %}
+  </div>
 </div>
 
 <script>
@@ -470,20 +476,34 @@
         "default": "transparent"
     },
     {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    },
+    {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
     {
-      "type": "color",
-      "id": "background_color1",
-      "label": "Linear gradient Background Color 1",
-      "default": "transparent"
-    },
-    {
-        "type": "color",
-        "id": "background_color2",
-        "label": "Linear gradient Background Color 2",
-        "default": "transparent"
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "linear-gradient(#FCA4A2, #FFFFFF)"
     },
     {
       "type": "range",

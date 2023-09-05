@@ -159,6 +159,17 @@
     border: 1px solid #2A7DE1;
 }
 
+.ways-to-earn-section .wave--top{
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+}
+.ways-to-earn-section .wave--bottom{
+    position: absolute;
+    bottom: -90px;
+    z-index: -1;
+}
+
 /* Begin: Media Query */
 @media screen and (max-width: 767px) {
     .page-width {
