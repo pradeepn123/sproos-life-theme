@@ -60,7 +60,7 @@
                                 <span class="scoop-amount">{{ block.settings.content}}</span>
                                 {% if customer %}
                                   {% if block.settings.heading == 'Sign Up' %}
-                                    <a href="{{ block.settings.button_link_1 }}" class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                    <a class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
                                       <span class="earn-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                           <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
@@ -83,19 +83,37 @@
                                         </button>
                                       </div>
                                   {% elsif block.settings.heading == 'Follow on instagram' %}
-                                    <a href="https://www.instagram.com/sprooslife/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</a>
+                                    <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
+                                    <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                      <span class="earn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                        </svg>
+                                      </span>
+                                      Earned
+                                    </button>
                                   {% elsif block.settings.heading == 'Like on Facebook' %}
-                                    <a href="https://www.facebook.com/sprooslife/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
+                                    <button class="button button--primary loggedin-btn fb-like-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
+                                    <button class="button button--secondary earned-btn" id="fb-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                      <span class="earn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                        </svg>
+                                      </span>
+                                      Earned
+                                    </button>
                                   {% elsif block.settings.heading == 'Place an order' %}
                                     <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
                                   {% endif %}
                                 {% else %}
                                   <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
                                     {%- if block.settings.button_label_1 != blank -%}
-                                        <a {% if block.settings.button_link_1 != blank %}  href="{{ block.settings.button_link_1 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_1 }};">{{ block.settings.button_label_1 | escape }}</a>
+                                        <a {% if block.settings.button_link_1 != blank %}  href="{{ block.settings.button_link_1 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_1 }};">{{ block.settings.button_label_1 | escape }}</a>
                                     {%- endif -%}
                                     {%- if block.settings.button_label_2 != blank -%}
-                                        <a {% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_2 }};">{{ block.settings.button_label_2 | escape }}</a>
+                                        <a {% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_2 }};">{{ block.settings.button_label_2 | escape }}</a>
                                     {%- endif -%}
                                   </div>
                                 {% endif %}
@@ -132,7 +150,7 @@
                                           </span>
                                       </span>
                                     </div>
-
+                                    <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
                                     <button class="button button--primary" onclick="dateSubmit()">
                                       Save Date
                                     </button>
@@ -151,11 +169,21 @@
 
 <script>
   let TOKEN = sessionStorage.getItem("SMILE_TOKEN");
+  let ACTIVITY_BEARER_TOKEN = "STCyqGpUPoyTxtWKb5MCGs1";
+  let SMILE_CHANNEL_KEY = "channel_OUtRL3oxWXmin4JywjGUrzab";
+
+  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", ACTIVITY_BEARER_TOKEN);
+  sessionStorage.setItem("SMILE_CHANNEL_KEY", SMILE_CHANNEL_KEY);
+
   // Get customer data
-  let CUSTOMER;
+  let CUSTOMER, ACTIVITIES, SMILE_CUSTOMER_ID;
+  SMILE_CUSTOMER_ID = sessionStorage.getItem('SMILE_CUSTOMER_ID');
   let edit_btn = document.querySelector('.edit-btn');
+  let ig_follow_btn = document.querySelector('.ig-follow-btn');
+  let fb_like_btn = document.querySelector('.fb-like-btn');
 
   if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
+      getUpdatedActivities();
       getCustomerDetails();
   }
   
@@ -173,12 +201,15 @@
 
   edit_btn.addEventListener('click', updateBirthday)
   
+  ig_follow_btn.addEventListener('click', igFollowAction)
+  
   function updateBirthday() {
     getCustomerDetails();
     let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
     editDateContent.style.display = 'none';
 
     document.querySelector('.edit-content-wrapper').style.display='block';
+    document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='30px';
     let current_dob = CUSTOMER[0].date_of_birth;
 
     let date = current_dob.split("-");
@@ -205,32 +236,105 @@
 
   }
 
-
   function dateSubmit() {
     let year = '', month = '', day = '';
     document.querySelectorAll('.y_date').forEach((y) => year = year + (y.value).toString());
     document.querySelectorAll('.m_date').forEach((m) => month = month + (m.value).toString());
     document.querySelectorAll('.d_date').forEach((d) => day = day + (d.value).toString());
-    
-    let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
+
+    if(parseInt(year) >= 1900 && parseInt(year) <= 2013 && parseInt(month) >= 01 && parseInt(month) <= 12 && parseInt(day) >= 01 && parseInt(month) <= 31) {
+      let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
+      let reqBody = JSON.stringify({
+        "customer": {
+          "date_of_birth": dob_iso_format
+        }
+      })
+      fetch(`https://platform.smile.io/v1/customers/${SMILE_CUSTOMER_ID}`, {method:'PUT',
+        headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
+        body: reqBody})
+        .then(response => response.text())
+        .then(result => {
+            updateBirthday();
+            let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+            editDateContent.style.display = 'block';
+            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
+            document.querySelector('.edit-content-wrapper').style.display='none';
+            document.querySelector('.birthday-btn').style.display = 'block';
+        })
+        .catch(error => console.log('error', error));
+    } else {
+      document.querySelector('.date-error-text').style.display = "block";
+      document.querySelector('.birth_date').style.margin = "4px 0 0";
+      setTimeout(() => {
+        document.querySelector('.date-error-text').style.display = "none";
+        document.querySelector('.birth_date').style.margin = "20px 0 13px";
+      }, 5000);
+      
+    }
+  }
+
+  function igFollowAction() {
+    console.log("clicked ig foll")
     let reqBody = JSON.stringify({
-      "customer": {
-        "date_of_birth": dob_iso_format
+      "activity": {
+        "customer_id": SMILE_CUSTOMER_ID,
+        "token": "instagram_follow"
       }
     })
-    fetch(`https://platform.smile.io/v1/customers/${CUSTOMER[0].id}`, {method:'PUT',
-      headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
+    
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
       body: reqBody})
       .then(response => response.text())
       .then(result => {
-          updateBirthday();
-          let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
-          editDateContent.style.display = 'block';
-          document.querySelector('.edit-content-wrapper').style.display='none';
-          document.querySelector('.birthday-btn').style.display = 'block';
+          getUpdatedActivities();
+          window.open('https://www.instagram.com/sprooslife/', '_blank');
       })
       .catch(error => console.log('error', error));
   }
+
+  function fbLikeAction() {
+    console.log("clicked fb like")
+    let reqBody = JSON.stringify({
+      "activity": {
+        "customer_id": SMILE_CUSTOMER_ID,
+        "token": "facebook_like"
+      }
+    })
+    
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+          getUpdatedActivities();
+          window.open('https://www.facebook.com/sprooslife/', '_blank');
+      })
+      .catch(error => console.log('error', error));
+  }
+
+  function getUpdatedActivities() {
+    fetch(`https://platform.smile.io/v1/customer_activity_rules?customer_id=${SMILE_CUSTOMER_ID}&include=activity_rule.image_svg`, {method:'GET',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'}})
+      .then(response => response.json())
+      .then(result => {
+       console.log("response.json()", result)
+       result.customer_activity_rules.map((activity) => {
+        if(activity.activity_rule.type == 'instagram_follow' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+            ig_follow_btn.style.display = 'none';
+            document.querySelector('#ig-btn').style.display = 'block';
+        }
+        if(activity.activity_rule.type == 'facebook_like' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+          fb_like_btn.style.display = 'none';
+          document.querySelector('#fb-btn').style.display = 'block';
+        }
+       })
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+  }
+
 </script>
 
 {% schema %}

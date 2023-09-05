@@ -93,8 +93,10 @@
 <script>
     let SMILE_TOKEN = "int_dnTsZz3RZcSAkiSy5Fco";
     sessionStorage.setItem("SMILE_TOKEN", "int_dnTsZz3RZcSAkiSy5Fco");
-    // Add referral code if logged in
+
     let SMILE_CUSTOMER;
+    // Add referral code if logged in
+    
     let referral_input = document.querySelector('.referral-url');
 
     if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
@@ -103,6 +105,7 @@
             .then(response => response.json())
             .then(response => {
                 SMILE_CUSTOMER = response.customers;
+                sessionStorage.setItem("SMILE_CUSTOMER_ID", SMILE_CUSTOMER[0].id);
                 referral_input.value = SMILE_CUSTOMER[0].referral_url;
             })
             .catch((e) => {
