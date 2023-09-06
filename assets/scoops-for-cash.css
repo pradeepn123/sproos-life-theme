@@ -137,6 +137,12 @@
     }
 }
 
+@media(max-width: 390px) {
+    .scoops-for-cash-section {
+        margin-bottom: 2.25em;
+    }
+}
+
 @media(max-width: 320px) {
     .scoops-for-cash-items p.scoop-heading {
         font-size: 20px;

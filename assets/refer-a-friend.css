@@ -181,3 +181,26 @@ input.text-input.with-system-btn.referral-url {
         justify-content: space-between;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .refer-friend-section .wave--top {
+        top: -24px;
+    }
+}
+
+@media screen and (max-width: 375px) { 
+    .refer-friend-section .wave--bottom {
+        bottom: -28px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .refer-friend-wrapper-image img {
+        width: 100%;
+        padding: 0 2em;
+        height: 330px;
+    }
+    .refer-friend-wrapper-info .sign_up, .refer-friend-wrapper-info .log_in {
+        padding: 1.5rem 2.5rem;
+    }
+}

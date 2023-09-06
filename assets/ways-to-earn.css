@@ -31,10 +31,17 @@
 .ways-to-earn-items {
     flex: 1 0 25%;
     background: #fff;
-    padding: 36px;
     border-radius: 1.25em;
     max-width: 420px;
     margin: auto;
+}
+
+.ways-to-earn-items-loggedin {
+    padding: 36px;
+}
+
+.ways-to-earn-items-loggedout {
+    padding: 30px;
 }
 
 .ways-to-earn-items h4, .ways-to-earn-items p{
@@ -249,7 +256,16 @@
 }
 @media(max-width: 390px) {
     .ways-to-earn-section .wave--top {
-        top: -40px;
+        top: -39px;
+    }
+    .ways-to-earn-section {
+        margin-top: 48px;
+    }
+}
+
+@media(max-width: 320px) {
+    .ways-to-earn-section .wave--top {
+        top: -34px;
     }
 }
 /* End: Media Query */

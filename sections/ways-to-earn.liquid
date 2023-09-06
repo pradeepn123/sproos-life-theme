@@ -1,10 +1,13 @@
 {{ 'ways-to-earn.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .ways-to-earn-section{
-      margin-top: {{ section.settings.margin_top}}px;
-      margin-bottom: {{section.settings.margin_bottom}}px;
+    @media(min-width: 1440px) {
+      .ways-to-earn-section{
+        margin-top: {{ section.settings.margin_top}}px;
+        margin-bottom: {{section.settings.margin_bottom}}px;
+      }
     }
+    
     .ways-to-earn-section-wrap{
       background-image: {{section.settings.background_color}};
     }
@@ -54,7 +57,7 @@
         </div>
         <div class="ways-to-earn-list">
             {%- for block in section.blocks -%}
-                <div class="ways-to-earn-items" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
+                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
                     {%- case block.type -%}
                         {%- when 'text_steps' -%}
                           <div class="content-wrapper">
