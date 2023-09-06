@@ -38,6 +38,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rewards_desktop_img_banner.png",
+        "mobile_image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED_png.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -63,8 +64,18 @@
       "type": "scoops-for-cash",
       "disabled": true,
       "settings": {
-        "scoops_for_cash_section_bg": "",
-        "scoops_for_cash_heading": ""
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "background_color": "rgba(0,0,0,0)",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": false,
+        "bottom_wave": false
       }
     },
     "80cbc417-e211-46e3-88f1-c2225e47c966": {
@@ -125,7 +136,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "color_scheme": "accent-1",
-        "top_wave": false,
+        "top_wave": true,
         "bottom_wave": true,
         "background_color": "#2a7de1",
         "padding_top": 36,
@@ -144,8 +155,227 @@
         "margin_bottom": 76
       }
     },
+    "77ec366e-5169-473a-88fc-fad67da6300a": {
+      "type": "ways-to-earn",
+      "blocks": {
+        "template--20715244585279__77ec366e-5169-473a-88fc-fad67da6300a-text_steps-1": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"86\" height=\"86\" viewbox=\"0 0 86 86\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M72.9201 48.1914H70.3905V72.6714C70.3905 72.7766 70.3052 72.8618 70.2001 72.8618H15.8001C15.6949 72.8618 15.6097 72.7766 15.6097 72.6714V48.1914H13.0801V72.6714C13.0801 74.1736 14.2979 75.3914 15.8001 75.3914H70.2001C71.7023 75.3914 72.9201 74.1736 72.9201 72.6714V48.1914Z\" fill=\"#2A7DE1\"><\/path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.4375 34.587H16.9671V26.427C16.9671 26.3219 17.0523 26.2366 17.1575 26.2366H67.4775C67.5827 26.2366 67.6679 26.3219 67.6679 26.427V34.587H70.1975V26.427C70.1975 24.9248 68.9797 23.707 67.4775 23.707H17.1575C15.6553 23.707 14.4375 24.9248 14.4375 26.427V34.587Z\" fill=\"#2A7DE1\"><\/path>\n  <path d=\"M29.7908 46.3911L28.3546 45.0124C27.0389 43.7494 24.9611 43.7494 23.6454 45.0124L22.2092 46.3911C19.5779 48.9172 15.4221 48.9172 12.7908 46.3911L9 42.752L15.8 34.592H68.5L77 42.752L73.2092 46.3911C70.5779 48.9172 66.4221 48.9172 63.7908 46.3911L62.3546 45.0124C61.0389 43.7494 58.9611 43.7494 57.6454 45.0124L56.2092 46.3911C53.5779 48.9172 49.4221 48.9172 46.7908 46.3911L45.3546 45.0124C44.0389 43.7494 41.9611 43.7494 40.6454 45.0124L39.2092 46.3911C36.5779 48.9172 32.4221 48.9172 29.7908 46.3911Z\" fill=\"#FDA3A2\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/path>\n  <path d=\"M19.8807 48.0677V61.915H44.3607V44.1113M49.4607 48.0677V74.0313H66.4607V48.0677M52.0107 52.395H54.5607V61.915H52.0107V52.395Z\" stroke=\"#2A7DE1\" stroke-width=\"1.7\"><\/path>\n  <line x1=\"25.0987\" y1=\"25.0703\" x2=\"25.0987\" y2=\"20.9903\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/line>\n  <line y1=\"-1.581\" x2=\"4.08\" y2=\"-1.581\" transform=\"matrix(5.82828e-08 -1 -1 -3.27841e-08 57.959 25.0703)\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/line>\n  <mask id=\"path-7-inside-1_1918_1687\" fill=\"white\">\n    <rect x=\"19.8807\" y=\"8.75\" width=\"44.88\" height=\"12.24\" rx=\"1.7\"><\/rect>\n  <\/mask>\n  <rect x=\"19.8807\" y=\"8.75\" width=\"44.88\" height=\"12.24\" rx=\"1.7\" stroke=\"#2A7DE1\" stroke-width=\"6.324\" mask=\"url(#path-7-inside-1_1918_1687)\"><\/rect>\n<\/svg>",
+            "heading": "Sign Up",
+            "content": "<p>100 Scoops<\/p>",
+            "heading_alignment": "center",
+            "button_label_1": "Join now",
+            "button_text_color_1": "#ffffff",
+            "button_link_1": "\/account\/register\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign in",
+            "button_link_2": "\/account\/login\/",
+            "button_text_color_2": "#2a7de1",
+            "button_style_secondary_2": true
+          }
+        },
+        "879795a2-c3c4-4f23-bb87-b08c2df00a98": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"85\" height=\"85\" viewbox=\"0 0 85 85\" fill=\"none\">\n  <path d=\"M12.5938 73.9824H72.3107\" stroke=\"#2A7DE1\" stroke-width=\"2.92778\" stroke-linecap=\"round\"><\/path>\n  <path d=\"M17 45.5L16 53L21 58L26 57.5L28 54.5L31 52.5L35.5 53.5L42.5 62L46 61L51 54.5H55.5L60 58.5H63L67.5 56V45.5H17Z\" fill=\"#FDA3A2\"><\/path>\n  <mask id=\"path-3-inside-1_1975_758\" fill=\"white\">\n    <path d=\"M21.6797 34.2927C21.6797 32.554 23.0892 31.1445 24.8278 31.1445H58.7756C60.5142 31.1445 61.9237 32.554 61.9237 34.2927V45.4247H21.6797V34.2927Z\"><\/path>\n  <\/mask>\n  <path d=\"M18.7519 34.2927C18.7519 30.937 21.4722 28.2168 24.8278 28.2168H58.7756C62.1312 28.2168 64.8515 30.937 64.8515 34.2927H58.9959C58.9959 34.171 58.8973 34.0723 58.7756 34.0723H24.8278C24.7061 34.0723 24.6075 34.171 24.6075 34.2927H18.7519ZM61.9237 45.4247H21.6797H61.9237ZM18.7519 45.4247V34.2927C18.7519 30.937 21.4722 28.2168 24.8278 28.2168V34.0723C24.7061 34.0723 24.6075 34.171 24.6075 34.2927V45.4247H18.7519ZM58.7756 28.2168C62.1312 28.2168 64.8515 30.937 64.8515 34.2927V45.4247H58.9959V34.2927C58.9959 34.171 58.8973 34.0723 58.7756 34.0723V28.2168Z\" fill=\"#2A7DE1\" mask=\"url(#path-3-inside-1_1975_758)\"><\/path>\n  <rect x=\"16.6553\" y=\"45.5889\" width=\"51.5964\" height=\"23.0361\" rx=\"1.68426\" stroke=\"#2A7DE1\" stroke-width=\"2.92778\"><\/rect>\n  <path d=\"M16.4883 51.2637C17.5701 53.211 18.4356 58.4037 22.9793 58.4037C28.172 58.4037 26.8738 51.9128 32.7157 51.9128C38.5576 51.9128 37.2594 61.6492 43.7504 61.6492C48.9431 61.6492 47.6449 53.8601 52.8377 53.8601C58.0305 53.8601 56.0832 58.4037 61.9251 58.4037C64.3051 58.4037 66.4687 56.4564 68.416 51.9128\" stroke=\"#2A7DE1\" stroke-width=\"2.92778\"><\/path>\n  <rect x=\"39.8555\" y=\"24.6504\" width=\"3.89458\" height=\"6.49097\" fill=\"#2A7DE1\"><\/rect>\n  <path d=\"M45.0476 20.3432C45.0476 22.1357 43.5946 23.3533 41.8021 23.3533C40.0097 23.3533 38.5566 22.1357 38.5566 20.3432C38.5566 17.5105 40.5039 16.8614 41.8021 11.0195C43.7494 14.265 45.0476 17.2397 45.0476 20.3432Z\" fill=\"#2A7DE1\"><\/path>\n<\/svg>",
+            "heading": "Celebrate a birthday",
+            "content": "<p>100 Scoops<\/p>",
+            "heading_alignment": "center",
+            "button_label_1": "Join now",
+            "button_text_color_1": "#ffffff",
+            "button_link_1": "\/account\/register\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign in",
+            "button_link_2": "\/account\/login\/",
+            "button_text_color_2": "#2a7de1",
+            "button_style_secondary_2": true
+          }
+        },
+        "edb228f5-eeb9-4d26-91d2-51dcca51d1b2": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"85\" height=\"85\" viewbox=\"0 0 85 85\" fill=\"none\">\n  <rect x=\"6.43842\" y=\"16.8798\" width=\"49.7732\" height=\"49.7732\" rx=\"15.419\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/rect>\n  <circle cx=\"31.3255\" cy=\"41.765\" r=\"13.5433\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/circle>\n  <circle cx=\"47.7083\" cy=\"26.6416\" r=\"2.52072\" fill=\"#2A7DE1\"><\/circle>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M72.9013 35.5625C72.9013 34.6893 72.1935 33.9815 71.3203 33.9815C70.4471 33.9815 69.7393 34.6893 69.7393 35.5625V40.8194L64.4854 40.8194C63.6123 40.8194 62.9044 41.5272 62.9044 42.4004C62.9044 43.2736 63.6123 43.9814 64.4854 43.9814H69.7393V49.2294C69.7393 50.1026 70.4471 50.8104 71.3203 50.8104C72.1935 50.8104 72.9013 50.1026 72.9013 49.2294V43.9814H78.1523C79.0255 43.9814 79.7333 43.2736 79.7333 42.4004C79.7333 41.5272 79.0255 40.8194 78.1523 40.8194L72.9013 40.8194V35.5625Z\" fill=\"#FDA3A2\"><\/path>\n<\/svg>",
+            "heading": "Follow on instagram",
+            "content": "<p>50 Scoops<\/p>",
+            "heading_alignment": "center",
+            "button_label_1": "Join now",
+            "button_text_color_1": "#ffffff",
+            "button_link_1": "\/account\/register\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign in",
+            "button_link_2": "\/account\/login\/",
+            "button_text_color_2": "#2a7de1",
+            "button_style_secondary_2": true
+          }
+        },
+        "0f11a3e6-fb13-4259-a417-09913805568c": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"86\" height=\"85\" viewbox=\"0 0 86 85\" fill=\"none\">\n  <path d=\"M11.5 37L8.5 38V68.5L10 71L24 71.5L27.5 70L29 36.5L11.5 37Z\" fill=\"#F6A0A0\"><\/path>\n  <path d=\"M28.3211 36.6226C30.398 36.6226 39.8424 36.9565 41.7313 30.2999C44.0281 22.2059 44.5647 20.6927 44.5647 15.0807C44.5647 9.46874 54.9827 11.4229 54.9827 19.8391C54.9827 22.645 54.9827 29.6077 54.9827 32.4137C54.9827 35.2196 56.3859 35.2196 59.1924 35.2196C61.9989 35.2196 63.4021 35.2196 67.6119 35.2196C71.8216 35.2196 78.8378 38.0256 76.0313 52.0555C73.2248 66.0854 64.8054 73.1004 59.1924 73.1004C53.5795 73.1004 52.1762 73.1004 46.5633 73.1004C42.0729 73.1004 32.0631 68.7808 28.3211 66.4425M28.3211 36.6226V68.2974C28.3211 70.1752 26.7989 71.6974 24.9211 71.6974H12.0758C10.198 71.6974 8.67578 70.1752 8.67578 68.2974V40.0226C8.67578 38.1449 10.198 36.6226 12.0758 36.6226L28.3211 36.6226Z\" stroke=\"#2A7DE1\" stroke-width=\"3.162\"><\/path>\n<\/svg>",
+            "heading": "Like on Facebook",
+            "content": "<p>50 Scoops<\/p>",
+            "heading_alignment": "center",
+            "button_label_1": "Join now",
+            "button_text_color_1": "#ffffff",
+            "button_link_1": "\/account\/register\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign in",
+            "button_link_2": "\/account\/login\/",
+            "button_text_color_2": "#2a7de1",
+            "button_style_secondary_2": true
+          }
+        },
+        "28f2d07b-6e83-4c8e-b907-0c5fe2584a9c": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"86\" height=\"85\" viewbox=\"0 0 86 85\" fill=\"none\">\n  <path d=\"M56.7158 75.4983L19 72.3393L21.4074 32.0617V27.3232M56.7158 75.4983L67.1478 67.6007L64.7405 24.9539M56.7158 75.4983V30.4822M64.7405 24.9539L59.7405 28.2764L56.7158 30.4822M64.7405 24.9539L27.8271 21.7949L24.5555 24.5727L21.4074 27.3232M56.7158 30.4822L21.4074 27.3232\" stroke=\"#2A7DE1\" stroke-width=\"2.37758\"><\/path>\n  <path d=\"M31.9609 31.0572C31.9609 27.0449 31.9617 21.4241 31.9617 19.2018C31.9617 16.4241 33.8136 13.6463 41.2209 14.5722C47.1468 15.313 48.6283 18.5845 48.6283 20.1277V32.909\" stroke=\"#2A7DE1\" stroke-width=\"2.37758\" stroke-linecap=\"round\"><\/path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M38.7044 15.5007C38.7044 14.3859 39.0597 13.4309 40.0269 12.7861C41.0673 12.0925 43.0379 11.602 46.6274 12.0507C52.1012 12.7349 52.9934 15.6165 52.9934 16.4265V23.7015L55.371 23.8844V16.4265C55.371 14.1502 53.3003 10.4887 46.9223 9.69147C43.1044 9.21424 40.4454 9.64963 38.7081 10.8079C36.8975 12.0149 36.3268 13.8377 36.3268 15.5007V15.5138V15.527V15.5404V15.5539V15.5676V15.5814V15.5954V15.6095V15.6237V15.6381V15.6526V15.6673V15.6821V15.697V15.7121V15.7273V15.7427V15.7582V15.7738V15.7895V15.8055V15.8215V15.8377V15.854V15.8704V15.887V15.9037V15.9205V15.9375V15.9546V15.9718V15.9892V16.0067V16.0243V16.042V16.0599V16.0779V16.0961V16.1143V16.1327V16.1512V16.1699V16.1886V16.2075V16.2265V16.2457V16.2649V16.2843V16.3038V16.3234V16.3432V16.3631V16.383V16.4032V16.4234V16.4437V16.4642V16.4848V16.5055V16.5263V16.5472V16.5683V16.5894V16.6107V16.6321V16.6536V16.6752V16.6969V16.7188V16.7407V16.7628V16.785V16.8073V16.8297V16.8522V16.8748V16.8975V16.9203V16.9433V16.9663V16.9895V17.0127V17.0361V17.0596V17.0832V17.1068V17.1306V17.1545V17.1785V17.2026V17.2268V17.2511V17.2754V17.2999V17.3245V17.3492V17.374V17.3989V17.4239V17.449V17.4741V17.4994V17.5248V17.5503V17.5758V17.6015V17.6272V17.6531V17.679V17.705V17.7311V17.7574V17.7837V17.8101V17.8365V17.8631V17.8898V17.9165V17.9433V17.9703V17.9973V18.0244V18.0516V18.0788V18.1062V18.1336V18.1611V18.1887V18.2164V18.2442V18.2721V18.3V18.328V18.3561V18.3843V18.4125V18.4409V18.4693V18.4978V18.5263V18.555V18.5837V18.6125V18.6414V18.6703V18.6994V18.7285V18.7576V18.7869V18.8162V18.8456V18.875V18.9046V18.9342V18.9639V18.9936V19.0234V19.0533V19.0832V19.1133V19.1433V19.1735V19.2037V19.234V19.2644V19.2948V19.3253V19.3558V19.3864V19.4171V19.4478V19.4786V19.5095V19.5404V19.5714V19.6024V19.6335V19.6646V19.6959V19.7271V19.7585V19.7899V19.8213V19.8528V19.8844V19.916V19.9476V19.9794V20.0111V20.043V20.0748V20.1068V20.1388V20.1708V20.2029V20.235V20.2672V20.2994V20.3317V20.3641V20.3964V20.4289V20.4613V20.4939V20.5264V20.559V20.5917V20.6244V20.6571V20.6899V20.7228V20.7556V20.7886V20.8215V20.8545V20.8876V20.9206V20.9538V20.9869V21.0201V21.0533V21.0866V21.1199V21.1533V21.1867V21.2201V21.2535V21.287V21.3205V21.3541V21.3877V21.4213V21.455V21.4886V21.5224V21.5561V21.5899V21.6237V21.6575V21.6914V21.7253V21.7592V21.7932V21.8271V21.8611V21.8952V21.9292V21.9633V21.9974V22.0315V22.0657V22.0998V22.134V22.1683V22.2025V22.2368V22.271V22.3053V22.3397V22.374V22.4083V22.4195L38.7044 22.6024V22.5804V22.5459V22.5115V22.4771V22.4427V22.4083V22.374V22.3397V22.3053V22.271V22.2368V22.2025V22.1683V22.134V22.0998V22.0657V22.0315V21.9974V21.9633V21.9292V21.8952V21.8611V21.8271V21.7932V21.7592V21.7253V21.6914V21.6575V21.6237V21.5899V21.5561V21.5224V21.4886V21.455V21.4213V21.3877V21.3541V21.3205V21.287V21.2535V21.2201V21.1867V21.1533V21.1199V21.0866V21.0533V21.0201V20.9869V20.9538V20.9206V20.8876V20.8545V20.8215V20.7886V20.7556V20.7228V20.6899V20.6571V20.6244V20.5917V20.559V20.5264V20.4939V20.4613V20.4289V20.3964V20.3641V20.3317V20.2994V20.2672V20.235V20.2029V20.1708V20.1388V20.1068V20.0748V20.043V20.0111V19.9794V19.9476V19.916V19.8844V19.8528V19.8213V19.7899V19.7585V19.7271V19.6959V19.6646V19.6335V19.6024V19.5714V19.5404V19.5095V19.4786V19.4478V19.4171V19.3864V19.3558V19.3253V19.2948V19.2644V19.234V19.2037V19.1735V19.1433V19.1133V19.0832V19.0533V19.0234V18.9936V18.9639V18.9342V18.9046V18.875V18.8456V18.8162V18.7869V18.7576V18.7285V18.6994V18.6703V18.6414V18.6125V18.5837V18.555V18.5263V18.4978V18.4693V18.4409V18.4125V18.3843V18.3561V18.328V18.3V18.2721V18.2442V18.2164V18.1887V18.1611V18.1336V18.1062V18.0788V18.0516V18.0244V17.9973V17.9703V17.9433V17.9165V17.8898V17.8631V17.8365V17.8101V17.7837V17.7574V17.7311V17.705V17.679V17.6531V17.6272V17.6015V17.5758V17.5503V17.5248V17.4994V17.4741V17.449V17.4239V17.3989V17.374V17.3492V17.3245V17.2999V17.2754V17.2511V17.2268V17.2026V17.1785V17.1545V17.1306V17.1068V17.0832V17.0596V17.0361V17.0127V16.9895V16.9663V16.9433V16.9203V16.8975V16.8748V16.8522V16.8297V16.8073V16.785V16.7628V16.7407V16.7188V16.6969V16.6752V16.6536V16.6321V16.6107V16.5894V16.5683V16.5472V16.5263V16.5055V16.4848V16.4642V16.4437V16.4234V16.4032V16.383V16.3631V16.3432V16.3234V16.3038V16.2843V16.2649V16.2457V16.2265V16.2075V16.1886V16.1699V16.1512V16.1327V16.1143V16.0961V16.0779V16.0599V16.042V16.0243V16.0067V15.9892V15.9718V15.9546V15.9375V15.9205V15.9037V15.887V15.8704V15.854V15.8377V15.8215V15.8055V15.7895V15.7738V15.7582V15.7427V15.7273V15.7121V15.697V15.6821V15.6673V15.6526V15.6381V15.6237V15.6095V15.5954V15.5814V15.5676V15.5539V15.5404V15.527V15.5138V15.5007Z\" fill=\"#2A7DE1\"><\/path>\n  <ellipse cx=\"38\" cy=\"50\" rx=\"9\" ry=\"10\" fill=\"#FDA3A2\"><\/ellipse>\n<\/svg>",
+            "heading": "Place an order",
+            "content": "<p>2 scoops for every $1 spent<\/p>",
+            "heading_alignment": "center",
+            "button_label_1": "Join now",
+            "button_text_color_1": "#ffffff",
+            "button_link_1": "\/account\/register\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign in",
+            "button_link_2": "\/account\/login\/",
+            "button_text_color_2": "#2a7de1",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20715244585279__77ec366e-5169-473a-88fc-fad67da6300a-text_steps-1",
+        "879795a2-c3c4-4f23-bb87-b08c2df00a98",
+        "edb228f5-eeb9-4d26-91d2-51dcca51d1b2",
+        "0f11a3e6-fb13-4259-a417-09913805568c",
+        "28f2d07b-6e83-4c8e-b907-0c5fe2584a9c"
+      ],
+      "settings": {
+        "heading": "Ways to earn",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "<p>Unlock exciting rewards with every purchase and engagement!<\/p>",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "top_wave_color": "#fda3a2",
+        "bottom_wave_color": "#ffffff",
+        "margin_top": 64,
+        "margin_bottom": 100,
+        "background_color": "linear-gradient(180deg, rgba(252, 164, 162, 1), rgba(255, 255, 255, 1) 100%)",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": true,
+        "bottom_wave": true
+      }
+    },
+    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0": {
+      "type": "scoops-for-cash",
+      "blocks": {
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "100 Scoops",
+            "content": "<p>$1<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "500 Scoops",
+            "content": "<p>$5<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "1000 Scoops",
+            "content": "<p>$10<\/p>",
+            "heading_alignment": "center"
+          }
+        },
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7": {
+          "type": "text_steps",
+          "settings": {
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"125\" height=\"122\" viewbox=\"0 0 125 122\" fill=\"none\">\n  <g filter=\"url(#filter0_i_1918_1581)\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 2.79407C54.8477 -5.04242 66.8549 5.44906 82.0449 11.6906C97.7558 18.1461 116.249 16.6689 123.141 38.3437C127.486 57.3418 116.85 60.0294 113.626 76.4879C110.285 93.5428 111.508 100.46 103.899 109.729C96.2897 118.997 87.6146 123.555 70.6964 121.248C56.4206 119.301 41.4528 124.846 30.3194 114.795C20.4532 105.889 20.5394 98.624 14.3966 90.7704C5.45186 79.3344 -0.456485 76.4119 0.0276888 61.4753C0.477851 47.5879 5.47658 45.0022 15.5409 34.3451C26.7261 22.5009 24.6686 10.125 39.2552 2.79407Z\" fill=\"#2173D6\"><\/path>\n  <\/g>\n  <defs>\n    <filter id=\"filter0_i_1918_1581\" x=\"-3\" y=\"-2\" width=\"127.169\" height=\"123.84\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n      <feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"><\/feflood>\n      <feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"><\/feblend>\n      <fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"><\/fecolormatrix>\n      <feoffset dx=\"-3\" dy=\"-2\"><\/feoffset>\n      <fegaussianblur stddeviation=\"2\"><\/fegaussianblur>\n      <fecomposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"><\/fecomposite>\n      <fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0853125 0 0 0 0 0.390217 0 0 0 0 0.758333 0 0 0 0.4 0\"><\/fecolormatrix>\n      <feblend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_1918_1581\"><\/feblend>\n    <\/filter>\n  <\/defs>\n<\/svg>",
+            "heading": "2000 Scoops",
+            "content": "<p>$20<\/p>",
+            "heading_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20715244585279__ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0-text_steps-1",
+        "f23f1b6a-4c64-46d8-b87b-d424d9269ddf",
+        "92b0bcf3-7e21-468d-a807-dc1f7f60b7ef",
+        "48dca1e1-efa0-4009-aeee-4201b63b1fc7"
+      ],
+      "settings": {
+        "heading": "Scoops for cash",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "title_size": "h4",
+        "subheading": "<p>Apply your Scoop points at checkout for a discount on your purchase.<\/p>",
+        "layout": "none",
+        "color_scheme": "accent-1",
+        "background_color": "#2880db",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_wave": true,
+        "bottom_wave": true
+      }
+    },
+    "a95cdb0b-4ab5-4570-8856-da191dfae687": {
+      "type": "curved-marquee",
+      "settings": {
+        "title": "JOIN NOW FOR FREE TO START EARNING .",
+        "heading_size": 30,
+        "heading_size_mobile": 60,
+        "background_color": "#ffffff",
+        "svg_fill_color": "#2a7de1",
+        "margin_top": 80,
+        "margin_bottom": 76
+      }
+    },
     "94fc5536-dc5b-45b6-9617-c36fe3d8db0c": {
       "type": "refer-a-friend",
+      "blocks": {
+        "c1685f7c-09ab-4004-849c-228d13b12283": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewbox=\"0 0 28 28\" fill=\"none\">\n  <g clip-path=\"url(#clip0_1918_1865)\">\n    <path d=\"M13.7783 6.01443e-06C10.304 -0.00160074 6.95749 1.3102 4.40975 3.67241C1.862 6.03461 0.301376 9.27258 0.0407695 12.7371C-0.219837 16.2017 0.838841 19.6367 3.00454 22.3534C5.17024 25.0702 8.28287 26.8678 11.7183 27.386V17.429H8.30935V13.808H11.7183V11.4C11.7183 7.41001 13.6623 5.65901 16.9783 5.65901C17.9233 5.64689 18.8678 5.70404 19.8043 5.83001V8.99101H17.5413C16.1333 8.99101 15.6413 10.326 15.6413 11.83V13.809H19.7663L19.2073 17.43H15.6423V27.415C19.1032 26.9455 22.2563 25.1784 24.4634 22.4716C26.6704 19.7648 27.7664 16.3204 27.5295 12.8359C27.2926 9.3514 25.7404 6.0871 23.1873 3.70392C20.6342 1.32073 17.2709 -0.0032563 13.7783 6.01443e-06Z\" fill=\"#541686\"><\/path>\n  <\/g>\n  <defs>\n    <clippath id=\"clip0_1918_1865\">\n      <rect width=\"27.556\" height=\"27.414\" fill=\"white\"><\/rect>\n    <\/clippath>\n  <\/defs>\n<\/svg>",
+            "social_icon_text": "Facebook",
+            "social_icon_link": "https:\/\/www.facebook.com\/sprooslife\/"
+          }
+        },
+        "d8ee1b8c-5e0d-48cc-ac36-b1874ec91982": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29\" height=\"28\" viewbox=\"0 0 29 28\" fill=\"none\">\n  <g clip-path=\"url(#clip0_1918_1869)\">\n    <path d=\"M14.3327 0C11.6077 0 8.94383 0.808065 6.67805 2.32201C4.41227 3.83596 2.64631 5.98779 1.60348 8.50539C0.560657 11.023 0.287807 13.7933 0.819434 16.466C1.35106 19.1386 2.66329 21.5936 4.59018 23.5205C6.51706 25.4474 8.97207 26.7596 11.6447 27.2913C14.3174 27.8229 17.0877 27.55 19.6053 26.5072C22.1229 25.4644 24.2747 23.6984 25.7887 21.4326C27.3026 19.1669 28.1107 16.503 28.1107 13.778C28.1067 10.1251 26.6538 6.62288 24.0708 4.03987C21.4878 1.45685 17.9856 0.00397044 14.3327 0ZM21.0637 11.1C21.0697 11.241 21.0737 11.385 21.0737 11.53C21.0736 13.2236 20.6178 14.886 19.754 16.3427C18.8903 17.7995 17.6504 18.997 16.1644 19.8095C14.6785 20.6221 13.0013 21.0198 11.3087 20.961C9.61614 20.9021 7.97059 20.3888 6.54469 19.475C8.29854 19.6808 10.0628 19.1867 11.4547 18.1C10.7629 18.0868 10.0924 17.8582 9.53677 17.4459C8.98109 17.0336 8.56787 16.4583 8.35469 15.8C8.85246 15.8961 9.36565 15.8766 9.85469 15.743C9.10408 15.5905 8.42923 15.1833 7.94447 14.5903C7.4597 13.9973 7.19482 13.2549 7.19469 12.489V12.447C7.65437 12.7033 8.16867 12.8459 8.69469 12.863C7.99244 12.3933 7.49542 11.6737 7.30465 10.8507C7.11389 10.0276 7.2437 9.16278 7.66769 8.432C8.5012 9.45695 9.54084 10.2952 10.7192 10.8925C11.8975 11.4898 13.1883 11.8327 14.5077 11.899C14.3422 11.1878 14.4158 10.4418 14.7171 9.77659C15.0184 9.11141 15.5307 8.56412 16.1745 8.21949C16.8183 7.87487 17.5578 7.75212 18.2784 7.87026C18.999 7.9884 19.6606 8.34084 20.1607 8.873C20.9034 8.72812 21.616 8.45757 22.2677 8.073C22.0198 8.84154 21.5009 9.49373 20.8077 9.908C21.4658 9.82934 22.1085 9.65307 22.7147 9.385C22.2704 10.05 21.7113 10.6307 21.0637 11.1Z\" fill=\"#541686\"><\/path>\n  <\/g>\n  <defs>\n    <clippath id=\"clip0_1918_1869\">\n      <rect width=\"27.556\" height=\"27.556\" fill=\"white\" transform=\"translate(0.554688)\"><\/rect>\n    <\/clippath>\n  <\/defs>\n<\/svg>",
+            "social_icon_text": "Twitter",
+            "social_icon_link": "https:\/\/www.twitter.com"
+          }
+        },
+        "fd5ad899-ac11-498f-a2f6-d5ff66bfb327": {
+          "type": "social_icons",
+          "settings": {
+            "social_svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"38\" height=\"27\" viewbox=\"0 0 38 27\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0.433594 0.97293V27H37.0765V0.957866L20.3278 13.8114L19.7513 14.2539L19.1525 13.8422L0.433594 0.97293ZM35.0395 0H2.54869L19.6867 11.7824L35.0395 0Z\" fill=\"#541686\"><\/path>\n<\/svg>",
+            "social_icon_text": "Mail",
+            "social_icon_link": "mailto:hello@sprooslife.com"
+          }
+        }
+      },
+      "block_order": [
+        "c1685f7c-09ab-4004-849c-228d13b12283",
+        "d8ee1b8c-5e0d-48cc-ac36-b1874ec91982",
+        "fd5ad899-ac11-498f-a2f6-d5ff66bfb327"
+      ],
       "settings": {
         "top_wave": true,
         "bottom_wave": true,
@@ -165,6 +395,51 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "f5008bfa-3958-4972-b91c-d42372544ead": {
+      "type": "instagram-feed",
+      "blocks": {
+        "266abd62-ce2a-4df4-a4ff-13ee2adb7f8d": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/8.jpg"
+          }
+        },
+        "ccdeb948-fe13-43a8-bdc0-b742da94a460": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/3.jpg"
+          }
+        },
+        "dc72dece-26bb-44e3-b9ae-c5a618fcfb0f": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/6.jpg"
+          }
+        },
+        "81f5c272-4186-443a-b189-7537618c4b76": {
+          "type": "select",
+          "settings": {
+            "instagram_image_block": "shopify:\/\/shop_images\/4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "266abd62-ce2a-4df4-a4ff-13ee2adb7f8d",
+        "ccdeb948-fe13-43a8-bdc0-b742da94a460",
+        "dc72dece-26bb-44e3-b9ae-c5a618fcfb0f",
+        "81f5c272-4186-443a-b189-7537618c4b76"
+      ],
+      "settings": {
+        "section_title": "<p>Follow us <a href=\"https:\/\/www.instagram.com\/sprooslife\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/sprooslife\/\">@sprooslife<\/a><\/p>",
+        "instagram_redirection_link": "https:\/\/www.instagram.com\/sprooslife\/",
+        "margin_top": 48,
+        "margin_bottom": 28,
+        "title_font-size": 30,
+        "title_font-size_mobile": 30,
+        "title_position": "center",
+        "title_position_mobile": "center"
+      }
     }
   },
   "order": [
@@ -174,6 +449,10 @@
     "80cbc417-e211-46e3-88f1-c2225e47c966",
     "021ac03c-84be-4eba-ab40-f5957d717eac",
     "39b84a07-b9dc-4620-a315-adca8c5f6558",
-    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c"
+    "77ec366e-5169-473a-88fc-fad67da6300a",
+    "ce523f6a-e3c3-4b81-b9d6-8e535fbd43c0",
+    "a95cdb0b-4ab5-4570-8856-da191dfae687",
+    "94fc5536-dc5b-45b6-9617-c36fe3d8db0c",
+    "f5008bfa-3958-4972-b91c-d42372544ead"
   ]
 }

@@ -40,7 +40,7 @@
         <div class="section-{{ section.id }}-padding">
             <div class="heading-sec" style="text-align: {{ section.settings.heading_alignment }}">
                 <h4 class="{{ section.settings.heading_size }}">{{section.settings.heading}}</h4>
-                <span>{{ section.settings.subheading }}</span>
+                <span class="subheading">{{ section.settings.subheading }}</span>
             </div>            
             {% comment %} Swiper container {% endcomment %}
             <div class="swiper-container slider-mobile-points {% if request.path == '/pages/rewards' %}line_through{% endif %}">

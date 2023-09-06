@@ -17,6 +17,14 @@
     }
 {%- endstyle -%}
 
+{%- liquid 
+    if customer
+        assign SHOPIFY_CUSTOMER_EMAIL = customer.email
+    else 
+        assign SHOPIFY_CUSTOMER_EMAIL = ''
+    endif
+-%}
+
 <div class="refer-friend-section color-{{ section.settings.color_scheme }} gradient">
     {% if section.settings.top_wave %}
         {% render 'wave-top-diff' class: 'wave--top', color: {{section.settings.background_color}} %}
@@ -55,11 +63,33 @@
                         {%- if shop.customer_accounts_enabled -%}
                             {%- if customer -%}
                                     <div class="copy-text-container referral field">
-                                        <input readonly="" value="https://i.refs.cc/hwlL9uNc?smile_ref=eyJzbWlsZV9zb3VyY2UiOiJzbWlsZV91aSIsInNtaWxlX21lZGl1bSI6IiIsInNtaWxlX2NhbXBhaWduIjoicmVmZXJyYWxfcHJvZ3JhbSIsInNtaWxlX2N1c3RvbWVyX2lkIjoxODUyMjQ5MDM2fQ%3D%3D" tabindex="-1" class="text-input with-system-btn referral-url">                                        
+                                        <input
+                                            readonly="" 
+                                            value="https://i.refs.cc/hwlL9uNc?smile_ref=eyJzbWlsZV9zb3VyY2UiOiJzbWlsZV91aSIsInNtaWxlX21lZGl1bSI6IiIsInNtaWxlX2NhbXBhaWduIjoicmVmZXJyYWxfcHJvZ3JhbSIsInNtaWxlX2N1c3RvbWVyX2lkIjoxODUyMjQ5MDM2fQ%3D%3D"
+                                            tabindex="-1" class="text-input with-system-btn referral-url">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                             <rect x="8.5" y="2" width="18" height="24" stroke="#541686" stroke-width="2"/>
                                             <path d="M4 4.5V30.5H24" stroke="#541686" stroke-width="2" stroke-linecap="round"/>
                                         </svg>                                    
+                                    </div>
+                                    <div class="social-media-links-section">
+                                        {%- for block in section.blocks -%}
+                                            <div class="social-media-list">
+                                                {%- case block.type -%}
+                                                    {%- when 'social_icons' -%}
+                                                        <div class="social-media-content-wrapper">
+                                                            <a href="{{block.settings.social_icon_link}}">
+                                                                <div class="social-icon_svg">
+                                                                    {{block.settings.social_svg_icon}}
+                                                                </div>
+                                                                <p class="social-media-icon-text">
+                                                                    {{ block.settings.social_icon_text}}
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                {%- endcase -%}
+                                            </div>
+                                        {%- endfor -%}
                                     </div>
                                 {% else %}
                                     <a href="{{ section.settings.sign_up_url }}" class="sign_up">{{ section.settings.sign_up_text }}</a>
@@ -80,6 +110,31 @@
 
 
 <script>
+    let SMILE_TOKEN = "int_dnTsZz3RZcSAkiSy5Fco";
+    sessionStorage.setItem("SMILE_TOKEN", "int_dnTsZz3RZcSAkiSy5Fco");
+
+    let SMILE_CUSTOMER;
+    // Add referral code if logged in
+    
+    let referral_input = document.querySelector('.referral-url');
+
+    if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
+        fetch(`https://platform.smile.io/v1/customers?email={{SHOPIFY_CUSTOMER_EMAIL}}`, {method:'GET', 
+            headers: {'Authorization': 'Bearer ' + SMILE_TOKEN}})
+            .then(response => response.json())
+            .then(response => {
+                SMILE_CUSTOMER = response.customers;
+                sessionStorage.setItem("SMILE_CUSTOMER_ID", SMILE_CUSTOMER[0].id);
+                referral_input.value = SMILE_CUSTOMER[0].referral_url;
+            })
+            .catch((e) => {
+                console.error(e);
+            })
+    } else {
+        referral_input.innerHTML = ''
+    }
+
+    // Copy to clipboard Script
     let copyText = document.querySelector(".referral");
 
     copyText.querySelector("svg").addEventListener("click", function () {
@@ -269,11 +324,44 @@
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
             "default": 36
-        }  
-    ],  
+        }
+    ],
+    "blocks": [
+        {
+          "type": "social_icons",
+          "name": "Social Media Links",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "social_image_icon",
+              "label": "Choose social media icon"
+            },
+            {
+              "type": "html",
+              "id": "social_svg_icon",
+              "label": "Choose svg code"
+            },
+            {
+              "type": "text",
+              "id": "social_icon_text",          
+              "label": "Social Media Icon Text"
+            },
+            {
+                "type": "url",
+                "id": "social_icon_link",          
+                "label": "Social Media Link"
+            }
+          ]
+        }
+    ],
     "presets": [
         {
-            "name": "Refer a Friend"
+            "name": "Refer a Friend",
+            "blocks": [
+                {
+                  "type": "social_icons"
+                }
+            ]
         }
     ]
 }

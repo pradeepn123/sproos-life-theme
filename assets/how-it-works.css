@@ -47,3 +47,19 @@
         flex: 1 0 33.33%;
     }
 }
+
+@media(max-width: 767px) {
+    .how-it-works-items h4 {
+        font-size: 16px;
+    }
+    .how-it-works-items p {
+        font-size: 14px;
+    }
+    .how-it-works-list {
+        padding-top: 0;
+    }
+    .how-it-works-items .icon_svg svg {
+        width: 129px;
+        height: 106px;
+    }
+}

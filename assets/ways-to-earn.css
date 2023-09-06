@@ -1,0 +1,271 @@
+.ways-to-earn-section {
+    position: relative;
+}
+
+.ways-to-earn-section h4{
+    margin: 0;
+    text-transform: inherit;
+}
+
+.ways-to-earn-section h4 {
+    color: #FFF;
+}
+
+.ways-to-earn-section .sub-heading {
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.ways-to-earn-list {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.ways-to-earn-items {
+    flex: 1 0 25%;
+    background: #fff;
+    border-radius: 1.25em;
+    max-width: 420px;
+    margin: auto;
+}
+
+.ways-to-earn-items-loggedin {
+    padding: 36px;
+}
+
+.ways-to-earn-items-loggedout {
+    padding: 30px;
+}
+
+.ways-to-earn-items h4, .ways-to-earn-items p{
+    margin: 0;
+}
+
+.ways-to-earn-items p.scoop-heading{
+    color: #2A7DE1;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.4px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.ways-to-earn-items span.scoop-amount {
+    color: #2A7DE1;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.banner__buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 45rem;
+    word-break: break-word;
+    margin-top: 1.5em;
+}
+
+.button--secondary {
+    --color-button: 255, 255, 255;
+    --color-button-text: 255, 255, 255;
+    --alpha-button-background: 0;
+}
+
+.loggedin-btn, .birthday-btn {
+    margin-top: 1.5em;
+}
+
+.bday-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.birthday-btn {
+    justify-content: center;
+    display: flex;
+}
+
+.earn-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.earned-btn, .earned-btn:hover {
+    border: 1px solid #2A7DE1;
+    cursor: not-allowed;
+}
+
+.edit-content-wrapper p {
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.643px;
+}
+
+.birth_date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 13px;
+}
+
+.birth_year, .birth_month, .birth_day {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.birth_date .input_label_text {
+    font-size: 14px;
+}
+
+.birth_date .input_text input {
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    width: 30px;
+    height: 44px;
+    color: #637381;
+    outline: none;
+    text-align: center;
+}
+
+.edit-content-wrapper .date-error-text {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin: 5px;
+}
+
+#ways-to-earn-items-edit-birthday {
+    padding: 36px;
+}
+
+#ig-btn, #fb-btn {
+    display: none;
+    cursor: not-allowed;
+    margin: 1.5em auto 0;
+}
+
+.btn-border {
+    border: 1px solid #2A7DE1;
+}
+
+.ways-to-earn-section .wave--top{
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+}
+.ways-to-earn-section .wave--bottom{
+    position: absolute;
+    bottom: -90px;
+    z-index: -1;
+}
+
+/* Begin: Media Query */
+@media(min-width: 1440px) {
+    .ways-to-earn-section {
+        margin-top: 64px;
+    }
+}
+
+@media(max-width: 1280px) {
+    .ways-to-earn-section {
+        margin-top: 74px;
+    }
+}
+@media(max-width: 1024px) {
+    .ways-to-earn-section {
+        margin-top: 60px;
+    }
+    .ways-to-earn-list {
+        padding-top: 24px;
+        display: flex;
+        flex-wrap: nowrap;
+        row-gap: 30px;
+        column-gap: 20px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .page-width {
+        padding: 0 0 0 1.5rem;
+    }
+
+    .ways-to-earn-section .wave--top {
+        top: -80px;
+    }
+
+    .ways-to-earn-section {
+        margin-top: 70px;
+    }
+
+    .ways-to-earn-section h4 {
+        font-size: 32px;
+    }
+
+    #ways-to-earn-items-edit-birthday {
+        padding:  36px 16px;;
+    }
+
+    .ways-to-earn-items {
+        min-width: 327px;
+    }
+
+    .ways-to-earn-items:last-child {
+        margin-right: 1.5rem;
+    }
+}
+@media(max-width: 540px) {
+    .ways-to-earn-section .wave--top {
+        top: -55px;
+    }
+    .ways-to-earn-section {
+        margin-top: 56px;
+    }
+}
+@media(max-width: 425px) {
+    .ways-to-earn-section .wave--top {
+        top: -45px;
+    }
+    .ways-to-earn-section {
+        margin-top: 48px;
+    }
+    .ways-to-earn-section .sub-heading {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ways-to-earn-section .sub-heading p {
+        margin-top: 10px;
+    }
+}
+@media(max-width: 390px) {
+    .ways-to-earn-section .wave--top {
+        top: -39px;
+    }
+    .ways-to-earn-section {
+        margin-top: 48px;
+    }
+}
+
+@media(max-width: 320px) {
+    .ways-to-earn-section .wave--top {
+        top: -34px;
+    }
+}
+/* End: Media Query */
