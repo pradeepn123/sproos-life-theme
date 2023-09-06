@@ -68,6 +68,10 @@
 /* BEGIN: Media Query */
 
 @media(min-width:1200px){
+    .scoops-for-cash-section {
+        margin-bottom: 2.5em;
+    }
+
     .scoops-for-cash-list {
         height: 170px;
     }
@@ -113,7 +117,15 @@
     }
 }
 
+@media(max-width: 820px) {
+    .scoops-for-cash-section {
+        margin-bottom: 2.5em;
+    }
+}
 @media(max-width: 767px) {
+    .scoops-for-cash-section {
+        margin-bottom: 2.5em;
+    }
     .scoops-for-cash-list {
         padding-top: 24px;
     }

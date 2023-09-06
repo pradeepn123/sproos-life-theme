@@ -171,15 +171,21 @@
 }
 
 /* Begin: Media Query */
-@media screen and (max-width: 767px) {
-    .page-width {
-        padding: 0 0 0 1.5rem;
+@media(min-width: 1440px) {
+    .ways-to-earn-section {
+        margin-top: 64px;
     }
+}
 
-    .ways-to-earn-section h4 {
-        font-size: 32px;
+@media(max-width: 1280px) {
+    .ways-to-earn-section {
+        margin-top: 74px;
     }
-
+}
+@media(max-width: 1024px) {
+    .ways-to-earn-section {
+        margin-top: 60px;
+    }
     .ways-to-earn-list {
         padding-top: 24px;
         display: flex;
@@ -190,8 +196,24 @@
         overflow-x: auto;
     }
 
+    .page-width {
+        padding: 0 0 0 1.5rem;
+    }
+
+    .ways-to-earn-section .wave--top {
+        top: -80px;
+    }
+
+    .ways-to-earn-section {
+        margin-top: 70px;
+    }
+
+    .ways-to-earn-section h4 {
+        font-size: 32px;
+    }
+
     #ways-to-earn-items-edit-birthday {
-        padding: 36px 16px;
+        padding:  36px 16px;;
     }
 
     .ways-to-earn-items {
@@ -201,19 +223,33 @@
     .ways-to-earn-items:last-child {
         margin-right: 1.5rem;
     }
-    
-    .ways-to-earn-items-edit-birthday {
-        padding: 20px;
+}
+@media(max-width: 540px) {
+    .ways-to-earn-section .wave--top {
+        top: -55px;
+    }
+    .ways-to-earn-section {
+        margin-top: 56px;
     }
 }
-
-@media screen and (max-width: 425px) {
+@media(max-width: 425px) {
+    .ways-to-earn-section .wave--top {
+        top: -45px;
+    }
+    .ways-to-earn-section {
+        margin-top: 48px;
+    }
     .ways-to-earn-section .sub-heading {
         font-size: 16px;
         line-height: 20px;
     }
     .ways-to-earn-section .sub-heading p {
         margin-top: 10px;
+    }
+}
+@media(max-width: 390px) {
+    .ways-to-earn-section .wave--top {
+        top: -40px;
     }
 }
 /* End: Media Query */
