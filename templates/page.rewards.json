@@ -388,9 +388,9 @@
         "text": "Refer a Friend",
         "description": "<p>Give your friends a reward and claim your own when they make a purchase.They get $5 off coupon ,you get $5 off coupon on all successful referral. <\/p>",
         "sign_up_text": "Sign Up",
-        "sign_up_url": "",
+        "sign_up_url": "https:\/\/sprooslife.com\/account\/register",
         "log_in_text": "Log In",
-        "log_in_url": "",
+        "log_in_url": "https:\/\/sprooslife.com\/account\/login",
         "background_color": "#c3e76b",
         "padding_top": 36,
         "padding_bottom": 36
