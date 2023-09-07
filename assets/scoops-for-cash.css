@@ -66,6 +66,11 @@
     transform: translate(-50%,-205%);
 }
 /* BEGIN: Media Query */
+@media(min-width: 1920px) {
+    .scoops-for-cash-section .heading-sec {
+        margin-top: 1em;
+    }
+}
 
 @media(min-width:1200px){
     .scoops-for-cash-section {

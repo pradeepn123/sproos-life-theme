@@ -34,6 +34,7 @@
     border-radius: 1.25em;
     max-width: 420px;
     margin: auto;
+    box-shadow: 2px 2px 3px 3px #0000000d;
 }
 
 .ways-to-earn-items-loggedin {
@@ -156,6 +157,16 @@
     padding: 36px;
 }
 
+.birth_date .input_text input::-webkit-outer-spin-button,
+.birth_date .input_text input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
 #ig-btn, #fb-btn {
     display: none;
     cursor: not-allowed;
@@ -181,12 +192,14 @@
 @media(min-width: 1440px) {
     .ways-to-earn-section {
         margin-top: 64px;
+        margin-bottom: 152px;
     }
 }
 
 @media(max-width: 1280px) {
     .ways-to-earn-section {
         margin-top: 74px;
+        margin-bottom: 152px;
     }
 }
 @media(max-width: 1024px) {
@@ -263,9 +276,18 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 360px) {
     .ways-to-earn-section .wave--top {
-        top: -34px;
+        top: -38px;
+    }
+}
+
+@media(max-width: 320px) {
+    .ways-to-earn-section {
+        margin-top: 44px;
+    }
+    .ways-to-earn-section .wave--top {
+        top: -33px;
     }
 }
 /* End: Media Query */

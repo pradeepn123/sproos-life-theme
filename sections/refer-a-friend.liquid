@@ -72,13 +72,14 @@
                                             <path d="M4 4.5V30.5H24" stroke="#541686" stroke-width="2" stroke-linecap="round"/>
                                         </svg>                                    
                                     </div>
+                                    <p class="referral-text-copy">Copied text to clipboard!</p>
                                     <div class="social-media-links-section">
                                         {%- for block in section.blocks -%}
                                             <div class="social-media-list">
                                                 {%- case block.type -%}
                                                     {%- when 'social_icons' -%}
                                                         <div class="social-media-content-wrapper">
-                                                            <a href="{{block.settings.social_icon_link}}">
+                                                            <a href="{{block.settings.social_icon_link}}" target="_blank">
                                                                 <div class="social-icon_svg">
                                                                     {{block.settings.social_svg_icon}}
                                                                 </div>
@@ -143,7 +144,9 @@
         document.execCommand("copy");
         copyText.classList.add("active");
         window.getSelection().removeAllRanges();
+        document.querySelector('.referral-text-copy').style.display = 'block';
         setTimeout(function () {
+            document.querySelector('.referral-text-copy').style.display = 'none';
             copyText.classList.remove("active");
         }, 2000);
     });
