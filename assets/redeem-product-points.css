@@ -27,7 +27,7 @@
 .redeem-product-points-sec .redeem_point_text{
     font-size: 16px;
     color: #2A7DE1;
-    font-weight: 700;
+    font-weight: 400;
 }
 .redeem-product-points-sec .slider-mobile-points.line_through .price .price__container{
     text-decoration: line-through;
@@ -158,6 +158,9 @@
     .collection_handle{
         width: 149px;
     }
+    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+        height: 40px;
+    }
 }
 
 @media(max-width: 767px) {
@@ -176,5 +179,9 @@
     }
     .redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
         display: none !important;
+    }
+    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+        /* check */
+        height: 60px;
     }
 }

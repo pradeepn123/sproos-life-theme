@@ -65,6 +65,9 @@
 }
 
 @media(max-width: 320px) {
+    .how-it-works-section .page-width {
+        padding: 0 0.6rem;
+    }
     .how-it-works-items h4 {
         font-size: 14px;
     }

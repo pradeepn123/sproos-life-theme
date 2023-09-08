@@ -134,6 +134,7 @@ input.text-input.with-system-btn.referral-url:focus-visible {
 @media screen and (max-width: 1275px){
     .refer-friend-section {
         margin-top: 30px;
+        margin-bottom: 120px;
     }
     .refer-friend-section .wave--top {
       top: -56px;
@@ -207,7 +208,7 @@ input.text-input.with-system-btn.referral-url:focus-visible {
 
 @media screen and (max-width: 375px) { 
     .refer-friend-section .wave--bottom {
-        bottom: -28px;
+        bottom: -27px;
     }
 }
 
@@ -229,7 +230,7 @@ input.text-input.with-system-btn.referral-url:focus-visible {
         padding: 1rem 2.5rem;
     }
     .refer-friend-section .wave--bottom {
-        bottom: -25px;
+        bottom: -24px;
     }
     .social-media-icon-text {
         font-size: 16px;

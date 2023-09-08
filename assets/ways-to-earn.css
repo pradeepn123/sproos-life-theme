@@ -154,7 +154,7 @@
 }
 
 #ways-to-earn-items-edit-birthday {
-    padding: 36px;
+    padding: 30px;
 }
 
 .birth_date .input_text input::-webkit-outer-spin-button,
@@ -202,6 +202,29 @@ input[type=number] {
         margin-bottom: 152px;
     }
 }
+
+@media(min-width: 1200px) {
+    .ways-to-earn-list .ways-to-earn-items:nth-last-child(2) {
+        margin: 0 0 0 11%;
+    }
+    
+    .ways-to-earn-list .ways-to-earn-items:nth-last-child(1) {
+        margin: 0;
+    }
+}
+
+@media(min-width: 1280px) {
+    .ways-to-earn-list .ways-to-earn-items:nth-last-child(2) {
+        margin: 0 0 0 13%;
+    }
+}
+
+@media(min-width: 1440px) {
+    .ways-to-earn-list .ways-to-earn-items:nth-last-child(2) {
+        margin: 0 0 0 17%;
+    }
+}
+
 @media(max-width: 1024px) {
     .ways-to-earn-section {
         margin-top: 60px;
@@ -216,7 +239,7 @@ input[type=number] {
         overflow-x: auto;
     }
 
-    .page-width {
+    .ways-to-earn-section-wrap .page-width {
         padding: 0 0 0 1.5rem;
     }
 
@@ -233,7 +256,7 @@ input[type=number] {
     }
 
     #ways-to-earn-items-edit-birthday {
-        padding:  36px 16px;;
+        padding:  30px 16px;
     }
 
     .ways-to-earn-items {
