@@ -244,6 +244,11 @@ input[type=number] {
         margin-right: 1.5rem;
     }
 }
+@media(max-width: 767px) {
+    .ways-to-earn-section {
+        margin-bottom: 82px;
+    }
+}
 @media(max-width: 540px) {
     .ways-to-earn-section .wave--top {
         top: -55px;
