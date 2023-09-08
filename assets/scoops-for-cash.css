@@ -37,6 +37,10 @@
 
 .scoops-for-cash-items .icon_svg{
     padding-bottom: 18px;    
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI1IiBoZWlnaHQ9IjEyMiIgdmlld0JveD0iMCAwIDEyNSAxMjIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lfMTkxOF8xNTgxKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzkuMjU1MiAyLjc5NDA3QzU0Ljg0NzcgLTUuMDQyNDIgNjYuODU0OSA1LjQ0OTA2IDgyLjA0NDkgMTEuNjkwNkM5Ny43NTU4IDE4LjE0NjEgMTE2LjI0OSAxNi42Njg5IDEyMy4xNDEgMzguMzQzN0MxMjcuNDg2IDU3LjM0MTggMTE2Ljg1IDYwLjAyOTQgMTEzLjYyNiA3Ni40ODc5QzExMC4yODUgOTMuNTQyOCAxMTEuNTA4IDEwMC40NiAxMDMuODk5IDEwOS43MjlDOTYuMjg5NyAxMTguOTk3IDg3LjYxNDYgMTIzLjU1NSA3MC42OTY0IDEyMS4yNDhDNTYuNDIwNiAxMTkuMzAxIDQxLjQ1MjggMTI0Ljg0NiAzMC4zMTk0IDExNC43OTVDMjAuNDUzMiAxMDUuODg5IDIwLjUzOTQgOTguNjI0IDE0LjM5NjYgOTAuNzcwNEM1LjQ1MTg2IDc5LjMzNDQgLTAuNDU2NDg1IDc2LjQxMTkgMC4wMjc2ODg4IDYxLjQ3NTNDMC40Nzc4NTEgNDcuNTg3OSA1LjQ3NjU4IDQ1LjAwMjIgMTUuNTQwOSAzNC4zNDUxQzI2LjcyNjEgMjIuNTAwOSAyNC42Njg2IDEwLjEyNSAzOS4yNTUyIDIuNzk0MDdaIiBmaWxsPSIjMjE3M0Q2Ii8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaV8xOTE4XzE1ODEiIHg9Ii0zIiB5PSItMiIgd2lkdGg9IjEyNy4xNjkiIGhlaWdodD0iMTIzLjg0IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9Ii0zIiBkeT0iLTIiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIvPgo8ZmVDb21wb3NpdGUgaW4yPSJoYXJkQWxwaGEiIG9wZXJhdG9yPSJhcml0aG1ldGljIiBrMj0iLTEiIGszPSIxIi8+CjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMDg1MzEyNSAwIDAgMCAwIDAuMzkwMjE3IDAgMCAwIDAgMC43NTgzMzMgMCAwIDAgMC40IDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfMTkxOF8xNTgxIi8+CjwvZmlsdGVyPgo8L2RlZnM+Cjwvc3ZnPgo=');
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
 }
 
 .scoops-for-cash-items span.scoop-amount {
@@ -49,9 +53,9 @@
     line-height: 62.4px;
     letter-spacing: 1px;
     position: relative;
-    top: -57%;
+    /* top: -57%;
     left: 0%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%); */
 }
 
 
@@ -59,11 +63,12 @@
     color: #fff;
     font-size: 28px;
     font-weight: 400;
-    line-height: 62.4px;
+    line-height: 1;
     position: relative;
-    top: -5%;
+    padding-top: 2rem;
+    /* top: -5%;
     left: 50%;
-    transform: translate(-50%,-205%);
+    transform: translate(-50%,-205%); */
 }
 /* BEGIN: Media Query */
 @media(min-width: 1920px) {
@@ -103,16 +108,16 @@
     .scoops-for-cash-items p.scoop-heading {
         font-size: 24px;
         line-height: 20px;
-        top: -60%;
+        /* top: -60%;
         left: 50%;
-        transform: translate(-50%,-200%);
+        transform: translate(-50%,-200%); */
     }
     .scoops-for-cash-items span.scoop-amount {
         font-size: 32px;
         line-height: 62.4px;
-        top: -96%;
+        /* top: -96%;
         left: 0;
-        transform: translate(-50%,-200%);
+        transform: translate(-50%,-200%); */
     }
     .scoops-for-cash-items {
         height: 124px;
