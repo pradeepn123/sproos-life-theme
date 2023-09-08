@@ -95,7 +95,7 @@
 
 .birthday-btn {
     justify-content: center;
-    display: flex;
+    display: none;
 }
 
 .earn-icon {

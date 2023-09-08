@@ -135,26 +135,26 @@
                                   <span class="birth_year">
                                       <span class="input_label_text">Year</span>
                                       <span class="input_text">
-                                        <input type="tel" class="y_date" id="y_datepicker" min="1" max="2" pattern="[1-2]">
-                                        <input type="tel" class="y_date" id="y_datepicker" min="0" max="9">
-                                        <input type="tel" class="y_date" id="y_datepicker" min="0" max="9">
-                                        <input type="tel" class="y_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="y_date" id="y_datepicker0" min="1" max="2" oninput="activateNextField(this, 'y_datepicker1')">
+                                        <input type="tel" class="y_date" id="y_datepicker1" min="0" max="9" oninput="activateNextField(this, 'y_datepicker2')">
+                                        <input type="tel" class="y_date" id="y_datepicker2" min="0" max="9" oninput="activateNextField(this, 'y_datepicker3')">
+                                        <input type="tel" class="y_date" id="y_datepicker3" min="0" max="9" oninput="activateNextField(this, 'm_datepicker0')">
                                       </span>
                                   </span>
                                   
                                   <span class="birth_month">
                                     <span class="input_label_text">Month</span>
                                       <span class="input_text">
-                                        <input type="tel" class="m_date" id="y_datepicker" min="0" max="1">
-                                        <input type="tel" class="m_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="m_date" id="m_datepicker0" min="0" max="1" oninput="activateNextField(this, 'm_datepicker1')">
+                                        <input type="tel" class="m_date" id="m_datepicker1" min="0" max="9" oninput="activateNextField(this, 'd_datepicker0')">
                                       </span>
                                   </span>
                                 
                                   <span class="birth_day">
                                     <span class="input_label_text">Day</span>
                                       <span class="input_text">
-                                        <input type="tel" class="d_date" id="y_datepicker" min="0" max="3">
-                                        <input type="tel" class="d_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="d_date" id="d_datepicker0" min="0" max="3" oninput="activateNextField(this, 'd_datepicker1')">
+                                        <input type="tel" class="d_date" id="d_datepicker1" min="0" max="9">
                                       </span>
                                   </span>
                                 </div>
@@ -194,6 +194,18 @@
     }, 1200)
   });
 
+function activateNextField(currentInput, nextInputId) {
+  // Check if the current input has a value
+  if (currentInput.value.trim() !== '') {
+      // Find the next input field by its id
+      const nextInput = document.getElementById(nextInputId);
+      if (nextInput) {
+          // Focus on the next input field
+          nextInput.focus();
+      }
+  }
+}
+
 function onSmileReady(){
   sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", Smile.__private_3_customerAuthToken);
   sessionStorage.setItem("SMILE_CHANNEL_KEY", Smile.channel_key);
@@ -212,10 +224,6 @@ function onSmileReady(){
       if (CUSTOMER.date_of_birth == null) {
         document.querySelector('.birthday-btn').style.display = 'none';
       }
-
-      if (CUSTOMER.date_of_birth == null) {
-        document.querySelector('.birthday-btn').style.display = 'none';
-      }
   }
   
   function getUpdatedActivities() {
@@ -231,6 +239,9 @@ function onSmileReady(){
         if(activity.activity_rule.type == 'facebook_like' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
           fb_like_btn.style.display = 'none';
           document.querySelector('#fb-btn').style.display = 'block';
+        }
+        if(activity.activity_rule.type == 'customer_birthday' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+          document.querySelector('.birthday-btn').style.display = 'flex';
         }
        })
       })
@@ -254,7 +265,8 @@ function igFollowAction() {
       .then(response => response.text())
       .then(result => {
         setTimeout(() => {
-          window.open('https://www.instagram.com/sprooslife/', '_blank');  
+          window.open('https://www.instagram.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000);
@@ -278,6 +290,7 @@ function igFollowAction() {
       .then(result => {
         setTimeout(() => {
           window.open('https://www.facebook.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000)
@@ -353,7 +366,6 @@ function dateSubmit() {
           editDateContent.style.display = 'block';
           document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
           document.querySelector('.edit-content-wrapper').style.display='none';
-          document.querySelector('.birthday-btn').style.display = 'block';
       })
       .catch(error => console.log('error', error));
   } else {
