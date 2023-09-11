@@ -159,7 +159,7 @@
                                   </span>
                                 </div>
                                 <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
-                                <button class="button button--primary" onclick="dateSubmit()">
+                                <button class="button button--primary" id="bday-save-btn" onclick="dateSubmit()">
                                   Save Date
                                 </button>
                             </div>
@@ -367,10 +367,14 @@ function dateSubmit() {
       .then(result => {
           SmileUI.closePanel();
           updateBirthday();
-          let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
-          editDateContent.style.display = 'block';
-          document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
-          document.querySelector('.edit-content-wrapper').style.display='none';
+          document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
+          setTimeout(() => {
+            let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+            editDateContent.style.display = 'block';
+            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
+            document.querySelector('.edit-content-wrapper').style.display='none';
+          }, 1000);
+          
       })
       .catch(error => console.log('error', error));
   } else {
