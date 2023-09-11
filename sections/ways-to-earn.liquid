@@ -184,7 +184,7 @@
   let ig_follow_btn = document.querySelector('.ig-follow-btn');
   let fb_like_btn = document.querySelector('.fb-like-btn');
 
-  window.addEventListener("load", (event) => {
+window.addEventListener("load", (event) => {
     setTimeout(() => {
       if (window.Smile != undefined){
           onSmileReady();
@@ -192,7 +192,7 @@
         console.log("Error loading Smile App")
       }
     }, 1200)
-  });
+});
 
 function activateNextField(currentInput, nextInputId) {
   // Check if the current input has a value
@@ -316,10 +316,11 @@ function updateBirthday() {
     editDateContent.style.display = 'none';
 
     document.querySelector('.edit-content-wrapper').style.display='block';
-    document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='30px';
 
-    let current_dob = CUSTOMER.date_of_birth;
+    document.querySelector('#ways-to-earn-items-edit-birthday').classList.add('edit-bday-input-wrapper');
 
+    let current_dob = CUSTOMER.date_of_birth ;
+debugger;
     let date = current_dob.split("-");
     document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
       if(ind == index) {
@@ -361,6 +362,7 @@ function dateSubmit() {
       body: reqBody})
       .then(response => response.text())
       .then(result => {
+          SmileUI.closePanel();
           updateBirthday();
           let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
           editDateContent.style.display = 'block';
