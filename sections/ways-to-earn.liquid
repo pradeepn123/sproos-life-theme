@@ -189,9 +189,10 @@ window.addEventListener("load", (event) => {
       if (window.Smile != undefined){
           onSmileReady();
       } else {
-        console.log("Error loading Smile App")
+        console.log("Error loading Smile App");
+        window.location.reload();
       }
-    }, 1200)
+    }, 1500)
 });
 
 function activateNextField(currentInput, nextInputId) {
@@ -319,29 +320,31 @@ function updateBirthday() {
 
     document.querySelector('#ways-to-earn-items-edit-birthday').classList.add('edit-bday-input-wrapper');
 
-    let current_dob = CUSTOMER.date_of_birth ;
-debugger;
-    let date = current_dob.split("-");
-    document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
-      }
-    }
-    ));
+    if (CUSTOMER.date_of_birth != null) {
+      let current_dob = CUSTOMER.date_of_birth;
+      let date = current_dob.split("-");
 
-    document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
+      document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
       }
-    }
-    ));
+      ));
 
-    document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
+      document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
       }
+      ));
+
+      document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
     }
-    ));
 }
 
 function dateSubmit() {
