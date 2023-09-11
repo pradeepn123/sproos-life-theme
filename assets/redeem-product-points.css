@@ -1,6 +1,9 @@
-
+.stamped-badge[data-rating="0.0"] {
+    display: block !important;
+}
 .redeem-product-points-sec .heading-sec h4{
     margin: 0;
+    text-transform: unset;
 }
 .redeem-product-points-sec{
     position: relative;
@@ -24,7 +27,10 @@
 .redeem-product-points-sec .redeem_point_text{
     font-size: 16px;
     color: #2A7DE1;
-    font-weight: 700;
+    font-weight: 400;
+}
+.redeem-product-points-sec .slider-mobile-points .card__media .media img{
+    transform: scale(1.01);
 }
 .redeem-product-points-sec .slider-mobile-points.line_through .price .price__container{
     text-decoration: line-through;
@@ -48,7 +54,8 @@
     background-color: #fff;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-}    
+    min-height: 138px;
+}
 .redeem-product-points-sec .slider-mobile-points .card-wrapper{    
     pointer-events: none;
 }
@@ -113,12 +120,15 @@
 }
 
 .redeem-product-points-sec .heading-sec .subheading p {
-    margin-bottom: 45px;
+    margin-bottom: 55px;
 }
 
 @media(min-width: 1440px) {
     .redeem-product-points-sec {
         margin-bottom: 2em;
+    }
+    .collection_handle {
+        margin-top: 75px;
     }
 }
 @media(max-width: 1280px) {
@@ -128,6 +138,7 @@
 }
 @media(min-width:1200px){
     .redeem-product-points-sec {
+        margin-top: -1px;
         padding-top: 26px;
     }
     .redeem-product-points-sec .redeem_point_text{
@@ -151,14 +162,36 @@
     .collection_handle{
         width: 149px;
     }
+    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+        height: 40px;
+    }
 }
 
 @media(max-width: 767px) {
     .redeem-product-points-sec {
         margin-bottom: 2.5em;
     }
+    .redeem-product-points-sec .heading-sec .subheading p {
+        margin-bottom: 40px;
+    }
     .collection_handle {
         max-width: 149px;
         max-height: 49px;
+    }
+    .redeem-product-points-sec .redeem_point_text {
+        font-size: 14px;
+    }
+    .redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
+        display: none !important;
+    }
+    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+        /* check */
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .redeem-product-points-sec .page-width{
+        padding: 0 0 0 5rem;
     }
 }

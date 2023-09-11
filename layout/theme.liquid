@@ -239,7 +239,14 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
-      </script>
+      </script> 
+      {% if request.path == '/pages/rewards'%}
+        <style>
+        #smile-ui-container{
+          display: none;
+        }
+        </style>
+      {% endif %}
   </head>
   
     <body class="gradient template-{{ template | replace: '.','--' }} currency-{{ cart.currency.iso_code }}">

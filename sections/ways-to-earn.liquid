@@ -135,31 +135,31 @@
                                   <span class="birth_year">
                                       <span class="input_label_text">Year</span>
                                       <span class="input_text">
-                                        <input type="number" class="y_date" id="y_datepicker" min="1" max="2" pattern="[1-2]">
-                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
-                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
-                                        <input type="number" class="y_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="y_date" id="y_datepicker0" min="1" max="2" oninput="activateNextField(this, 'y_datepicker1')">
+                                        <input type="tel" class="y_date" id="y_datepicker1" min="0" max="9" oninput="activateNextField(this, 'y_datepicker2')">
+                                        <input type="tel" class="y_date" id="y_datepicker2" min="0" max="9" oninput="activateNextField(this, 'y_datepicker3')">
+                                        <input type="tel" class="y_date" id="y_datepicker3" min="0" max="9" oninput="activateNextField(this, 'm_datepicker0')">
                                       </span>
                                   </span>
                                   
                                   <span class="birth_month">
                                     <span class="input_label_text">Month</span>
                                       <span class="input_text">
-                                        <input type="number" class="m_date" id="y_datepicker" min="0" max="1">
-                                        <input type="number" class="m_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="m_date" id="m_datepicker0" min="0" max="1" oninput="activateNextField(this, 'm_datepicker1')">
+                                        <input type="tel" class="m_date" id="m_datepicker1" min="0" max="9" oninput="activateNextField(this, 'd_datepicker0')">
                                       </span>
                                   </span>
                                 
                                   <span class="birth_day">
                                     <span class="input_label_text">Day</span>
                                       <span class="input_text">
-                                        <input type="number" class="d_date" id="y_datepicker" min="0" max="3">
-                                        <input type="number" class="d_date" id="y_datepicker" min="0" max="9">
+                                        <input type="tel" class="d_date" id="d_datepicker0" min="0" max="3" oninput="activateNextField(this, 'd_datepicker1')">
+                                        <input type="tel" class="d_date" id="d_datepicker1" min="0" max="9">
                                       </span>
                                   </span>
                                 </div>
                                 <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
-                                <button class="button button--primary" onclick="dateSubmit()">
+                                <button class="button button--primary" id="bday-save-btn" onclick="dateSubmit()">
                                   Save Date
                                 </button>
                             </div>
@@ -178,14 +178,42 @@
 
 <script>
   let TOKEN = sessionStorage.getItem("SMILE_TOKEN");
-  let ACTIVITY_BEARER_TOKEN = "STCyqGpUPoyTxtWKb5MCGs1";
-  let SMILE_CHANNEL_KEY = "channel_OUtRL3oxWXmin4JywjGUrzab";
+  let CUSTOMER, SMILE_CUSTOMER_ID, ACTIVITY_BEARER_TOKEN, SMILE_CHANNEL_KEY;
+  
+  let edit_btn = document.querySelector('.edit-btn');
+  let ig_follow_btn = document.querySelector('.ig-follow-btn');
+  let fb_like_btn = document.querySelector('.fb-like-btn');
 
-  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", ACTIVITY_BEARER_TOKEN);
-  sessionStorage.setItem("SMILE_CHANNEL_KEY", SMILE_CHANNEL_KEY);
+window.addEventListener("load", (event) => {
+    setTimeout(() => {
+      if (window.Smile != undefined){
+          onSmileReady();
+      } else {
+        console.log("Error loading Smile App");
+        window.location.reload();
+      }
+    }, 1500)
+});
 
-  // Get customer data
-  let CUSTOMER, ACTIVITIES, SMILE_CUSTOMER_ID;
+function activateNextField(currentInput, nextInputId) {
+  // Check if the current input has a value
+  if (currentInput.value.trim() !== '') {
+      // Find the next input field by its id
+      const nextInput = document.getElementById(nextInputId);
+      if (nextInput) {
+          // Focus on the next input field
+          nextInput.focus();
+      }
+  }
+}
+
+function onSmileReady(){
+  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", Smile.__private_3_customerAuthToken);
+  sessionStorage.setItem("SMILE_CHANNEL_KEY", Smile.channel_key);
+  
+  ACTIVITY_BEARER_TOKEN = sessionStorage.getItem("ACTIVITY_BEARER_TOKEN");
+  SMILE_CHANNEL_KEY = sessionStorage.getItem("SMILE_CHANNEL_KEY");
+
   SMILE_CUSTOMER_ID = sessionStorage.getItem('SMILE_CUSTOMER_ID');
   let edit_btn = document.querySelector('.edit-btn');
   let ig_follow_btn = document.querySelector('.ig-follow-btn');
@@ -193,141 +221,17 @@
 
   if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
       getUpdatedActivities();
-      getCustomerDetails();
+      CUSTOMER = Smile.customer;
+      if (CUSTOMER.date_of_birth == null) {
+        document.querySelector('.birthday-btn').style.display = 'none';
+      }
   }
   
-  function getCustomerDetails() {
-    fetch(`https://platform.smile.io/v1/customers?email={{SHOPIFY_CUSTOMER_EMAIL}}`, {method:'GET', 
-      headers: {'Authorization': 'Bearer ' + TOKEN}})
-      .then(response => response.json())
-      .then(response => {
-          CUSTOMER = response.customers;
-      })
-      .catch((e) => {
-        console.error(e);
-      })
-  }
-
-  edit_btn.addEventListener('click', updateBirthday)
-  
-  ig_follow_btn.addEventListener('click', igFollowAction)
-  
-  function updateBirthday() {
-    getCustomerDetails();
-    let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
-    editDateContent.style.display = 'none';
-
-    document.querySelector('.edit-content-wrapper').style.display='block';
-    document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='20px';
-    let current_dob = CUSTOMER[0].date_of_birth;
-
-    let date = current_dob.split("-");
-    document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
-      }
-    }
-    ));
-
-    document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
-      }
-    }
-    ));
-
-    document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
-      if(ind == index) {
-        val.value = i;
-      }
-    }
-    ));
-
-  }
-
-  function dateSubmit() {
-    let year = '', month = '', day = '';
-    document.querySelectorAll('.y_date').forEach((y) => year = year + (y.value).toString());
-    document.querySelectorAll('.m_date').forEach((m) => month = month + (m.value).toString());
-    document.querySelectorAll('.d_date').forEach((d) => day = day + (d.value).toString());
-
-    if(parseInt(year) >= 1900 && parseInt(year) <= 2013 && parseInt(month) >= 01 && parseInt(month) <= 12 && parseInt(day) >= 01 && parseInt(month) <= 31) {
-      let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
-      let reqBody = JSON.stringify({
-        "customer": {
-          "date_of_birth": dob_iso_format
-        }
-      })
-      fetch(`https://platform.smile.io/v1/customers/${SMILE_CUSTOMER_ID}`, {method:'PUT',
-        headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
-        body: reqBody})
-        .then(response => response.text())
-        .then(result => {
-            updateBirthday();
-            let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
-            editDateContent.style.display = 'block';
-            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
-            document.querySelector('.edit-content-wrapper').style.display='none';
-            document.querySelector('.birthday-btn').style.display = 'block';
-        })
-        .catch(error => console.log('error', error));
-    } else {
-      document.querySelector('.date-error-text').style.display = "block";
-      document.querySelector('.birth_date').style.margin = "4px 0 0";
-      setTimeout(() => {
-        document.querySelector('.date-error-text').style.display = "none";
-        document.querySelector('.birth_date').style.margin = "20px 0 13px";
-      }, 5000);
-      
-    }
-  }
-
-  function igFollowAction() {
-    console.log("clicked ig foll")
-    let reqBody = JSON.stringify({
-      "activity": {
-        "customer_id": SMILE_CUSTOMER_ID,
-        "token": "instagram_follow"
-      }
-    })
-    
-    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
-      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
-      body: reqBody})
-      .then(response => response.text())
-      .then(result => {
-          getUpdatedActivities();
-          window.open('https://www.instagram.com/sprooslife/', '_blank');
-      })
-      .catch(error => console.log('error', error));
-  }
-
-  function fbLikeAction() {
-    console.log("clicked fb like")
-    let reqBody = JSON.stringify({
-      "activity": {
-        "customer_id": SMILE_CUSTOMER_ID,
-        "token": "facebook_like"
-      }
-    })
-    
-    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
-      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
-      body: reqBody})
-      .then(response => response.text())
-      .then(result => {
-          getUpdatedActivities();
-          window.open('https://www.facebook.com/sprooslife/', '_blank');
-      })
-      .catch(error => console.log('error', error));
-  }
-
   function getUpdatedActivities() {
     fetch(`https://platform.smile.io/v1/customer_activity_rules?customer_id=${SMILE_CUSTOMER_ID}&include=activity_rule.image_svg`, {method:'GET',
       headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'}})
       .then(response => response.json())
       .then(result => {
-       console.log("response.json()", result)
        result.customer_activity_rules.map((activity) => {
         if(activity.activity_rule.type == 'instagram_follow' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
             ig_follow_btn.style.display = 'none';
@@ -337,12 +241,152 @@
           fb_like_btn.style.display = 'none';
           document.querySelector('#fb-btn').style.display = 'block';
         }
+        if(activity.activity_rule.type == 'customer_birthday' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+          document.querySelector('.birthday-btn').style.display = 'flex';
+        }
        })
       })
       .catch((e) => {
         console.error(e);
       })
   }
+
+}
+
+function igFollowAction() {
+    let reqBody = JSON.stringify({
+      "activity": {
+        "customer_id": CUSTOMER.id,
+        "token": "instagram_follow"
+      }
+    })
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+        setTimeout(() => {
+          window.open('https://www.instagram.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
+          let smileReady = onSmileReady();
+          smileReady.getUpdatedActivities();
+        }, 1000);
+      })
+      .catch(error => console.log('error', error));
+  
+    }
+
+  
+  function fbLikeAction() {
+    let reqBody = JSON.stringify({
+      "activity": {
+        "customer_id": CUSTOMER.id,
+        "token": "facebook_like"
+      }
+    })
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+        setTimeout(() => {
+          window.open('https://www.facebook.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
+          let smileReady = onSmileReady();
+          smileReady.getUpdatedActivities();
+        }, 1000)
+      })
+      .catch(error => console.log('error', error));
+}
+
+edit_btn.addEventListener('click', updateBirthday);
+
+ig_follow_btn.addEventListener('click', igFollowAction);
+
+fb_like_btn.addEventListener('click', fbLikeAction);
+
+function getCustomerDetails() {
+  Smile.fetchCustomer().then((customer) => {
+    CUSTOMER = customer;
+  });
+}
+
+function updateBirthday() {
+    getCustomerDetails();
+    let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+    editDateContent.style.display = 'none';
+
+    document.querySelector('.edit-content-wrapper').style.display='block';
+
+    document.querySelector('#ways-to-earn-items-edit-birthday').classList.add('edit-bday-input-wrapper');
+
+    if (CUSTOMER.date_of_birth != null) {
+      let current_dob = CUSTOMER.date_of_birth;
+      let date = current_dob.split("-");
+
+      document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+
+      document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+
+      document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+    }
+}
+
+function dateSubmit() {
+  let year = '', month = '', day = '';
+  document.querySelectorAll('.y_date').forEach((y) => year = year + (y.value).toString());
+  document.querySelectorAll('.m_date').forEach((m) => month = month + (m.value).toString());
+  document.querySelectorAll('.d_date').forEach((d) => day = day + (d.value).toString());
+
+  if(parseInt(year) >= 1900 && parseInt(year) <= 2013 && parseInt(month) >= 01 && parseInt(month) <= 12 && parseInt(day) >= 01 && parseInt(month) <= 31) {
+    let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
+    let reqBody = JSON.stringify({
+      "customer": {
+        "date_of_birth": dob_iso_format
+      }
+    })
+    fetch(`https://platform.smile.io/v1/customers/${CUSTOMER.id}`, {method:'PUT',
+      headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+          SmileUI.closePanel();
+          updateBirthday();
+          document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
+          setTimeout(() => {
+            let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+            editDateContent.style.display = 'block';
+            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
+            document.querySelector('.edit-content-wrapper').style.display='none';
+          }, 1000);
+          
+      })
+      .catch(error => console.log('error', error));
+  } else {
+    document.querySelector('.date-error-text').style.display = "block";
+    document.querySelector('.birth_date').style.margin = "4px 0 0";
+    setTimeout(() => {
+      document.querySelector('.date-error-text').style.display = "none";
+      document.querySelector('.birth_date').style.margin = "20px 0 13px";
+    }, 5000);
+    
+  }
+}
 
 </script>
 
@@ -492,7 +536,7 @@
       "type": "range",
       "id": "margin_bottom",
       "min": 0,
-      "max": 100,
+      "max": 152,
       "step": 4,
       "unit": "px",
       "label": "Margin Bottom",

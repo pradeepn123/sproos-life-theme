@@ -1,6 +1,5 @@
 .refer-friend-section{
     position: relative;
-    margin-top: 70px;
 }
 .refer-friend-section .wave--top{
     position: absolute;
@@ -76,6 +75,13 @@ input.text-input.with-system-btn.referral-url {
     border: 0;
     width: 100%;
 }
+
+input.text-input.with-system-btn.referral-url:focus-visible {
+    outline: .2rem solid rgba(85,26,139,.5);
+    outline-offset: .3rem;
+    box-shadow: 0 0 0 0.3rem #551a8b29, 0 0 0.5rem 0.4rem #551a8b4d;
+}
+
 .copy-text-container.referral svg {
     cursor: pointer;
 }
@@ -87,6 +93,12 @@ input.text-input.with-system-btn.referral-url {
     column-gap: 3em;
     row-gap: 1em;
     margin-top: 2em;
+}
+
+.referral-text-copy {
+    display: none;
+    margin: 0.1em 0;
+    float: right;
 }
 
 .social-media-icon-text {
@@ -107,7 +119,7 @@ input.text-input.with-system-btn.referral-url {
     text-decoration: none;
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1280px){
     .refer-friend-wrapper-info .refer_heading{
         font-size: 44px;
     }
@@ -119,8 +131,11 @@ input.text-input.with-system-btn.referral-url {
         flex-direction: row;
     }
 }
-
-@media screen and (max-width: 1275px){   
+@media screen and (max-width: 1275px){
+    .refer-friend-section {
+        margin-top: 30px;
+        margin-bottom: 120px;
+    }
     .refer-friend-section .wave--top {
       top: -56px;
     }    
@@ -186,12 +201,23 @@ input.text-input.with-system-btn.referral-url {
     .refer-friend-section .wave--top {
         top: -24px;
     }
+    .refer-friend-wrapper-image img {
+        padding: 0 2em 0 1em;
+    }
 }
 
 @media screen and (max-width: 375px) { 
     .refer-friend-section .wave--bottom {
-        bottom: -28px;
+        bottom: -27px;
     }
+}
+
+@media screen and (max-width: 360px) {
+    .refer-friend-wrapper-image img {
+        width: 100%;
+        padding: 0 2em;
+        height: 360px;
+    }    
 }
 
 @media screen and (max-width: 320px) {
@@ -201,6 +227,13 @@ input.text-input.with-system-btn.referral-url {
         height: 330px;
     }
     .refer-friend-wrapper-info .sign_up, .refer-friend-wrapper-info .log_in {
-        padding: 1.5rem 2.5rem;
+        padding: 1rem 2.5rem;
+    }
+    .refer-friend-section .wave--bottom {
+        bottom: -24px;
+    }
+    .social-media-icon-text {
+        font-size: 16px;
+        line-height: normal;
     }
 }

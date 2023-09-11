@@ -48,10 +48,9 @@
                         {%- case block.type -%}
                             {%- when 'text_steps' -%}
                                 <div class="icon_svg">
-                                    {{block.settings.svg_icon}}
+                                  <p class="scoop-heading">{{ block.settings.heading}}</p>
+                                  <span class="scoop-amount">{{ block.settings.content}}</span>
                                 </div>
-                                <p class="scoop-heading">{{ block.settings.heading}}</p>
-                                <span class="scoop-amount">{{ block.settings.content}}</span>
                         {%- endcase -%}
                     </div>
                 {%- endfor -%}
