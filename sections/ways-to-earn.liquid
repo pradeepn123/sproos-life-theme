@@ -313,6 +313,7 @@ function getCustomerDetails() {
 
 function updateBirthday() {
     getCustomerDetails();
+    document.querySelector('#bday-save-btn').innerHTML = 'Save Date';
     let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
     editDateContent.style.display = 'none';
 
@@ -371,9 +372,9 @@ function dateSubmit() {
           setTimeout(() => {
             let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
             editDateContent.style.display = 'block';
-            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
+            document.querySelector('#ways-to-earn-items-edit-birthday').classList.remove('edit-bday-input-wrapper');
             document.querySelector('.edit-content-wrapper').style.display='none';
-          }, 1000);
+          }, 800);
           
       })
       .catch(error => console.log('error', error));
