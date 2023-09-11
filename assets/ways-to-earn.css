@@ -265,6 +265,14 @@ input[type=number] {
         margin-right: 1.5rem;
     }
 }
+@media(max-width: 768px) {
+    .ways-to-earn-items {
+        min-width: 345px;
+    }
+    .edit-bday-input-wrapper {
+        padding: 30px 10px;
+    }
+}
 @media(max-width: 767px) {
     .ways-to-earn-section {
         margin-bottom: 82px;
