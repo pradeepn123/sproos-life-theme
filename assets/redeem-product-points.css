@@ -44,6 +44,11 @@
     font-weight: 700;
     margin-bottom: 10px;
 }
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading a{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__inner{
     border-radius: 9px;
 }
@@ -55,6 +60,7 @@
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
     min-height: 138px;
+    overflow: hidden;
 }
 .redeem-product-points-sec .slider-mobile-points .card-wrapper{    
     pointer-events: none;
@@ -161,9 +167,9 @@
     .collection_handle{
         width: 149px;
     }
-    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+    /* .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
         height: 40px;
-    }
+    } */
 }
 
 @media(max-width: 767px) {
@@ -183,10 +189,9 @@
     .redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
         display: none !important;
     }
-    .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
-        /* check */
+    /* .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{        
         height: 60px;
-    }
+    } */
 }
 
 @media screen and (min-width: 768px) and (max-width:1024px) {
