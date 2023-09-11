@@ -267,7 +267,6 @@ function igFollowAction() {
       .then(result => {
         setTimeout(() => {
           window.open('https://www.instagram.com/sprooslife/', '_blank');
-          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000);
@@ -291,7 +290,6 @@ function igFollowAction() {
       .then(result => {
         setTimeout(() => {
           window.open('https://www.facebook.com/sprooslife/', '_blank');
-          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000)
@@ -366,7 +364,6 @@ function dateSubmit() {
       body: reqBody})
       .then(response => response.text())
       .then(result => {
-          SmileUI.closePanel();
           updateBirthday();
           document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
           setTimeout(() => {
