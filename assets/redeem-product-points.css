@@ -62,6 +62,12 @@
     min-height: 138px;
     overflow: hidden;
 }
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .stamped-product-reviews-badge .stamped-badge-caption{
+    color: #A8A4A4;
+    font-size: 11px;
+    font-family: "Brown,sans-serif";
+    font-weight: 400;    
+}   
 .redeem-product-points-sec .slider-mobile-points .card-wrapper{    
     pointer-events: none;
 }
