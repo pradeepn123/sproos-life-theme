@@ -1,5 +1,48 @@
 {
   "sections": {
+    "4629fabf-f1b3-44cc-a140-7739e59622d1": {
+      "type": "featured-blog-post",
+      "blocks": {
+        "c35d3658-b769-47fe-88d5-0bab4a910b07": {
+          "type": "featured_post",
+          "settings": {
+            "article": "blog\/how-to-choose-a-collagen-powder",
+            "article_title_color": "",
+            "article_text_color": "",
+            "read_more_text_color": ""
+          }
+        },
+        "dbd3130c-9924-4cff-8695-da0cabd0ff8e": {
+          "type": "featured_post",
+          "settings": {
+            "article": "blog\/pumpkin-spice-matcha-latte",
+            "article_title_color": "",
+            "article_text_color": "",
+            "read_more_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "c35d3658-b769-47fe-88d5-0bab4a910b07",
+        "dbd3130c-9924-4cff-8695-da0cabd0ff8e"
+      ],
+      "settings": {
+        "color_scheme": "custom-1",
+        "text_bg": "",
+        "page_title": "",
+        "page_title_color": "",
+        "page_subtitle": "",
+        "page_subtitle_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_author": false,
+        "show_date": false,
+        "show_comment_count": false,
+        "show_subheading": true,
+        "show_read_more": true,
+        "carousel_btn_color": ""
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -14,6 +57,7 @@
     }
   },
   "order": [
+    "4629fabf-f1b3-44cc-a140-7739e59622d1",
     "main"
   ]
 }
