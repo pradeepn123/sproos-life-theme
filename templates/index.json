@@ -6,22 +6,22 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Your coffee just got butter.",
+            "text": "Coming Soon!",
             "text_style": "subtitle"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "NEW! Keto Creamer",
+            "heading": "Super chai latte",
             "heading_size": "h1"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/products\/sproos-keto-creamer",
+            "button_label_1": "Sneak Peek",
+            "button_link_1": "shopify:\/\/products\/chai-latte",
             "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
