@@ -287,6 +287,7 @@
     },
     "7a4be800-7acb-4768-8372-8602294744c3": {
       "type": "section--how-to-use",
+      "disabled": true,
       "settings": {
         "heading": "How to Use",
         "heading_size": "h2",
@@ -297,6 +298,20 @@
         "color_scheme": "background-1",
         "padding_top": 68,
         "padding_bottom": 68
+      }
+    },
+    "0261f7e9-20dc-4be1-830f-a2168d3b19ae": {
+      "type": "section--how-to-use--new",
+      "settings": {
+        "heading": "How to use",
+        "heading_size": "h2",
+        "cover_image": "{{ product.metafields.custom.how_to_use_section.value.image.value }}",
+        "video_url": "",
+        "description": "<p>{{ product.metafields.custom.how_to_use_section.value.description | metafield_tag }}<\/p>",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "b188e874-3f40-4320-a7ff-0f841eb9a7e9": {
@@ -423,6 +438,7 @@
     "870b683a-cba4-4813-8e33-1c4d538f1cde",
     "4a6432eb-ca68-40e6-b914-25855145912d",
     "7a4be800-7acb-4768-8372-8602294744c3",
+    "0261f7e9-20dc-4be1-830f-a2168d3b19ae",
     "b188e874-3f40-4320-a7ff-0f841eb9a7e9",
     "054fc94b-73b6-47de-bc2c-0e06906ae2ff",
     "7436a445-3b6b-4777-afb0-c8a2728e9d61",
