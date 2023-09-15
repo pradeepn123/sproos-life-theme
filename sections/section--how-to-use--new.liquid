@@ -116,13 +116,13 @@
         {%- unless section.settings.description == blank -%}
           <div class="body-wrapper body-wrapper--no-top-margin">
             {{ section.settings.description }}
-            <div>
-              {% for list in product.metafields.custom.how_to_use_content.value %}
-                <div style="display: flex; align-items: center; column-gap: 10px;">
-                  {{ list.how_to_use_feature_icon.value | img_tag }}
-                  {{ list.how_to_use_feature_description | metafield_tag }}
-                </div>
-              {% endfor %}
+               {% assign icon_text_metaobject = product.metafields.custom.how_to_use_section.value.icon_with_text %}
+               {% for icon_text in icon_text_metaobject.value %}
+                    <div style="display: flex; align-items: center; column-gap: 10px;">
+                        {{ icon_text.icon | img_tag }}
+                        {{ icon_text.text }}
+                    </div>
+               {% endfor %}
             </div>
           </div>
         {% endunless %}
