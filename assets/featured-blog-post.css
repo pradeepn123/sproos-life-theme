@@ -75,6 +75,17 @@
     color: #fff;
     line-height: 1.4;
 }
+.featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box .banner__buttons .button{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box .banner__buttons .button:before,
+.featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box .banner__buttons .button::after{
+    border: 0;
+    box-shadow: none;
+}
+
 .featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box .banner__buttons{
     margin-top: 2rem;
 }
@@ -86,6 +97,7 @@
     top: unset;
     bottom: 80px;
     position: absolute;    
+    z-index: 1;
 }
 .featured_blog_post_section .swiper-button-next{
     left: 8%;
