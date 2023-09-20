@@ -198,7 +198,7 @@
               </span>              
             {% endif %}
             
-
+              {% if request.path == '/blogs/test/' %}
               {% assign product = card_product %}
                 <div {{ block.shopify_attributes }}>
                   <product-form class="product-form">
@@ -262,7 +262,8 @@
                     </template>
                   </pickup-availability>
                 </div>
-          </div>
+              {% endif %}
+              </div>
         </div>
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}

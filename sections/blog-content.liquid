@@ -1,0 +1,180 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+
+<article class="article-template page-width page-width--narrow" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div>
+          {% render block %}
+        </div>
+      {%- when 'content'-%}
+        <div class="article-template__content rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+            {{ article.content }}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+  <div class="article-template__back center">
+    <a href="{{ blog.url }}" class="article-template-content__link link animate-arrow">
+        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+        {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+    </a>
+  </div>
+</article>
+
+{%- assign product_content = "" -%}
+{%- assign article_content = "" -%}
+{% for tag in article.tags %}
+  {%- assign handle = tag | replace: "product_", ""  | replace: "article_", "" -%}
+  {% if tag contains 'product_' %}
+    {%- capture product_content -%}
+      {{  product_content }}
+      <li class="grid__item">
+        {% render 'card-product',
+          card_product: all_products[handle],
+          media_aspect_ratio: 'square',
+          show_secondary_image: true,
+          show_vendor: false,
+          show_rating: false,
+          lazy_load: lazy_load
+        %}
+      </li>
+    {%- endcapture -%}
+  {% endif %}
+
+  {% if tag contains 'article_' %}
+    {%- assign handle = blog.handle | append: "/" | append: handle -%}
+    {%- capture article_content -%}
+      {{  article_content }}
+      <div class="blog-articles__article article">
+        {%- render 'article-card',
+          article: articles[handle],
+          media_height: 'medium',
+          media_aspect_ratio: articles[handle].image.aspect_ratio,
+          show_image: true,
+          show_date: true,
+          show_author: false,
+          show_excerpt: true 
+        -%}
+      </div>
+    {%- endcapture -%}
+  {% endif %}
+{% endfor %}
+
+{%- if product_content != "" -%}
+  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  <div class="page-width">
+    <div class="loading-overlay gradient"></div>
+    <h2>{{ 'blogs.article.related_products' | t }}</h2>
+    <ul id="product-grid" data-id="{{ section.id }}" class="
+      grid product-grid grid--2-col-tablet-down grid--4-col-desktop">
+      {{ product_content }}
+    </ul>
+  </div>
+{%- endif -%}
+
+{%- if article_content != "" -%}
+  {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+  <div class="page-width">
+    <div class="loading-overlay gradient"></div>
+    <h2>{{ 'blogs.article.related_articles' | t }}</h2>
+    <div class="blog-articles">
+      {{ article_content }}
+    </div>
+  </div>
+{%- else -%}
+  {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+  <div class="page-width">
+    <div class="loading-overlay gradient"></div>
+    <h2>{{ 'blogs.article.latest_articles' | t }}</h2>
+    <div class="blog-articles">
+      {%- assign num_shown = 0 -%}
+      {%- for art in blog.articles limit:3 -%}
+        {%- if art.id != article.id and num_shown < 2 -%}
+          <div class="blog-articles__article article">
+            {%- render 'article-card',
+              article: art,
+              media_height: 'medium',
+              media_aspect_ratio: art.image.aspect_ratio,
+              show_image: true,
+              show_date: true,
+              show_author: false,
+              show_excerpt: true
+            -%}
+          </div>
+          {%- assign num_shown = num_shown | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      {% assign image_size = article.image.width | append: 'x' %}
+      "image": [
+        {{ article | img_url: image_size | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        {% assign image_size = settings.share_image.width | append: 'x' %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | img_url: image_size | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+  </script>
+
+  {% schema %}
+  {
+    "name": "t:sections.blog-content.name",
+    "tag": "section",
+    "class": "section",
+    "blocks": [
+      {
+        "type": "@app"
+      },
+      {
+        "type": "content",
+        "name": "t:sections.blog-content.blocks.content.name",
+        "limit": 1
+      }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.blog-content.name"
+        }
+    ]
+  }
+  {% endschema %}
+  

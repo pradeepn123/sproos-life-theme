@@ -51,54 +51,28 @@
               {{ article.content }}
           </div>
 
-        {%- when 'share' -%}
-          <div class="article-template__social-sharing" {{ block.shopify_attributes }}>
-            <share-button class="share-button" {{ block.shopify_attributes }}>
-              <button class="share-button__button hidden">
-                {% render 'icon-share' %}
-                {{ block.settings.share_label | escape }}
-              </button>
-              <details id="Details-{{ block.id }}-{{ section.id }}">
-                <summary class="share-button__button">
-                  {% render 'icon-share' %}
-                  {{ block.settings.share_label | escape }}
-                </summary>
-                <div id="Article-share-{{ section.id }}" class="share-button__fallback motion-reduce">
-                  <div class="field">
-                    <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
-                    </span>
-                    <input type="text"
-                          class="field__input"
-                          id="url"
-                          value="{{ request.origin | append: article.url }}"
-                          placeholder="{{ 'general.share.share_url' | t }}"
-                          onclick="this.select();"
-                          readonly
-                    >
-                    <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
-                  </div>
-                  <button class="share-button__close hidden no-js-hidden">
-                    {% render 'icon-close' %}
-                    <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
-                  </button>
-                  <button class="share-button__copy no-js-hidden">
-                    {% render 'icon-clipboard' %}
-                    <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
-                  </button>
-                </div>
-              </details>
-            </share-button>
-            <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-          </div>
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+  <div class="article-template-content__back element-margin-top center">
+    <a href="{{ blog.url }}" class="article-template-content__link link animate-arrow">
       <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
+    <div>
+      <share-button class="footer-share-button">
+        <button class="share-button__button" id="footer-share-button">
+          {% render 'icon-share' %}
+          Share
+        </button>
+      </share-button>
+      {% assign value_to_copy = shop.url | append: article.url %}
+      {% render 'share',
+        value_to_copy: value_to_copy,
+        id: 'footer_share_popup' %}
+    </div>
   </div>
+
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="">
@@ -287,59 +261,6 @@
   {% endif %}
 {% endfor %}
 
-{%- if product_content != "" -%}
-  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-  {{ 'component-card.css' | asset_url | stylesheet_tag }}
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
-  <div class="page-width">
-    <div class="loading-overlay gradient"></div>
-    <h2>{{ 'blogs.article.related_products' | t }}</h2>
-    <ul id="product-grid" data-id="{{ section.id }}" class="
-      grid product-grid grid--2-col-tablet-down grid--4-col-desktop">
-      {{ product_content }}
-    </ul>
-  </div>
-{%- endif -%}
-
-{%- if article_content != "" -%}
-  {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-  {{ 'component-card.css' | asset_url | stylesheet_tag }}
-  {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
-  <div class="page-width">
-    <div class="loading-overlay gradient"></div>
-    <h2>{{ 'blogs.article.related_articles' | t }}</h2>
-    <div class="blog-articles">
-      {{ article_content }}
-    </div>
-  </div>
-{%- else -%}
-  {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-  {{ 'component-card.css' | asset_url | stylesheet_tag }}
-  {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
-  <div class="page-width">
-    <div class="loading-overlay gradient"></div>
-    <h2>{{ 'blogs.article.latest_articles' | t }}</h2>
-    <div class="blog-articles">
-      {%- assign num_shown = 0 -%}
-      {%- for art in blog.articles limit:3 -%}
-        {%- if art.id != article.id and num_shown < 2 -%}
-          <div class="blog-articles__article article">
-            {%- render 'article-card',
-              article: art,
-              media_height: 'medium',
-              media_aspect_ratio: art.image.aspect_ratio,
-              show_image: true,
-              show_date: true,
-              show_author: false,
-              show_excerpt: true
-            -%}
-          </div>
-          {%- assign num_shown = num_shown | plus: 1 -%}
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-  </div>
-{%- endif -%}
 
 <script type="application/ld+json">
   {

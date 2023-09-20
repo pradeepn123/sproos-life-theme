@@ -1203,3 +1203,50 @@ document.querySelectorAll('.noFollow').forEach((link) => {
   }
   */
  
+  share_button = document.querySelector('.share-button');
+  footer_share_button = document.querySelector('.footer-share-button');
+  share_popup = document.querySelector('share-component#share_popup');
+  footer_share_popup = document.querySelector('share-component#footer_share_popup');
+
+  share_button.addEventListener('click', () => {
+    share_popup.style.display = 'block';
+  });
+
+  footer_share_button.addEventListener('click', () => {    
+    footer_share_popup.style.display = 'block';
+  });
+
+  document.querySelector('#share_popup clipboard-button#copy-link').addEventListener('click', (e) => {
+    let copied_value = e.currentTarget.dataset.value;
+    navigator.clipboard.writeText(copied_value);
+    
+    navigator.clipboard.writeText(copied_value).then(() => {
+      let tooltip = document.querySelector('#share_popup .copy-text-label')
+      tooltip.style.display = 'flex';
+      setTimeout(() => {
+        tooltip.style.display = 'none';
+      }, 800);
+    });
+  })
+
+  document.querySelector('#footer_share_popup clipboard-button#copy-link').addEventListener('click', (e) => {
+    let copied_value = e.currentTarget.dataset.value;
+    navigator.clipboard.writeText(copied_value);
+    
+    navigator.clipboard.writeText(copied_value).then(() => {
+      let tooltip = document.querySelector('#footer_share_popup .copy-text-label')
+      tooltip.style.display = 'flex';
+      setTimeout(() => {
+        tooltip.style.display = 'none';
+      }, 800);
+    });
+  })
+
+  window.addEventListener('click', function(e){   
+    if (document.getElementById('footer_share_popup').style.display == 'block'){
+      document.querySelector('#footer_share_popup').style.display = 'none';
+    }
+    // if (document.getElementById('share_popup').style.display == 'block'){
+    //   document.querySelector('#share_popup').style.display = 'none';
+    // }
+  });
