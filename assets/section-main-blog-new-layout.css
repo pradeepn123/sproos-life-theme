@@ -270,6 +270,7 @@
 .cards.blog-articles__per_row{
     margin: 0 -1rem;
     padding: 74px 0 3rem 0;
+    row-gap: 40px;
 }
 
 @media(min-width:768px){
