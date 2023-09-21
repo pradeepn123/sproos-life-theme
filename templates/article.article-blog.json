@@ -103,7 +103,7 @@
       "settings": {
         "title": "Related Products",
         "heading_size": 40,
-        "collection": "bundles",
+        "collection": "all",
         "products_to_show": 3,
         "columns_desktop": 4,
         "color_scheme": "background-1",

@@ -241,24 +241,6 @@
       </li>
     {%- endcapture -%}
   {% endif %}
-
-  {% if tag contains 'article_' %}
-    {%- assign handle = blog.handle | append: "/" | append: handle -%}
-    {%- capture article_content -%}
-      {{  article_content }}
-      <div class="blog-articles__article article">
-        {%- render 'article-card',
-          article: articles[handle],
-          media_height: 'medium',
-          media_aspect_ratio: articles[handle].image.aspect_ratio,
-          show_image: true,
-          show_date: true,
-          show_author: false,
-          show_excerpt: true 
-        -%}
-      </div>
-    {%- endcapture -%}
-  {% endif %}
 {% endfor %}
 
 

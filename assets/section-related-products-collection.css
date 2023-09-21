@@ -241,11 +241,24 @@ h3.related-products-collection-title {
     left: 3% !important;
     right: auto;
 }
-.swiper-button-prev:after, .swiper-button-next:after{
+.swiper-button-prev:after {
     color: #2A7DE1 !important;
     font-size: 14px;
     font-weight: 700;
     color: black;
+    left: 1.2em;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.swiper-button-next:after{
+    color: #2A7DE1 !important;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    left: 1.35em;
+    position: relative;
+    vertical-align: bottom;
 }
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
