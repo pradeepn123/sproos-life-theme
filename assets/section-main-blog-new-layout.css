@@ -269,10 +269,18 @@
 
 .cards.blog-articles__per_row{
     margin: 0 -1rem;
-    padding: 74px 0 3rem 0;
+    padding: 20px 0 2rem 0;
     row-gap: 40px;
 }
 
+@media(max-width:767px){
+    .search_category_bar{
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 2;
+    }
+}
 @media(min-width:768px){
     .search_category_bar{
         flex-direction: row;
@@ -280,9 +288,13 @@
     }
     .search_category_bar .category-bar {        
         margin-left: 25px;
+        padding: 0 30px;
     }
 }
-@media(min-width:1200px){    
+@media(min-width:1200px){
+    .cards.blog-articles__per_row{
+        padding: 74px 0 2rem 0;
+    }
     .search_category_bar .template-search__search{
         margin-bottom: 0;
         flex: 1 0 20%;

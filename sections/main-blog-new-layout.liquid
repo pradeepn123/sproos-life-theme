@@ -30,64 +30,65 @@
   <div class="main-blog main-blog-article__section section-{{ section.id }}-padding">
     <div class="page-width">
         <div class="search_category_bar">
-            <div class="template-search__search">
-            {%- if settings.predictive_search_enabled -%}
-                <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
-            {%- endif -%}
-            <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-                <input type="hidden" name="type" value="article" />
-                <div class="field">
-                    <input
-                        class="search__input field__input"
-                        id="Search-In-Template"
-                        type="search"
-                        name="q"
-                        value="{{ search.terms | escape }}"
-                        placeholder="{{ 'general.search.search_blog' | t }} Blog"
+                    
+            <div class="template-search__search js-drawer">
+                {%- if settings.predictive_search_enabled -%}
+                    <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+                {%- endif -%}
+                <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                    <input type="hidden" name="type" value="article" />
+                    <div class="field">
+                        <input
+                            class="search__input field__input"
+                            id="Search-In-Template"
+                            type="search"
+                            name="q"
+                            value="{{ search.terms | escape }}"
+                            placeholder="{{ 'general.search.search_blog' | t }} Blog"
+                            {%- if settings.predictive_search_enabled -%}
+                            role="combobox"
+                            aria-expanded="false"
+                            aria-owns="predictive-search-results-list"
+                            aria-controls="predictive-search-results-list"
+                            aria-haspopup="listbox"
+                            aria-autocomplete="list"
+                            autocorrect="off"
+                            autocomplete="off"
+                            autocapitalize="off"
+                            spellcheck="false"
+                            {%- endif -%}
+                        >
+                        <label class="field__label" for="Search-In-Template">{{ 'general.search.search_blog' | t }}</label>
+                        <input name="options[prefix]" type="hidden" value="last">
+
                         {%- if settings.predictive_search_enabled -%}
-                        role="combobox"
-                        aria-expanded="false"
-                        aria-owns="predictive-search-results-list"
-                        aria-controls="predictive-search-results-list"
-                        aria-haspopup="listbox"
-                        aria-autocomplete="list"
-                        autocorrect="off"
-                        autocomplete="off"
-                        autocapitalize="off"
-                        spellcheck="false"
+                            <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                            <div class="predictive-search__loading-state">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                            </div>
+                            </div>
+
+                            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                         {%- endif -%}
-                    >
-                    <label class="field__label" for="Search-In-Template">{{ 'general.search.search_blog' | t }}</label>
-                    <input name="options[prefix]" type="hidden" value="last">
 
-                    {%- if settings.predictive_search_enabled -%}
-                        <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
-                        <div class="predictive-search__loading-state">
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search_blog' | t }}">
+                            {% comment %} <svg class="icon icon-search">
+                                <use xlink:href="#icon-search">
+                            </svg> {% endcomment %}
+                            <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" stroke="#2A7DE1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
-                        </div>
-
-                        <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-                    {%- endif -%}
-
-                    <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search_blog' | t }}">
-                        {% comment %} <svg class="icon icon-search">
-                            <use xlink:href="#icon-search">
-                        </svg> {% endcomment %}
-                        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" stroke="#2A7DE1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </form>
-            {%- if settings.predictive_search_enabled -%}
-                </predictive-search>
-            {%- endif -%}
+                        </button>
+                    </div>
+                </form>
+                {%- if settings.predictive_search_enabled -%}
+                    </predictive-search>
+                {%- endif -%}
             </div>
             
-            <div class="swiper-container category-bar">        
+            <div class="swiper-container category-bar">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="/blogs/sproos-life/">All</a></div>
                     <div class="swiper-slide {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>
@@ -173,13 +174,31 @@
                     spaceBetween: 10
                 },
                 320: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     spaceBetween: 10
                 }
             }
-        });        
+        });
     });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+  
+        // MY HIDDEN THING
+        var myhiddenthing = document.querySelector('.mobile-search-blog');
 
+        // MY TOGGLE BUTTON - BY ADDING/REMOVING A CLASS
+        var mytogglebutton = document.querySelector('.open-drawer-wrap');
+        mytogglebutton.onclick = function() {
+            myhiddenthing.classList.toggle('active');
+        };
+        
+        // MY CLOSE BUTTON - BY REMOVING A CLASS
+        var myclosebutton = document.querySelector('.closebutton');
+        myclosebutton.onclick = function() {
+            myhiddenthing.classList.remove('active');
+        };
+        
+    });
 </script>
 
 
