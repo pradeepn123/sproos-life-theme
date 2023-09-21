@@ -2282,13 +2282,9 @@ input[type='checkbox'] {
   }
 
   .header:not(.header--middle-left) .header__inline-menu {
-    margin: 1.2rem 0 1.2rem 6rem;
-
+    margin-top: 1.05rem;
   }
 
-  .header__icons {
-    margin: 2.20rem 6rem 1.2rem 0;
-  }
 }
 
 .header *[tabindex='-1']:focus {

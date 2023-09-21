@@ -46,7 +46,7 @@
 
 {% assign top_wave_color = section.settings.top_wave_color %}
 {% assign bottom_wave_color = section.settings.bottom_wave_color %}
-<article class="article-banner-template page-width" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-banner-template {%if template.suffix != 'article-blog' %}page-width{% endif %}" itemscope itemtype="http://schema.org/BlogPosting">
     {% if section.settings.top_wave %}
         {% render 'wave-top', color: top_wave_color, class: 'top__wave' %}
     {% endif %}
