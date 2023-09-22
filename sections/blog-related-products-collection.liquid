@@ -29,14 +29,11 @@
     width: calc(100% / {{ section.settings.products_to_show }} - 30px) !important;
     max-width: calc(100% /{{ section.settings.products_to_show }}) !important;
   }
-  @media (max-width: 989px){
-    .featured-collection-banner.page-width{
-      padding: 0 !important
-    }
+  @media (max-width: 989px){    
     {% if section.settings.collection.all_products_count > 1%}
-    .featured-collection-banner .swiper-container .swiper-slide:first-child{
-        margin-left: 15px;
-    }
+      .featured-collection-banner .swiper-container .swiper-slide:first-child{
+          margin-left: 15px;
+      }
     {% endif %}
   }
   @media screen and (min-width: 990px) {
@@ -45,15 +42,7 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
   }
-  {% if section.settings.collection.all_products_count > 3 %}
-  .swiper-button-next, .swiper-button-prev{
-    display: block !important;
-  }
-  {% else %}
-  .swiper-button-next, .swiper-button-prev{
-    display: none !important;
-  }
-  {% endif %}
+  
 {%- endstyle -%}
 
 {%- liquid
@@ -71,9 +60,9 @@
   endif
 -%}
 
- <h3 class="related-products-collection-title">{{section.settings.title}}</h3>
  <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection featured-collection-banner page-width{% if show_mobile_slider %} page-width-desktop{% endif %} section-{{ section.id }}-padding">
+    <h3 class="related-products-collection-title">{{section.settings.title}}</h3>
     {% comment %} Swiper container {% endcomment %}
     <div class="swiper-container slider-mobile-gutter">
       <div class="swiper-wrapper">
@@ -90,8 +79,10 @@
         </div>
         {% endfor %}
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      {% if section.settings.collection.all_products_count > 2 %}
+        <div class="swiper-button-next desktop-only"></div>
+        <div class="swiper-button-prev desktop-only"></div>
+      {% endif %}
     </div>
   </div>
 </div> 

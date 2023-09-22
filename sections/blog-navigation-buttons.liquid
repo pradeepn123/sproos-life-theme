@@ -1,6 +1,7 @@
 {{ 'section-blog-navigation.css' | asset_url | stylesheet_tag }}
 
-<div class="blog-navigation-section">
+<div class="blog-navigation-section page-width">
+  <div class="blog-navigation-section-wrapper">
     <div class="previous-button">
         <a href="{{ blog.previous_article }}">
             <div class="blog-nav-element blog-nav-text">
@@ -24,6 +25,7 @@
             </div>
         </a>
     </div>
+  </div>
 </div>
 
 
