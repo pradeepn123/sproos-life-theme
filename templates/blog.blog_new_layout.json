@@ -52,7 +52,7 @@
         "image_height": "medium",
         "show_date": true,
         "show_author": false,
-        "per_row_article": "2_layout",
+        "per_row_article": "3_layout",
         "padding_top": 36,
         "padding_bottom": 36
       }
