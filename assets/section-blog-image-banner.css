@@ -221,15 +221,18 @@
     }
 
     .article-banner-template .article-template__hero-container .media {
-        height: 0 !important;
-        padding-bottom: 100%;
+        /* height: 0 !important;
+        padding-bottom: 100%; */
+        height: 355px !important;
+        padding-bottom: 0 !important;
         margin: 0 3em 3em 9.91em;
     }
 }
 
 .article-banner-template .article-template__subtitle {
     text-transform: none;
-    font-size: calc(var(--font-heading-scale) * rem);
+    /* font-size: calc(var(--font-heading-scale) * rem); */
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -249,10 +252,19 @@
 
 .article-banner-template .caption-with-letter-spacing {
     text-transform: unset;
+    font-size: 16px;
+    line-height: normal;
 }
 
 #share-button, #footer-share-button {
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.share-button__button .icon-share {
+    width: 18px;
+    height: 18px;
 }
 
 share-component#share_popup {
