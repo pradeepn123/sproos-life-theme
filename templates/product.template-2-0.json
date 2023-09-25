@@ -302,6 +302,7 @@
     },
     "0261f7e9-20dc-4be1-830f-a2168d3b19ae": {
       "type": "section--how-to-use--new",
+      "disabled": true,
       "settings": {
         "heading": "How to use",
         "heading_size": "h2",
