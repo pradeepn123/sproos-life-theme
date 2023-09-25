@@ -307,7 +307,7 @@
         "heading_size": "h2",
         "cover_image": "{{ product.metafields.custom.how_to_use_section.value.image.value }}",
         "video_url": "",
-        "description": "<p>{{ product.metafields.custom.how_to_use_section.value.description | metafield_tag }}<\/p>",
+        "description": "{{ product.metafields.custom.how_to_use_section.value.description | metafield_tag }}",
         "full_width": true,
         "color_scheme": "background-1",
         "padding_top": 36,
