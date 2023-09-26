@@ -146,7 +146,7 @@
     "39b84a07-b9dc-4620-a315-adca8c5f6558": {
       "type": "curved-marquee",
       "settings": {
-        "title": "Free Shipping on all orders $50+ .",
+        "title": "Free Shipping on all orders over $50 .",
         "heading_size": 30,
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
@@ -256,7 +256,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "title_size": "h4",
-        "subheading": "<p>Unlock exciting rewards with every purchase and engagement!<\/p>",
+        "subheading": "<p>Connect with us and earn more scoops<\/p>",
         "layout": "none",
         "color_scheme": "background-1",
         "top_wave_color": "#fda3a2",
