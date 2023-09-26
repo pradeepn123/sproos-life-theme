@@ -28,9 +28,8 @@
 
 {%- paginate blog.articles by 12 -%}
   <div class="main-blog main-blog-article__section section-{{ section.id }}-padding">
-    <div class="page-width">
-        <div class="search_category_bar">
-                    
+    <div class="search_category_bar">
+        <div class="search_category_bar_wrapper page-width">
             <div class="template-search__search js-drawer">
                 {%- if settings.predictive_search_enabled -%}
                     <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -121,10 +120,11 @@
                     <li class="cat-item swiper-slide{% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</li>
                 </ul>           
             </div> {% endcomment %}
-            
-        </div>        
+        </div>
+    </div>
+    <div class="page-width">        
 
-        <ul class="cards {% if section.settings.per_row_article == '3_layout' %}blog-articles__per_row{% endif %}{% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+        <ul class="cards {% if section.settings.per_row_article == '3_layout' %}blog-articles__per_row{%else%}blog-articles__2_per_row{% endif %}{% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
             {%- for article in blog.articles -%}
                 
                 {%- render 'article-card-flex',
@@ -162,7 +162,7 @@
             spaceBetween: 10,
             breakpoints: {
                 1440: {
-                    slidesPerView: 8,
+                    slidesPerView: 9,
                     spaceBetween: 10
                 },
                 1024: {
