@@ -221,7 +221,7 @@
     }
 
     .article-banner-template .article-template__hero-container .media {
-        height: 355px !important;
+        height: 289px !important;
         padding-bottom: 0 !important;
         margin: 0 3em 3em 9.91em;
     }
@@ -257,6 +257,7 @@
     cursor: pointer;
     font-size: 20px;
     font-weight: 400;
+    font-family: "Brown";
 }
 
 .share-button__button .icon-share {

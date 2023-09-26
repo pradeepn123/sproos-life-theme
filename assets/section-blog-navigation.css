@@ -51,17 +51,24 @@
     column-gap: 12px;
 }
 
-@media screen and (min-width: 1920px) {
-    .blog-navigation-section {
-        width: 80%;
-        margin: 1.5em 3.9em 80px 29.5em; 
-    }
-}
+
 
 @media screen and (min-width: 1680px) {
     .blog-navigation-section {
         width: 80%;
         margin: 1.5em 3.9em 80px 21.5em; 
+    }
+}
+@media screen and (min-width: 1440px) {
+    .blog-navigation-section {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog-navigation-section {
+        width: 80%;
+        margin: 1.5em 3.9em 80px 29.5em; 
     }
 }
 
