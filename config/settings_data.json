@@ -115,9 +115,9 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "20% off our NEW Keto Creamer",
+              "text": "Get 15% off our NEW Super Chai Latte using code TRYCHAI at checkout",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/products\/sproos-keto-creamer"
+              "link": "shopify:\/\/products\/chai-latte"
             }
           }
         },
