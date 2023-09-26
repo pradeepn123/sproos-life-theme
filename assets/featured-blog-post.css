@@ -117,6 +117,12 @@
     box-shadow: 0px 15px 21px 0px #32324714;
     box-shadow: 0px 12px 12px 0px #32324714;
 }
+
+@media (max-width: 820px) {
+    .featured_blog_post_section .swiper-button-next {
+        left: 10%;
+    }
+}
 @media (min-width: 768px){
     .css-swiper-button{
         display: block;
@@ -180,6 +186,11 @@
 @media(min-width:1024px) and (max-width:1440px){
     .featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box{
         padding: 3rem;
+    }
+}
+@media(min-width:768px) and (max-width:820px){
+    .featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box {
+        max-width: 45rem;
     }
 }
 @media screen and (max-width: 320px){
