@@ -103,9 +103,6 @@
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE1IDE3IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNNS40MzU3NCAyLjc1ODA2TDExLjI0MjIgOC41NjQ1MUw1LjQzNTc0IDE0LjM3MSIgc3Ryb2tlPSIjMkE3REUxIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz4KPC9zdmc+');
 }
 
-.css-swiper-button{
-    /* position: relative; */
-}
 .featured_blog_post_section .swiper-button-next,
 .featured_blog_post_section .swiper-button-prev{    
     top: 30%;
@@ -128,8 +125,8 @@
     .featured_blog_post_section .swiper-button-prev{
         display: block;
         top: unset;
-        bottom: 80px;
-        position: absolute;    
+        bottom: 120px;
+        position: absolute;
         z-index: 1;
     } 
     .featured_blog_post_section .swiper-button-next{
@@ -214,6 +211,13 @@
     }
 }
 @media(min-width:1200px){
+    .featured_blog_post_section .swiper-button-next,
+    .featured_blog_post_section .swiper-button-prev{        
+        bottom: 80px;        
+    } 
+    .css-swiper-button{
+        position: relative;
+    }
     .featured_blog_post_section .swiper-button-next{
         left: 8%;
     }
