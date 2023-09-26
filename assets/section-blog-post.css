@@ -280,6 +280,10 @@ share-component#share_popup, share-component#footer_share_popup {
   display: none;
 }
 
+share-component#footer_share_popup {
+  transform: translate(150px, -2px);
+}
+
 clipboard-button#copy-link {
   cursor: pointer;
 }
@@ -298,5 +302,23 @@ clipboard-button#copy-link {
     max-width: 100%;
     margin-left: 0;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  share-component#footer_share_popup {
+    transform: translate(95px, -2px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  share-component#footer_share_popup {
+    transform: translate(75px, -2px);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  share-component#footer_share_popup {
+    transform: translate(-30px, -2px);
   }
 }
