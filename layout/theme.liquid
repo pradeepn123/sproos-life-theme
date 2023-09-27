@@ -296,6 +296,7 @@
       </script>
   
       {%- if settings.predictive_search_enabled -%}
+        <script src="{{ 'blog-predictive-search.js' | asset_url }}" defer="defer"></script>
         <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
       {%- endif -%}
      {% include 'smile-initializer' %}

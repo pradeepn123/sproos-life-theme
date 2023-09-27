@@ -3,6 +3,7 @@
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog-new-layout.css' | asset_url | stylesheet_tag }}
 
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -32,7 +33,7 @@
         <div class="search_category_bar_wrapper page-width">
             <div class="template-search__search js-drawer">
                 {%- if settings.predictive_search_enabled -%}
-                    <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+                    <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
                 {%- endif -%}
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search">
                     <input type="hidden" name="type" value="article" />
@@ -83,7 +84,7 @@
                     </div>
                 </form>
                 {%- if settings.predictive_search_enabled -%}
-                    </predictive-search>
+                    </blog-predictive-search>
                 {%- endif -%}
             </div>
             <div class="divider"></div>
