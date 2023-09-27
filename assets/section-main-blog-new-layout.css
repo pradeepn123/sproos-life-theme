@@ -388,7 +388,7 @@
 @media(min-width:1200px){
     /* card hover animation */
     .article-card__image:after{
-        opacity: 0.4;
+        opacity: 0.2;
         content: "";
         position: absolute;
         transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
