@@ -281,6 +281,10 @@
     border-bottom: 4px solid #CAE57C;
 }
 
+.search_category_bar .category-bar .swiper-slide-prev.active a{
+    border-bottom: 4px solid #ffffff;
+}
+
 .cards.blog-articles__per_row{
     margin: 0 -1rem;
     padding: 20px 0 2rem 0;
