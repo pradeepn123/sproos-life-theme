@@ -121,7 +121,7 @@
 @media (max-width: 1024px) {
     .featured_blog_post_section .swiper-button-next,
     .featured_blog_post_section .swiper-button-prev{
-        bottom: 100px;
+        bottom: -60px;
     }
 }
 
@@ -148,7 +148,7 @@
 @media (max-width: 770px){
     .featured_blog_post_section .swiper-button-next,
     .featured_blog_post_section .swiper-button-prev{
-        bottom: 80px;
+        bottom: 375px;
     }
 }
 
