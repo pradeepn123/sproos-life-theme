@@ -32,9 +32,7 @@
     <div class="search_category_bar">
         <div class="search_category_bar_wrapper page-width">
             <div class="template-search__search js-drawer">
-                {%- if settings.predictive_search_enabled -%}
-                    <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
-                {%- endif -%}
+                <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search">
                     <input type="hidden" name="type" value="article" />
                     <div class="field">
@@ -60,32 +58,22 @@
                         >
                         <label class="field__label" for="Search-In-Template">{{ 'general.search.search_blog' | t }}</label>
                         <input name="options[prefix]" type="hidden" value="last">
-
-                        {%- if settings.predictive_search_enabled -%}
-                            <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                        <div class="predictive-search predictive-search--search-template" tabindex="-1" blog-data-predictive-search>
                             <div class="predictive-search__loading-state">
                                 <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                                 <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                                 </svg>
                             </div>
-                            </div>
-
-                            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-                        {%- endif -%}
-
+                        </div>
+                        <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                         <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search_blog' | t }}">
-                            {% comment %} <svg class="icon icon-search">
-                                <use xlink:href="#icon-search">
-                            </svg> {% endcomment %}
                             <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" stroke="#2A7DE1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
                 </form>
-                {%- if settings.predictive_search_enabled -%}
-                    </blog-predictive-search>
-                {%- endif -%}
+                </blog-predictive-search>
             </div>
             <div class="divider"></div>
             <div class="swiper-container category-bar">

@@ -2458,7 +2458,7 @@ menu-drawer + .header__search {
   }
 }
 
-.no-js .predictive-search {
+.no-js .predictive-search, .no-js .blog-predictive-search {
   display: none;
 }
 

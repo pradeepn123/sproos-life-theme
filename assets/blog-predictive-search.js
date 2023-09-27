@@ -3,14 +3,13 @@ class BlogPredictiveSearch extends HTMLElement {
       super();
       this.cachedResults = {};
       this.input = this.querySelector('input[type="search"]');
-      this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
+      this.predictiveSearchResults = this.querySelector('[blog-data-predictive-search]');
       this.isOpen = false;
   
       this.setupEventListeners();
     }
   
     setupEventListeners() {
-    debugger;
       const form = this.querySelector('form.search');
       form.addEventListener('submit', this.onFormSubmit.bind(this));
   

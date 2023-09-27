@@ -45,7 +45,9 @@
 }
 
 predictive-search[open] .predictive-search,
-predictive-search[loading] .predictive-search {
+predictive-search[loading] .predictive-search,
+blog-predictive-search[open] .predictive-search,
+blog-predictive-search[loading] .predictive-search {
   display: block;
 }
 
@@ -60,7 +62,7 @@ predictive-search[loading] .predictive-search {
   color: rgba(var(--color-foreground), 0.7);
 }
 
-predictive-search .spinner {
+predictive-search .spinner, blog-predictive-search .spinner {
   width: 1.5rem;
   height: 1.5rem;
   line-height: 0;
@@ -72,18 +74,24 @@ predictive-search .spinner {
 
 predictive-search:not([loading]) .predictive-search__heading .spinner,
 predictive-search:not([loading]) .predictive-search__loading-state,
-predictive-search:not([loading]) .predictive-search-status__loading {
+predictive-search:not([loading]) .predictive-search-status__loading,
+blog-predictive-search:not([loading]) .predictive-search__heading .spinner,
+blog-predictive-search:not([loading]) .predictive-search__loading-state,
+blog-predictive-search:not([loading]) .predictive-search-status__loading  {
   display: none;
 }
 
-predictive-search[loading] .predictive-search__loading-state {
+predictive-search[loading] .predictive-search__loading-state,
+blog-predictive-search[loading] .predictive-search__loading-state {
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
 
 predictive-search[loading] .predictive-search__heading ~ .predictive-search__loading-state,
-predictive-search[loading] .predictive-search__results-list:first-child {
+predictive-search[loading] .predictive-search__results-list:first-child,
+blog-predictive-search[loading] .predictive-search__heading ~ .predictive-search__loading-state,
+blog-predictive-search[loading] .predictive-search__results-list:first-child {
   display: none;
 }
 
