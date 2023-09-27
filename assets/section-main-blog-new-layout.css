@@ -291,6 +291,25 @@
     padding: 20px 0 2rem 0;
     row-gap: 40px;
 }
+
+/* card hover animation */
+.article-card__image:after{
+    opacity: 0.4;
+    content: "";
+    position: absolute;
+    transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 1;
+}
+.card:hover .article-card__image:after {
+    height: 100%;
+}
+/* card hover animation */
+
 @media(max-width:767px){
     .search_category_bar{
         position: sticky;
