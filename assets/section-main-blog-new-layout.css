@@ -283,6 +283,7 @@
 
 .search_category_bar .category-bar .swiper-slide-prev.active a{
     border-bottom: 4px solid #ffffff;
+    color: #ffff;
 }
 
 .cards.blog-articles__per_row{
