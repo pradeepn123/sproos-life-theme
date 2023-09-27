@@ -148,7 +148,7 @@
 @media (max-width: 770px){
     .featured_blog_post_section .swiper-button-next,
     .featured_blog_post_section .swiper-button-prev{
-        bottom: 375px;
+        bottom: -70px;
     }
 }
 
