@@ -375,4 +375,10 @@ h3.related-products-collection-title {
         font-size: 28px;
         line-height: normal;     
     }
+    .card-information>*:not(.visually-hidden:first-child)+*:not(.rating) {
+        height: 40px;
+    }
+    .featured-collection-banner .slider-mobile-gutter .card__content {
+        padding: 10px !important;
+    }
 }
