@@ -407,6 +407,16 @@ blog-predictive-search[open='true']:before{
         /* padding: 0 45px; */
         margin-left: 20px;
     }
+    .search_category_bar .template-search__search .field .search__input.field__input{
+        padding-left: 2rem;
+    }
+    #predictive-search-results .predictive-search__item--link .predictive-search__image{
+        display: none;
+    }
+    #predictive-search-results .predictive-search__item--link{
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+    }
 }
 
 @media(min-width:768px) and (max-width: 1023px){
