@@ -28,11 +28,11 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 12 -%}
-  <div class="main-blog main-blog-article__section section-{{ section.id }}-padding">
+  <div class="main-blog main-blog-article__section section-{{ section.id }}-padding" id="tag-section">
     <div class="search_category_bar">
         <div class="search_category_bar_wrapper page-width">
             <div class="template-search__search js-drawer">
-                <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+                <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">                
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search">
                     <input type="hidden" name="type" value="article" />
                     <div class="field">
@@ -169,24 +169,10 @@
             }
         });
     });
-    
-    document.addEventListener('DOMContentLoaded', function() {
-  
-        // MY HIDDEN THING
-        var myhiddenthing = document.querySelector('.mobile-search-blog');
-
-        // MY TOGGLE BUTTON - BY ADDING/REMOVING A CLASS
-        var mytogglebutton = document.querySelector('.open-drawer-wrap');
-        mytogglebutton.onclick = function() {
-            myhiddenthing.classList.toggle('active');
-        };
         
-        // MY CLOSE BUTTON - BY REMOVING A CLASS
-        var myclosebutton = document.querySelector('.closebutton');
-        myclosebutton.onclick = function() {
-            myhiddenthing.classList.remove('active');
-        };
-        
+    window.addEventListener('DOMContentLoaded', function(){
+      var targetSection = document.getElementById('tag-section');
+      window.scrollTo(0, targetSection.offsetTop - 20);
     });
 </script>
 

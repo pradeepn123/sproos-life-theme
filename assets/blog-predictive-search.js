@@ -189,6 +189,7 @@ class BlogPredictiveSearch extends HTMLElement {
       this.setAttribute('open', true);
       this.input.setAttribute('aria-expanded', true);
       this.isOpen = true;
+      document.body.classList.add('overlay_search');
     }
   
     close(clearSearchTerm = false) {
@@ -203,6 +204,7 @@ class BlogPredictiveSearch extends HTMLElement {
   
       this.input.setAttribute('aria-activedescendant', '');
       this.removeAttribute('open');
+      document.body.classList.remove('overlay_search');
       this.input.setAttribute('aria-expanded', false);
       this.resultsMaxHeight = false
       this.predictiveSearchResults.removeAttribute('style');
