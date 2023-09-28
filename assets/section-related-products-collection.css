@@ -133,8 +133,11 @@ h3.related-products-collection-title {
     position: relative;
     /* column-gap: 30px; */
 }
+.featured-collection-banner .slider-mobile-gutter{
+    padding: 0 10px;
+}
 .featured-collection-banner .slider-mobile-gutter .swiper-slide .card-wrapper{
-    box-shadow: -1px 5px 11px 9px #3232471f;
+    box-shadow: 0px -4.14px 18.00993px 0px rgba(50, 50, 71, 0.08), 0px 10.29139px 10.29139px 0px rgba(50, 50, 71, 0.08);
     border-radius: 5px;
 }
 .featured-collection-banner .slider-mobile-gutter .card__content{
@@ -356,7 +359,7 @@ h3.related-products-collection-title {
 
 @media (min-width: 1680px) {
     .swiper-button-prev, .swiper-button-next {
-        margin: auto 19%;
+        margin: auto 19.5%;
     }
 }
 

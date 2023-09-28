@@ -78,37 +78,17 @@
             <div class="divider"></div>
             <div class="swiper-container category-bar">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="/blogs/sproos-life/">All</a></div>
-                    {% if current_tags contains 'Category_Collagen' %} 
-                        <div class="swiper-slide {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Gut' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Hair' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Health' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Joint' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_News' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Nutrition' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Recipe' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Research' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</div>
-                    {% endif %}
-                    {% if current_tags contains 'Category_Skin' %}
-                        <div class="swiper-slide {% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</div>
-                    {% endif %}
+                    <div class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="/blogs/sproos-life/">All</a></div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</div>                
+                    <div class="swiper-slide {% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</div>                
+                    <div class="swiper-slide {% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</div>                    
+                    <div class="swiper-slide {% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</div> 
                 </div>
                 
                 <div class="swiper-button-prev"></div>
