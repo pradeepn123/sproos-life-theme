@@ -335,7 +335,7 @@ blog-predictive-search[open='true']:before{
 
 @media(max-width:767px){
     .search_category_bar .template-search__search .field .search__input.field__input{
-        padding-left: 0;
+        padding-left: 2rem;
     }
     .search_category_bar{
         position: sticky;
