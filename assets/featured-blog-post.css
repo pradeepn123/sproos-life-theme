@@ -132,18 +132,18 @@
     }
     .featured_blog_post_section .swiper-button-next {
         left: auto !important;
-        top: 30%;
+        top: -48rem;
     }
     .featured_blog_post_section .swiper-button-prev {
-        top: 30%;
+        top: -48rem;
     }
 }
 @media (min-width: 375px) and (max-width: 390px) {
     .featured_blog_post_section .swiper-button-next {        
-        top: 40%;
+        top: -48rem;
     }
     .featured_blog_post_section .swiper-button-prev {
-        top: 40%;
+        top: -48rem;
     }
 }
 @media (min-width: 376px) and (max-width: 390px) {
@@ -246,6 +246,9 @@
     height: 100%;
     background: #fff;
     opacity: .4;
+}
+.css-swiper-button{
+    position: relative;
 }
 @media(min-width:1024px) and (max-width:1440px){
     .featured_blog_swiper_js .featured-article__content .featured-article__details .banner__box{
