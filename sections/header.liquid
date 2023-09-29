@@ -239,7 +239,7 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper {% if section.settings.header_transparent and request.page_type == 'index' %}header-wrap__transparent{% endif %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper {% if section.settings.header_transparent and request.page_type == 'index' or request.path contains 'rewards' %}header-wrap__transparent{% endif %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
@@ -505,17 +505,19 @@
       <h1 class="header__heading">
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-          {%- if request.page_type == 'index' and section.settings.transparent_logo != blank and section.settings.header_transparent -%}
-            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            {% comment %} <img srcset="{{ section.settings.transparent_logo | img_url: image_size }} 1x, {{ section.settings.transparent_logo | img_url: image_size, scale: 2 }} 2x"
-              src="{{ section.settings.transparent_logo | img_url: image_size }}"
-              loading="lazy"
-              class="header__heading-logo transparent_logo"
-              width="{{ section.settings.transparent_logo.width }}"
-              height="{{ section.settings.transparent_logo.height }}"
-              alt="{{ section.settings.transparent_logo.alt | default: shop.name | escape }}"
-            >           {% endcomment %}
-            {% render 'logo', class: 'home-logo' %}
+          {%- if request.page_type == 'index' or request.path contains 'rewards' -%}
+            {%- if section.settings.transparent_logo != blank and section.settings.header_transparent != blank -%}
+              {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+              {% comment %} <img srcset="{{ section.settings.transparent_logo | img_url: image_size }} 1x, {{ section.settings.transparent_logo | img_url: image_size, scale: 2 }} 2x"
+                src="{{ section.settings.transparent_logo | img_url: image_size }}"
+                loading="lazy"
+                class="header__heading-logo transparent_logo"
+                width="{{ section.settings.transparent_logo.width }}"
+                height="{{ section.settings.transparent_logo.height }}"
+                alt="{{ section.settings.transparent_logo.alt | default: shop.name | escape }}"
+              >           {% endcomment %}
+              {% render 'logo', class: 'home-logo' %}
+            {%- endif -%}
           {%- elsif section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"

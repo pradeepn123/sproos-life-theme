@@ -169,6 +169,7 @@
         "heading_size": 28,
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
+        "svg_fill_color": "#c3e76b",
         "margin_top": 36,
         "margin_bottom": 36
       }

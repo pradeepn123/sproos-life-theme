@@ -1,0 +1,696 @@
+{{ 'ways-to-earn.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    @media(min-width: 1440px) {
+      .ways-to-earn-section{
+        margin-top: {{ section.settings.margin_top}}px;
+        margin-bottom: {{section.settings.margin_bottom}}px;
+      }
+    }
+    
+    .ways-to-earn-section-wrap{
+      background-image: {{section.settings.background_color}};
+    }
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+    
+    a.edit-btn :not([href]) {
+      cursor: pointer !important;
+    }
+
+    .edit-content-wrapper {
+      display: none;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{%- endstyle -%}
+
+{%- liquid 
+  if customer
+      assign SHOPIFY_CUSTOMER_EMAIL = customer.email
+  else 
+      assign SHOPIFY_CUSTOMER_EMAIL = ''
+  endif
+-%}
+
+{% assign top_wave_color = section.settings.top_wave_color %}
+{% assign bottom_wave_color = section.settings.bottom_wave_color %}
+{% assign editDate = false %}
+
+<div class="ways-to-earn-section color-{{ section.settings.color_scheme }} gradient">
+  {% if section.settings.top_wave %}
+    {% render 'wave-top-diff', color: top_wave_color, class: 'wave--top' %}
+  {% endif %}
+  <div class="ways-to-earn-section-wrap">
+    <div class="page-width">
+      <div class="section-{{ section.id }}-padding">
+        <div class="heading-sec" style="text-align: {{ section.settings.heading_alignment }}">
+            <h4 class="{{ section.settings.heading_size }}">{{section.settings.heading}}</h4>
+            <span class="sub-heading">{{ section.settings.subheading }}</span>
+        </div>
+        <div class="ways-to-earn-list">
+            {%- for block in section.blocks -%}
+                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.block_title == 'Celebrate a Birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
+                    {%- case block.type -%}
+                        {%- when 'text_steps' -%}
+                          <div class="content-wrapper">
+                            <div class="icon_svg">
+                                {{block.settings.svg_icon}}
+                            </div>
+                            <p class="scoop-heading">{{ block.settings.heading}}</p>
+                            <span class="scoop-amount">{{ block.settings.content}}</span>
+                            {% if customer %}
+                              {% if block.settings.block_title == 'Sign Up' %}
+                                <a class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </a>
+                              {% elsif block.settings.block_title == 'Celebrate a Birthday' %}
+                                  <div class="bday-btns">
+                                    <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
+                                    <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                      <span class="earn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                          <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                          <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                        </svg>
+                                      </span>
+                                      Earned
+                                    </button>
+                                  </div>
+                              {% elsif block.settings.block_title == 'Follow on Instagram' %}
+                                <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
+                                <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </button>
+                              {% elsif block.settings.block_title == 'Like on Facebook' %}
+                                <button class="button button--primary loggedin-btn fb-like-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
+                                <button class="button button--secondary earned-btn" id="fb-btn" style="color: {{ block.settings.button_text_color_2 }};">
+                                  <span class="earn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <circle cx="10" cy="10.25" r="9.25" fill="#C3E76B" stroke="white"/>
+                                      <path d="M6.32771 9.88074L8.6962 13.9687L14.9404 7.38254" stroke="#2A7DE1" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                  </span>
+                                  Earned
+                                </button>
+                              {% elsif block.settings.block_title == 'Place an Order' %}
+                                <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
+                              {% endif %}
+                            {% else %}
+                              <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+                                {%- if block.settings.button_label_1 != blank -%}
+                                    <a {% if block.settings.button_link_1 != blank %}  href="{{ block.settings.button_link_1 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_1 }};">{{ block.settings.button_label_1 | escape }}</a>
+                                {%- endif -%}
+                                {%- if block.settings.button_label_2 != blank -%}
+                                    <a {% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}" {% else %} role="link" aria-disabled="true" {% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary btn-border{% else %} button--primary{% endif %}" style="color: {{ block.settings.button_text_color_2 }};">{{ block.settings.button_label_2 | escape }}</a>
+                                {%- endif -%}
+                              </div>
+                            {% endif %}
+                          </div>
+                          {% if block.settings.block_title == 'Celebrate a Birthday' %}
+                            <div class="edit-content-wrapper">
+                              <p>
+                                We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
+                              </p>
+                              <div class="birth_date">
+                                  <span class="birth_year">
+                                      <span class="input_label_text">Year</span>
+                                      <span class="input_text">
+                                        <input type="tel" class="y_date" id="y_datepicker0" min="1" max="2" oninput="activateNextField(this, 'y_datepicker1')">
+                                        <input type="tel" class="y_date" id="y_datepicker1" min="0" max="9" oninput="activateNextField(this, 'y_datepicker2')">
+                                        <input type="tel" class="y_date" id="y_datepicker2" min="0" max="9" oninput="activateNextField(this, 'y_datepicker3')">
+                                        <input type="tel" class="y_date" id="y_datepicker3" min="0" max="9" oninput="activateNextField(this, 'm_datepicker0')">
+                                      </span>
+                                  </span>
+                                  
+                                  <span class="birth_month">
+                                    <span class="input_label_text">Month</span>
+                                      <span class="input_text">
+                                        <input type="tel" class="m_date" id="m_datepicker0" min="0" max="1" oninput="activateNextField(this, 'm_datepicker1')">
+                                        <input type="tel" class="m_date" id="m_datepicker1" min="0" max="9" oninput="activateNextField(this, 'd_datepicker0')">
+                                      </span>
+                                  </span>
+                                
+                                  <span class="birth_day">
+                                    <span class="input_label_text">Day</span>
+                                      <span class="input_text">
+                                        <input type="tel" class="d_date" id="d_datepicker0" min="0" max="3" oninput="activateNextField(this, 'd_datepicker1')">
+                                        <input type="tel" class="d_date" id="d_datepicker1" min="0" max="9">
+                                      </span>
+                                  </span>
+                                </div>
+                                <p class="date-error-text">Please enter a valid date (YYYY-MM-DD)</p>
+                                <button class="button button--primary" id="bday-save-btn" onclick="dateSubmit()">
+                                  Save Date
+                                </button>
+                            </div>
+                          {% endif %}
+                    {%- endcase -%}
+                </div>
+            {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    {% if section.settings.bottom_wave %}
+      {% render 'wave-bottom' color: bottom_wave_color, class: 'wave--bottom' %}
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  let TOKEN = sessionStorage.getItem("SMILE_TOKEN");
+  let CUSTOMER, SMILE_CUSTOMER_ID, ACTIVITY_BEARER_TOKEN, SMILE_CHANNEL_KEY;
+  
+  let edit_btn = document.querySelector('.edit-btn');
+  let ig_follow_btn = document.querySelector('.ig-follow-btn');
+  let fb_like_btn = document.querySelector('.fb-like-btn');
+  let Smile;
+window.addEventListener("load", (event) => {
+    setTimeout(() => {
+      if (window.Smile != undefined){
+          Smile = SmileUI;
+          onSmileReady();
+      } else {
+        console.log("Error loading Smile App");
+        window.location.reload();
+      }
+    }, 1800)
+});
+
+function activateNextField(currentInput, nextInputId) {
+  // Check if the current input has a value
+  if (currentInput.value.trim() !== '') {
+      // Find the next input field by its id
+      const nextInput = document.getElementById(nextInputId);
+      if (nextInput) {
+          // Focus on the next input field
+          nextInput.focus();
+      }
+  }
+}
+
+function onSmileReady(){
+  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", Smile.smile.__private_3_customerAuthToken);
+  sessionStorage.setItem("SMILE_CHANNEL_KEY", Smile.channel_key);
+  ACTIVITY_BEARER_TOKEN = sessionStorage.getItem("ACTIVITY_BEARER_TOKEN");
+  SMILE_CHANNEL_KEY = sessionStorage.getItem("SMILE_CHANNEL_KEY");
+
+  SMILE_CUSTOMER_ID = sessionStorage.getItem('SMILE_CUSTOMER_ID');
+  let edit_btn = document.querySelector('.edit-btn');
+  let ig_follow_btn = document.querySelector('.ig-follow-btn');
+  let fb_like_btn = document.querySelector('.fb-like-btn');
+
+  if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
+      getUpdatedActivities();
+      CUSTOMER = Smile.smile.customer;
+      if (CUSTOMER.date_of_birth == null) {
+        document.querySelector('.birthday-btn').style.display = 'none';
+      }
+  }
+  
+  function getUpdatedActivities() {
+    fetch(`https://platform.smile.io/v1/customer_activity_rules?customer_id=${SMILE_CUSTOMER_ID}&include=activity_rule.image_svg`, {method:'GET',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'}})
+      .then(response => response.json())
+      .then(result => {
+       result.customer_activity_rules.map((activity) => {
+        if(activity.activity_rule.type == 'instagram_follow' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+            ig_follow_btn.style.display = 'none';
+            document.querySelector('#ig-btn').style.display = 'block';
+        }
+        if(activity.activity_rule.type == 'facebook_like' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+          fb_like_btn.style.display = 'none';
+          document.querySelector('#fb-btn').style.display = 'block';
+        }
+        if(activity.activity_rule.type == 'customer_birthday' && activity.not_available_reason == 'Already completed. ' && activity.is_available == false) {
+          document.querySelector('.birthday-btn').style.display = 'flex';
+        }
+       })
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+  }
+
+}
+
+function igFollowAction() {
+    let reqBody = JSON.stringify({
+      "activity": {
+        "customer_id": CUSTOMER.id,
+        "token": "instagram_follow"
+      }
+    })
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+        setTimeout(() => {
+          window.open('https://www.instagram.com/sprooslife/', '_blank');
+          let smileReady = onSmileReady();
+          smileReady.getUpdatedActivities();
+        }, 1000);
+      })
+      .catch(error => console.log('error', error));
+  
+    }
+
+  
+  function fbLikeAction() {
+    let reqBody = JSON.stringify({
+      "activity": {
+        "customer_id": CUSTOMER.id,
+        "token": "facebook_like"
+      }
+    })
+    fetch(`https://platform.smile.io/v1/activities`, {method:'POST',
+      headers: {'Authorization': 'Bearer ' + ACTIVITY_BEARER_TOKEN, 'Smile-Channel-Key': SMILE_CHANNEL_KEY, 'Smile-Client': 'smile-ui', 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+        setTimeout(() => {
+          window.open('https://www.facebook.com/sprooslife/', '_blank');
+          let smileReady = onSmileReady();
+          smileReady.getUpdatedActivities();
+        }, 1000)
+      })
+      .catch(error => console.log('error', error));
+}
+
+edit_btn.addEventListener('click', updateBirthday);
+
+ig_follow_btn.addEventListener('click', igFollowAction);
+
+fb_like_btn.addEventListener('click', fbLikeAction);
+
+function getCustomerDetails() {
+  CUSTOMER = Smile.smile.customer;
+}
+
+function updateBirthday() {
+    getCustomerDetails();
+    document.querySelector('#bday-save-btn').innerHTML = 'Save Date';
+    let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+    editDateContent.style.display = 'none';
+
+    document.querySelector('.edit-content-wrapper').style.display='block';
+
+    document.querySelector('#ways-to-earn-items-edit-birthday').classList.add('edit-bday-input-wrapper');
+
+    if (CUSTOMER.date_of_birth != null) {
+      let current_dob = CUSTOMER.date_of_birth;
+      let date = current_dob.split("-");
+
+      document.querySelectorAll('.birth_year input').forEach((val, ind) => date[0].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+
+      document.querySelectorAll('.birth_month input').forEach((val, ind) => date[1].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+
+      document.querySelectorAll('.birth_day input').forEach((val, ind) => date[2].split('').map((i, index) => {
+        if(ind == index) {
+          val.value = i;
+        }
+      }
+      ));
+    }
+}
+
+function dateSubmit() {
+  let year = '', month = '', day = '';
+  document.querySelectorAll('.y_date').forEach((y) => year = year + (y.value).toString());
+  document.querySelectorAll('.m_date').forEach((m) => month = month + (m.value).toString());
+  document.querySelectorAll('.d_date').forEach((d) => day = day + (d.value).toString());
+
+  if(parseInt(year) >= 1900 && parseInt(year) <= 2013 && parseInt(month) >= 01 && parseInt(month) <= 12 && parseInt(day) >= 01 && parseInt(month) <= 31) {
+    let dob_iso_format = new Date(year+'-'+month+'-'+day).toISOString();
+    let reqBody = JSON.stringify({
+      "customer": {
+        "date_of_birth": dob_iso_format
+      }
+    })
+    fetch(`https://platform.smile.io/v1/customers/${CUSTOMER.id}`, {method:'PUT',
+      headers: {'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'},
+      body: reqBody})
+      .then(response => response.text())
+      .then(result => {
+          updateBirthday();
+          document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
+          window.location.reload();
+          setTimeout(() => {
+            let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
+            editDateContent.style.display = 'block';
+            document.querySelector('#ways-to-earn-items-edit-birthday').classList.remove('edit-bday-input-wrapper');
+            document.querySelector('.edit-content-wrapper').style.display='none';
+          }, 800);
+          
+      })
+      .catch(error => console.log('error', error));
+  } else {
+    document.querySelector('.date-error-text').style.display = "block";
+    document.querySelector('.birth_date').style.margin = "4px 0 0";
+    setTimeout(() => {
+      document.querySelector('.date-error-text').style.display = "none";
+      document.querySelector('.birth_date').style.margin = "20px 0 13px";
+    }, 5000);
+    
+  }
+}
+
+</script>
+
+{% schema %}
+{
+  "name": "Ways to earn",
+  "tag": "section",
+  "class": "section",
+  "settings": [    
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.collapsible_content.settings.heading.label"      
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title Font Size",
+      "options": [
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading"      
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.collapsible_content.settings.layout.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.collapsible_content.settings.layout.options__1.label"
+        },
+        {
+          "value": "row",
+          "label": "t:sections.collapsible_content.settings.layout.options__2.label"
+        },
+        {
+          "value": "section",
+          "label": "t:sections.collapsible_content.settings.layout.options__3.label"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__3.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.collapsible_content.settings.color_scheme.label"
+    },
+    {
+        "type": "color",
+        "id": "top_wave_color",
+        "label": "Top Wave Color",
+        "default": "transparent"
+      },
+    {
+        "type": "color",
+        "id": "bottom_wave_color",
+        "label": "Bottom Wave Color",
+        "default": "transparent"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 152,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "linear-gradient(#FCA4A2, #FFFFFF)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "top_wave",
+      "default": false,
+      "label": "Top Wave"
+    },
+    {
+        "type": "checkbox",
+        "id": "bottom_wave",
+        "default": false,
+        "label": "Bottom Wave"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_steps",
+      "name": "Ways to earn",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Choose image icon"
+        },
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "Choose svg code"
+        },
+        {
+          "type": "text",
+          "id": "heading",          
+          "label": "heading"          
+        },
+        {
+          "type": "text",
+          "id": "block_title",          
+          "label": "Block Title",
+          "info": "Note: Do not edit."
+        },        
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Description"
+        },
+        {
+            "type": "select",
+            "id": "heading_alignment",
+            "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+                },
+                {
+                    "value": "center",
+                    "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+                },
+                {
+                    "value": "right",
+                    "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+                }
+            ],
+            "default": "center"
+        },
+        {
+            "type": "text",
+            "id": "button_label_1",
+            "default": "Button label",
+            "label": "Button Label"
+        },
+        {
+            "type": "color",
+            "id": "button_text_color_1",
+            "label": "Button text color",
+            "default": "#000"
+        },
+        {
+            "type": "url",
+            "id": "button_link_1",
+            "label": "Button Link"
+        },
+        {
+            "type": "checkbox",
+            "id": "button_style_secondary_1",
+            "default": false,
+            "label": "Button style"
+        },
+        {
+            "type": "text",
+            "id": "button_label_2",
+            "default": "Button label",
+            "label": "Button Label"
+        },
+        {
+            "type": "url",
+            "id": "button_link_2",
+            "label": "Button Link"
+        },
+        {
+            "type": "color",
+            "id": "button_text_color_2",
+            "label": "Button text color",
+            "default": "#000"
+        },
+        {
+            "type": "checkbox",
+            "id": "button_style_secondary_2",
+            "default": false,
+            "label": "Button style"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ways to earn",
+      "blocks": [
+        {
+          "type": "text_steps"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

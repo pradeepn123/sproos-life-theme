@@ -8,6 +8,20 @@
   text-align: center;
 }
 
+.banner__content .banner__box h2#rewards_banner_heading span {
+  text-transform: initial;
+  display: block;
+  line-height: 1;
+}
+
+.banner__content .banner__box h2#rewards_banner_heading:first-letter {
+  text-transform: uppercase;
+}
+
+.banner__content .banner__box .banner__text#rewards_banner_text span {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
     text-align: right;
@@ -16,7 +30,68 @@
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
   }
+
+  .banner__content .banner__box h2#rewards_banner_heading span {
+    color: #000;
+    font-size: 52px;
+    letter-spacing: 0.45px;
+  }
+
+  .banner__content .banner__box .banner__text#rewards_banner_text {
+    margin-top: 2.8rem;
+    margin-bottom: 0.8rem;
+    padding-top: 0;
+  }
+
+  .banner__content .banner__box .banner__text#rewards_banner_text span {
+    color: #000;
+    font-size: 24px;
+    line-height: normal;
+  }
 }
+
+@media only screen and (max-width: 425px) {
+  .banner__content .banner__box h2#rewards_banner_heading span {
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .banner__content .banner__box .banner__text#rewards_banner_text span {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h2#rewards_banner_heading {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 394px) {
+  h2#rewards_banner_heading {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h2#rewards_banner_heading {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  h2#rewards_banner_heading {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h2#rewards_banner_heading {
+    width: 85%;
+  }
+}
+
 
 @media only screen and (min-width: 750px) {
   .banner--content-align-right .banner__box {
@@ -31,6 +106,18 @@
   .banner--content-align-right.banner--desktop-transparent .banner__box,
   .banner--medium.banner--desktop-transparent .banner__box {
     max-width: 68rem;
+  }
+
+  .banner__content .banner__box h2#rewards_banner_heading {
+    width: 70%;
+    font-size: 60px;
+  }
+
+  .banner__content .banner__box .banner__text#rewards_banner_text {
+    width: 60%;
+  }
+  .banner__content .banner__box .banner__text#rewards_banner_text span {
+    color: #fff;
   }
 }
 
@@ -73,7 +160,7 @@
   }
 
   .banner--medium:not(.banner--adapt) {
-    min-height: 56rem;
+    min-height: 54rem;
   }
 
   .banner--large:not(.banner--adapt) {
@@ -302,6 +389,10 @@
   .banner:not(.banner--mobile-bottom) .field__input {
     background-color: transparent;
   }
+
+  #rewards_banner_box {
+    padding: 4rem 1.5rem 4rem;
+  }
 }
 
 .banner__box {
@@ -401,6 +492,7 @@
 
 .banner__box .banner__heading + * {
   margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .banner__buttons {
@@ -435,4 +527,34 @@
 
 .banner__box > * + .banner__buttons {
   margin-top: 2rem;
+}
+
+
+
+.banner__media.media.desktop_banner{
+  display: none;
+}
+.banner__media.media.mobile_banner{
+  display: block;
+}
+
+@media(min-width:768px) and (max-width:1024px){
+  .banner__media.media.desktop_banner img{
+    object-position: 68% 32%;
+  }
+}
+
+@media(min-width:768px){
+  .banner__media.media.desktop_banner{
+    display: block;
+  }
+  .banner__media.media.mobile_banner{
+    display: none;
+  }
+}
+
+@media (min-width:1024px) {
+  .banner__content .banner__box .banner__text#rewards_banner_text {
+    width: 85%;
+  }
 }

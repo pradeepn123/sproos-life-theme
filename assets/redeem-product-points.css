@@ -1,0 +1,207 @@
+.stamped-badge[data-rating="0.0"] {
+    display: block !important;
+}
+.redeem-product-points-sec .heading-sec h4{
+    margin: 0;
+    text-transform: unset;
+}
+.redeem-product-points-sec{
+    position: relative;
+}
+.section-curved-marquee{
+    margin-top: 20px !important;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper product-form.product-form{
+    display: none;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information{
+    padding: 0 1rem;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .price,
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .price--on-sale .price-item--regular {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.redeem-product-points-sec .redeem_point_text{
+    font-size: 16px;
+    color: #2A7DE1;
+    font-weight: 400;
+}
+.redeem-product-points-sec .slider-mobile-points .card__media .media img{
+    transform: scale(1.01);
+}
+.redeem-product-points-sec .slider-mobile-points.line_through .price .price__container{
+    text-decoration: line-through;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information variant-custom-selects{
+    color: #000;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+    color: #121212;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading a{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__inner{
+    border-radius: 9px;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card{    
+    box-shadow: 0px 14.39px 21.59px 0px rgba(50, 50, 71, 0.08), 0px 10.79px 10.79px 0px rgba(50, 50, 71, 0.08);
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information{
+    background-color: #fff;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    min-height: 138px;
+    overflow: hidden;
+}
+.redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .stamped-product-reviews-badge .stamped-badge-caption{
+    color: #A8A4A4;
+    font-size: 11px;
+    font-family: "Brown,sans-serif";
+    font-weight: 400;    
+}   
+.redeem-product-points-sec .slider-mobile-points .card-wrapper{    
+    pointer-events: none;
+}
+.slider-mobile-points{
+    overflow: hidden;
+}
+.collection_handle{
+    font-size: 16px;
+    color: #2A7DE1;
+    z-index: 2;
+    position: relative;
+    padding: 1rem;
+    background: #FFF;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    text-decoration: none;    
+    display: block;
+    text-align: center;    
+    margin: 40px auto 20px;
+    font-weight: 700;
+}
+.redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: calc(0px - (44px / 2));
+    z-index: 2;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 4px 4px rgba(11, 56, 109, 0.2);
+}
+.redeem-product-points-sec .swiper-button-next:after, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 16px;
+}
+.redeem-product-points-sec .swiper-button-prev:after, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 16px;
+}
+.redeem-product-points-sec .swiper-button-next, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-prev {
+    right: 10px !important;
+    left: auto;
+}
+.redeem-product-points-sec .swiper-button-prev, 
+.redeem-product-points-sec .swiper-rtl .swiper-button-next {
+    left: 10px !important;
+    right: auto;
+}
+
+.redeem-product-points-sec .heading-sec .subheading {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.redeem-product-points-sec .heading-sec .subheading p {
+    margin-bottom: 55px;
+}
+
+@media(min-width: 1440px) {
+    .redeem-product-points-sec {
+        margin-bottom: 2em;
+    }
+    .collection_handle {
+        margin-top: 75px;
+    }
+}
+@media(max-width: 1280px) {
+    .redeem-product-points-sec {
+        margin-bottom: 2.5em;
+    }
+}
+@media(min-width:1200px){
+    .redeem-product-points-sec {
+        padding-top: 26px;
+    }
+    .redeem-product-points-sec .redeem_point_text{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .redeem-product-points-sec {
+        margin-bottom: 1.5em;
+    }
+}
+
+@media(max-width: 820px) {
+    .redeem-product-points-sec {
+        margin-bottom: 2em;
+    }
+}
+
+@media(min-width: 768px) {
+    .collection_handle{
+        width: 149px;
+    }
+    /* .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{
+        height: 40px;
+    } */
+}
+
+@media(max-width: 767px) {
+    .redeem-product-points-sec {
+        margin-bottom: 2.5em;
+    }
+    .redeem-product-points-sec .heading-sec .subheading p {
+        margin-bottom: 40px;
+    }
+    .collection_handle {
+        max-width: 149px;
+        max-height: 49px;
+    }
+    .redeem-product-points-sec .redeem_point_text {
+        font-size: 14px;
+    }
+    .redeem-product-points-sec .swiper-button-prev, .redeem-product-points-sec .swiper-button-next {
+        display: none !important;
+    }
+    /* .redeem-product-points-sec .slider-mobile-points .card-wrapper .card .card__content .card__information .card__heading{        
+        height: 60px;
+    } */
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .redeem-product-points-sec .page-width{
+        padding: 0 0 0 5rem;
+    }
+}
