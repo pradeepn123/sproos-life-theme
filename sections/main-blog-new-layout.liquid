@@ -78,16 +78,16 @@
             <div class="swiper-container category-bar">
                 <div class="swiper-wrapper">
                     <div data-index='1' class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="/blogs/test">All</a></div>                    
-                    <div data-index='2' class="swiper-slide {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>                    
-                    <div data-index='3' class="swiper-slide {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>
-                    <div data-index='4' class="swiper-slide {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>
-                    <div data-index='5' class="swiper-slide {% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</div>
-                    <div data-index='6' class="swiper-slide {% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</div>
-                    <div data-index='7' class="swiper-slide {% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</div>
-                    <div data-index='8' class="swiper-slide {% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</div>
-                    <div data-index='9' class="swiper-slide {% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</div>
-                    <div data-index='10' class="swiper-slide {% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</div>
-                    <div data-index='11' class="swiper-slide {% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</div>
+                    <div data-index='2' class="swiper-slide tag_section {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>                    
+                    <div data-index='3' class="swiper-slide tag_section {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>
+                    <div data-index='4' class="swiper-slide tag_section {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>
+                    <div data-index='5' class="swiper-slide tag_section {% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</div>
+                    <div data-index='6' class="swiper-slide tag_section {% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</div>
+                    <div data-index='7' class="swiper-slide tag_section {% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</div>
+                    <div data-index='8' class="swiper-slide tag_section {% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</div>
+                    <div data-index='9' class="swiper-slide tag_section {% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</div>
+                    <div data-index='10' class="swiper-slide tag_section {% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</div>
+                    <div data-index='11' class="swiper-slide tag_section {% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</div>
                 </div>
                 
                 <div class="swiper-button-prev"></div>
@@ -178,11 +178,12 @@
             }
         });        
     });
-        
-    window.addEventListener('DOMContentLoaded', function(){
-      var targetSection = document.getElementById('tag-section');
-      window.scrollTo(0, targetSection.offsetTop - 20);
-    });
+    if(window.location.href != 'https://sprooslife.com/blogs/test'){
+        window.addEventListener('DOMContentLoaded', function(){
+            var targetSection = document.getElementById('tag-section');
+            window.scrollTo(0, targetSection.offsetTop - 20);
+        });
+    }
 </script>
 
 
