@@ -74,10 +74,18 @@
                     </div>
                 </form>
                 </blog-predictive-search>
-            </div>         
+            </div>            
             <div class="swiper-container category-bar">
-                <div class="swiper-wrapper">
-                    <div data-index='1' class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="/blogs/test">All</a></div>                    
+                <div class="swiper-wrapper">                    
+                    {% comment %} {%- for tag in blog.all_tags -%}
+                        {% assign blog_tags = tag | split:'_' %}
+                        {% if tag contains 'Category_'%}
+                            <div data-index='1' class="swiper-slide tag_section {% if current_tags contains tag %} active {% endif %}">
+                                {{ blog_tags.last | link_to_tag: tag }}
+                            </div>
+                        {% endif %}
+                    {%- endfor-%} {% endcomment %}
+                    <div data-index='1' class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="{{blog.url}}">All</a></div>                    
                     <div data-index='2' class="swiper-slide tag_section {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>                    
                     <div data-index='3' class="swiper-slide tag_section {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>
                     <div data-index='4' class="swiper-slide tag_section {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>
@@ -92,22 +100,7 @@
                 
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
-            {% comment %} <div class="category-bar swiper-container">
-                <ul class="category-bar-list swiper-wrapper list-unstyled">
-                    <li class="cat-item swiper-slide{% unless current_tags %} active{% endunless %}"><a href="/blogs/sproos-life/">All</a></li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</a></li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</a></li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</a></li>
-                    <li class="cat-item swiper-slide{% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</li>
-                </ul>           
-            </div> {% endcomment %}
+            </div>        
         </div>
     </div>
     <div class="page-width">        
