@@ -9,7 +9,7 @@
 }
 
 .banner__content .banner__box h2#rewards_banner_heading span {
-  text-transform: lowercase;
+  text-transform: initial;
   display: block;
   line-height: 1;
 }
