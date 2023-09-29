@@ -141,8 +141,10 @@
         background: var(--swiper-pagination-bullet-inactive-color,#000);
     }
     .featured_blog_swiper_js .swiper-pagination{
-        bottom: 43%;
+        bottom: unset;
         display: block;
+        position: relative;
+        margin-bottom: 24px;
     }
     .css-swiper-button{
         display: none;
