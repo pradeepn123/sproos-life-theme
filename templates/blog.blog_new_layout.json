@@ -3,15 +3,6 @@
     "4629fabf-f1b3-44cc-a140-7739e59622d1": {
       "type": "featured-blog-post",
       "blocks": {
-        "9aea7b1d-cacd-4339-ace9-27ddd42b8822": {
-          "type": "featured_post",
-          "settings": {
-            "article": "test\/test-is-there-such-thing-as-vegan-or-plant-based-collagen",
-            "article_title_color": "",
-            "article_text_color": "",
-            "read_more_text_color": ""
-          }
-        },
         "c35d3658-b769-47fe-88d5-0bab4a910b07": {
           "type": "featured_post",
           "settings": {
@@ -32,7 +23,6 @@
         }
       },
       "block_order": [
-        "9aea7b1d-cacd-4339-ace9-27ddd42b8822",
         "c35d3658-b769-47fe-88d5-0bab4a910b07",
         "dbd3130c-9924-4cff-8695-da0cabd0ff8e"
       ],
