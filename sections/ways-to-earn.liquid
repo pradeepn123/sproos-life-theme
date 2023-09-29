@@ -267,6 +267,7 @@ function igFollowAction() {
       .then(result => {
         setTimeout(() => {
           window.open('https://www.instagram.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000);
@@ -290,6 +291,7 @@ function igFollowAction() {
       .then(result => {
         setTimeout(() => {
           window.open('https://www.facebook.com/sprooslife/', '_blank');
+          SmileUI.closePanel();
           let smileReady = onSmileReady();
           smileReady.getUpdatedActivities();
         }, 1000)
@@ -309,7 +311,6 @@ function getCustomerDetails() {
 
 function updateBirthday() {
     getCustomerDetails();
-    document.querySelector('#bday-save-btn').innerHTML = 'Save Date';
     let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
     editDateContent.style.display = 'none';
 
@@ -362,15 +363,16 @@ function dateSubmit() {
       body: reqBody})
       .then(response => response.text())
       .then(result => {
+          SmileUI.closePanel();
           updateBirthday();
           document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
           window.location.reload();
           setTimeout(() => {
             let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
             editDateContent.style.display = 'block';
-            document.querySelector('#ways-to-earn-items-edit-birthday').classList.remove('edit-bday-input-wrapper');
+            document.querySelector('#ways-to-earn-items-edit-birthday').style.padding='36px';
             document.querySelector('.edit-content-wrapper').style.display='none';
-          }, 800);
+          }, 1000);
           
       })
       .catch(error => console.log('error', error));
