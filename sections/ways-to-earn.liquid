@@ -57,7 +57,7 @@
         </div>
         <div class="ways-to-earn-list">
             {%- for block in section.blocks -%}
-                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.heading == 'Celebrate a birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
+                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.heading == 'Celebrate a Birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
                     {%- case block.type -%}
                         {%- when 'text_steps' -%}
                           <div class="content-wrapper">
@@ -77,7 +77,7 @@
                                   </span>
                                   Earned
                                 </a>
-                              {% elsif block.settings.heading == 'Celebrate a birthday' %}
+                              {% elsif block.settings.heading == 'Celebrate a Birthday' %}
                                   <div class="bday-btns">
                                     <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
                                     <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
@@ -90,7 +90,7 @@
                                       Earned
                                     </button>
                                   </div>
-                              {% elsif block.settings.heading == 'Follow on instagram' %}
+                              {% elsif block.settings.heading == 'Follow on Instagram' %}
                                 <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
                                 <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
                                   <span class="earn-icon">
@@ -112,7 +112,7 @@
                                   </span>
                                   Earned
                                 </button>
-                              {% elsif block.settings.heading == 'Place an order' %}
+                              {% elsif block.settings.heading == 'Place an Order' %}
                                 <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
                               {% endif %}
                             {% else %}
@@ -126,7 +126,7 @@
                               </div>
                             {% endif %}
                           </div>
-                          {% if block.settings.heading == 'Celebrate a birthday' %}
+                          {% if block.settings.heading == 'Celebrate a Birthday' %}
                             <div class="edit-content-wrapper">
                               <p>
                                 We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
@@ -183,16 +183,17 @@
   let edit_btn = document.querySelector('.edit-btn');
   let ig_follow_btn = document.querySelector('.ig-follow-btn');
   let fb_like_btn = document.querySelector('.fb-like-btn');
-
+  let Smile;
 window.addEventListener("load", (event) => {
     setTimeout(() => {
       if (window.Smile != undefined){
+          Smile = SmileUI;
           onSmileReady();
       } else {
         console.log("Error loading Smile App");
         window.location.reload();
       }
-    }, 1500)
+    }, 1800)
 });
 
 function activateNextField(currentInput, nextInputId) {
@@ -208,9 +209,8 @@ function activateNextField(currentInput, nextInputId) {
 }
 
 function onSmileReady(){
-  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", Smile.__private_3_customerAuthToken);
+  sessionStorage.setItem("ACTIVITY_BEARER_TOKEN", Smile.smile.__private_3_customerAuthToken);
   sessionStorage.setItem("SMILE_CHANNEL_KEY", Smile.channel_key);
-  
   ACTIVITY_BEARER_TOKEN = sessionStorage.getItem("ACTIVITY_BEARER_TOKEN");
   SMILE_CHANNEL_KEY = sessionStorage.getItem("SMILE_CHANNEL_KEY");
 
@@ -221,7 +221,7 @@ function onSmileReady(){
 
   if (`{{SHOPIFY_CUSTOMER_EMAIL}}` != "" ) {
       getUpdatedActivities();
-      CUSTOMER = Smile.customer;
+      CUSTOMER = Smile.smile.customer;
       if (CUSTOMER.date_of_birth == null) {
         document.querySelector('.birthday-btn').style.display = 'none';
       }
@@ -304,9 +304,7 @@ ig_follow_btn.addEventListener('click', igFollowAction);
 fb_like_btn.addEventListener('click', fbLikeAction);
 
 function getCustomerDetails() {
-  Smile.fetchCustomer().then((customer) => {
-    CUSTOMER = customer;
-  });
+  CUSTOMER = Smile.smile.customer;
 }
 
 function updateBirthday() {
