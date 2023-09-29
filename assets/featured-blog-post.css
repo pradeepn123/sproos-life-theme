@@ -137,6 +137,16 @@
     .featured_blog_post_section .swiper-button-prev {
         top: -52rem;
     }
+    .featured_blog_swiper_js .swiper-pagination .swiper-pagination-bullet-active{
+        background: var(--swiper-pagination-bullet-inactive-color,#000);
+    }
+    .featured_blog_swiper_js .swiper-pagination{
+        bottom: 43%;
+        display: block;
+    }
+    .css-swiper-button{
+        display: none;
+    }
 }
 @media (min-width: 375px) and (max-width: 400px) {
     .featured_blog_post_section .swiper-button-next,
@@ -194,6 +204,9 @@
 }
 
 @media (min-width: 768px){
+    .featured_blog_swiper_js .swiper-pagination{
+        display: none;
+    }
     .css-swiper-button{
         display: block;
         position: relative;
