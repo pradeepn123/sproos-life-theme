@@ -57,7 +57,7 @@
         </div>
         <div class="ways-to-earn-list">
             {%- for block in section.blocks -%}
-                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.heading == 'Celebrate a Birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
+                <div class="ways-to-earn-items {% if customer %} ways-to-earn-items-loggedin {% else %} ways-to-earn-items-loggedout {% endif %}" {% if block.settings.block_title == 'Celebrate a Birthday' %} id="ways-to-earn-items-edit-birthday"{% endif %} style="text-align: {{ block.settings.heading_alignment }}">
                     {%- case block.type -%}
                         {%- when 'text_steps' -%}
                           <div class="content-wrapper">
@@ -67,7 +67,7 @@
                             <p class="scoop-heading">{{ block.settings.heading}}</p>
                             <span class="scoop-amount">{{ block.settings.content}}</span>
                             {% if customer %}
-                              {% if block.settings.heading == 'Sign Up' %}
+                              {% if block.settings.block_title == 'Sign Up' %}
                                 <a class="button button--secondary loggedin-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
                                   <span class="earn-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -77,7 +77,7 @@
                                   </span>
                                   Earned
                                 </a>
-                              {% elsif block.settings.heading == 'Celebrate a Birthday' %}
+                              {% elsif block.settings.block_title == 'Celebrate a Birthday' %}
                                   <div class="bday-btns">
                                     <button class="button button--primary loggedin-btn edit-btn" style="color: {{ block.settings.button_text_color_1 }};">Edit Date</button>
                                     <button class="button button--secondary birthday-btn earned-btn" style="color: {{ block.settings.button_text_color_2 }};">
@@ -90,7 +90,7 @@
                                       Earned
                                     </button>
                                   </div>
-                              {% elsif block.settings.heading == 'Follow on Instagram' %}
+                              {% elsif block.settings.block_title == 'Follow on Instagram' %}
                                 <button class="button button--primary loggedin-btn ig-follow-btn" style="color: {{ block.settings.button_text_color_1 }};">Follow</button>
                                 <button class="button button--secondary earned-btn" id="ig-btn" style="color: {{ block.settings.button_text_color_2 }};">
                                   <span class="earn-icon">
@@ -101,7 +101,7 @@
                                   </span>
                                   Earned
                                 </button>
-                              {% elsif block.settings.heading == 'Like on Facebook' %}
+                              {% elsif block.settings.block_title == 'Like on Facebook' %}
                                 <button class="button button--primary loggedin-btn fb-like-btn" style="color: {{ block.settings.button_text_color_1 }};">Like</a>
                                 <button class="button button--secondary earned-btn" id="fb-btn" style="color: {{ block.settings.button_text_color_2 }};">
                                   <span class="earn-icon">
@@ -112,7 +112,7 @@
                                   </span>
                                   Earned
                                 </button>
-                              {% elsif block.settings.heading == 'Place an Order' %}
+                              {% elsif block.settings.block_title == 'Place an Order' %}
                                 <a href="/collections/all/" class="button button--primary loggedin-btn" style="color: {{ block.settings.button_text_color_1 }};">Shop Now</a>
                               {% endif %}
                             {% else %}
@@ -126,7 +126,7 @@
                               </div>
                             {% endif %}
                           </div>
-                          {% if block.settings.heading == 'Celebrate a Birthday' %}
+                          {% if block.settings.block_title == 'Celebrate a Birthday' %}
                             <div class="edit-content-wrapper">
                               <p>
                                 We want to celebrate your birthday! Make sure you let us know at least one month in advance — otherwise, you'll have to wait until next year.
@@ -364,6 +364,7 @@ function dateSubmit() {
       .then(result => {
           updateBirthday();
           document.querySelector('#bday-save-btn').innerHTML = 'Saved!';
+          window.location.reload();
           setTimeout(() => {
             let editDateContent = document.querySelector('#ways-to-earn-items-edit-birthday .content-wrapper');
             editDateContent.style.display = 'block';
@@ -600,6 +601,12 @@ function dateSubmit() {
           "type": "text",
           "id": "heading",          
           "label": "heading"          
+        },
+        {
+          "type": "text",
+          "id": "block_title",          
+          "label": "Block Title",
+          "info": "Note: Do not edit."
         },        
         {
           "type": "richtext",
