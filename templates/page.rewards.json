@@ -6,7 +6,7 @@
         "template--20715244585279__4f835111-3926-4219-aa71-20bb022cf07e-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Join the Sproos Squad",
+            "heading": "Join the Sproos Squads",
             "heading_size": "h1"
           }
         },
@@ -38,7 +38,6 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rewards_desktop_img_banner.png",
-        "mobile_image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED_png.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -150,7 +149,7 @@
         "heading_size": 30,
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
-        "svg_fill_color": "#407ad9",
+        "svg_fill_color": "",
         "margin_top": 80,
         "margin_bottom": 76
       }
@@ -343,7 +342,7 @@
         "heading_size": 30,
         "heading_size_mobile": 60,
         "background_color": "#ffffff",
-        "svg_fill_color": "#2a7de1",
+        "svg_fill_color": "",
         "margin_top": 80,
         "margin_bottom": 76
       }
