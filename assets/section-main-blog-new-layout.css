@@ -344,6 +344,7 @@ blog-predictive-search[open='true']:before{
         z-index: 9;
         border-top: 1px solid #DFDFDF;
         padding: 20px 0 12px;
+        margin-top: 32px;
     }
     .search_category_bar .template-search__search .field .predictive-search{
         width: 100%;

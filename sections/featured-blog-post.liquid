@@ -42,58 +42,60 @@
                     -%}
                     <div class='featured-article__content swiper-slide'>
                         <div class="banner">
-                            <div class="featured-article__image media">
-                                {%- if image != blank -%}
-                                    {%- assign image_size = block.settings.image | append: 'x' -%}
-                                    <img
-                                        src="{{ image | image_url: width: 1920 }}"
-                                        alt="{{ block.settings.image.alt | escape }}"
-                                        class="motion-reduce"
-                                    >
-                                {%- else -%}
-                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                                {%- endif -%}
-                            </div>
-                            <div class="featured-article__details banner__content--{{ section.settings.desktop_content_position }} page-width">
+                            <div class="banner-title-block" style="background: {{ section.settings.text_bg }}">
+                              <div class="featured-article__details">
                                 <div class="banner__box">
-                                    <div class='featured-article__meta'>
-                                        {%- if show_author -%}
-                                            <span class='featured-article__meta-item'>{{ author }}</span>
-                                        {%- endif -%}
-                                        {%- if show_date -%}
-                                            <span class='featured-article__meta-item'>{{ date }}</span>
-                                        {%- endif -%}
-                                        {%- if show_comment_count -%}
-                                            <span class='featured-article__meta-item'>
-                                                {{- 'blogs.article.comments' | t: count: comments_count -}}
-                                            </span>
-                                        {%- endif -%}
-                                    </div>
-                                    {%- if title != blank -%}
-                                        <h4 class='featured-article__title' style="color: {{ block.settings.article_title_color }}">
-                                            <a
-                                                class='unstyled-link'
-                                                href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
-                                                aria-label='{{ title }}'
-                                            >
-                                                {{- title -}}
-                                            </a>
-                                        </h4>
+                                  <div class='featured-article__meta'>
+                                    {%- if show_author -%}
+                                        <span class='featured-article__meta-item'>{{ author }}</span>
                                     {%- endif -%}
-                                    {%- if show_subheading and excerpt_or_content != blank -%}
-                                        <div class='featured-article__text' style="color: {{ block.settings.article_text_color }}">{{ excerpt_or_content }}</div>
+                                    {%- if show_date -%}
+                                        <span class='featured-article__meta-item'>{{ date }}</span>
                                     {%- endif -%}
-                                    {%- if show_read_more -%}
+                                    {%- if show_comment_count -%}
+                                        <span class='featured-article__meta-item'>
+                                            {{- 'blogs.article.comments' | t: count: comments_count -}}
+                                        </span>
+                                    {%- endif -%}
+                                  </div>
+                                  {%- if title != blank -%}
+                                    <h4 class='featured-article__title' style="color: {{ section.settings.article_title_color }}">
                                         <a
-                                        class='banner__buttons link'
-                                        href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
-                                        aria-label='{{ 'sections.featured_blog_posts.read_more_link_aria_label' | t: blog_post_title: title }}'
-                                        style="color: {{ block.settings.read_more_text_color }}"
+                                            class='unstyled-link'
+                                            href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
+                                            aria-label='{{ title }}'
                                         >
-                                            <span class='button button--primary link__text'>Learn more</span>                          
+                                            {{- title -}}
                                         </a>
-                                    {%- endif -%}
+                                    </h4>
+                                  {%- endif -%}
+                                  {%- if show_subheading and excerpt_or_content != blank -%}
+                                      <div class='featured-article__text' style="color: {{ section.settings.article_text_color }}">{{ excerpt_or_content }}</div>
+                                  {%- endif -%}
+                                  {%- if show_read_more -%}
+                                      <a
+                                      class='banner__buttons link'
+                                      href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
+                                      aria-label='{{ 'sections.featured_blog_posts.read_more_link_aria_label' | t: blog_post_title: title }}'
+                                      style="color: {{ block.settings.read_more_text_color }}"
+                                      >
+                                          <span class='button button--primary link__text'>Learn more</span>                          
+                                      </a>
+                                  {%- endif -%}
                                 </div>
+                              </div>
+                            </div>
+                            <div class="banner-image-block">
+                              {%- if image != blank -%}
+                                {%- assign image_size = section.settings.image | append: 'x' -%}
+                                <img
+                                    src="{{ image | image_url: width: 1920 }}"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    class="motion-reduce"
+                                >
+                              {%- else -%}
+                                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                              {%- endif -%}
                             </div>
                         </div>
                     </div>
