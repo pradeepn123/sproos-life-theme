@@ -124,11 +124,11 @@
 .card__image::before {
     content: "";
     display: block;
-    padding-top: 56.25%;
+    padding-top: 100%;
 }
 @media (min-width: 40rem) {
     .card__image::before {
-        padding-top: 53.24%;
+        padding-top: 100%;
     }
 }
 .card__title {
