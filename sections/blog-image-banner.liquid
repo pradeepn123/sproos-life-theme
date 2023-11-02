@@ -24,13 +24,13 @@
 {%- endif -%}
 
 {%- style -%}
-    .blog-banner-image-section {
-        background-color:{%- if section.settings.background_color != blank -%} {{ section.settings.background_color }} {%- else -%} transparent {%- endif -%}
-    }
-    .article-template__link, .article-banner-template header,
-    .article-template__title, .article-template__subtitle {
-        color: {%- if section.settings.background_color != blank -%} {{ section.settings.banner_text_color }} {%- else -%} #000 {%- endif -%}
-    }
+  .blog-banner-image-section {
+    background-color:{%- if section.settings.background_color != blank -%} {{ section.settings.background_color }} {%- else -%} transparent {%- endif -%}
+  }
+  .article-template__link, .article-banner-template header,
+  .article-template__title, .article-template__subtitle {
+    color: {%- if section.settings.background_color != blank -%} {{ section.settings.banner_text_color }} {%- else -%} #000 {%- endif -%}
+  }
 {%- endstyle -%}
 
 {%- style -%}
@@ -41,7 +41,7 @@
     .content-container--full-width-mobile .banner__buttons .button{
       color: #fff !important;
     }
-  }
+  }  
 {%- endstyle -%}
 
 {% assign top_wave_color = section.settings.top_wave_color %}
@@ -66,9 +66,9 @@
                     {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
                 </a>
               </div>
-              <div class="article-template__hero-{{ block.settings.image_height }} media"
+              <div class="article-template__hero-{{ block.settings.image_height }} media {% if block.settings.image_height == 'medium' and article.image %}media_height{% endif %}"
                 itemprop="image"
-                {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
+                {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}                
               >
                 <img
                   srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}

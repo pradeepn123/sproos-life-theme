@@ -265,6 +265,18 @@ share-component#share_popup {
     display: none;
 }
 
+@media screen and (min-width: 1200px){
+    .article-banner-template .article-template__hero-container .article-template__hero-medium.media_height{
+        height: 460px !important;
+        padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 821px) and (max-width: 1024px){
+    .article-banner-template .article-template__hero-container .article-template__hero-medium.media_height{
+        height: 360px !important;
+        padding-bottom: 0;
+    }
+}
 @media screen and (max-width: 820px) {
     .article-banner-template .blog-banner-image-section {
         flex-direction: column;
