@@ -344,7 +344,7 @@ blog-predictive-search[open='true']:before{
         z-index: 9;
         border-top: 1px solid #DFDFDF;
         padding: 20px 0 12px;
-        margin-top: 32px;
+        margin-top: 24px;
     }
     .search_category_bar .template-search__search .field .predictive-search{
         width: 100%;
@@ -474,10 +474,10 @@ blog-predictive-search[open='true']:before{
         font-size: 22px;
     }
     .cards.blog-articles__per_row{
-        padding: 74px 0 2rem 0;
+        padding: 40px 0 2rem 0;
     }
     .blog-articles__2_per_row{
-        padding: 74px 0 2rem 0;
+        padding: 40px 0 2rem 0;
     }
     .search_category_bar .template-search__search{
         margin-bottom: 0;
