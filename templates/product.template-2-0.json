@@ -74,6 +74,7 @@
         },
         "a70f7ede-52ac-4b81-9400-f656c43aa052": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{%- liquid \n  if cart.total_price > 5000\n    assign content = 'products.product.sproos_shipping.free' | t\n    assign class = \"free-shipping\"\n\n else\n    assign content = 'products.product.sproos_shipping.default_html' | t\n    assign class = \"\"\n  endif \n-%}\n\n<div class=\"sproos-shipping-special {{ class }}\">\n{{ content }}\n<\/div>\n\n<style>\n.cb_bundles.cb_bundles_rendered {\n    max-width: 44rem;\n}\n<\/style>"
           }
