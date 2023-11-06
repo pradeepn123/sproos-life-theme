@@ -49,14 +49,18 @@
         "heading": "Company",
         "heading_size": "h2",
         "heading_alignment": "left",
+        "title_size": "h4",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "background_color": "transparent",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "button_text": "View All",
+        "button_link": ""
       }
     },
     "164931222148618fdf": {
@@ -110,14 +114,18 @@
         "heading": "Shipping & Returns",
         "heading_size": "h2",
         "heading_alignment": "left",
+        "title_size": "h4",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "background_color": "transparent",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "button_text": "View All",
+        "button_link": ""
       }
     },
     "164931159358128483": {
@@ -164,7 +172,7 @@
           "settings": {
             "heading": "Where can I buy Sproos?",
             "icon": "none",
-            "row_content": "<p>Please use the store finder function on our website, available <a href=\"\/pages\/where-to-buy\" title=\"Where to Buy\">here<\/a>. We are widely distributed throughout retailers and online in Canada, and online in the US. You can also purchase our products directly through our website <a href=\"\/collections\" title=\"All collections\">here<\/a>. We ship to both Canada and the US.<\/p>",
+            "row_content": "<p>Please use the store finder function on our website, available <a href=\"https:\/\/sprooslife.com\/apps\/store-locator\" title=\"Store Locator\">here<\/a>. We are widely distributed throughout retailers and online in Canada, and online in the US. You can also purchase our products directly through our website <a href=\"\/collections\" title=\"All collections\">here<\/a>. We ship to both Canada and the US.<\/p>",
             "page": ""
           }
         }
@@ -181,14 +189,18 @@
         "heading": "General",
         "heading_size": "h2",
         "heading_alignment": "left",
+        "title_size": "h4",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "background_color": "transparent",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "button_text": "View All",
+        "button_link": ""
       }
     },
     "1649311877be3d9cd5": {
@@ -322,14 +334,18 @@
         "heading": "Products",
         "heading_size": "h2",
         "heading_alignment": "left",
+        "title_size": "h4",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "background_color": "transparent",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "button_text": "View All",
+        "button_link": ""
       }
     }
   },
