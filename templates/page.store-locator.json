@@ -4,11 +4,37 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "title_style": "default"
+      }
+    },
+    "1699253608bf3e1347": {
+      "type": "apps",
+      "blocks": {
+        "be9dedb8-b3e1-497d-aa95-ea9016a6ca8a": {
+          "type": "shopify:\/\/apps\/bold-store-locator-map\/blocks\/map\/4ca379c6-722c-49d3-b6ec-a7fe7c1061a5",
+          "settings": {
+            "distance_unit": "KM",
+            "display_title": true,
+            "display_search": true,
+            "search_text": "#121212",
+            "search_background": "linear-gradient(180deg, rgba(245, 245, 245, 1), rgba(243, 243, 243, 1) 100%)",
+            "display_addresses_sidebar": true,
+            "map_theme": "default",
+            "google_maps_language": "en"
+          }
+        }
+      },
+      "block_order": [
+        "be9dedb8-b3e1-497d-aa95-ea9016a6ca8a"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1699253608bf3e1347"
   ]
 }
