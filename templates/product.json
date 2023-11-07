@@ -19,7 +19,9 @@
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": true,
-            "sku_tagtype": "sku"
+            "sku_tagtype": "sku",
+            "is_featured_product": false,
+            "featured_product_handle": ""
           }
         },
         "price": {
@@ -52,6 +54,7 @@
         },
         "a70f7ede-52ac-4b81-9400-f656c43aa052": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{%- liquid \n  if cart.total_price > 5000\n    assign content = 'products.product.sproos_shipping.free' | t\n    assign class = \"free-shipping\"\n\n else\n    assign content = 'products.product.sproos_shipping.default' | t\n    assign class = \"\"\n  endif \n-%}\n\n<div class=\"sproos-shipping-special {{ class }}\">\n{{ content }}\n<\/div>"
           }
