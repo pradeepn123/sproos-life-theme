@@ -6,14 +6,14 @@
         "1652328975df886123-0": {
           "type": "heading",
           "settings": {
-            "heading": "save big in the new year",
+            "heading": "our biggest sale of the year",
             "heading_size": "h1"
           }
         },
         "1652328975df886123-1": {
           "type": "text",
           "settings": {
-            "text": "Buy more, save more! Buy 3 or more of any of the same product and get 20% off all month long.",
+            "text": "Save all month long with our Black Friday sales below!",
             "text_style": "body"
           }
         },
@@ -22,9 +22,11 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
+            "button_text_color_1": "#000",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
+            "button_text_color_2": "#000",
             "button_style_secondary_2": false
           }
         }
@@ -50,7 +52,6 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28,
