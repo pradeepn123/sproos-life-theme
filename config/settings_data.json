@@ -114,7 +114,6 @@
           },
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "Get 15% off our NEW Super Chai Latte using code TRYCHAI at checkout",
               "color_scheme": "accent-1",
