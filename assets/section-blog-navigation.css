@@ -1,0 +1,111 @@
+.blog-navigation-section {    
+    max-width: 100rem;
+}
+.blog-navigation-section-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin-top: 1.5em;
+    border-top: 1px solid #DFDFDF;
+}
+.prev-button-icon svg {
+    transform: rotate(180deg);
+}
+
+.previous-button, .next-button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.previous-button a, .next-button a {
+    text-decoration: none;
+}
+
+.previous-button a .blog-nav-text, .next-button a .blog-nav-text {
+    color: #000;
+    font-size: 18px;
+}
+
+.next-button a .blog-nav-text {
+    text-align: end;
+    justify-content: flex-end;
+}
+
+.previous-button a .blog-name, .next-button a .blog-name {
+    color: #427ADA;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.previous-button .blog-name {
+    margin: auto;
+}
+
+.blog-nav-element {
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+}
+
+
+
+@media screen and (min-width: 1680px) {
+    .blog-navigation-section {
+        width: 80%;
+        margin: 1.5em 3.9em 80px 21.5em; 
+    }
+}
+@media screen and (min-width: 1440px) {
+    .blog-navigation-section {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog-navigation-section {
+        width: 80%;
+        margin: 1.5em 3.9em 80px 29.5em; 
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .blog-navigation-section {
+        width: 80%;
+        margin: 1.5em 8.9em 80px 8.9em; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blog-navigation-section {
+        width: 100%;
+        margin: 1.5em 1em 80px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .blog-navigation-section {
+        width: 100%;
+        margin: 1.5em .2em 53px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .blog-nav-section {
+        margin: 0 15px;
+    }
+    .blog-navigation-section {
+        width: 100%;
+        margin: 1.5em 0 53px;
+        padding: 0;
+    }
+    .blog-nav-element {
+        justify-content: flex-end;
+    }
+    .blog-name {
+        display: none;
+    }
+}

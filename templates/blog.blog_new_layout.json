@@ -1,9 +1,67 @@
 {
   "sections": {
+    "4629fabf-f1b3-44cc-a140-7739e59622d1": {
+      "type": "featured-blog-post",
+      "blocks": {
+        "c35d3658-b769-47fe-88d5-0bab4a910b07": {
+          "type": "featured_post",
+          "settings": {
+            "article": "blog\/how-to-choose-a-collagen-powder",
+            "article_title_color": "",
+            "article_text_color": "",
+            "read_more_text_color": "#2a7de1"
+          }
+        },
+        "dbd3130c-9924-4cff-8695-da0cabd0ff8e": {
+          "type": "featured_post",
+          "settings": {
+            "article": "blog\/pumpkin-spice-matcha-latte",
+            "article_title_color": "",
+            "article_text_color": "",
+            "read_more_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "c35d3658-b769-47fe-88d5-0bab4a910b07",
+        "dbd3130c-9924-4cff-8695-da0cabd0ff8e"
+      ],
+      "settings": {
+        "color_scheme": "custom-1",
+        "text_bg": "#2a7edf",
+        "page_title": "",
+        "page_title_color": "",
+        "page_subtitle": "",
+        "page_subtitle_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "show_author": false,
+        "show_date": false,
+        "show_comment_count": false,
+        "show_subheading": true,
+        "show_read_more": true,
+        "carousel_btn_color": "",
+        "desktop_content_position": "middle-left"
+      }
+    },
+    "d8915c44-f53b-4649-8d21-bc155ff18ff3": {
+      "type": "main-blog-new-layout",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "per_row_article": "3_layout",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-blog",
+      "disabled": true,
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
@@ -14,6 +72,8 @@
     }
   },
   "order": [
+    "4629fabf-f1b3-44cc-a140-7739e59622d1",
+    "d8915c44-f53b-4649-8d21-bc155ff18ff3",
     "main"
   ]
 }

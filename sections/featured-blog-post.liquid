@@ -1,0 +1,329 @@
+{%- liquid
+  assign options = section.settings
+  assign color_scheme = options.color_scheme
+  assign section_spacing_top = options.section_spacing_top
+  assign section_spacing_bottom = options.section_spacing_bottom
+  assign show_author = options.show_author
+  assign show_date = options.show_date
+  assign show_comment_count = options.show_comment_count
+  assign show_read_more = options.show_read_more
+  assign show_subheading = options.show_subheading
+  assign container_size = options.container_size  
+-%}
+
+{% style %}
+    
+{% endstyle %}
+
+{{ 'featured-blog-post.css' | asset_url | stylesheet_tag }}
+
+<div class="featured_blog_post_section">
+    <div class="">
+        <div class="featured_blog_swiper_js swiper-container">
+            <div class="swiper-wrapper blogs_content">
+                {% for block in section.blocks %}
+                    {%- liquid
+                        assign options = block.settings
+                        assign article = options.article
+                        assign image = options.image | default: article.image
+                        assign title = article.title
+                        assign excerpt_or_content = article.excerpt_or_content | strip_html
+                        assign author = article.author
+                        assign date = article.published_at | date: format: 'abbreviated_date'
+                        assign comments_count = article.comments_count
+
+                        if article == blank
+                        assign title = 'Your post heading'
+                        assign excerpt_or_content = 'Use blog posts to talk about new product launches, tips, or other news about your store that you want to share with your customers.'
+                        assign author = 'Author Name' 
+                        assign date = '11/03/2020'
+                        assign comments_count = 0
+                        endif
+                    -%}
+                    <div class='featured-article__content swiper-slide'>
+                        <div class="banner">
+                            <div class="banner-title-block" style="background: {{ section.settings.text_bg }}">
+                              <div class="featured-article__details">
+                                <div class="banner__box">
+                                  <div class='featured-article__meta'>
+                                    {%- if show_author -%}
+                                        <span class='featured-article__meta-item'>{{ author }}</span>
+                                    {%- endif -%}
+                                    {%- if show_date -%}
+                                        <span class='featured-article__meta-item'>{{ date }}</span>
+                                    {%- endif -%}
+                                    {%- if show_comment_count -%}
+                                        <span class='featured-article__meta-item'>
+                                            {{- 'blogs.article.comments' | t: count: comments_count -}}
+                                        </span>
+                                    {%- endif -%}
+                                  </div>
+                                  {%- if title != blank -%}
+                                    <h4 class='featured-article__title' style="color: {{ section.settings.article_title_color }}">
+                                        <a
+                                            class='unstyled-link'
+                                            href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
+                                            aria-label='{{ title }}'
+                                        >
+                                            {{- title -}}
+                                        </a>
+                                    </h4>
+                                  {%- endif -%}
+                                  {%- if show_subheading and excerpt_or_content != blank -%}
+                                      <div class='featured-article__text' style="color: {{ section.settings.article_text_color }}">{{ excerpt_or_content }}</div>
+                                  {%- endif -%}
+                                  {%- if show_read_more -%}
+                                      <a
+                                      class='banner__buttons link'
+                                      href='{% if article.url != blank %}{{ article.url }}{% else %}#{% endif %}'
+                                      aria-label='{{ 'sections.featured_blog_posts.read_more_link_aria_label' | t: blog_post_title: title }}'
+                                      style="color: {{ block.settings.read_more_text_color }}"
+                                      >
+                                          <span class='button button--primary link__text'>Learn more</span>                          
+                                      </a>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="banner-image-block">
+                              {%- if image != blank -%}
+                                {%- assign image_size = section.settings.image | append: 'x' -%}
+                                <img
+                                    src="{{ image | image_url: width: 1920 }}"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    class="motion-reduce"
+                                >
+                              {%- else -%}
+                                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                              {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="css-swiper-button page-width desktop-only">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper('.featured_blog_swiper_js', {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        noSwiping: false,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+</script>
+
+
+{% schema %}
+{
+  "name": "Featured Blog Post",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.collapsible_content.settings.color_scheme.options__3.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.collapsible_content.settings.color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "text_bg",
+      "label": "Text Background Color"
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title"
+    },
+    {
+      "type": "color",
+      "id": "page_title_color",
+      "label": "Page Title Color"
+    },
+    {
+      "type": "text",
+      "id": "page_subtitle",
+      "label": "Page Sub Title"
+    },
+    {
+      "type": "color",
+      "id": "page_subtitle_color",
+      "label": "Page Sub Title Color"
+    },    
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_comment_count",
+      "default": true,
+      "label": "Show comment count"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subheading",
+      "default": true,
+      "label": "Show excerpt",
+      "info": "Change excerpts by editing your blog posts"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_read_more",
+      "default": true,
+      "label": "Show 'Read more' link"
+    },
+    {
+      "type": "color",
+      "id": "carousel_btn_color",
+      "label": "Carousel Button Color"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "top-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+        },
+        {
+          "value": "middle-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+        },
+        {
+          "value": "bottom-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+        },
+        {
+          "value": "bottom-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
+        }
+      ],
+      "default": "middle-center",
+      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+    }
+  ],
+    "blocks": [
+        {
+        "type": "featured_post",
+        "name": "Blog post",
+        "settings": [
+            {
+                "type": "article",
+                "id": "article",
+                "label": "article"
+            },
+            {
+                "type": "color",
+                "id": "article_title_color",
+                "label": "Article Title Color"
+            },
+            {
+                "type": "color",
+                "id": "article_text_color",
+                "label": "Article Text Color"
+            },
+            {
+                "type": "color",
+                "id": "read_more_text_color",
+                "label": "Read More Color"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
+        ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Featured Blog Post"
+        }
+    ]
+}
+{% endschema %}

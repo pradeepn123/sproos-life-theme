@@ -144,7 +144,7 @@
             {%- when 'share' -%}
               <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
               <share-button id="Share-{{ section.id }}" class="share-button" {{ block.shopify_attributes }}>
-                <button class="share-button__button hidden">
+                <button class="share-button__button">
                   {% render 'icon-share' %}
                   {{ block.settings.share_label | escape }}
                 </button>

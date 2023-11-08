@@ -1,0 +1,305 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog-new-layout.css' | asset_url | stylesheet_tag }}
+
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .template-search__search {
+    margin: 0 auto 3.5rem;
+    max-width: 47.8rem;
+  }
+
+  .template-search__search .search {
+    margin-top: 3rem;
+  } 
+{%- endstyle -%}
+
+{%- paginate blog.articles by 12 -%}
+  <div class="main-blog main-blog-article__section section-{{ section.id }}-padding" id="tag-section">
+    <div class="search_category_bar">
+        <div class="search_category_bar_wrapper page-width">
+            <div class="template-search__search js-drawer">
+                <blog-predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">                
+                <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                    <input type="hidden" name="type" value="article" />
+                    <div class="field">
+                        <input
+                            class="search__input field__input"
+                            id="Search-In-Template"
+                            type="search"
+                            name="q"
+                            value="{{ search.terms | escape }}"
+                            placeholder="{{ 'general.search.search_blog' | t }} Blog"
+                            {%- if settings.predictive_search_enabled -%}
+                            role="combobox"
+                            aria-expanded="false"
+                            aria-owns="predictive-search-results-list"
+                            aria-controls="predictive-search-results-list"
+                            aria-haspopup="listbox"
+                            aria-autocomplete="list"
+                            autocorrect="off"
+                            autocomplete="off"
+                            autocapitalize="off"
+                            spellcheck="false"
+                            {%- endif -%}
+                        >
+                        <label class="field__label" for="Search-In-Template">{{ 'general.search.search_blog' | t }}</label>
+                        <input name="options[prefix]" type="hidden" value="last">
+                        <div class="predictive-search predictive-search--search-template" tabindex="-1" blog-data-predictive-search>
+                            <div class="predictive-search__loading-state">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                        <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search_blog' | t }}">
+                            <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" stroke="#2A7DE1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                </blog-predictive-search>
+            </div>            
+            <div class="swiper-container category-bar">
+                <div class="swiper-wrapper">                    
+                    {% comment %} {%- for tag in blog.all_tags -%}
+                        {% assign blog_tags = tag | split:'_' %}
+                        {% if tag contains 'Category_'%}
+                            <div data-index='1' class="swiper-slide tag_section {% if current_tags contains tag %} active {% endif %}">
+                                {{ blog_tags.last | link_to_tag: tag }}
+                            </div>
+                        {% endif %}
+                    {%- endfor-%} {% endcomment %}
+                    <div data-index='1' class="swiper-slide {% unless current_tags %} active{% endunless %}"><a href="{{blog.url}}">All</a></div>                    
+                    <div data-index='2' class="swiper-slide tag_section {% if current_tags contains 'Category_Collagen' %} active{% endif %}">{{ 'Collagen' | link_to_tag: 'Category_Collagen' }}</div>                    
+                    <div data-index='3' class="swiper-slide tag_section {% if current_tags contains 'Category_Gut' %} active{% endif %}">{{ 'Gut' | link_to_tag: 'Category_Gut' }}</div>
+                    <div data-index='4' class="swiper-slide tag_section {% if current_tags contains 'Category_Hair' %} active{% endif %}">{{ 'Hair' | link_to_tag: 'Category_Hair' }}</div>
+                    <div data-index='5' class="swiper-slide tag_section {% if current_tags contains 'Category_Health' %} active{% endif %}">{{ 'Health' | link_to_tag: 'Category_Health' }}</div>
+                    <div data-index='6' class="swiper-slide tag_section {% if current_tags contains 'Category_Joint' %} active{% endif %}">{{ 'Joint' | link_to_tag: 'Category_Joint' }}</div>
+                    <div data-index='7' class="swiper-slide tag_section {% if current_tags contains 'Category_News' %} active{% endif %}">{{ 'News' | link_to_tag: 'Category_News' }}</div>
+                    <div data-index='8' class="swiper-slide tag_section {% if current_tags contains 'Category_Nutrition' %} active{% endif %}">{{ 'Nutrition' | link_to_tag: 'Category_Nutrition' }}</div>
+                    <div data-index='9' class="swiper-slide tag_section {% if current_tags contains 'Category_Recipe' %} active{% endif %}">{{ 'Recipe' | link_to_tag: 'Category_Recipe' }}</div>
+                    <div data-index='10' class="swiper-slide tag_section {% if current_tags contains 'Category_Research' %} active{% endif %}">{{ 'Research' | link_to_tag: 'Category_Research' }}</div>
+                    <div data-index='11' class="swiper-slide tag_section {% if current_tags contains 'Category_Skin' %} active{% endif %}">{{ 'Skin' | link_to_tag: 'Category_Skin' }}</div>
+                </div>
+                
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>        
+        </div>
+    </div>
+    <div class="page-width">        
+
+        <ul class="cards {% if section.settings.per_row_article == '3_layout' %}blog-articles__per_row{%else%}blog-articles__2_per_row{% endif %}{% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+            {%- for article in blog.articles -%}
+                
+                {%- render 'article-card-flex',
+                    article: article,
+                    media_height: section.settings.image_height,
+                    media_aspect_ratio: article.image.aspect_ratio,
+                    show_image: section.settings.show_image,
+                    show_date: section.settings.show_date,
+                    show_author: section.settings.show_author,
+                    show_excerpt: true 
+                -%}
+                
+            {%- endfor -%}       
+        </ul>
+    </div>
+    
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}
+
+
+<script>    
+    $(document).ready(function() {
+        
+        new Swiper('.category-bar', {
+            loop: false,            
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            slidesPerView: 8,
+            paginationClickable: true,
+            spaceBetween: 10,
+            breakpoints: {
+                1440: {
+                    slidesPerView: 9,
+                    spaceBetween: 10
+                },
+                1024: {
+                    slidesPerView: 8,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 10
+                },
+                375: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 10
+                },
+                320: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10
+                }
+            },
+            on: {                
+                init: function(){
+                    const index = parseInt(document.querySelector('.swiper-slide.active')?.dataset.index) - 1;                    
+                    this.slideTo(index)
+                }
+            }
+        });        
+    });
+    if(window.location.href != 'https://sprooslife.com/blogs/test'){
+        window.addEventListener('DOMContentLoaded', function(){
+            var targetSection = document.getElementById('tag-section');
+            window.scrollTo(0, targetSection.offsetTop - 20);
+        });
+    }
+</script>
+
+
+{% schema %}
+{
+    "name": "Blog posts articles",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "t:sections.main-blog.settings.header.content"
+        },
+        {
+            "type": "select",
+            "id": "layout",
+            "options": [
+                {
+                    "value": "grid",
+                    "label": "t:sections.main-blog.settings.layout.options__1.label"
+                },
+                {
+                    "value": "collage",
+                    "label": "t:sections.main-blog.settings.layout.options__2.label"
+                }
+            ],
+            "default": "collage",
+            "label": "t:sections.main-blog.settings.layout.label",
+            "info": "t:sections.main-blog.settings.layout.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_image",
+            "default": true,
+            "label": "t:sections.main-blog.settings.show_image.label"
+        },
+        {
+            "type": "select",
+            "id": "image_height",
+            "options": [
+                {
+                    "value": "adapt",
+                    "label": "t:sections.main-blog.settings.image_height.options__1.label"
+                },
+                {
+                    "value": "small",
+                    "label": "t:sections.main-blog.settings.image_height.options__2.label"
+                },
+                {
+                    "value": "medium",
+                    "label": "t:sections.main-blog.settings.image_height.options__3.label"
+                },
+                {
+                    "value": "large",
+                    "label": "t:sections.main-blog.settings.image_height.options__4.label"
+                }
+            ],
+            "default": "medium",
+            "label": "t:sections.main-blog.settings.image_height.label",
+            "info": "t:sections.main-blog.settings.image_height.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_date",
+            "default": true,
+            "label": "t:sections.main-blog.settings.show_date.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_author",
+            "default": false,
+            "label": "t:sections.main-blog.settings.show_author.label"
+        },
+        {
+            "type": "paragraph",
+            "content": "t:sections.main-blog.settings.paragraph.content"
+        },
+        {
+            "type": "select",
+            "id": "per_row_article",
+            "options": [
+                {
+                    "value": "2_layout",
+                    "label": "Show 2 grid layout"
+                },
+                {
+                    "value": "3_layout",
+                    "label": "Show 3 grid layout"
+                }
+            ],
+            "default": "3_layout",
+            "label": "Show number of articles per row",
+            "info": "t:sections.main-blog.settings.layout.info"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 36
+        }
+    ],
+    "presets": [
+        {
+            "name": "Blog posts articles"
+        }
+    ]
+}
+{% endschema %}

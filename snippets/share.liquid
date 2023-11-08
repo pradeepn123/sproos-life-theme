@@ -1,0 +1,62 @@
+{{ 'share-component.css' | asset_url | stylesheet_tag }}
+
+<share-component class='share' id='{{ id }}'>
+  <div class="share-dropdown">
+    <a
+      href='https://www.facebook.com/sharer.php?u={{ value_to_copy }}'
+      class='share-dropdown__item'
+      target='_blank'
+      rel='noopener'
+      aria-label='Facebook'
+    >
+      {% render 'icon', icon_name: 'facebook', class: 'share-dropdown__item-icon' %}
+      {{ 'general.share.facebook_label' | t }}
+    </a>
+    <a
+      href='https://twitter.com/share?text={{ value_to_copy }}'
+      class='share-dropdown__item'
+      target='_blank'
+      rel='noopener'
+      aria-label='Twitter'
+    >
+      {% render 'icon', icon_name: 'twitter', class: 'share-dropdown__item-icon' %}
+      {{ 'general.share.twitter_label' | t }}
+    </a>
+    <a
+      href='https://www.instagram.com/?url={{ value_to_copy }}'
+      class='share-dropdown__item'
+      target='_blank'
+      rel='noopener'
+      aria-label='Instagram'
+    >
+      {% render 'icon', icon_name: 'instagram', type: 'solid', class: 'share-dropdown__item-icon' %}
+      {{ 'general.share.instagram_label' | t }}
+    </a>
+    <a
+      href='https://pinterest.com/pin/create/button/?url={{ value_to_copy }}'
+      class='share-dropdown__item'
+      target='_blank'
+      rel='noopener'
+      aria-label='Pinterest'
+    >
+      {% render 'icon', icon_name: 'pinterest', class: 'share-dropdown__item-icon' %}
+      {{ 'general.share.pinterest_label' | t }}
+    </a>
+    <clipboard-button
+      data-value='{{ value_to_copy }}'
+      class='share-dropdown__item'
+      id="copy-link"
+      value='{{ window.location.href }}'
+    >
+      {% render 'icon', icon_name: 'clipboard', class: 'share-dropdown__item-icon' %}
+      {{ 'general.share.base_label' | t }}
+    </clipboard-button>
+    <div class="copy-text-label">Copied!</div>
+  </div>
+</share-component>
+
+
+<script>
+
+  
+</script>

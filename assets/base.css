@@ -609,7 +609,9 @@ h6:empty {
   font-size: 1.4rem;
   font-family: inherit;
 }
-
+.banner__buttons {
+  text-decoration: none;
+}
 .link--text {
   color: rgb(var(--color-foreground));
 }
@@ -1444,6 +1446,8 @@ button.shopify-payment-button__button--unbranded {
 .share-button {
   display: block;
   position: relative;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .share-button details {
@@ -1458,6 +1462,32 @@ button.shopify-payment-button__button--unbranded {
   color: rgb(var(--color-link));
   margin-left: 0;
   padding-left: 0;
+}
+#share_popup .copy-text-label {
+  position: relative;
+  display: none;
+  justify-content: flex-start;
+  margin-left: 58.5%;
+  background-color: #000000c7;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: -14%;
+}
+#footer_share_popup .copy-text-label{
+  position: relative;
+  display: none;
+  justify-content: flex-start;
+  margin-left: 58.5%;
+  margin-top: -19%;
+  background-color: #000000c7;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 details[open] > .share-button__fallback {
@@ -2256,6 +2286,7 @@ input[type='checkbox'] {
   .header:not(.header--middle-left) .header__inline-menu {
     margin-top: 1.05rem;
   }
+
 }
 
 .header *[tabindex='-1']:focus {
@@ -2427,7 +2458,7 @@ menu-drawer + .header__search {
   }
 }
 
-.no-js .predictive-search {
+.no-js .predictive-search, .no-js .blog-predictive-search {
   display: none;
 }
 
