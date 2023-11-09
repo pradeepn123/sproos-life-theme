@@ -3,26 +3,19 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "NEW!",
-            "text_style": "subtitle"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Super chai latte",
+            "heading": "something big is coming soon...",
             "heading_size": "h1"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/products\/chai-latte",
-            "button_text_color_1": "#ff8189",
+            "button_label_1": "Learn More",
+            "button_link_1": "shopify:\/\/pages\/promotion",
+            "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -32,12 +25,11 @@
         }
       },
       "block_order": [
-        "text",
         "heading",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2023-10-20_at_2.59.12_PM.png",
+        "image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED_40fec09b-81a3-4688-885d-30009fefa35a.png",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
