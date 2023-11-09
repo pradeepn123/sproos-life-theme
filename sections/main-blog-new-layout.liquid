@@ -25,7 +25,11 @@
   .template-search__search .search {
     margin-top: 3rem;
   } 
+    {% if request.page_type == 'blog'%} 
+        .shopify-section-header-hidden{transform: none;} 
+    {% endif %}
 {%- endstyle -%}
+
 
 {%- paginate blog.articles by 12 -%}
   <div class="main-blog main-blog-article__section section-{{ section.id }}-padding" id="tag-section">
@@ -171,7 +175,7 @@
             }
         });        
     });
-    if(window.location.href != 'https://sprooslife.com/blogs/test'){
+    if(window.location.href != 'https://sprooslife.com/blogs/blog'){
         window.addEventListener('DOMContentLoaded', function(){
             var targetSection = document.getElementById('tag-section');
             window.scrollTo(0, targetSection.offsetTop - 20);
