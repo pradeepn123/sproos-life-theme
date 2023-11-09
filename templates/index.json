@@ -3,10 +3,17 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "08efa423-63c3-473f-9d98-a51cbcae8abe": {
+          "type": "text",
+          "settings": {
+            "text": "SAVE 20%",
+            "text_style": "subtitle"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "something big is coming soon...",
+            "heading": "NEW! Latte Bundle",
             "heading_size": "h1"
           }
         },
@@ -14,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Learn More",
-            "button_link_1": "shopify:\/\/pages\/promotion",
+            "button_link_1": "shopify:\/\/products\/latte-bundle-1",
             "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -25,11 +32,12 @@
         }
       },
       "block_order": [
+        "08efa423-63c3-473f-9d98-a51cbcae8abe",
         "heading",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_Oct_22-160-EXTENDED_40fec09b-81a3-4688-885d-30009fefa35a.png",
+        "image": "shopify:\/\/shop_images\/3_Oct_Healco_23-240.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
