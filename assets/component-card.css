@@ -302,3 +302,8 @@ variant-custom-selects .product-form__input{
 .shop-by-category variant-custom-selects .product-form__input{
   display: block;
 }
+
+.collection.featured-collection-banner .slider-mobile-gutter .swiper-button-next, 
+.collection.featured-collection-banner .slider-mobile-gutter .swiper-button-prev{
+  display: flex !important;
+}
