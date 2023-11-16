@@ -255,7 +255,7 @@
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ "accessibility.skip_to_text" | t }}
       </a>
-  
+  {%  render 'rebuy-smart-cart-template' %}
       {% section 'announcement-bar' %}
       {% section 'header' %}
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
@@ -401,7 +401,7 @@
     </modal-dialog>   
 
     <div data-rebuy-id="116749"></div>
-
+    
     <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
 {% render 'rebuy-smart-cart-template' %}
  </body>
