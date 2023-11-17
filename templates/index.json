@@ -20,8 +20,8 @@
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Learn More",
-            "button_link_1": "shopify:\/\/products\/latte-bundle-1",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/bundles",
             "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
