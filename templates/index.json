@@ -6,14 +6,14 @@
         "08efa423-63c3-473f-9d98-a51cbcae8abe": {
           "type": "text",
           "settings": {
-            "text": "BUNDLE + SAVE 20%",
+            "text": "THIS WEEKEND ONLY!",
             "text_style": "subtitle"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "NEW! Latte Bundle",
+            "heading": "BUNDLE + SAVE 30%",
             "heading_size": "h1"
           }
         },
