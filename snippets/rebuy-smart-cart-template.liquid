@@ -1,7 +1,7 @@
 {% raw %}
 <script id="rebuy-cart-template" type="text/template">
 <div
-  id="rebuy-cart-sproos"
+  id="rebuy-cart"
   class="rebuy-cart"
   v-cloak
   v-bind:class="[visible ? 'is-visible' : '', 'currency-' + currency() ]"
@@ -12,6 +12,7 @@
 >
   <div class="rebuy-cart__flyout">
     <div class="rebuy-cart__flyout-header">
+  <div class="20-Nov-test">20 Nov Test</div>
       <div v-html="renderHeader()"></div>
       <button
         class="rebuy-cart__flyout-close"
