@@ -115,9 +115,9 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "30% Off All Bundles This Weekend Only - Promo Code: HAPPYBDAY",
+              "text": "🎉 Black Friday Sale 🎉 25% Off Using Code BLACKFRIDAY",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/products\/chai-latte"
+              "link": "shopify:\/\/collections\/all"
             }
           }
         },
