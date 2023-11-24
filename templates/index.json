@@ -37,15 +37,15 @@
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/3_Oct_Healco_23-240.jpg",
+        "image": "shopify:\/\/shop_images\/2_Oct_Sproos_23-578_3991d753-6c46-4e47-b84a-105fa764347a.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "top-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
