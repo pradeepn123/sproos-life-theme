@@ -106,23 +106,14 @@
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
             "settings": {
-              "text": "🎉 Black Friday Sale 🎉 25% Off Using Code BLACKFRIDAY",
-              "color_scheme": "accent-1",
-              "link": "shopify:\/\/collections\/all"
-            }
-          },
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Sale valid on all products except already discounted bundles",
+              "text": "free shipping on orders $50+",
               "color_scheme": "background-2",
               "link": "shopify:\/\/collections\/all"
             }
           }
         },
         "block_order": [
-          "79597cab-94bc-4833-b70b-6b958c804eb7",
-          "announcement-bar-0"
+          "79597cab-94bc-4833-b70b-6b958c804eb7"
         ],
         "settings": {
         }
