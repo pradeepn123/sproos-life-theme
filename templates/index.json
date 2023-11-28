@@ -6,14 +6,14 @@
         "08efa423-63c3-473f-9d98-a51cbcae8abe": {
           "type": "text",
           "settings": {
-            "text": "PROMO CODE: BLACKFRIDAY",
+            "text": "",
             "text_style": "subtitle"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "25% OFF SITEWIDE",
+            "heading": "",
             "heading_size": "h1"
           }
         },
