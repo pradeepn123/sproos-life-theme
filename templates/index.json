@@ -3,25 +3,25 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "08efa423-63c3-473f-9d98-a51cbcae8abe": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "subtitle"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Sproos super lattes",
             "heading_size": "h1"
+          }
+        },
+        "08efa423-63c3-473f-9d98-a51cbcae8abe": {
+          "type": "text",
+          "settings": {
+            "text": "stay cozy this season with our functional lattes",
+            "text_style": "subtitle"
           }
         },
         "bbe10736-5344-419c-ad21-9f7f5d4c9156": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/collections\/lattes",
             "button_text_color_1": "#2a7de1",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -32,19 +32,19 @@
         }
       },
       "block_order": [
-        "08efa423-63c3-473f-9d98-a51cbcae8abe",
         "heading",
+        "08efa423-63c3-473f-9d98-a51cbcae8abe",
         "bbe10736-5344-419c-ad21-9f7f5d4c9156"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/2_Oct_Sproos_23-578_3991d753-6c46-4e47-b84a-105fa764347a.jpg",
+        "image": "shopify:\/\/shop_images\/Sproos_06_22-177_f59fd5b0-8296-42f8-baa8-555b20f4d56c.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "top-left",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
+        "color_scheme": "accent-2",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
