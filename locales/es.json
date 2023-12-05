@@ -36,7 +36,8 @@
       "previous": "Pagina anterior"
     },
     "search": {
-      "search": "Búsqueda"
+      "search": "Búsqueda",
+      "search_blog": "Buscar Blog"
     },
     "cart": {
       "view": "Ver mi carrito ({{ count }})",
@@ -46,18 +47,29 @@
       "copy_to_clipboard": "Copiar enlace",
       "share_url": "Enlace",
       "success_message": "Enlace copiado al portapapeles",
-      "close": "Cerrar compartición"
+      "close": "Cerrar compartición",
+      "facebook_label": "Facebook",
+      "twitter_label": "Gorjeo",
+      "instagram_label": "Instagram",
+      "pinterest_label": "Pinterest",
+      "base_label": "Copiar link",
+      "button_label": "Compartir"
     },
     "slider": {
       "of": "de",
       "next_slide": "Diapositiva a la derecha",
       "previous_slide": "Diapositiva a la izquierda"
+    },
+    "custom_modal": {
+      "headline": "Uy... ¿PARECE QUE PUEDES ESTAR EN EL LUGAR EQUIVOCADO?",
+      "text": "Seleccione su ubicación a continuación. Tenga en cuenta que actualmente solo realizamos envíos a Canadá y EE. UU. Todos los pedidos canadienses deben realizarse en CAD y los pedidos estadounidenses en USD."
     }
   },
   "newsletter": {
     "label": "Correo electrónico",
     "success": "Gracias por suscribirte",
-    "button_label": "Suscribirse"
+    "button_label": "Suscribirse",
+    "paragraph": "Regístrese para obtener acceso temprano a nuevos productos, recetas y descuentos exclusivos."
   },
   "accessibility": {
     "skip_to_text": "Ir directamente al contenido",
@@ -93,8 +105,12 @@
       "back_to_blog": "Regresar al blog",
       "share": "Compartir este artículo",
       "success": "Tu comentario se publicó correctamente. ¡Gracias!",
-      "success_moderated": "Tu comentario se publicó correctamente. Lo publicaremos en breve, cuando se modere nuestro blog."
-    }
+      "success_moderated": "Tu comentario se publicó correctamente. Lo publicaremos en breve, cuando se modere nuestro blog.",
+      "related_products": "Productos relacionados",
+      "related_articles": "Artículos relacionados",
+      "latest_articles": "últimos artículos"
+    },
+    "subtitle": "SIMPLEMENTE LA SALUD"
   },
   "onboarding": {
     "product_title": "Ejemplo de nombre del producto",
@@ -146,7 +162,21 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "Impuesto incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago."
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago.",
+      "sproos_shipping": {
+        "default_html": "Gasta <span>$50<\/span> para <span>envío gratis<\/span>",
+        "free": "Has calificado para envío gratis"
+      },
+      "sproos_whats_inside": {
+        "title": "Qué hay adentro",
+        "ginger": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "sea-salt": {
+          "title": "título próximamente"
+        }
+      }
     },
     "modal": {
       "label": "Galería multimedia"
