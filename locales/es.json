@@ -315,13 +315,35 @@
           "option1": "Consulta general",
           "option2": "Oportunidades minoristas",
           "option3": "Consulta de medios\/blogueros",
-          "option4": "Preguntas sobre productos\/ingredientes"
+          "option4": "Preguntas sobre productos\/ingredientes",
+          "option5": "Consulta de empleo",
+          "option6": "Envíos y Devoluciones"
         }
       }
     },
     "404": {
       "title": "Página no encontrada",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "seleccione un tema",
+          "option1": "Consulta general",
+          "option2": "Oportunidades minoristas",
+          "option3": "Consulta de medios\/blogueros",
+          "option4": "Preguntas sobre productos\/ingredientes",
+          "option5": "Consulta de empleo",
+          "option6": "Envíos y Devoluciones"
+        },
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "comment": "Comentario",
+        "send": "Enviar",
+        "post_success": "Gracias por contactarnos. Nos comunicaremos con usted lo antes posible.",
+        "error_heading": "Ajuste lo siguiente:"
+      }
     }
   },
   "sections": {
@@ -523,7 +545,8 @@
       "copy_code": "Copiar código",
       "expired": "Vencido",
       "copy_code_success": "El código se copió correctamente",
-      "print_gift_card": "Imprimir"
+      "print_gift_card": "Imprimir",
+      "copied": "Copiado"
     }
   }
 }
