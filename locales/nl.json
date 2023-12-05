@@ -51,7 +51,9 @@
       "facebook_label": "Facebook",
       "twitter_label": "Twitteren",
       "instagram_label": "Instagram",
-      "pinterest_label": "Pinterest"
+      "pinterest_label": "Pinterest",
+      "base_label": "Kopieer link",
+      "button_label": "Deel"
     },
     "slider": {
       "of": "van",
@@ -66,7 +68,8 @@
   "newsletter": {
     "label": "E‑mail",
     "success": "Bedankt voor het abonneren",
-    "button_label": "Abonneren"
+    "button_label": "Abonneren",
+    "paragraph": "Meld u aan om vroegtijdig toegang te krijgen tot nieuwe producten, recepten en exclusieve kortingen."
   },
   "accessibility": {
     "skip_to_text": "Meteen naar de content",
@@ -102,8 +105,12 @@
       "back_to_blog": "Terug naar blog",
       "share": "Dit artikelen delen",
       "success": "Je reactie is geplaatst! Bedankt!",
-      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd."
-    }
+      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd.",
+      "related_products": "gerelateerde producten",
+      "related_articles": "gerelateerde artikelen",
+      "latest_articles": "Laatste artikels"
+    },
+    "subtitle": "GEZONDHEID EENVOUDIG MAKEN"
   },
   "onboarding": {
     "product_title": "Voorbeeld producttitel",
@@ -155,7 +162,34 @@
       },
       "view_full_details": "Alle details bekijken",
       "include_taxes": "Inclusief btw.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout.",
+      "sproos_shipping": {
+        "default_html": "Besteed <span>$ 50<\/span> voor <span>gratis verzending<\/span>",
+        "free": "U komt in aanmerking voor gratis verzending"
+      },
+      "sproos_whats_inside": {
+        "title": "Wat zit erin",
+        "ginger": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "sea-salt": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "coconut-water": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "corn": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "apple": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        }
+      }
     },
     "modal": {
       "label": "Mediagalerij"
