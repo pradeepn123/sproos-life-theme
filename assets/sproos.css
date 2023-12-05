@@ -714,3 +714,18 @@ span.bundle_bear_trigger::before{
   background: #fff;
   max-height: 360px;
 }
+.stamped-pagination .page.active {
+  text-decoration: none!important;
+}
+@media screen and (max-width: 425px) {
+  .fa-star-half-o:before, .fa-star-o:before, .fa-star:before, .stamped-fa-star-half-o:before, .stamped-fa-star-o:before, .stamped-fa-star:before {
+    font-size: 17px;
+  }
+}
+.sezzle-shopify-info-button .sezzle-checkout-button-wrapper .sezzle-button-text .sezzle-payment-amount {
+  font-weight: 700 !important;
+}
+.sezzle-shopify-info-button .sezzle-checkout-button-wrapper .sezzle-button-text .sezzle-info-icon {
+    font-size: 6px !important;
+    line-height: 3 !important;
+}

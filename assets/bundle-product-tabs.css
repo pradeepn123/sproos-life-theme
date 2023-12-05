@@ -1,0 +1,223 @@
+.tab__list {
+    display: flex;
+    margin-bottom: 24px;
+}
+.tab__item {
+    overflow: hidden;
+    cursor: pointer;
+    padding: 17px 24px 22px;
+    /* margin-right: 24px; */
+    text-shadow: 0 0 0.5px currentColor;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-size: 18px;
+    position: relative;
+    color: #121212;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.tab__item:before {
+    content: "";
+    position: absolute;
+    top: 91%;
+    left: 0;
+    height: 5px;
+    width: 33%;
+    background: #2A7DE1;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(100%, 0);
+}
+.tab__item.is--active {
+    color: #2A7DE1;
+    position: relative;
+}
+.tab__item.is--active:before {
+    visibility: visible;
+    opacity: 1;
+}
+.tab__content {
+    padding: 0 0 0 24px;
+}
+.tab__content-item {
+    display: none;
+}
+.tab__content-item.is--active {
+    display: block;
+}
+.tab__content-title {
+    padding: 24px 24px 24px 0;
+}  
+.tab .tab .tab__item {
+    font-size: 16px;
+    font-weight: 500;
+}
+.tab .tab .tab__content {
+    padding: 0;
+}
+.main__tab_section{
+    display: grid;
+    grid-template-columns: .56fr .8fr;
+    gap: 1rem;
+}
+.main__tab_section .main__tab_section_wrap{
+    display: block;
+    margin-top: 52px;
+}
+
+.main__tab_section .main__tab_section_wrap .tab__item{
+    margin-bottom: 14px;
+    background-color: #FFF;
+}
+.main__tab_section .main__tab_section_wrap .tab__item:before{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #2A7DE1;
+}
+@media(min-width:1200px){
+    .main__tab_section{
+        gap: 23rem;
+    }
+}
+.tab__content-item .tab__list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+.tab__item h4 {
+    text-transform: uppercase;
+    color: #121212;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.6px;
+}
+
+/* accordion */
+.section-bundle-pro .desktop-view{
+    display: grid;
+}
+.section-bundle-pro .mobile-view{
+    display: none;
+}
+@media only screen and (max-width: 1025px) {
+    .section-bundle-pro .desktop-view{
+        display: none;
+    }
+    .section-bundle-pro .mobile-view{
+        display: block;
+    }
+}
+
+  
+  /* .panel {
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 14px 0;
+
+    color: rgba(18, 18, 18, 0.75);
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+  }
+  .panel p {
+    margin: 0;
+    padding: 0;
+  }
+  .panel ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+  } */
+
+  
+
+
+  
+  /* .accordion::before,
+.accordion::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 15px;
+    width: 14px;
+    height: 2px;
+    background-color: #2A7DE1;
+    transition: 0.5s ease;
+    border-radius: 30px;
+}
+.accordion::before {
+  transform: rotate(-90deg);
+} */
+/* .accordion__block-item.active .accordion::before {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+.accordion__block-item.active .accordion::before, 
+  .accordion__block-item.active .accordion::after {
+    transform: rotate(180deg);
+} */
+.section-bundle-pro .page-width {
+    position: relative;
+}
+.tab_section__heading {
+    position: absolute;
+    width: fit-content;
+}
+.tab_section__heading p {
+    margin: 0;
+    color: #2A7DE1;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 1025px) {
+    .tab_section__heading {
+        width: 90%;
+        text-align: center;
+    }
+    .tab_section__heading p {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 786px) {
+    .tab_section__heading {
+        width: 86.5%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .tab_section__heading {
+        width: 93%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .tab_section__heading {
+        width: 90%;
+    }
+}
+.loyalty-widget {
+    margin-top: 24px !important;
+    font-weight: 700;
+}
+.section-bundle-pro {
+    margin-top: 44px;
+    margin-bottom: 60px;
+}
+.slider-button svg path {
+    fill: rgba(42, 125, 225, 0.7);
+}
+
+

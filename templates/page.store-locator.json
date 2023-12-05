@@ -12,7 +12,7 @@
       "type": "apps",
       "blocks": {
         "be9dedb8-b3e1-497d-aa95-ea9016a6ca8a": {
-          "type": "shopify:\/\/apps\/bold-store-locator-map\/blocks\/map\/4ca379c6-722c-49d3-b6ec-a7fe7c1061a5",
+          "type": "shopify:\/\/apps\/sc-store-locator-map-fka-bold\/blocks\/map\/4ca379c6-722c-49d3-b6ec-a7fe7c1061a5",
           "settings": {
             "distance_unit": "KM",
             "display_title": true,

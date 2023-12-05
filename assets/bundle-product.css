@@ -1,0 +1,111 @@
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/bundle-product.scss ***!
+  \******************************************************************************************************************************************************************************************************************************/
+.accordions__item {
+  color: "red";
+}
+.main__accordion_section .accordion_section_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+}
+.main__accordion_section .accordion_section_wrap .accordion__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 109px;
+  margin-top: 52px;
+}
+.main__accordion_section .accordion_section_wrap .accordion__item img {
+  border: 3px solid transparent;
+}
+.main__accordion_section .accordion_section_wrap .accordion__item.is__active img {
+  border: 3px solid #2A7DE1;
+}
+.main__accordion_section .accordion_section_wrap .accordion__item h4 {
+  color: #121212;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main__accordion_section .accordion_section_wrap .accordion__item.is__active h4 {
+  color: #2A7DE1;
+}
+.main__accordion_section .accordion_section_accords .main-content .description {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+.main__accordion_section .accordion_section_accords .main-content .description p {
+  margin-top: 4px;
+}
+.main__accordion_section .accordion_section_accords .accordion__block {
+  display: none;
+}
+.main__accordion_section .accordion_section_accords .accordion__block.is__active {
+  display: block;
+}
+.main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item.active .accordion::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  opacity: 0;
+}
+.main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item.active .accordion::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item .accordion {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 30px 0 0;
+  margin: 7px 0 0 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  color: #000;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+.main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item .accordion::before, .main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item .accordion::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 15px;
+  width: 14px;
+  height: 2px;
+  background-color: #2A7DE1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border-radius: 30px;
+}
+.main__accordion_section .accordion_section_accords .accordion__block .accordion__block-item .accordion::before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}

@@ -403,8 +403,14 @@
     <div data-rebuy-id="116749"></div>
     <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
 {% render 'rebuy-smart-cart-template' %}
- </body>
-</html>
+
+    <script src="{{ 'vendor.js' | asset_url }}" defer></script>
+    <script src="{{ 'shared.js' | asset_url }}" defer></script>
+    <script src="{{ 'sections.js' | asset_url }}" defer></script>
+
+
+</body>
+  </html>
   
   
 {% comment %}  
