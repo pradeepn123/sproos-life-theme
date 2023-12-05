@@ -330,8 +330,17 @@
           "option1": "Algemeen onderzoek",
           "option2": "Retailmogelijkheden",
           "option3": "Media-\/blogger-onderzoek",
-          "option4": "Vragen over producten\/ingrediënten"
-        }
+          "option4": "Vragen over producten\/ingrediënten",
+          "option5": "Onderzoek naar werkgelegenheid",
+          "option6": "Verzending en retourneren"
+        },
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoonnummer",
+        "comment": "Opmerking",
+        "send": "Versturen",
+        "post_success": "Bedankt dat u contact met ons opneemt. We nemen zo snel mogelijk contact met u op.",
+        "error_heading": "Pas het volgende aan:"
       }
     }
   },
@@ -534,7 +543,8 @@
       "copy_code": "Code kopiëren",
       "expired": "Verlopen",
       "copy_code_success": "Code gekopieerd",
-      "print_gift_card": "Afdrukken"
+      "print_gift_card": "Afdrukken",
+      "copied": "Gekopieerd"
     }
   },
   "shopify": {
