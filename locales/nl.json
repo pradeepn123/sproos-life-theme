@@ -309,12 +309,30 @@
         "comment": "Reactie",
         "send": "Sturen",
         "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
-        "error_heading": "Pas het volgende aan:"
+        "error_heading": "Pas het volgende aan:",
+        "subject": {
+          "option2": "Retailmogelijkheden",
+          "option3": "Media-\/blogger-onderzoek",
+          "option4": "Vragen over producten\/ingrediënten",
+          "option5": "Onderzoek naar werkgelegenheid",
+          "option6": "Verzending en retourneren"
+        }
       }
     },
     "404": {
       "title": "Pagina niet gevonden",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "Selecteer een onderwerp",
+          "option1": "Algemeen onderzoek",
+          "option2": "Retailmogelijkheden",
+          "option3": "Media-\/blogger-onderzoek",
+          "option4": "Vragen over producten\/ingrediënten"
+        }
+      }
     }
   },
   "sections": {
