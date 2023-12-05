@@ -36,7 +36,8 @@
       "previous": "Vorige pagina"
     },
     "search": {
-      "search": "Zoeken"
+      "search": "Zoeken",
+      "search_blog": "Zoek blog"
     },
     "cart": {
       "view": "Winkelwagen bekijken ({{ count }})",
@@ -46,12 +47,20 @@
       "copy_to_clipboard": "Link kopiëren",
       "share_url": "Link",
       "success_message": "Link gekopieerd naar klembord",
-      "close": "Delen sluiten"
+      "close": "Delen sluiten",
+      "facebook_label": "Facebook",
+      "twitter_label": "Twitteren",
+      "instagram_label": "Instagram",
+      "pinterest_label": "Pinterest"
     },
     "slider": {
       "of": "van",
       "next_slide": "Naar rechts schuiven",
       "previous_slide": "Naar links schuiven"
+    },
+    "custom_modal": {
+      "headline": "Oeps... HET LIJKT DAT JE OP DE VERKEERDE PLAATS STAAT?",
+      "text": "Selecteer hieronder uw locatie. Houd er rekening mee dat we momenteel alleen naar Canada en de VS verzenden. Alle Canadese bestellingen moeten in CAD worden geplaatst en Amerikaanse bestellingen in USD."
     }
   },
   "newsletter": {
@@ -414,6 +423,21 @@
       "expired": "Verlopen",
       "copy_code_success": "Code gekopieerd",
       "print_gift_card": "Afdrukken"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "redeemable_errors": {
+        "gift_card": {
+          "throttle_limit_exceeded": "Je hebt het maximale aantal pogingen overschreden. Probeer het later nog eens."
+        }
+      },
+      "marketing": {
+        "disclaimer": {
+          "privacy_policy": "Privacybeleid",
+          "terms_of_service": "Servicevoorwaarden"
+        }
+      }
     }
   }
 }
