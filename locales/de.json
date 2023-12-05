@@ -336,12 +336,30 @@
         "comment": "Kommentar",
         "send": "Senden",
         "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
-        "error_heading": "Bitte passe Folgendes an:"
+        "error_heading": "Bitte passe Folgendes an:",
+        "subject": {
+          "option5": "Beschäftigungsanfrage",
+          "option6": "Versand und Rücksendungen"
+        }
       }
     },
     "404": {
       "title": "Seite nicht gefunden",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "Wähle ein Thema aus",
+          "option1": "Allgemeine Anfrage",
+          "option2": "Einzelhandelsmöglichkeiten",
+          "option3": "Medien-\/Blogger-Anfrage",
+          "option4": "Fragen zu Produkten\/Zutaten",
+          "option5": "Beschäftigungsanfrage",
+          "option6": "Versand und Rücksendungen"
+        },
+        "name": "Name"
+      }
     }
   },
   "sections": {
