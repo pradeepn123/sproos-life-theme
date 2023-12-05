@@ -237,6 +237,17 @@
         },
         "collagen_beef": {
           "title": "título próximamente"
+        },
+        "erythritol": {
+          "text": "texto próximamente"
+        },
+        "chicken_bone_broth": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "acerola": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
         }
       }
     },
@@ -298,7 +309,14 @@
         "comment": "Comentario",
         "send": "Enviar",
         "post_success": "Gracias por contactarnos. Te responderemos lo antes posible.",
-        "error_heading": "Por favor, ajusta lo siguiente:"
+        "error_heading": "Por favor, ajusta lo siguiente:",
+        "subject": {
+          "label": "seleccione un tema",
+          "option1": "Consulta general",
+          "option2": "Oportunidades minoristas",
+          "option3": "Consulta de medios\/blogueros",
+          "option4": "Preguntas sobre productos\/ingredientes"
+        }
       }
     },
     "404": {
