@@ -36,7 +36,8 @@
       "previous": "Pagina anterior"
     },
     "search": {
-      "search": "Búsqueda"
+      "search": "Búsqueda",
+      "search_blog": "Buscar Blog"
     },
     "cart": {
       "view": "Ver mi carrito ({{ count }})",
@@ -46,18 +47,29 @@
       "copy_to_clipboard": "Copiar enlace",
       "share_url": "Enlace",
       "success_message": "Enlace copiado al portapapeles",
-      "close": "Cerrar compartición"
+      "close": "Cerrar compartición",
+      "facebook_label": "Facebook",
+      "twitter_label": "Gorjeo",
+      "instagram_label": "Instagram",
+      "pinterest_label": "Pinterest",
+      "base_label": "Copiar link",
+      "button_label": "Compartir"
     },
     "slider": {
       "of": "de",
       "next_slide": "Diapositiva a la derecha",
       "previous_slide": "Diapositiva a la izquierda"
+    },
+    "custom_modal": {
+      "headline": "Uy... ¿PARECE QUE PUEDES ESTAR EN EL LUGAR EQUIVOCADO?",
+      "text": "Seleccione su ubicación a continuación. Tenga en cuenta que actualmente solo realizamos envíos a Canadá y EE. UU. Todos los pedidos canadienses deben realizarse en CAD y los pedidos estadounidenses en USD."
     }
   },
   "newsletter": {
     "label": "Correo electrónico",
     "success": "Gracias por suscribirte",
-    "button_label": "Suscribirse"
+    "button_label": "Suscribirse",
+    "paragraph": "Regístrese para obtener acceso temprano a nuevos productos, recetas y descuentos exclusivos."
   },
   "accessibility": {
     "skip_to_text": "Ir directamente al contenido",
@@ -93,8 +105,12 @@
       "back_to_blog": "Regresar al blog",
       "share": "Compartir este artículo",
       "success": "Tu comentario se publicó correctamente. ¡Gracias!",
-      "success_moderated": "Tu comentario se publicó correctamente. Lo publicaremos en breve, cuando se modere nuestro blog."
-    }
+      "success_moderated": "Tu comentario se publicó correctamente. Lo publicaremos en breve, cuando se modere nuestro blog.",
+      "related_products": "Productos relacionados",
+      "related_articles": "Artículos relacionados",
+      "latest_articles": "últimos artículos"
+    },
+    "subtitle": "SIMPLEMENTE LA SALUD"
   },
   "onboarding": {
     "product_title": "Ejemplo de nombre del producto",
@@ -146,7 +162,94 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "Impuesto incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago."
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago.",
+      "sproos_shipping": {
+        "default_html": "Gasta <span>$50<\/span> para <span>envío gratis<\/span>",
+        "free": "Has calificado para envío gratis"
+      },
+      "sproos_whats_inside": {
+        "title": "Qué hay adentro",
+        "ginger": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "sea-salt": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "coconut-water": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "corn": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "apple": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "mango-orange": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "sodium-phosphate": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "green-tea": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "citrus": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "citric-acid": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "glutamine": {
+          "title": "L-Glutamina",
+          "text": "La L-Glutamina es el aminoácido más abundante en el cuerpo y es una importante fuente de combustible para las células intestinales. La glutamina es crucial para generar una respuesta de las células intestinales contra la inflamación y las lesiones. La adición de L-glutamina a la dieta mejora la integridad intestinal, así como la digestión y absorción de nutrientes. Las personas con intestino permeable (es decir, aumento de la permeabilidad intestinal) pueden beneficiarse de un suplemento de glutamina en su dieta."
+        },
+        "quercetin": {
+          "title": "título próximamente"
+        },
+        "aloe-vera": {
+          "text": "El gel de aloe vera es una sustancia transparente y gelatinosa que se encuentra en la parte interna de la hoja de la planta de aloe. El gel de aloe vera es un demulcente con propiedades gastroprotectoras: alivia la irritación y la inflamación del intestino. El gel de aloe vera puede reducir la gravedad general de los síntomas gastrointestinales en personas con síndrome del intestino irritable (SII). Se ha demostrado que mejora el dolor y el malestar abdominal, así como la flatulencia, en pacientes con SII con predominio de estreñimiento."
+        },
+        "methylsulfonylmethane": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "mct-powder": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "stevia": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "monk-fruit": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "collagen_beef": {
+          "title": "título próximamente"
+        },
+        "erythritol": {
+          "text": "texto próximamente"
+        },
+        "chicken_bone_broth": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        },
+        "acerola": {
+          "title": "título próximamente",
+          "text": "texto próximamente"
+        }
+      }
     },
     "modal": {
       "label": "Galería multimedia"
@@ -206,12 +309,41 @@
         "comment": "Comentario",
         "send": "Enviar",
         "post_success": "Gracias por contactarnos. Te responderemos lo antes posible.",
-        "error_heading": "Por favor, ajusta lo siguiente:"
+        "error_heading": "Por favor, ajusta lo siguiente:",
+        "subject": {
+          "label": "seleccione un tema",
+          "option1": "Consulta general",
+          "option2": "Oportunidades minoristas",
+          "option3": "Consulta de medios\/blogueros",
+          "option4": "Preguntas sobre productos\/ingredientes",
+          "option5": "Consulta de empleo",
+          "option6": "Envíos y Devoluciones"
+        }
       }
     },
     "404": {
       "title": "Página no encontrada",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "seleccione un tema",
+          "option1": "Consulta general",
+          "option2": "Oportunidades minoristas",
+          "option3": "Consulta de medios\/blogueros",
+          "option4": "Preguntas sobre productos\/ingredientes",
+          "option5": "Consulta de empleo",
+          "option6": "Envíos y Devoluciones"
+        },
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "comment": "Comentario",
+        "send": "Enviar",
+        "post_success": "Gracias por contactarnos. Nos comunicaremos con usted lo antes posible.",
+        "error_heading": "Ajuste lo siguiente:"
+      }
     }
   },
   "sections": {
@@ -413,7 +545,8 @@
       "copy_code": "Copiar código",
       "expired": "Vencido",
       "copy_code_success": "El código se copió correctamente",
-      "print_gift_card": "Imprimir"
+      "print_gift_card": "Imprimir",
+      "copied": "Copiado"
     }
   }
 }

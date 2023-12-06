@@ -305,5 +305,12 @@ variant-custom-selects .product-form__input{
 
 .collection.featured-collection-banner .slider-mobile-gutter .swiper-button-next, 
 .collection.featured-collection-banner .slider-mobile-gutter .swiper-button-prev{
-  display: flex !important;
+  display: none !important;
+}
+
+@media screen and (min-width: 750px) {
+  .collection.featured-collection-banner .slider-mobile-gutter .swiper-button-next, 
+  .collection.featured-collection-banner .slider-mobile-gutter .swiper-button-prev{
+    display: flex !important;
+  }
 }

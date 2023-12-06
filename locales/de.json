@@ -36,7 +36,8 @@
       "previous": "Vorherige Seite"
     },
     "search": {
-      "search": "Suchen"
+      "search": "Suchen",
+      "search_blog": "Blog durchsuchen"
     },
     "cart": {
       "view": "Meinen Warenkorb ({{ count }}) anzeigen",
@@ -46,18 +47,29 @@
       "copy_to_clipboard": "Link kopieren",
       "share_url": "Link",
       "success_message": "Link in die Zwischenablage kopiert",
-      "close": "Teilen schließen"
+      "close": "Teilen schließen",
+      "facebook_label": "Facebook",
+      "twitter_label": "Twitter",
+      "instagram_label": "Instagram",
+      "pinterest_label": "Pinterest",
+      "base_label": "Link kopieren",
+      "button_label": "Aktie"
     },
     "slider": {
       "of": "von",
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben"
+    },
+    "custom_modal": {
+      "headline": "Hoppla... Sieht aus, als wären Sie am falschen Ort?",
+      "text": "Wählen Sie unten Ihren Standort aus. Bitte beachten Sie, dass wir derzeit nur nach Kanada und in die USA versenden. Alle kanadischen Bestellungen müssen in CAD und US-Bestellungen in USD aufgegeben werden."
     }
   },
   "newsletter": {
     "label": "E-Mail",
     "success": "Danke für deine Anmeldung",
-    "button_label": "Abonnieren"
+    "button_label": "Abonnieren",
+    "paragraph": "Melden Sie sich an, um frühzeitig Zugang zu neuen Produkten, Rezepten und exklusiven Rabatten zu erhalten."
   },
   "accessibility": {
     "skip_to_text": "Direkt zum Inhalt",
@@ -93,8 +105,12 @@
       "back_to_blog": "Zurück zum Blog",
       "share": "Diesen Artikel teilen",
       "success": "Dein Kommentar wurde erfolgreich gepostet! Vielen Dank!",
-      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen."
-    }
+      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen.",
+      "related_products": "Verwandte Produkte",
+      "related_articles": "In Verbindung stehende Artikel",
+      "latest_articles": "Neueste Artikel"
+    },
+    "subtitle": "GESUNDHEIT EINFACH MACHEN"
   },
   "onboarding": {
     "product_title": "Beispiel für Produkttitel",
@@ -146,7 +162,121 @@
       },
       "view_full_details": "Vollständige Details anzeigen",
       "include_taxes": "inkl. MwSt.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet"
+      "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet",
+      "sproos_shipping": {
+        "default_html": "Geben Sie <span>50 $<\/span> für <span>kostenlosen Versand<\/span> aus",
+        "free": "Sie haben sich für den kostenlosen Versand qualifiziert"
+      },
+      "sproos_whats_inside": {
+        "title": "Was ist da drin",
+        "ginger": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "sea-salt": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "coconut-water": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "corn": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "apple": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "mango-orange": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "sodium-phosphate": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "green-tea": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "citrus": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "citric-acid": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "glutamine": {
+          "title": "L-Glutamin",
+          "text": "L-Glutamin ist die am häufigsten vorkommende Aminosäure im Körper und eine wichtige Energiequelle für die Darmzellen. Glutamin ist entscheidend für die Reaktion der Darmzellen auf Entzündungen und Verletzungen. Die Zugabe von L-Glutamin zur Nahrung verbessert die Darmintegrität sowie die Verdauung und Aufnahme von Nährstoffen. Personen mit „Leaky Gut“ (d. h. erhöhter Darmpermeabilität) können von einer zusätzlichen Glutaminzufuhr in ihrer Ernährung profitieren."
+        },
+        "quercetin": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "glucosamine-sulfate": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "malic-acid": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "natural-flavours": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "inulin": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "aloe-vera": {
+          "title": "Bio-Aloe-Vera-Blattgel",
+          "text": "Aloe-Vera-Gel ist die klare, geleeartige Substanz, die sich im inneren Teil des Blattes der Aloe-Pflanze befindet. Aloe-Vera-Gel ist ein Milderungsmittel mit magenschützenden Eigenschaften: Es lindert Reizungen und Entzündungen im Darm. Aloe-Vera-Gel kann die Gesamtschwere der gastrointestinalen Symptome bei Patienten mit Reizdarmsyndrom (IBS) verringern. Es hat sich gezeigt, dass es Bauchschmerzen und -beschwerden sowie Blähungen bei Patienten mit überwiegend verstopftem Reizdarmsyndrom lindert."
+        },
+        "methylsulfonylmethane": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "mct-powder": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "stevia": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "monk-fruit": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "collagen_beef": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "biotin": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "hyaluronic_acid": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "turmeric": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "collagen_fish": {
+          "title": "Titel kommt bald",
+          "text": "Text kommt bald"
+        },
+        "erythritol": {
+          "title": "Titel kommt bald"
+        }
+      }
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -206,12 +336,30 @@
         "comment": "Kommentar",
         "send": "Senden",
         "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
-        "error_heading": "Bitte passe Folgendes an:"
+        "error_heading": "Bitte passe Folgendes an:",
+        "subject": {
+          "option5": "Beschäftigungsanfrage",
+          "option6": "Versand und Rücksendungen"
+        }
       }
     },
     "404": {
       "title": "Seite nicht gefunden",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "Wähle ein Thema aus",
+          "option1": "Allgemeine Anfrage",
+          "option2": "Einzelhandelsmöglichkeiten",
+          "option3": "Medien-\/Blogger-Anfrage",
+          "option4": "Fragen zu Produkten\/Zutaten",
+          "option5": "Beschäftigungsanfrage",
+          "option6": "Versand und Rücksendungen"
+        },
+        "name": "Name"
+      }
     }
   },
   "sections": {

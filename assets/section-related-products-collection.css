@@ -71,6 +71,9 @@ h3.related-products-collection-title {
         background: rgb(195, 231, 107);
         margin: -1px 0 !important;
     }
+    .banner_title_bottom_mobile {
+        margin: -1px 0 !important;
+    }
 }
 .cover::before {
     content: '';
@@ -251,7 +254,7 @@ h3.related-products-collection-title {
     font-weight: 700;
     color: black;
     left: 1.2em;
-    position: relative;
+    /* position: relative; */
     vertical-align: bottom;
 }
 
@@ -261,7 +264,7 @@ h3.related-products-collection-title {
     font-weight: 700;
     color: black;
     left: 1.35em;
-    position: relative;
+    /* position: relative; */
     vertical-align: bottom;
 }
 

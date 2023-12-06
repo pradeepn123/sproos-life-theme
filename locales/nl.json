@@ -36,7 +36,8 @@
       "previous": "Vorige pagina"
     },
     "search": {
-      "search": "Zoeken"
+      "search": "Zoeken",
+      "search_blog": "Zoek blog"
     },
     "cart": {
       "view": "Winkelwagen bekijken ({{ count }})",
@@ -46,18 +47,29 @@
       "copy_to_clipboard": "Link kopiëren",
       "share_url": "Link",
       "success_message": "Link gekopieerd naar klembord",
-      "close": "Delen sluiten"
+      "close": "Delen sluiten",
+      "facebook_label": "Facebook",
+      "twitter_label": "Twitteren",
+      "instagram_label": "Instagram",
+      "pinterest_label": "Pinterest",
+      "base_label": "Kopieer link",
+      "button_label": "Deel"
     },
     "slider": {
       "of": "van",
       "next_slide": "Naar rechts schuiven",
       "previous_slide": "Naar links schuiven"
+    },
+    "custom_modal": {
+      "headline": "Oeps... HET LIJKT DAT JE OP DE VERKEERDE PLAATS STAAT?",
+      "text": "Selecteer hieronder uw locatie. Houd er rekening mee dat we momenteel alleen naar Canada en de VS verzenden. Alle Canadese bestellingen moeten in CAD worden geplaatst en Amerikaanse bestellingen in USD."
     }
   },
   "newsletter": {
     "label": "E‑mail",
     "success": "Bedankt voor het abonneren",
-    "button_label": "Abonneren"
+    "button_label": "Abonneren",
+    "paragraph": "Meld u aan om vroegtijdig toegang te krijgen tot nieuwe producten, recepten en exclusieve kortingen."
   },
   "accessibility": {
     "skip_to_text": "Meteen naar de content",
@@ -93,8 +105,12 @@
       "back_to_blog": "Terug naar blog",
       "share": "Dit artikelen delen",
       "success": "Je reactie is geplaatst! Bedankt!",
-      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd."
-    }
+      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd.",
+      "related_products": "gerelateerde producten",
+      "related_articles": "gerelateerde artikelen",
+      "latest_articles": "Laatste artikels"
+    },
+    "subtitle": "GEZONDHEID EENVOUDIG MAKEN"
   },
   "onboarding": {
     "product_title": "Voorbeeld producttitel",
@@ -146,7 +162,94 @@
       },
       "view_full_details": "Alle details bekijken",
       "include_taxes": "Inclusief btw.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout.",
+      "sproos_shipping": {
+        "default_html": "Besteed <span>$ 50<\/span> voor <span>gratis verzending<\/span>",
+        "free": "U komt in aanmerking voor gratis verzending"
+      },
+      "sproos_whats_inside": {
+        "title": "Wat zit erin",
+        "ginger": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "sea-salt": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "coconut-water": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "corn": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "apple": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "glutamine": {
+          "title": "L-Glutamine",
+          "text": "L-Glutamine is het meest voorkomende aminozuur in het lichaam en is een belangrijke brandstofbron voor darmcellen. Glutamine is cruciaal voor het opbouwen van een darmcelreactie tegen ontstekingen en verwondingen. Toevoeging van L-glutamine via de voeding verbetert de darmintegriteit en de vertering en opname van voedingsstoffen. Personen met een lekkende darm (dat wil zeggen een verhoogde darmpermeabiliteit) kunnen baat hebben bij aanvullende glutamine in hun dieet."
+        },
+        "quercetin": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "glucosamine-sulfate": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "malic-acid": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "natural-flavours": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "inulin": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "aloe-vera": {
+          "title": "Biologische Aloë Vera bladgel",
+          "text": "Aloë vera-gel is de heldere, geleiachtige substantie die wordt aangetroffen in het binnenste deel van het blad van de aloëplant. Aloë vera-gel is een verzachtend middel met maagbeschermende eigenschappen: het verzacht irritatie en ontstekingen in de darmen. Aloë vera-gel kan de algehele ernst van gastro-intestinale symptomen verminderen bij mensen met het prikkelbare darm syndroom (IBS). Er is aangetoond dat het de buikpijn en het ongemak, evenals de winderigheid, verbetert bij patiënten met PDS die vooral door constipatie overheersen."
+        },
+        "methylsulfonylmethane": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "mct-powder": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "stevia": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "monk-fruit": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "collagen_beef": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "biotin": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "hyaluronic_acid": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        },
+        "turmeric": {
+          "title": "titel binnenkort beschikbaar",
+          "text": "tekst komt binnenkort"
+        }
+      }
     },
     "modal": {
       "label": "Mediagalerij"
@@ -206,12 +309,39 @@
         "comment": "Reactie",
         "send": "Sturen",
         "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
-        "error_heading": "Pas het volgende aan:"
+        "error_heading": "Pas het volgende aan:",
+        "subject": {
+          "option2": "Retailmogelijkheden",
+          "option3": "Media-\/blogger-onderzoek",
+          "option4": "Vragen over producten\/ingrediënten",
+          "option5": "Onderzoek naar werkgelegenheid",
+          "option6": "Verzending en retourneren"
+        }
       }
     },
     "404": {
       "title": "Pagina niet gevonden",
       "subtext": "404"
+    },
+    "wholesale": {
+      "form": {
+        "subject": {
+          "label": "Selecteer een onderwerp",
+          "option1": "Algemeen onderzoek",
+          "option2": "Retailmogelijkheden",
+          "option3": "Media-\/blogger-onderzoek",
+          "option4": "Vragen over producten\/ingrediënten",
+          "option5": "Onderzoek naar werkgelegenheid",
+          "option6": "Verzending en retourneren"
+        },
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoonnummer",
+        "comment": "Opmerking",
+        "send": "Versturen",
+        "post_success": "Bedankt dat u contact met ons opneemt. We nemen zo snel mogelijk contact met u op.",
+        "error_heading": "Pas het volgende aan:"
+      }
     }
   },
   "sections": {
@@ -413,7 +543,23 @@
       "copy_code": "Code kopiëren",
       "expired": "Verlopen",
       "copy_code_success": "Code gekopieerd",
-      "print_gift_card": "Afdrukken"
+      "print_gift_card": "Afdrukken",
+      "copied": "Gekopieerd"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "redeemable_errors": {
+        "gift_card": {
+          "throttle_limit_exceeded": "Je hebt het maximale aantal pogingen overschreden. Probeer het later nog eens."
+        }
+      },
+      "marketing": {
+        "disclaimer": {
+          "privacy_policy": "Privacybeleid",
+          "terms_of_service": "Servicevoorwaarden"
+        }
+      }
     }
   }
 }

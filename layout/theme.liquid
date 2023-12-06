@@ -400,20 +400,22 @@
       </div>
     </modal-dialog>   
 
+    {% comment %} 
     <div data-rebuy-id="116749"></div>
     <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
-{% comment %} {% render 'rebuy-smart-cart-template' %} {% endcomment %}
+    {% render 'rebuy-smart-cart-template' %}
+    {% endcomment %}
 
     <script src="{{ 'vendor.js' | asset_url }}" defer></script>
     <script src="{{ 'shared.js' | asset_url }}" defer></script>
-    <script src="{{ 'sections.js' | asset_url }}" defer></script>
+    <script src="{{ 'sections.js' | asset_url }}" defer></script> 
 
 
-</body>
-  </html>
+  </body>
+</html>
   
 
-{% comment %}  
+{% comment %} 
 {% section 'sezzle-widget' %}
 {{ "//checkout-sdk.sezzle.com/sezzle-checkout-button.min.js" | script_tag }}
 <script>
