@@ -60,6 +60,9 @@
         background: rgb(195, 231, 107);
         margin: -1px 0 !important;
     }
+    .banner_title_bottom_mobile{
+        margin: -1px 0 !important;
+    }
 }
 .cover::before {
     content: '';
