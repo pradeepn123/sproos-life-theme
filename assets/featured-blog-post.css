@@ -158,6 +158,7 @@
         display: block;
         position: relative;
         margin-bottom: 24px;
+        z-index: 1;
     }
     .css-swiper-button{
         display: none;

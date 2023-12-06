@@ -78,8 +78,8 @@ document.querySelectorAll('.whats-inside .whats-inside-left li').forEach((tar) =
 });
 
 //move the related products
-const div1 = document.querySelectorAll("[id*=Share-template]");
-const div2 = document.querySelectorAll("[id*=product-recommendations]");
-if(div1.length && div2.length){
-  div1[0].after(div2[0]);
-}
+// const div1 = document.querySelectorAll("[id*=Share-template]");
+
+const div1 = document.querySelectorAll("[id*=bundle-tabbed-section]");
+const div2 = document.querySelectorAll("[id*=stamped-main-widget]");
+div2[0].before(div1[0]);

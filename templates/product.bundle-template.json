@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "bundle-product",
       "blocks": {
         "caption": {
           "type": "text",
@@ -35,6 +35,13 @@
             "picker_type": "button"
           }
         },
+        "30b92812-704c-4490-ada9-879565013ed5": {
+          "type": "loyalty",
+          "settings": {
+            "loyalty_unit_name": "Sproos Squad",
+            "loyalty_color": "#f9848b"
+          }
+        },
         "420d1f51-1cd4-446a-b64e-855e4fa63f9b": {
           "type": "shopify:\/\/apps\/bundle-bear-volume-discounts\/blocks\/offer-widget\/8301eac6-7eb6-487c-92f6-ccde92f1db50",
           "settings": {
@@ -43,13 +50,27 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "830e6190-9ebd-4779-82f2-0067a9546a9f": {
+          "type": "bundlesbear",
+          "disabled": true,
+          "settings": {
+            "popup_title": "",
+            "popup_description": ""
+          }
+        },
+        "description": {
+          "type": "description",
           "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "a70f7ede-52ac-4b81-9400-f656c43aa052": {
@@ -63,11 +84,6 @@
           "type": "sproos_icons",
           "settings": {
             "heading": ""
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -108,8 +124,15 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "dfd230fd-8cd1-4ef4-b896-d8aba2e56a1d": {
+          "type": "icon_with_text",
+          "settings": {
+            "show_icon_with_text": true
           }
         }
       },
@@ -119,17 +142,20 @@
         "cd6c50de-08a6-44f3-9bf5-e64efb6c85d7",
         "price",
         "variant_picker",
+        "30b92812-704c-4490-ada9-879565013ed5",
         "420d1f51-1cd4-446a-b64e-855e4fa63f9b",
         "quantity_selector",
+        "830e6190-9ebd-4779-82f2-0067a9546a9f",
+        "description",
         "buy_buttons",
         "a70f7ede-52ac-4b81-9400-f656c43aa052",
         "baa4409a-a083-4b6e-8a73-e62309791ee1",
-        "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "dfd230fd-8cd1-4ef4-b896-d8aba2e56a1d"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -138,8 +164,39 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 12
+      }
+    },
+    "d1d03a0a-9c24-4d1c-8342-6a74a3fc7224": {
+      "type": "bundle-product-tabs",
+      "settings": {
+        "color_scheme": "#f0f5fc",
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    },
+    "170021361564b615da": {
+      "type": "apps",
+      "blocks": {
+        "62012c67-2a05-4532-9182-f88ea0db555e": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "62012c67-2a05-4532-9182-f88ea0db555e"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "product-recommendations": {
@@ -166,6 +223,8 @@
   },
   "order": [
     "main",
+    "d1d03a0a-9c24-4d1c-8342-6a74a3fc7224",
+    "170021361564b615da",
     "product-recommendations",
     "product-whats-inside"
   ]
