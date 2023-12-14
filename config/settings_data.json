@@ -128,7 +128,7 @@
             "type": "announcement",
             "settings": {
               "country_iso": "FR, BE, DE, IE, IT, NL, PT, SI, ES",
-              "announcement_text": "Free shipping on orders £60+"
+              "announcement_text": "Free shipping on orders €65+"
             }
           }
         },
