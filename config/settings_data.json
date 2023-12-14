@@ -107,14 +107,14 @@
             "type": "announcement",
             "settings": {
               "country_iso": "IN",
-              "announcement_text": "free shipping on orders $50+"
+              "announcement_text": "Test"
             }
           },
           "9b081283-106c-4be9-a792-0681463707a8": {
             "type": "announcement",
             "settings": {
-              "country_iso": "FR",
-              "announcement_text": "This is announcement for france"
+              "country_iso": "",
+              "announcement_text": ""
             }
           }
         },
@@ -124,8 +124,8 @@
         ],
         "settings": {
           "text": "Announce something here",
-          "link": "shopify:\/\/collections\/all",
-          "color_scheme": "background-2"
+          "link": "",
+          "color_scheme": "accent-1"
         }
       },
       "header": {
