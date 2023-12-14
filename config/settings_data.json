@@ -105,6 +105,7 @@
         "blocks": {
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "country_iso": "IN",
               "announcement_text": "Test"
@@ -112,6 +113,7 @@
           },
           "9b081283-106c-4be9-a792-0681463707a8": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "country_iso": "GB",
               "announcement_text": "Test UK"
