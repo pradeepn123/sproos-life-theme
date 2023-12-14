@@ -106,16 +106,26 @@
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
             "settings": {
-              "text": "free shipping on orders $50+",
-              "color_scheme": "background-2",
-              "link": "shopify:\/\/collections\/all"
+              "country_iso": "IN",
+              "announcement_text": "free shipping on orders $50+"
+            }
+          },
+          "9b081283-106c-4be9-a792-0681463707a8": {
+            "type": "announcement",
+            "settings": {
+              "country_iso": "FR",
+              "announcement_text": "This is announcement for france"
             }
           }
         },
         "block_order": [
-          "79597cab-94bc-4833-b70b-6b958c804eb7"
+          "79597cab-94bc-4833-b70b-6b958c804eb7",
+          "9b081283-106c-4be9-a792-0681463707a8"
         ],
         "settings": {
+          "text": "Announce something here",
+          "link": "shopify:\/\/collections\/all",
+          "color_scheme": "background-2"
         }
       },
       "header": {
@@ -445,9 +455,6 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "text": "Welcome to our store",
-                "color_scheme": "background-1",
-                "link": ""
               }
             }
           },

@@ -6,58 +6,15 @@
 /*!*****************************************!*\
   !*** ./js/sections/announcement-bar.js ***!
   \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var JsComponents_svelte_wrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/svelte-wrapper */ "./js/components/svelte-wrapper.js");
 /* harmony import */ var SvelteComponents_AnnouncementBar_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SvelteComponents/AnnouncementBar.svelte */ "./js/components/svelte/AnnouncementBar.svelte");
  //wrapper that inject svelte into DOM
  //svelte component to load
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
   (0,JsComponents_svelte_wrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(SvelteComponents_AnnouncementBar_svelte__WEBPACK_IMPORTED_MODULE_1__["default"], 'announcement-bar', '#announcement-bar-data');
-});
-
-/***/ }),
-
-/***/ "./js/sections/bundle-tab-section.js":
-/*!*******************************************!*\
-  !*** ./js/sections/bundle-tab-section.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var JsComponents_accordions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/accordions */ "./js/components/accordions.js");
-/* harmony import */ var JsComponents_tabbed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/tabbed */ "./js/components/tabbed.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  var sectionParent = document.querySelector('[data-section-parent]');
-  if (sectionParent) {
-    (0,JsComponents_accordions__WEBPACK_IMPORTED_MODULE_0__["default"])(sectionParent);
-    (0,JsComponents_tabbed__WEBPACK_IMPORTED_MODULE_1__["default"])(sectionParent);
-  }
-});
-
-/***/ }),
-
-/***/ "./js/sections/sections.js":
-/*!*********************************!*\
-  !*** ./js/sections/sections.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
-
-/* harmony import */ var _bundle_tab_section__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bundle-tab-section */ "./js/sections/bundle-tab-section.js");
-/* harmony import */ var _announcement_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./announcement-bar */ "./js/sections/announcement-bar.js");
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  (0,_bundle_tab_section__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_announcement_bar__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 
 /***/ })
@@ -173,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"sections": 0
+/******/ 			"announcement-bar": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -223,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors","shared"], () => (__webpack_require__("./js/sections/sections.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors","shared"], () => (__webpack_require__("./js/sections/announcement-bar.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

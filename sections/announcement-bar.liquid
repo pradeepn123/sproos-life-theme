@@ -1,39 +1,49 @@
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'announcement' -%}
-      <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+
+
+<announcement-bar>
+  <script id="announcement-bar-data" type="text/json">
+    {
+     "data": {% render 'JSON-announcement-bar' | json %}
+    }
+  </script>
+</announcement-bar>
+
+
+  <section data-section-id="{{ section.id }}" data-section-type="announcement-bar" data-settings>
+      <div data-announcement-bar class="announcement-bar {% if section.blocks.size > 0 %} hidden {% endif %} color-{{ section.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+          {%- if section.settings.link != blank -%}
+            <a href="{{ section.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
           {%- endif -%}
-              <p class="announcement-bar__message h5">
-                {{ block.settings.text | escape }}
-                {% comment %} {%- if block.settings.link != blank -%}
-                  {% render 'icon-arrow' %}
-                {%- endif -%} {% endcomment %}
+              <p class="announcement-bar__message h5" data-announcement-text>
+                {{ section.settings.text | escape }}
               </p>
-          {%- if block.settings.link != blank -%}
+          {%- if section.settings.link != blank -%}
             </a>
           {%- endif -%}
-        {%- endif -%}
       </div>
-  {%- endcase -%}
-{%- endfor -%}
+  </section>
+
+  <script>
+    document.documentElement.style.removeProperty('--announcement-bar-button-width');
+    document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-{{ section.id }}').clientHeight + 'px');
+  </script>
+
 
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
-  "max_blocks": 12,
-  "blocks": [
-    {
-      "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
+
       "settings": [
         {
           "type": "text",
           "id": "text",
-          "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          "label": "Text",
+          "default": "Announce something here"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         },
         {
           "type": "select",
@@ -62,21 +72,27 @@
           ],
           "default": "accent-1",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.color_scheme.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
         }
-      ]
-    }
-  ],
-  "default": {
+      ],
+
     "blocks": [
       {
-        "type": "announcement"
+        "type": "announcement",
+        "name": "announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "country_iso",
+            "label": "Enter country ISO in 2 digits"
+          },
+          {
+            "type": "text",
+            "id": "announcement_text",
+            "label": "Enter Announcement Text"
+          }
+        ]
       }
     ]
-  }
+  
 }
 {% endschema %}
