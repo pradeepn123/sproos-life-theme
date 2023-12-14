@@ -113,8 +113,8 @@
           "9b081283-106c-4be9-a792-0681463707a8": {
             "type": "announcement",
             "settings": {
-              "country_iso": "",
-              "announcement_text": ""
+              "country_iso": "GB",
+              "announcement_text": "Test UK"
             }
           }
         },
