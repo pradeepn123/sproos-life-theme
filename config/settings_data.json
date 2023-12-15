@@ -140,7 +140,7 @@
         ],
         "settings": {
           "text": "Announce something here",
-          "link": "",
+          "link": "shopify:\/\/policies\/shipping-policy",
           "color_scheme": "accent-1"
         }
       },
