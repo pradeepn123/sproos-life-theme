@@ -127,7 +127,7 @@
           "a69b19ed-beee-427f-9333-0fc40bde2e4a": {
             "type": "announcement",
             "settings": {
-              "country_iso": "FR, BE, DE, IE, IT, NL, PT, SI, ES",
+              "country_iso": "FR, BE, DE, IE, IT, NL, PT, SI, ES, AT",
               "announcement_text": "Free shipping on orders €65+"
             }
           }
