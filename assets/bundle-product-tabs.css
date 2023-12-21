@@ -65,6 +65,7 @@
 .main__tab_section .main__tab_section_wrap{
     display: block;
     margin-top: 52px;
+    padding-right: 7rem;
 }
 
 .main__tab_section .main__tab_section_wrap .tab__item{
@@ -80,9 +81,12 @@
     background-color: transparent;
     border: 2px solid #2A7DE1;
 }
-@media(min-width:1200px){
+@media(min-width:1024px){
     .main__tab_section{
-        gap: 23rem;
+        gap: 10rem;
+    }
+    .tab .tab .tab__item {
+        padding: 15px;
     }
 }
 .tab__content-item .tab__list {
