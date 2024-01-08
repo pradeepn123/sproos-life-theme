@@ -325,12 +325,12 @@
                           <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
                         </div>
                         <ul class="language-selector-menu" data-dropdown-menu>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/" title="English">English (en)</a></li>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
-                          <li class="language-selector-content"><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+                          <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
                         </ul>
                       </div>
                     </div>
@@ -703,12 +703,12 @@
               <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
             </div>
             <ul class="language-selector-menu" data-dropdown-menu>
-              <li class="language-selector-content"><a class="language-selector-name" href="/" title="English">English (en)</a></li>
-              <li class="language-selector-content"><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
-              <li class="language-selector-content"><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
-              <li class="language-selector-content"><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
-              <li class="language-selector-content"><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
-              <li class="language-selector-content"><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+              <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
             </ul>
           </div>
         </div>
@@ -829,7 +829,7 @@
 
       options.forEach(option => {
         option.addEventListener('click', () => {
-          selected?.innerText = option?.innerText;
+          selected.innerText = option?.innerText;
           [dropdownSelect='', caret='', menu=''].forEach(el => el?.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
           options.forEach(opt => opt.classList.remove('active'));
           option.classList.add('active');
