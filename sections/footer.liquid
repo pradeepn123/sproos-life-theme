@@ -249,10 +249,20 @@
               -%}
               <div class="sproos-footer-icons">
                 <div class="sproos-languages">
-                  <ul class="sproos-language-chooser list-unstyled">
-                  <li class="{{en_class}}"><a href="{{ cleanPathUS }}" title="English (en)">en</a></li>
-                  <li class="{{fr_class}}"><a href="/fr{{ cleanPath }}" title="Français (fr)">fr</a></li>
-                  </ul>
+                  <div class="dropdown sproos-language-chooser">
+                    <div class="dropdown-select">
+                      <span class="selected">{{ request.locale.name | capitalize }} ({{ request.locale.iso_code }})</span>
+                      <div class="caret">{% render 'icon-caret' %}</div>
+                    </div>
+                    <ul class="languageSelectorMenu" id="languageSelectorMenu">
+                      <li><a href="/" title="English">English (en)</a></li>
+                      <li><a href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+                      <li><a href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+                      <li><a href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+                      <li><a href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+                      <li><a href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="sproos-currencies">

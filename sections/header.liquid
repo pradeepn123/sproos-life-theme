@@ -317,12 +317,24 @@
                   </ul>
                 </nav>
                 <div class="menu-drawer__utility-links">
-                  <div class="sproos-languages sproos-languages-mobile">
-                    <ul class="sproos-language-chooser list-unstyled">
-                    <li class="{{en_class}}"><a href="{{ cleanPathUS }}" title="English (en)">en</a></li>
-                    <li class="{{fr_class}}"><a href="/fr{{ cleanPath }}" title="Français (fr)">fr</a></li>
-                    </ul>
-                  </div>
+                  {%- if section.settings.show_language_selector -%}
+                    <div class="sproos-languages sproos-languages-mobile">
+                      <div class="dropdown sproos-language-chooser" data-dropdown-wrapper>
+                        <div class="dropdown-select" data-dropdown-select>
+                          <span class="dropdown__selected" data-dropdown-selected>{{ request.locale.name | capitalize }} <span class="tab-hide">({{ request.locale.iso_code }})</span></span>
+                          <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
+                        </div>
+                        <ul class="language-selector-menu" data-dropdown-menu>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+                          <li class="language-selector-content"><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  {%- endif -%}
 
                   <div class="sproos-currencies sproos-currencies-mobile">
                     {%- if cart.currency.iso_code == 'USD' -%}
@@ -508,14 +520,6 @@
           {%- if request.page_type == 'index' or request.path contains 'rewards' -%}
             {%- if section.settings.transparent_logo != blank and section.settings.header_transparent != blank -%}
               {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-              {% comment %} <img srcset="{{ section.settings.transparent_logo | img_url: image_size }} 1x, {{ section.settings.transparent_logo | img_url: image_size, scale: 2 }} 2x"
-                src="{{ section.settings.transparent_logo | img_url: image_size }}"
-                loading="lazy"
-                class="header__heading-logo transparent_logo"
-                width="{{ section.settings.transparent_logo.width }}"
-                height="{{ section.settings.transparent_logo.height }}"
-                alt="{{ section.settings.transparent_logo.alt | default: shop.name | escape }}"
-              >           {% endcomment %}
               {% render 'logo', class: 'home-logo' %}
             {%- endif -%}
           {%- elsif section.settings.logo != blank -%}
@@ -593,12 +597,6 @@
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              {% comment %} <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
-              </svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-close">
-              </svg> {% endcomment %}
               {% render 'icon-search', color: '#000' %}
             </span>
           </summary>
@@ -697,13 +695,24 @@
           </span>
         </a>
       {%- endif -%}
-      <div class="sproos-languages sproos-languages-desktop">
-        <ul class="sproos-language-chooser list-unstyled">
-        <li class="{{en_class}}"><a href="{{ cleanPathUS }}" title="English (en)">en</a></li>
-        <li class="{{fr_class}}"><a href="/fr{{ cleanPath }}" title="Français (fr)">fr</a></li>
-        </ul>
-      </div>
-
+      {%- if section.settings.show_language_selector -%}
+        <div class="sproos-languages sproos-languages--desktop">
+          <div class="dropdown sproos-language-chooser" data-dropdown-wrapper>
+            <div class="dropdown-select" data-dropdown-select>
+              <span class="dropdown__selected" data-dropdown-selected>{{ request.locale.name | capitalize }} <span class="tab-hide">({{ request.locale.iso_code }})</span></span>
+              <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
+            </div>
+            <ul class="language-selector-menu" data-dropdown-menu>
+              <li class="language-selector-content"><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+              <li class="language-selector-content"><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+              <li class="language-selector-content"><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+              <li class="language-selector-content"><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+              <li class="language-selector-content"><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+              <li class="language-selector-content"><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+            </ul>
+          </div>
+        </div>
+      {%- endif -%}
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
@@ -800,6 +809,42 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  // Language Selector Dropdown
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-dropdown-wrapper]').forEach(dropdown => {
+      const dropdownSelect = dropdown?.querySelector('[data-dropdown-select]');
+      const caret = dropdown?.querySelector('[data-dropdown-caret]');
+      const menu = dropdown?.querySelector('[data-dropdown-menu]');
+      const options = menu?.querySelectorAll('[data-dropdown-selector]');
+      const selected = dropdownSelect?.querySelector('[data-dropdown-selected]');
+
+      const toggleDropdown = () => {
+        dropdownSelect?.classList.toggle('select-clicked');
+        caret?.classList.toggle('caret-rotate');
+        menu?.classList.toggle('menu-open');
+      };
+
+      dropdownSelect?.addEventListener('click', toggleDropdown);
+
+      options.forEach(option => {
+        option.addEventListener('click', () => {
+          selected?.innerText = option?.innerText;
+          [dropdownSelect='', caret='', menu=''].forEach(el => el?.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
+          options.forEach(opt => opt.classList.remove('active'));
+          option.classList.add('active');
+        });
+      });
+
+      const handleDropdownContainer = event => {
+        if (!dropdown.contains(event.target)) [dropdownSelect, caret, menu].forEach(el => el?.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
+      };
+
+      ['click', 'scroll'].forEach(eventType => document.addEventListener(eventType, handleDropdownContainer));
+    });
+  });
+
+
 {% endjavascript %}
 
 <script type="application/ld+json">
@@ -946,6 +991,12 @@
       "default": true,
       "label": "t:sections.header.settings.enable_sticky_header.label",
       "info": "t:sections.header.settings.enable_sticky_header.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_language_selector",
+      "default": true,
+      "label": "Show Language Selector"
     },
     {
       "type": "header",

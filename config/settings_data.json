@@ -156,6 +156,7 @@
           "show_offer": true,
           "show_line_separator": false,
           "enable_sticky_header": true,
+          "show_language_selector": true,
           "header_transparent": true,
           "transparent_logo": "shopify:\/\/shop_images\/sproos_logo.png",
           "margin_bottom": 0

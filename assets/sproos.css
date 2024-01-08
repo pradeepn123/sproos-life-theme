@@ -729,3 +729,122 @@ span.bundle_bear_trigger::before{
     font-size: 6px !important;
     line-height: 3 !important;
 }
+
+
+/* Language Selector Dropdown */
+.sproos-language-chooser {
+  position: relative;
+  margin: 0 0.5em;
+  padding: 6px 0;
+}
+
+.sproos-languages .dropdown-select {
+  background: transparent;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em 1.5em 0.2em 0.7em;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.sproos-languages .selected-clicked {
+  border: 2px solid #2a2f3b;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.sproos-languages .caret .icon-caret path {
+  transition: transform var(--duration-short) ease;
+}
+
+.sproos-languages .icon-caret {
+  position: absolute;
+  height: 0.6rem;
+  right: 0.5em;
+  top: calc(50% - 0.2rem);
+}
+
+.sproos-languages .caret-rotate {
+  transform: rotate(180deg);
+}
+
+.sproos-languages .language-selector-menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #fff;
+    border: 1px solid #8797bb;
+    box-shadow: 0.5em 0.5em 10px 5px #33313133;
+    color: #9fa5b5;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 2;
+    max-height: 200px;
+    overflow: auto;
+    width: max-content;
+}
+
+.sproos-languages .language-selector-menu li {
+  padding: 0.2em 0.2em;
+  margin: 0.2em 0;
+  cursor: pointer;
+}
+
+.sproos-languages .language-selector-menu li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sproos-languages .language-selector-menu li:hover {
+  background: #eeeef0;
+}
+
+.sproos-languages .menu-open {
+  visibility: visible;
+  opacity: 1;
+}
+.sproos-languages .dropdown-select .dropdown__selected .tab-hide {
+  display: none;
+}
+
+@media screen and (min-width: 990px) {
+  .sproos-languages .dropdown-select {
+    color: #fff;
+    padding: 0.2em 1.5em 0.2em 0.7em;
+    font-size: 16px;
+  }
+  .shopify-section-header-sticky .sproos-languages .dropdown-select {
+    color: rgba(var(--color-foreground),.75);
+  }
+  .sproos-languages .dropdown-select .dropdown__selected .tab-hide {
+    display: unset;
+  }
+  .sproos-languages .language-selector-menu li a {
+    font-size: 16px;
+  }
+  .sproos-language-chooser {
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menu-drawer__utility-links > .sproos-languages {
+    flex-basis: 22%;
+  }
+  .sproos-languages .language-selector-menu {
+    box-shadow: 0 0 10px 1px #33313133;
+    top: -15em;
+    left: 60%;
+    border-radius: 4px;
+  }
+  .shopify-section-header-hidden .sproos-languages .language-selector-menu {
+    display: none;
+  }
+}
