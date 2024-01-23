@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Sproos super lattes",
+            "heading": "Your new favourite matcha",
             "heading_size": "h1"
           }
         },
         "08efa423-63c3-473f-9d98-a51cbcae8abe": {
           "type": "text",
           "settings": {
-            "text": "stay cozy this season with our functional lattes",
+            "text": "PSST: It even has collagen",
             "text_style": "subtitle"
           }
         },
@@ -26,7 +26,7 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_text_color_2": "#000",
+            "button_text_color_2": "#000000",
             "button_style_secondary_2": false
           }
         }
@@ -37,7 +37,7 @@
         "b58c2180-424c-441b-bd5d-50c42636e544"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_06_22-177_f59fd5b0-8296-42f8-baa8-555b20f4d56c.jpg",
+        "image": "shopify:\/\/shop_images\/2_Oct_Sproos_23-191.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -486,7 +486,7 @@
       "type": "apps",
       "blocks": {
         "44b60048-5a5e-414c-bfd4-c4f729f0ffc1": {
-          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-ugc\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "twlm7c9nmp92h"
           }
