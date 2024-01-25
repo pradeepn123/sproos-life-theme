@@ -80,7 +80,7 @@
           "settings": {
             "heading": "What shipping options are available?",
             "icon": "none",
-            "row_content": "<p>All Canadian and US orders over $50 CAD pre-tax are eligible for free shipping. <\/p>",
+            "row_content": "<p>All Canadian and US orders over $50 CAD pre-tax are eligible for free shipping. <\/p><p>For UK and EU, orders over €65 and £60 before tax are eligible for free shipping. Shipping charges below the free shipping threshold are calculated at checkout.<\/p>",
             "page": ""
           }
         },
