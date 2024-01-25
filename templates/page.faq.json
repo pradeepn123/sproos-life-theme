@@ -71,7 +71,7 @@
           "settings": {
             "heading": "Where do you ship?",
             "icon": "none",
-            "row_content": "<p>We ship to both Canada and the US!<\/p>",
+            "row_content": "<p>We currently ship to Canada, the United States, the United Kingdom, and the European Union (Germany, Austria, Belgium, France, Germany,<br\/>Ireland, Italy, Netherlands, Portugal and Spain).<\/p>",
             "page": ""
           }
         },
