@@ -106,7 +106,7 @@
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
             "settings": {
-              "country_iso": "CA",
+              "country_iso": "CA, US",
               "announcement_text": "This Weekend Only 🎉 Spend $100, Get $15 Off. Spend $150, Get $30 Off!"
             }
           },
@@ -120,7 +120,7 @@
           "71788ed1-7272-4486-b759-650ae38d1c76": {
             "type": "announcement",
             "settings": {
-              "country_iso": "US",
+              "country_iso": "",
               "announcement_text": "Free shipping on orders $50+"
             }
           },
