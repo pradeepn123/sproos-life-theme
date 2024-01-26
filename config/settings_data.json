@@ -106,8 +106,8 @@
           "79597cab-94bc-4833-b70b-6b958c804eb7": {
             "type": "announcement",
             "settings": {
-              "country_iso": "CA, IN",
-              "announcement_text": "Free shipping on orders $50+"
+              "country_iso": "CA",
+              "announcement_text": "This Weekend Only 🎉 Spend $100, Get $15 Off. Spend $150, Get $30 Off!"
             }
           },
           "9b081283-106c-4be9-a792-0681463707a8": {
@@ -121,7 +121,7 @@
             "type": "announcement",
             "settings": {
               "country_iso": "US",
-              "announcement_text": "Free shipping on orders $40+"
+              "announcement_text": "Free shipping on orders $50+"
             }
           },
           "a69b19ed-beee-427f-9333-0fc40bde2e4a": {
