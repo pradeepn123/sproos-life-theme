@@ -37,11 +37,11 @@
         "b58c2180-424c-441b-bd5d-50c42636e544"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/2_Oct_Sproos_23-191.jpg",
+        "image": "shopify:\/\/shop_images\/Sproos_Oct_22-105-2_4fce6ea2-29b3-4cb0-87d8-eb1b25cd4668.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "top-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
