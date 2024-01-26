@@ -6,22 +6,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Your new favourite matcha",
+            "heading": "New year sale",
             "heading_size": "h1"
           }
         },
         "08efa423-63c3-473f-9d98-a51cbcae8abe": {
           "type": "text",
           "settings": {
-            "text": "PSST: It even has collagen",
-            "text_style": "subtitle"
+            "text": "Spend $100, Get $15 Off. Spend $150, Get $30 Off!",
+            "text_style": "caption-with-letter-spacing"
           }
         },
         "b58c2180-424c-441b-bd5d-50c42636e544": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify:\/\/products\/super-matcha-latte",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_text_color_1": "#121212",
             "button_style_secondary_1": false,
             "button_label_2": "",
