@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "New year sale",
+            "heading": "Your new favourite matcha",
             "heading_size": "h1"
           }
         },
         "08efa423-63c3-473f-9d98-a51cbcae8abe": {
           "type": "text",
           "settings": {
-            "text": "Spend $100, Get $15 Off. Spend $150, Get $30 Off! Bundles excluded.",
+            "text": "ceremonial grade matcha plus collagen",
             "text_style": "caption-with-letter-spacing"
           }
         },
@@ -21,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/products\/super-matcha-latte",
             "button_text_color_1": "#121212",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -37,11 +37,11 @@
         "b58c2180-424c-441b-bd5d-50c42636e544"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Sproos_Oct_22-105-2_4fce6ea2-29b3-4cb0-87d8-eb1b25cd4668.jpg",
+        "image": "shopify:\/\/shop_images\/2_Oct_Sproos_23-191.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "top-left",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "background-1",
