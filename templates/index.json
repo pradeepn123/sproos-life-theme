@@ -6,15 +6,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Collagen, your way.",
-            "heading_size": "h1"
+            "heading": "Back in stock!",
+            "heading_size": "h0"
+          }
+        },
+        "text_AfBkWH": {
+          "type": "text",
+          "settings": {
+            "text": "MCT COLLAGEN CREAMER",
+            "text_style": "subtitle"
           }
         },
         "b58c2180-424c-441b-bd5d-50c42636e544": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/products\/sproos-mct-collagen-creamer",
             "button_text_color_1": "#121212",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -26,16 +33,16 @@
       },
       "block_order": [
         "heading",
+        "text_AfBkWH",
         "b58c2180-424c-441b-bd5d-50c42636e544"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1_Feb_Sproos_24-049-Edit-2.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/1_Feb_Sproos_24-049-Edit-2_b041c01d-1f76-4428-9998-83166577098b.jpg",
+        "image": "shopify:\/\/shop_images\/Website_Banner.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
