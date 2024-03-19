@@ -1,0 +1,70 @@
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/product-card.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.show_badges_collection .badge_with_vendor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.show_badges_collection .card__badge {
+  display: block !important;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.show_badges_collection .card__badge .badge {
+  font-size: 10px;
+  word-break: keep-all !important;
+  white-space: nowrap;
+  line-height: 1.4;
+  padding: 0.3rem 0.7rem;
+}
+@media (min-width: 1380px) {
+  .show_badges_collection .card__badge .badge {
+    font-size: 12px;
+    padding: 0.6rem 1.3rem;
+  }
+}
+.show_badges_collection .card__heading {
+  margin: 0;
+}
+
+.grid--5-col-desktop .grid__item {
+  width: calc(50% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+  max-width: calc(50% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+}
+@media (min-width: 768px) {
+  .grid--5-col-desktop .grid__item {
+    width: calc(33% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+    max-width: calc(33% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .grid--5-col-desktop .grid__item {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+  }
+}
+@media (min-width: 1200px) {
+  .grid--5-col-desktop .grid__item {
+    width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+    max-width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+  }
+}
+
+.card__information {
+  padding: 0.4rem 0 !important;
+}
+@media (min-width: 768px) {
+  .card__information {
+    padding: 1rem !important;
+  }
+}
