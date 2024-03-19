@@ -37,7 +37,7 @@
         "b58c2180-424c-441b-bd5d-50c42636e544"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/MCT_Collagen_Creamer_Mobile_Banner_b7e8a4ee-83aa-4dac-b91c-cb5defc36a9b.png",
+        "image": "shopify:\/\/shop_images\/Website_Banner.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": true,
@@ -242,7 +242,6 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "show_badges": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -336,7 +335,6 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
-        "show_badges": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
