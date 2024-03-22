@@ -29,7 +29,6 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-
 <div class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
@@ -52,7 +51,40 @@
         <span id="price_per_serving" class="per_serving">({{ product.first_available_variant.metafields.sproos.variant_price_per_serving }} per serving)</span>
       {% endif %}
     </div>
-    <div class="price__sale">
+    {% if product.template_suffix == "bundle-template" %}
+      <div class="price__sale">
+      
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+        <span class="price-item price-item--sale price-item--last">
+          {{ money_price }}
+        </span>
+        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+          <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+          {%- if request.path == '/pages/rewards' -%}
+            <span class="hidden">
+              <s class="price-item price-item--regular">
+                {% if settings.currency_code_enabled %}
+                ({{ compare_at_price | money_with_currency }})
+                {% else %}
+                  ({{ compare_at_price | money }})
+                {% endif %}
+              </s>
+            </span>
+            {%- else -%}
+            <span>
+              <s class="price-item price-item--regular">
+                {% if settings.currency_code_enabled %}
+                ({{ compare_at_price | money_with_currency }})
+                {% else %}
+                  ({{ compare_at_price | money }})
+                {% endif %}
+              </s>
+            </span>
+          {%- endif -%}
+        {%- endunless -%}
+      </div>
+    {% else %}
+      <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         {%- if request.path == '/pages/rewards' -%}
@@ -65,7 +97,7 @@
               {% endif %}
             </s>
           </span>
-          {%- else -%}
+        {%- else -%}
           <span>
             <s class="price-item price-item--regular">
               {% if settings.currency_code_enabled %}
@@ -78,10 +110,11 @@
         {%- endif -%}
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
-      </span>
-    </div>
+        <span class="price-item price-item--sale price-item--last">
+          {{ money_price }}
+        </span>
+      </div>
+    {% endif %}
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
@@ -98,6 +131,11 @@
     </small>
   </div>
   {%- if show_badges -%}
+  {% if product.available == false %}
+      <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
+      {{ 'products.product.sold_out' | t }}
+    </span>
+  {% else %}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
       {% if template.suffix == "bundle-template" %}
         {% if product.compare_at_price_max > product.price %}Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0' }}%{% else %}{{ 'products.product.on_sale' | t }}{% endif %}
@@ -105,9 +143,7 @@
          {% if product.compare_at_price_max > product.price %}{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0' }}% Off {% else %}  {{ 'products.product.on_sale' | t }}{% endif %}
       {% endif %}
     </span>
-
-    <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
-      {{ 'products.product.sold_out' | t }}
-    </span>
+  {% endif %}
+  
   {%- endif -%}
 </div>
